@@ -1,0 +1,55 @@
+created: 20210202192929068
+modified: 20210202201712731
+tags: [[1.02 Concepts de base]]
+title: 1.2.03 Algorithme
+type: text/vnd.tiddlywiki
+
+Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Algorithme]] (au 2 février 2021):
+
+<<<
+Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre une classe de problèmes.
+<<<
+
+Donc, un algorithme est une sorte de ''recette logique'' pour résoudre un problème.
+
+Un algortihme peut d'abord être écrit en ''pseudo-code'', qui ne correspond à aucun langage en particulier et qui ne fait que représenter de manière générique les étapes de la recette logique.
+
+De la même façon qu'une recette de cuisine peut être traduite dans plusieurs langues, il en va de même pour un algorithme qui peut être traduit (on dit ''implémenté'') dans plusieurs langages informatiques. 
+
+Exemple de pseudo-code pour trouver et afficher le plus grand nombre d'une liste d'entiers positifs:
+
+```
+liste := Liste(nombres entiers positifs);
+
+plus_grand := 0;
+
+Pour chaque nombre n dans liste, faire:
+   si n > plus_grand, alors:
+      plus_grand = n;
+
+Afficher plus_grand;
+```
+
+Exemple d'implémentation du pseudo-code ci-dessus en C#:
+
+```cs
+int[] liste = {10, 55, 33, 30, 47, 21};
+
+int plus_grand = 0;
+
+foreach (n in liste)
+{
+   if (n > plus_grand)
+   {
+      plus_grand = n;
+   }
+}
+
+Console.WriteLine(plus_grand);
+```
+
+<p class="boite">
+Les algorithmes suivent souvent un processus mental naturel; la difficulté est parfois de décortiquer la pensée afin de bien isoler chaque étape suivie dans un raisonnement.
+<br><br>
+La difficulté d'implémentation dans un langage dépend quant à elle généralement du niveau de maîtrise du langage par la personne qui programme afin de traduire ces étapes avec la bonne syntaxe.
+</p>

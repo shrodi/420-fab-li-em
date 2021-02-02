@@ -1,0 +1,23 @@
+created: 20210202192819715
+modified: 20210202215421582
+tags: [[1.02 Concepts de base]]
+title: 1.2.02 Langage de programmation
+type: text/vnd.tiddlywiki
+
+Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Langage_de_programmation]] (au 2 février 2021):
+
+<<<
+Un langage de programmation est une notation conventionnelle destinée à ''formuler des algorithmes'' et produire des programmes informatiques qui les appliquent. D'une manière similaire à une langue naturelle, un langage de programmation est composé d'un ''alphabet'', d'un ''vocabulaire'', de ''règles de grammaire'' et de ''significations''.
+<<<
+
+''&rarr; //[[Liste de langages|https://en.wikipedia.org/wiki/List_of_programming_languages]]//''
+
+<p class="boite">
+Étant donné la très grande quantité de langages de programmation, il est impossible de les voir tous dans un programme d'étude en informatique; vous n'en verrez que quelques-uns, et il vous appartiendra, au fil de votre carrière, d'apprendre d'autres langages, par vous-mêmes ou par le biais de diverses formations.
+</p>
+
+Dans le présent cours, nous étudierons les bases du [[langage C# de Microsoft|https://docs.microsoft.com/fr-fr/dotnet/csharp/]] (prononcé «c-sharp», à l'anglaise).
+
+!! Les niveaux de langage
+
+On dit souvent des langages de programmation qu'ils sont de ''haut ou de bas niveau''. On réfère ainsi à la «distance» à laquelle le langage se trouve par rapport au langage machine de l'ordinateur. Ainsi, le langage ''assembleur'', constitué de simples mnémoniques du langage machine, est le langage de programmation de plus bas niveau. On retrouve ensuite dans l'ordre, de manière générale, les[[ langages compilés|1.2.05 La compilation / l'interprétation]], puis les [[langages interprétés|1.2.05 La compilation / l'interprétation]]; à l'intérieur de ces deux catégories, les [[langages POO|1.2.04 Les paradigmes de programmation]] sont en principe de plus haut niveau que les langages procéduraux simples.

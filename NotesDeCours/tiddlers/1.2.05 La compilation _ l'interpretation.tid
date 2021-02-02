@@ -1,0 +1,27 @@
+created: 20210202212012990
+modified: 20210202220329677
+tags: [[1.02 Concepts de base]]
+title: 1.2.05 La compilation / l'interprétation
+type: text/vnd.tiddlywiki
+
+Donc, ''programmer = écrire du code informatique dans un langage de programmation''.
+
+Mais un ordinateur ne comprend qu'un seul langage, soit le ''langage machine'', constitué uniquement de 0 et de 1. 
+
+Alors, comment l'ordinateur peut-il comprendre les instructions données dans un langage de programmation en particulier (comme C#, par exemple)?
+
+''&rarr; Il a besoin d'un traducteur!''
+
+Selon le langage, ce «traducteur» peut être un ''compilateur'' ou un ''interpréteur'':
+
+* un ''compilateur'' traduit le programme ''une seule fois'' dans un fichier (un ''exécutable'') qui contiendra le langage machine spécifique pour l'ordinateur ciblé; donc, une fois le programme compilé, il suffit de passer l'exécutable à l'ordinateur qui en comprendra le contenu immédiatement;
+
+* un ''interpréteur'', quant à lui, ne crée pas de fichier contenant la traduction en langage machine: il lit le code informatique écrit par le programmeur, puis dit à l'ordinateur quoi faire; comme il n'y a pas de fichier exécutable produit en langage machine, le code doit être interprété (traduit) chaque fois que l'on désire exécuter le programme.
+
+On appelle ''langages compilés'' les langages faisant appel à un compilateur (ex.: ''C/C++, Pascal''), et ''langages interprétés'' ceux faisant appel à un interpréteur (ex.: ''Javascript, Perl, Ruby, Python'').
+
+Les langages compilés ont pour avantage de générer des programmes exécutables plus rapidement, mais qui sont cependant spécifiques à des plateformes précises (un programme compilé pour Windows ne fonctionnera pas sous ~MacOS ou Linux et vice-versa).
+
+Les langages interprétés quant à eux ont pour avantage de générer des programmes ''portables'' (c.-à-d. qui peuvent être exécutés sur n'importe quelle plateforme pour laquelle existe un interpréteur approprié), au prix cependant d'une baisse de performance. Les langages interprétés sont néanmoins généralement plus rapides à écrire que les langages compilés, car souvent de plus [[haut niveau|1.2.02 Langage de programmation]].
+
+Par contre, il existe des langages dits ''intermédiaires'' ou ''semi-compilés'' qui ont une étape de «prémâchage» du code (qui réduira et optimisera le code initial) pour un interpréteur; autrement dit, le programmeur écrit dans le langage de programmation, qu'il passe à un «compilateur» mais qui, au lieu de traduire en langage machine, va traduire dans un langage propre à un interpréteur. Donc, un fichier est produit, mais ce fichier, bien qu'illisible pour un humain, n'est pas un exécutable contenant du langage machine, mais plutôt un fichier contenant du langage optimisé pour un interpréteur. On crée ainsi un programme qui s'exécute plus rapidement qu'un programme interprété pur, tout en étant portable. Des exemples de ce type de langage sont le ''Java'' et le ''C#''.
