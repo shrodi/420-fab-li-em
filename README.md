@@ -1,3 +1,3 @@
-# 420-XXX-LI-EM
+# 420-EBA-LI-EM
 
-Gabarit de notes de cours
+Notes du cours 420-EBA-LI -- Programmation objet I
