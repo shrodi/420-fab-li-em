@@ -1,5 +1,5 @@
 created: 20210202192929068
-modified: 20210203113409064
+modified: 20210203113634724
 tags: [[1.02 Concepts de base]]
 title: 1.2.03 Algorithme
 type: text/vnd.tiddlywiki
@@ -32,7 +32,7 @@ Afficher plus_grand_n;
 
 !!! Le même algorithme, sous forme de diagramme de flux:
 
-[img[https://i.imgur.com/0mg2yN3.png]]
+[img[https://i.imgur.com/typsQMa.png]]
 
 
 !!! Exemple d'implémentation de l'algorithme ci-dessus en C#:
