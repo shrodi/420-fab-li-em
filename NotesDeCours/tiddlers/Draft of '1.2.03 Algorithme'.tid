@@ -1,7 +1,9 @@
 created: 20210202192929068
-modified: 20210203111234977
+draft.of: 1.2.03 Algorithme
+draft.title: 1.2.03 Algorithme
+modified: 20210203113229289
 tags: [[1.02 Concepts de base]]
-title: 1.2.03 Algorithme
+title: Draft of '1.2.03 Algorithme'
 type: text/vnd.tiddlywiki
 
 Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Algorithme]] (au 2 février 2021):
@@ -12,40 +14,45 @@ Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructi
 
 Donc, un algorithme est une sorte de ''recette logique'' pour résoudre un problème.
 
-Un algortihme peut d'abord être écrit en ''pseudo-code'', qui ne correspond à aucun langage en particulier et qui ne fait que représenter de manière générique les étapes de la recette logique.
+Un algortihme peut d'abord être écrit en ''pseudo-code'', qui ne correspond à aucun langage en particulier et qui ne fait que représenter de manière générique les étapes de la recette logique. On peut également représenter les algorithmes sous forme de ''diagramme de flux''.
 
 De la même façon qu'une recette de cuisine peut être traduite dans plusieurs langues, il en va de même pour un algorithme qui peut être traduit (on dit ''implémenté'') dans plusieurs langages informatiques. 
 
-Exemple de pseudo-code pour trouver et afficher le plus grand nombre d'une liste d'entiers positifs:
+!!! Exemple de pseudo-code pour trouver et afficher le plus grand nombre d'une liste d'entiers positifs:
 
 ```
 liste := Liste(nombres entiers positifs);
 
-plus_grand := 0;
+plus_grand_n := 0;
 
 Pour chaque nombre n dans liste, faire:
-   si n > plus_grand, alors:
-      plus_grand = n;
+   si n > plus_grand_n, alors:
+      plus_grand_n = n;
 
-Afficher plus_grand;
+Afficher plus_grand_n;
 ```
 
-Exemple d'implémentation du pseudo-code ci-dessus en C#:
+!!! Le même algorithme, sous forme de diagramme de flux
+
+[img[https://i.imgur.com/0mg2yN3.png]]
+
+
+!!! Exemple d'implémentation de l'algorithme ci-dessus en C#:
 
 ```cs
 int[] liste = {10, 55, 33, 30, 47, 21};
 
-int plus_grand = 0;
+int plus_grand_n = 0;
 
 foreach (n in liste)
 {
-   if (n > plus_grand)
+   if (n > plus_grand_n)
    {
-      plus_grand = n;
+      plus_grand_n = n;
    }
 }
 
-Console.WriteLine(plus_grand);
+Console.WriteLine(plus_grand_n);
 ```
 
 <p class="boite">
