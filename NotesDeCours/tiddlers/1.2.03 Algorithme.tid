@@ -1,5 +1,5 @@
 created: 20210202192929068
-modified: 20210203152857530
+modified: 20210203161955913
 tags: [[1.02 Concepts de base]]
 title: 1.2.03 Algorithme
 type: text/vnd.tiddlywiki
@@ -40,7 +40,7 @@ Afficher plus_grand_n;
 ```cs
 int[] liste = {10, 55, 33, 30, 47, 21};
 
-int plus_grand_n = 0;
+int plus_grand_n = liste[0];
 
 foreach (n in liste)
 {
@@ -60,3 +60,7 @@ La difficulté d'implémentation dans un langage dépend quant à elle général
 </p>
 
 [img width=1024 [https://m1.quebecormedia.com/emp/emp/MREG_2021_02_03_019ad3b8f4a-5dc0-44dc-8a6a-4144f880d312_ORIGINAL.jpg?impolicy=crop-resize&x=0&y=0&w=0&h=0&width=3200]]
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/27d08780-4f6f-4d88-a918-dc7dbfdc7f53?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

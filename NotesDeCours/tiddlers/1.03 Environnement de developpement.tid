@@ -1,5 +1,5 @@
 created: 20210202211339110
-modified: 20210202221704666
+modified: 20210203162111279
 tags: [[01 Introduction]]
 title: 1.03 Environnement de développement
 type: text/vnd.tiddlywiki
@@ -18,3 +18,7 @@ Mais dans quoi écrire ce code?
 #* ces logiciels poussent encore plus loin les fonctionnalités en offrant notamment des outils de débogage et de test, en plus de permettre l'exécution des programmes écrits du simple clic d'un bouton.
 
 Dans ce cours, nous utiliserons l'IDE MS Visual Studio pour écrire nos programmes en C#.
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/74293dd4-5280-4a32-b59e-12a7bb2a3040?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

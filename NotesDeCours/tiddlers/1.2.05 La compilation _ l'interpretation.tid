@@ -1,5 +1,5 @@
 created: 20210202212012990
-modified: 20210202220329677
+modified: 20210203162051068
 tags: [[1.02 Concepts de base]]
 title: 1.2.05 La compilation / l'interprétation
 type: text/vnd.tiddlywiki
@@ -25,3 +25,7 @@ Les langages compilés ont pour avantage de générer des programmes exécutable
 Les langages interprétés quant à eux ont pour avantage de générer des programmes ''portables'' (c.-à-d. qui peuvent être exécutés sur n'importe quelle plateforme pour laquelle existe un interpréteur approprié), au prix cependant d'une baisse de performance. Les langages interprétés sont néanmoins généralement plus rapides à écrire que les langages compilés, car souvent de plus [[haut niveau|1.2.02 Langage de programmation]].
 
 Par contre, il existe des langages dits ''intermédiaires'' ou ''semi-compilés'' qui ont une étape de «prémâchage» du code (qui réduira et optimisera le code initial) pour un interpréteur; autrement dit, le programmeur écrit dans le langage de programmation, qu'il passe à un «compilateur» mais qui, au lieu de traduire en langage machine, va traduire dans un langage propre à un interpréteur. Donc, un fichier est produit, mais ce fichier, bien qu'illisible pour un humain, n'est pas un exécutable contenant du langage machine, mais plutôt un fichier contenant du langage optimisé pour un interpréteur. On crée ainsi un programme qui s'exécute plus rapidement qu'un programme interprété pur, tout en étant portable. Des exemples de ce type de langage sont le ''Java'' et le ''C#''.
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/60a00cd5-6347-45a8-87cf-86eb1014c590?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
