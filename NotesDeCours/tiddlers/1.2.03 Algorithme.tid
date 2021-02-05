@@ -1,5 +1,5 @@
 created: 20210202192929068
-modified: 20210203161955913
+modified: 20210205133817131
 tags: [[1.02 Concepts de base]]
 title: 1.2.03 Algorithme
 type: text/vnd.tiddlywiki
@@ -25,7 +25,7 @@ plus_grand_n := premier nombre de liste;
 
 Pour chaque nombre n dans liste, faire:
    si n > plus_grand_n, alors:
-      plus_grand_n = n;
+      plus_grand_n := n;
 
 Afficher plus_grand_n;
 ```
