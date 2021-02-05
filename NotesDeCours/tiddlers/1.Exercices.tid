@@ -1,5 +1,5 @@
 created: 20210202221714830
-modified: 20210205130836812
+modified: 20210205133311562
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
@@ -26,7 +26,7 @@ Notez de plus:
 </p>
 </div>
 
-# Remplacez maintenant le code ci-dessus par le code de calculatrice reproduit au point 2. de [[cette section|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#add-code-to-create-a-calculator]].
+# Remplacez maintenant le code ci-dessus par le code de calculatrice reproduit au point 2. de la section [[Ajouter du code pour créer une calculatrice|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#add-code-to-create-a-calculator]].
 
 ## Étudiez bien le code de manière à comprendre comment il fonctionne.
 
