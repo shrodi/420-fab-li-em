@@ -1,5 +1,5 @@
 created: 20210202221714830
-modified: 20210203144014426
+modified: 20210205112150206
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
@@ -11,6 +11,42 @@ type: text/vnd.tiddlywiki
 #> [img[https://i.imgur.com/ahl37E0.png]]
 #> Quand on vous demandera de vous connecter, utilisez le même identifiant que pour la connexion au portail Azure.
 
-# Après installation, suivez les étapes 1 à 4 de [[cette section|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#create-a-project]] du site Web de Microsoft, puis les étapes 1 à 5 de [[la section suivante|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#explore-integer-math]].
+# Après installation, suivez les étapes 1 à 4 de [[cette section|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#create-a-project]] du site Web de Microsoft, puis les étapes 1 à 5 de [[la section suivante|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#explore-integer-math]].<div>
 
 > ''NOTE:'' en informatique, il est ''très'' important de pouvoir suivre des procédures écrites!
+
+<p class="boite">
+
+Si tout a bien été, vous devriez à la fin vous retrouver dans Visual Studio avec le code suivant:
+
+[img[https://i.imgur.com/uxukV7m.png]]
+
+Notez de plus:
+
+* Le code est constitué de ''blocs d'instructions'':
+** chaque bloc est délimité par des accolades: `{ }`
+** chaque instruction est terminée par un point-virgule: `;`
+
+</p>
+</div>
+
+# Remplacez maintenant le code ci-dessus par le code de calculatrice reproduit au point 2. de [[cette section|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#add-code-to-create-a-calculator]].
+
+## Étudiez bien le code de manière à comprendre comment il fonctionne.
+
+## Modifiez le code de manière à ce que tout ce qui s'affiche lorsqu'on exécute le programme soit en français.
+
+## Francisez également les commentaires (lignes commençant avec «`//`»)
+
+## En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5,2)`, ce qui donnera 25.
+##* Sachant cela, ajouter au programme l'option «p» qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^)
+##> le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &equiv; 5^^2^^
+
+## Ajoutez un troisième nombre «num3» de manière à ce que:
+##* Si on choisit «a», alors  calculera num1 + num2 + num3
+##* Si on choisit «s», alors calculera num1 - num2 - num3
+##* Si on choisit «m», alors calculera num1 &times; num2 &times; num3
+##* Si on choisit «d», alors calculera num1 &divide; num2 &divide; num3
+##* Si on choisit «p», alors calculera (num1 + num2)^^num3^^
+##> Évidemment, le programme doit également afficher ce 3e nombre dans ses sorties à l'écran!
+
