@@ -1,5 +1,5 @@
 created: 20210202221714830
-modified: 20210205133311562
+modified: 20210205151619784
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
@@ -40,8 +40,8 @@ Notez de plus:
 #* Testez l'application jusqu'à ce qu'elle fonctionne.
 
 # En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5,2)`, ce qui donnera 25.
-##* Sachant cela, ajouter au programme l'option «p» qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^)
-##> le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &equiv; 5^^2^^
+#* Sachant cela, ajouter au programme l'option «p» qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^)
+#> Le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &equiv; 5^^2^^
 
 # Ajoutez un troisième nombre «num3» de manière à ce que:
 #* Si on choisit «a», alors  calculera num1 + num2 + num3
