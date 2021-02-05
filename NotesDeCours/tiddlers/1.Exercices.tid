@@ -1,5 +1,5 @@
 created: 20210202221714830
-modified: 20210205112150206
+modified: 20210205125741372
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
@@ -38,15 +38,20 @@ Notez de plus:
 
 ## Francisez également les commentaires (lignes commençant avec «`//`»)
 
-## En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5,2)`, ce qui donnera 25.
+## Testez l'application jusqu'à ce qu'elle fonctionne.
+
+# Continuez le développement de l'application en suivant les étapes de la section [[Ajouter des nombres décimaux|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#add-decimals]] (arrêtez avant la section «Déboguer l'application»).
+#* Testez l'application jusqu'à ce qu'elle fonctionne.
+
+# En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5,2)`, ce qui donnera 25.
 ##* Sachant cela, ajouter au programme l'option «p» qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^)
 ##> le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &equiv; 5^^2^^
 
-## Ajoutez un troisième nombre «num3» de manière à ce que:
-##* Si on choisit «a», alors  calculera num1 + num2 + num3
-##* Si on choisit «s», alors calculera num1 - num2 - num3
-##* Si on choisit «m», alors calculera num1 &times; num2 &times; num3
-##* Si on choisit «d», alors calculera num1 &divide; num2 &divide; num3
-##* Si on choisit «p», alors calculera (num1 + num2)^^num3^^
-##> Évidemment, le programme doit également afficher ce 3e nombre dans ses sorties à l'écran!
+# Ajoutez un troisième nombre «num3» de manière à ce que:
+#* Si on choisit «a», alors  calculera num1 + num2 + num3
+#* Si on choisit «s», alors calculera num1 - num2 - num3
+#* Si on choisit «m», alors calculera num1 &times; num2 &times; num3
+#* Si on choisit «d», alors calculera num1 &divide; num2 &divide; num3
+#* Si on choisit «p», alors calculera (num1 + num2)^^num3^^
+#> Évidemment, le programme doit également afficher ce 3e nombre dans ses sorties à l'écran!
 
