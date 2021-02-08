@@ -1,5 +1,5 @@
 created: 20210208150219255
-modified: 20210208161526683
+modified: 20210208183608314
 tags: [[02 Variables]]
 title: 2.04 Les conversions de types
 type: text/vnd.tiddlywiki
@@ -13,3 +13,23 @@ Certains langages sont dits //faiblement typés// et d'autres //fortement typés
 
 * Un ''langage fortement typé'' est un langage où les conversions entre les types doivent être explicites (donc avec intervention nécessaire du programmeur); ces langages ont souvent plusieurs types formels.
 *> Le langage C# est fortement typé: il comprend [[plus d'une dizaine de types de base|https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/built-in-types]], et il est parfois nécessaire d'effectuer une conversion entre ces différents types. Par exemple, dans les [[exercices de la section 1|1.Exercices]], on a dû utiliser `Convert.ToInt32()` et `Convert.ToDouble()` pour convertir les chaînes récupérées du clavier en nombres sur lesquels appliquer des opérations mathématiques.
+
+!! Méthodes de conversion
+
+Lorsque l'on doit convertir des types, il y a essentiellement trois façons:
+
+# ''conversion implicite'' (automatique): il arrive que, dans certains contextes, le compilateur C# reconnaisse le type désiré et puisse faire la conversion automatiquement sans intervention du programmeur (p.ex., `System.Console.WriteLine()` convertira automatiquement les nombres à afficher en chaînes de caractères);
+
+# ''[[Sytem.Convert|https://docs.microsoft.com/fr-fr/dotnet/api/system.convert?view=net-5.0]]'': classe qui offre plusieurs méthodes de conversion entre types 
+
+# ''conversion par transtypage'' (//type casting//): pour des types «rapprochés» (comme des nombres), on peut souvent forcer la conversion en préfixant le type désiré entre parenthèses
+#> ex.:<div>
+
+```cs
+int entier = 12;
+
+// Convertit en double
+double reel = (double)entier;
+```
+
+</div>

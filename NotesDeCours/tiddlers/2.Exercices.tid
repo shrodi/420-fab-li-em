@@ -1,10 +1,10 @@
 created: 20210208161536234
-modified: 20210208172750370
+modified: 20210208183555832
 tags: [[02 Variables]]
 title: 2.Exercices
 type: text/vnd.tiddlywiki
 
 # Reprenez le code que vous avez obtenu à la fin des exercices de la section 1, et modifiez-le afin que tous les nombres du code soient de type ''decimal''.
-#> Vous aurez sans doute besoin de la méthode `Convert.ToDecimal()` pour ce faire 
+#> Vous aurez sans doute besoin de la méthode `Convert.ToDecimal()` pour ce faire et de faire du «type casting».
 
 # Ajoutez à votre code une variable à laquelle vous affecterez votre nom complet, et faites en sorte que le programme affiche « Programme écrit par [votre nom] » au début de son exécution, où vous remplacerez [votre nom] par le contenu de la variable créé.
