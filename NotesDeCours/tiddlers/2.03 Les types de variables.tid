@@ -1,5 +1,5 @@
 created: 20210208131812543
-modified: 20210208154912204
+modified: 20210208172929483
 tags: [[02 Variables]]
 title: 2.03 Les types de variables
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ Les types de bases avec lesquels nous travaillerons pour commencer sont:
 
 * ''int'': désigne une variable de type nombre entier (peut être négatif ou positif) (ex.: 12, 6789, -743...)
 * ''decimal'': désigne une variable de type nombre réel (ex: -45.9862, 3456.93783, ...)
-*> Les types ''double'' et ''float'' sont aussi très utilisés pour les nombres réels: ils offrent l'avantage d'être techniquement plus rapides, mais ont l'inconvénient d'être moins précis que ''decimal'' (voir les exercices de la présente section pour un exemple); beaucoup de programmeurs vont aussi l'utiliser simplement par habitude, puisque ce sont des types que l'on retrouve dans plusieurs autres langages.
+*> Les types ''double'' et ''float'' sont aussi très utilisés pour les nombres réels: ils offrent l'avantage d'être techniquement plus rapides, mais ont l'inconvénient d'être moins précis que ''decimal''; beaucoup de programmeurs vont aussi l'utiliser simplement par habitude, puisque ce sont des types que l'on retrouve dans plusieurs autres langages.
 * ''string'': désigne une variable de type chaîne de caractères (ex.: "Bonjour", "Mon n° de téléphone est le: 123 456-7890", "Quel est votre nom?")
 
 <p class="boite">
