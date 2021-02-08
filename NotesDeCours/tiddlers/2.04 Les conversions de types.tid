@@ -1,0 +1,15 @@
+created: 20210208150219255
+modified: 20210208161526683
+tags: [[02 Variables]]
+title: 2.04 Les conversions de types
+type: text/vnd.tiddlywiki
+
+Si deux variables contiennent une chaîne de caractères rerésentant des nombres (p.ex., "10" et "20", en représentation ASCII), et que l'on veuille effectuer une opération mathématique entre les deux, cette opération sera impossible si ces chaînes ne sont pas d'abord converties en véritables nombres en mémoire; il y aura nécessité d'effectuer une ''conversion de types''. Le même besoin sera exprimé si on désire plutôt afficher à l'écran des nombres: ils devront d'abord être convertis en chaînes de caractères affichables.
+
+Certains langages sont dits //faiblement typés// et d'autres //fortement typés//.
+
+* Un ''langage faiblement typé'' est un langage où les conversions entre les types seront implicites (donc sans intervention nécessaire du programmeur); ces langages ont habituellement peu de types formels.
+*> P.ex., en langage Perl, il y a seulement trois types formels de variables, à savoir le type «scalaire», le type «tableau» et le type «tableau associatif»; il n'y a pas de déclaration de type nécessaire: seuls la syntaxe et le contexte le détermineront; ainsi, on pourra additionner deux chaînes de caractères si elles représentent des nombres, car Perl fera automatiquement la conversion numérique des chaînes. 
+
+* Un ''langage fortement typé'' est un langage où les conversions entre les types doivent être explicites (donc avec intervention nécessaire du programmeur); ces langages ont souvent plusieurs types formels.
+*> Le langage C# est fortement typé: il comprend [[plus d'une dizaine de types de base|https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/built-in-types]], et il est parfois nécessaire d'effectuer une conversion entre ces différents types. Par exemple, dans les [[exercices de la section 1|1.Exercices]], on a dû utiliser `Convert.ToInt32()` et `Convert.ToDouble()` pour convertir les chaînes récupérées du clavier en nombres sur lesquels appliquer des opérations mathématiques.

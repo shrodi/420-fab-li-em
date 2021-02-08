@@ -1,0 +1,28 @@
+created: 20210208132837986
+modified: 20210208150301605
+tags: [[02 Variables]]
+title: 2.02 La nomenclature
+type: text/vnd.tiddlywiki
+
+Il existe différentes philosophies de nomenclature des variables et autres éléments en informatique et d'un langage à l'autre, mais pour le C# on vous demande de respecter principalement les [[conventions établies par Microsoft|https://docs.microsoft.com/fr-fr/dotnet/standard/design-guidelines/naming-guidelines]], dont voici les principales lignes directrices:
+
+* Choisissez des noms ''significatifs'', qui permettent de facilement comprendre à quoi sert l'élément nommé;
+*> p.ex., ''largeur'' et ''hauteur'' seront mieux que ''a'' et ''b'', qui ne veulent rien dire
+
+* Utilisez le «~CamelCase» pour nommer les variables et objets; les noms de variables simples commencent souvent (mais pas obligatoirement) avec une minuscule, alors que les autres éléments (propriétés, classes, méthodes...) commencent avec une majuscule. N’utilisez pas de traits de soulignement (« _ »), de traits d’union (« - ») ou tout autre caractère non alphanumérique;
+*> p.ex., ''largeurRectangle'' plutôt que ''largeur_rectangle''.
+
+* Choisissez des noms d’identificateur facilement lisibles.
+*> p.ex., , ''~AlignementHorizontal'' est plus lisible en français que ''~HorizontalAlignement''.
+
+* Préférez la lisibilité par rapport à la concision.
+*> ''~DefilementHorizontal'' est mieux que ''~DefilementX'' (une référence cachée à l’axe X), et ''largeur'' est mieux que simplement ''l''.
+
+* N’utilisez pas la notation hongroise (c.-à-d. donner le type de la variable dans son nom; comme p. ex.: ''intUnEntier'').
+
+* Évitez d’utiliser des identificateurs qui sont en conflit avec des mots clés de langages de programmation largement utilisés.
+
+*  N’utilisez pas d’abréviations ou de contractions dans les noms d’identificateurs.
+*> p.ex., ''~OuvrirFenetre'' plutôt que ''~OuvFen''
+
+* Évitez autant que possible les acronymes; une exception peut être faite s'ils sont largement connus et que le contexte s'y prête.

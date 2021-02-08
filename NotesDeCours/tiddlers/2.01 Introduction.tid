@@ -1,0 +1,35 @@
+created: 20210208125757905
+modified: 20210208153309206
+tags: [[02 Variables]]
+title: 2.01 Introduction
+type: text/vnd.tiddlywiki
+
+Une ''variable'' en informatique est, tout comme en mathématique, une sorte de «contenant» auquel on donne une étiquette et dans lequel on insère (affecte) une valeur:
+
+```cs
+int unEntier = 32;
+decimal unReel = 18.4567;
+string monNom = "Eric";
+```
+
+[img[https://i.imgur.com/oHuxHne.png]]
+
+* Les contenants en question seront en fait des espaces réservés créés dans la mémoire de l'ordinateur lors de l'exécution du programme. Le cours //Systèmes d'exploitation// aborde plus spécifiquement comment les valeurs sont stockées dans la mémoire au format binaire (en 0 et 1).
+
+* Comme on peut le voir dans l'extrait de code ci-dessus, en C# on affecte (assigne) une valeur à une variable en utilisant le symbole `=` (ce qui n'est pas le cas dans tous les langages; on rencontre aussi assez souvent `:=` comme symbole d'affectation).
+
+* Les termes qui apparaissent en ''gras'' dans l'extrait de code ci-dessus sont des [[types de variables|2.03 Les types de variables]]; on doit toujours donner le type d'une variable la ''première fois'' qu'elle apparaît, ce qu'on appelle aussi la ''déclaration''.
+
+* Lorsqu'une variable a reçu une valeur, on dit qu'elle est ''définie'' ou ''initialisée''. Il est aussi possible de ''déclarer'' une variable sans la définir (on pourra lui affecter une valeur plus tard):<div>
+
+```cs
+int unAutreEntier;
+```
+</div>
+
+* Sauf exception, on peut écraser (remplacer) la valeur d'une variable déjà définie; dans ce cas, puisque la déclaration est déjà faite, on n'a pas besoin de répéter le type:<div>
+
+```cs
+unEntier = 876;
+```
+</div>

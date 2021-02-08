@@ -1,0 +1,36 @@
+created: 20210208131812543
+modified: 20210208154912204
+tags: [[02 Variables]]
+title: 2.03 Les types de variables
+type: text/vnd.tiddlywiki
+
+Comme vu [[précédemment|2.01 Introduction]], lorsqu'on déclare une variable, on doit spéficfier son ''type''.
+
+Le type d'une variable servira au compilateur à allouer l'espace nécessaire en mémoire et à contrôler les opérations permises entre différentes variables (p.ex., il serait illogique de multiplier deux chaînes de caractères entre elles).
+
+Les types de bases avec lesquels nous travaillerons pour commencer sont:
+
+* ''int'': désigne une variable de type nombre entier (peut être négatif ou positif) (ex.: 12, 6789, -743...)
+* ''decimal'': désigne une variable de type nombre réel (ex: -45.9862, 3456.93783, ...)
+*> Les types ''double'' et ''float'' sont aussi très utilisés pour les nombres réels: ils offrent l'avantage d'être techniquement plus rapides, mais ont l'inconvénient d'être moins précis que ''decimal'' (voir les exercices de la présente section pour un exemple); beaucoup de programmeurs vont aussi l'utiliser simplement par habitude, puisque ce sont des types que l'on retrouve dans plusieurs autres langages.
+* ''string'': désigne une variable de type chaîne de caractères (ex.: "Bonjour", "Mon n° de téléphone est le: 123 456-7890", "Quel est votre nom?")
+
+<p class="boite">
+
+! Le type ''var''
+
+Depuis la version 3.0 de C#, il existe un type générique appelé ''var''. Une variable de type ''var'' peut contenir //n'importe quelle valeur//, peu importe son type formel.
+
+!!! Avantages:
+* moins long à écrire
+* pas à se casser la tête à choisir le bon type
+* plus facile à maintenir si des types retournés changent
+
+!!! Inconvénients:
+* perte de clarté (d'information) sur la nature et possiblement le rôle attendu des variables
+* plus de risques de bogues dus à des interactions illogiques entre les variables
+* perte de contrôle automatique de certaines contraintes (p.ex., nombre entier vs nombre réel)
+
+!! __''Dans le présent cours, pour des raisons pédagogiques et de bonne pratique, l'utilisation du type «var» sera interdite.''__
+
+</p>
