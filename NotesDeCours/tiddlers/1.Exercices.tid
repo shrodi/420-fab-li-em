@@ -1,5 +1,5 @@
 created: 20210202221714830
-modified: 20210205151619784
+modified: 20210208162805928
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
@@ -51,3 +51,7 @@ Notez de plus:
 #* Si on choisit «p», alors calculera (num1 + num2)^^num3^^
 #> Évidemment, le programme doit également afficher ce 3e nombre dans ses sorties à l'écran!
 
+---
+
+!! Cours du 2020-02-05
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e4be45e6-5198-4903-925f-3197fe09cd06?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
