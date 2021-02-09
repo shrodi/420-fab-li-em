@@ -1,5 +1,5 @@
 created: 20210208150219255
-modified: 20210208183608314
+modified: 20210209210631440
 tags: [[02 Variables]]
 title: 2.04 Les conversions de types
 type: text/vnd.tiddlywiki
@@ -33,3 +33,11 @@ double reel = (double)entier;
 ```
 
 </div>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b7ff59c5-6da4-4a37-a21f-3395e69941d6?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/603eec24-bcbe-4bbf-9a88-de13797b3e5b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/9c59d08d-821e-4895-bff9-9fb5aab25fa6?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

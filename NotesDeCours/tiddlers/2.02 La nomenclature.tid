@@ -1,5 +1,5 @@
 created: 20210208132837986
-modified: 20210208150301605
+modified: 20210209190449353
 tags: [[02 Variables]]
 title: 2.02 La nomenclature
 type: text/vnd.tiddlywiki
@@ -26,3 +26,10 @@ Il existe différentes philosophies de nomenclature des variables et autres él�
 *> p.ex., ''~OuvrirFenetre'' plutôt que ''~OuvFen''
 
 * Évitez autant que possible les acronymes; une exception peut être faite s'ils sont largement connus et que le contexte s'y prête.
+
+<p class="boite">
+
+! Les accents
+
+Bien que Visual Studio permette les noms de variables avec des accents français, pour des raisons de portabilité et de compatibilité, cette pratique est à proscrire: ''on créera donc toujours des noms de variables sans accents''.
+</p>

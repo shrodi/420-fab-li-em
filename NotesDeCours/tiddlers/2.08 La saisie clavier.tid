@@ -1,0 +1,24 @@
+created: 20210208150412375
+modified: 20210209214327526
+tags: [[02 Variables]]
+title: 2.08 La saisie clavier
+type: text/vnd.tiddlywiki
+
+Comme on a déjà pu le voir dans des exemples précédents, on peut récupérer une saisie clavier avec `System.Console.ReadLine()`, laquelle retourne toujours cependant une chaîne de caractères, qu'il faut donc convertir en nombre au besoin:
+
+```cs
+string nom;
+int age;
+
+// On demande le nom (de type chaîne), on n'a donc pas besoin de convertir la saisie clavier
+Console.Write("Entrez votre nom: ");
+nom = Console.ReadLine();
+
+// On demande l'âge (de type entier), on a donc besoin de convertir la saisie clavier
+Console.Write("Entrez votre âge: ");
+age = Convert.ToInt32(Console.ReadLine());
+```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/fd4391ec-7a86-4795-b892-1da0779cc7ba?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

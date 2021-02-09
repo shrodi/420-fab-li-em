@@ -1,0 +1,76 @@
+created: 20210209150258694
+list: 
+modified: 20210209213834405
+tags: [[02 Variables]]
+title: 2.07 L'affichage à la console
+type: text/vnd.tiddlywiki
+
+On voudra souvent afficher du texte ou la valeur de variables définies. À la console, on utilisera principalement pour ce faire les méthodes `System.Console.Write()` (qui n'ajoute pas de retour de ligne automatique) et `System.Console.WriteLine()` (qui ajoute un retour de ligne à la fin de l'affichage).
+
+Pour ces deux méthodes, on place entre les parenthèses le contenu à afficher (ce sont les ''arguments'' passés à la méthode). Il y a plusieurs façons d'utiliser ces méthodes (tous les exemples ci-dessous afficheront le même texte):
+
+```cs
+/*
+   Affichage d'une chaîne brute (on note les guillemets anglais pour encadrer la chaîne)
+*/
+Console.WriteLine("J'ai 32 ans et je pèse 155,13 lbs.");
+
+// Si jamais on a besoin d'écrire des guillemets anglais, on peut les échapper avec une barre oblique inverse
+Console.WriteLine("Le mot \"redingotte\" vient de l'anglais \"riding coat\".");
+```
+
+```cs
+/*
+   Affichage en alternance de chaînes brutes et de variables avec des instructions séparées
+*/
+
+int age = 32;
+decimal poids = 155.13m;
+
+Console.Write("J'ai ");
+Console.Write(age);
+Console.Write(" ans et je pèse ");
+Console.Write(poids);
+Console.WriteLine(" lbs.");
+```
+
+```cs
+/*
+   Affichage d'une concaténation de chaînes brutes et de variables
+*/
+
+int age = 32;
+decimal poids = 155.13m;
+
+Console.WriteLine("J'ai " + age + " ans et je pèse " + poids + " lbs.");
+```
+
+```cs
+/*
+   Affichage avec formattage composite: les accolades contiennent un index (partant de
+   zéro) référant à une des variables listées à la suite de la chaîne; ainsi, ici, {0}
+   réfère à la variable «age», et {1} réfère à la variable «poids»
+*/
+
+int age = 32;
+decimal poids = 155.13m;
+
+Console.WriteLine("J'ai {0} ans et je pèse {1} lbs.", age, poids);
+```
+
+```cs
+/*
+   Affichage avec interpolation de chaînes (en vigueur depuis C# v6.0): au lieu d'index,
+   on insère directement les variables à afficher dans les accolades, mais on doit alors
+   préfixer la chaîne d'un «$»
+*/
+
+int age = 32;
+decimal poids = 155.13m;
+
+Console.WriteLine($"J'ai {age} ans et je pèse {poids} lbs.");
+```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/ec1ad4ca-4d50-4f3d-87b2-c475eaf0e55d?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

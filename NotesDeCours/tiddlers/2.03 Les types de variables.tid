@@ -1,5 +1,5 @@
 created: 20210208131812543
-modified: 20210208172929483
+modified: 20210209205603342
 tags: [[02 Variables]]
 title: 2.03 Les types de variables
 type: text/vnd.tiddlywiki
@@ -8,11 +8,28 @@ Comme vu [[précédemment|2.01 Introduction]], lorsqu'on déclare une variable, 
 
 Le type d'une variable servira au compilateur à allouer l'espace nécessaire en mémoire et à contrôler les opérations permises entre différentes variables (p.ex., il serait illogique de multiplier deux chaînes de caractères entre elles).
 
-Les types de bases avec lesquels nous travaillerons pour commencer sont:
+C# comprend [[plusieurs types de base|https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/built-in-types]], mais ceux avec lesquels nous travaillerons principalement pour commencer sont:
 
-* ''int'': désigne une variable de type nombre entier (peut être négatif ou positif) (ex.: 12, 6789, -743...)
+* ''int'': désigne une variable de type nombre entier (peut être négatif ou positif) (ex.: 12, 6789, -743...)<div>
+
+```cs
+// Déclare une variable «age» contenant l'âge d'une personne
+int age = 37;
+```
+</div>
+
 * ''decimal'': désigne une variable de type nombre réel (ex: -45.9862, 3456.93783, ...)
-*> Les types ''double'' et ''float'' sont aussi très utilisés pour les nombres réels: ils offrent l'avantage d'être techniquement plus rapides, mais ont l'inconvénient d'être moins précis que ''decimal''; beaucoup de programmeurs vont aussi l'utiliser simplement par habitude, puisque ce sont des types que l'on retrouve dans plusieurs autres langages.
+*> Les types ''double'' et ''float'' sont aussi très utilisés pour les nombres réels: ils offrent l'avantage d'être techniquement plus rapides, mais ont l'inconvénient d'être moins précis que ''decimal''; beaucoup de programmeurs vont aussi les utiliser simplement par habitude, puisque ce sont des types que l'on retrouve dans plusieurs autres langages.<p>Fait à noter, on affecte une valeur littérale ''decimal'' en suffixant un ''m'' à la valeur, et une valeur littérale ''float'' en suffixant un ''f'', alors qu'aucun suffixe n'est nécessaire avec les types ''int'' ou ''double''.</p><div>
+
+```cs
+// Déclare une variable de type 'double' et une autre de type 'decimal' (noter le «m» pour le type 'decimal' et le «f» pour le type 'float')
+double masse = 70.51;
+float poids = 155.12f;
+decimal taille = 1.75m;
+```
+</div>
+
+
 * ''string'': désigne une variable de type chaîne de caractères (ex.: "Bonjour", "Mon n° de téléphone est le: 123 456-7890", "Quel est votre nom?")
 
 <p class="boite">
