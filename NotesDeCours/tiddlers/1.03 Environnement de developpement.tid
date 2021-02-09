@@ -1,5 +1,5 @@
 created: 20210202211339110
-modified: 20210203162111279
+modified: 20210209223351890
 tags: [[01 Introduction]]
 title: 1.03 Environnement de développement
 type: text/vnd.tiddlywiki
@@ -18,6 +18,25 @@ Mais dans quoi écrire ce code?
 #* ces logiciels poussent encore plus loin les fonctionnalités en offrant notamment des outils de débogage et de test, en plus de permettre l'exécution des programmes écrits du simple clic d'un bouton.
 
 Dans ce cours, nous utiliserons l'IDE MS Visual Studio pour écrire nos programmes en C#.
+
+<p class="boite">
+
+! Où est le programme???
+
+Si le langage C# est [[compilé dans un fichier|1.2.05 La compilation / l'interprétation]], où se trouve-t-il quand on exécute un programme à partir de Visual Studio?
+
+[img[https://i.imgur.com/CxoTwvN.png]]
+
+[img[https://i.imgur.com/vlo76Sa.png]]
+
+[img[https://i.imgur.com/HQRmjHq.png]]
+
+[img[https://i.imgur.com/Cs4R1eG.png]]
+
+[img[https://i.imgur.com/wbbKkqV.png]]
+
+</p>
+
 
 ---
 
