@@ -1,5 +1,5 @@
 created: 20210208161536234
-modified: 20210210151726037
+modified: 20210210183116796
 tags: [[02 Variables]]
 title: 2.Exercices
 type: text/vnd.tiddlywiki
@@ -12,10 +12,10 @@ type: text/vnd.tiddlywiki
 # Corrigez le code suivant sans toucher aux types de variable déjà en place:<div>
 
 ```cs
-const decimal lbs_par_kg = 2.2m;
+const decimal lbsParKg = 2.2m;
 float poids = 155.12;
 
-double masse = poids / lbs_par_kg;
+double masse = poids / lbsParKg;
 
 Console.WriteLine("Un poids de {poids} lbs correpond à une masse de {masse} kg.");
 ```
