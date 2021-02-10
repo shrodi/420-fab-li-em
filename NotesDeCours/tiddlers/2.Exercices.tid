@@ -1,5 +1,5 @@
 created: 20210208161536234
-modified: 20210209215041120
+modified: 20210210145819516
 tags: [[02 Variables]]
 title: 2.Exercices
 type: text/vnd.tiddlywiki
@@ -30,5 +30,6 @@ Console.WriteLine("Un poids de {poids} lbs correpond à une masse de {masse} kg.
 
 </div>écrivez un programme pour convertir des températures de °F en °C et vice-versa (le programme devra donc demander à l'utilisateur d'entrer une température et de spécifier si la température entrée est en °C ou en °F afin d'effectuer la conversion appropriée).
 #* Utilisez les types de votre choix, tant qu'ils sont appropriés au contexte
+#* Affichez toutes les températures avec une seule décimale
 #* N'oubliez pas de mettre des commentaires pertinents
 #* Aux fins de tests: 0°C = 32°F, -40°C = -40°F, 37°C = 98,6°F, 100°C = 212°F
