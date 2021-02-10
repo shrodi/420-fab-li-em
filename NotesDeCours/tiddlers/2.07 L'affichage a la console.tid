@@ -1,6 +1,6 @@
 created: 20210209150258694
 list: 
-modified: 20210209213834405
+modified: 20210210143331495
 tags: [[02 Variables]]
 title: 2.07 L'affichage à la console
 type: text/vnd.tiddlywiki
@@ -14,9 +14,6 @@ Pour ces deux méthodes, on place entre les parenthèses le contenu à afficher 
    Affichage d'une chaîne brute (on note les guillemets anglais pour encadrer la chaîne)
 */
 Console.WriteLine("J'ai 32 ans et je pèse 155,13 lbs.");
-
-// Si jamais on a besoin d'écrire des guillemets anglais, on peut les échapper avec une barre oblique inverse
-Console.WriteLine("Le mot \"redingotte\" vient de l'anglais \"riding coat\".");
 ```
 
 ```cs
@@ -69,6 +66,45 @@ int age = 32;
 decimal poids = 155.13m;
 
 Console.WriteLine($"J'ai {age} ans et je pèse {poids} lbs.");
+```
+
+! Les caractères spéciaux
+
+* Si jamais on a besoin d'écrire des guillemets anglais à l'intérieur d'une chaîne, on peut les échapper avec une barre oblique inverse:<div>
+
+```cs
+Console.WriteLine("Le mot \"redingotte\" vient de l'anglais \"riding coat\".");
+```
+</div>
+
+* Il existe aussi certains [[caractères de formattage|https://docs.microsoft.com/fr-fr/cpp/c-language/escape-sequences?view=msvc-160]], dont notamment:<div>
+
+```cs
+// Un « \n » insère un retour de ligne complet (change de ligne)
+Console.WriteLine("1re ligne\n2e ligne\n3e ligne");
+
+// Un « \t » insère une tabulation
+Console.WriteLine("\tTexte tabulé");
+
+// Un « \r » insère un retour chariot (retourne au début de la même ligne, sans créer de nouvelle ligne)
+Console.WriteLine("Texte 1\rTexte 2 écrasera texte 1");
+```
+</div>
+
+! Le formattage de chaînes composites ou interpolées
+
+Il existe une syntaxe plus avancée permettant de [[formatter avec précision|https://docs.microsoft.com/fr-fr/dotnet/api/system.string.format?view=net-5.0#the-format-item]] la façon dont des valeurs (particulièrement des valeurs numériques) seront affichées.
+
+Quelques exemples à essayer (ici j'utilise des valeurs numériques littérales, mais on pourrait aussi utiliser des variables):
+
+```cs
+// Affiche la valeur décimale de 5/3 avec 4 chiffres après la virgule
+Console.WriteLine($"{5m/3m:f4}");
+
+// Affiche des valeurs monétaires alignées à droite sur une colonne de largeur 10
+Console.WriteLine($"{1245.673, 10:c}");
+Console.WriteLine($"{45.8, 10:c}");
+Console.WriteLine($"{465.7398, 10:c}");
 ```
 
 ---
