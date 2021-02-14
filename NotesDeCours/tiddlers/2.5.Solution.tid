@@ -1,0 +1,31 @@
+created: 20210213130251649
+modified: 20210213130344307
+title: 2.5.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+decimal temperature;
+string uniteEntree;
+
+Console.WriteLine("Convertisseur de température °F/°C");
+Console.WriteLine("------------------------------------------------");
+
+Console.Write("La température initiale à convertir est-elle en °F (f) ou en °C (c) ? ");
+uniteEntree = Console.ReadLine();
+
+Console.Write("Entrez la valeur de la température à convertir: ");
+temperature = Convert.ToDecimal(Console.ReadLine());
+
+switch (uniteEntree)
+{
+    case "f":
+        Console.WriteLine($"{temperature}°F = {(temperature - 32) * 5m / 9m}°C");
+        break;
+    case "c":
+        Console.WriteLine($"{temperature}°C = {(temperature * 9m / 5m) + 32m}°F");
+        break;
+    default:
+        Console.WriteLine($"Mauvaise unité entrée.");
+        break;
+}
+```

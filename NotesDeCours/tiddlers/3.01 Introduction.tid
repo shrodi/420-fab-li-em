@@ -1,0 +1,12 @@
+created: 20210213140558982
+list: 
+modified: 20210213143710270
+tags: [[03 Instructions conditionnelles]]
+title: 3.01 Introduction
+type: text/vnd.tiddlywiki
+
+On appelle ''instructions conditionnelles'' des instructions qui seront exécutées conditionnellement (sous condition).
+
+P.ex., dans l'exemple de la calculatrice des exercices de la section 1, chaque calcul possible s'exécute conditionnellement à ce qu'une option («a», «s», «m» ou «d») soit entrée (l'addition se fait seulement à la condition qu'on ait entré «a», la soustraction seulement à la condition qu'on ait entré «s», etc.).
+
+En C#, il y a trois manières principales d'exprimer des conditions: les blocs ''switch'' et ''if-else'', et l'opérateur ternaire ''?:''

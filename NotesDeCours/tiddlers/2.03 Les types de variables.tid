@@ -1,5 +1,5 @@
 created: 20210208131812543
-modified: 20210209205603342
+modified: 20210213145323904
 tags: [[02 Variables]]
 title: 2.03 Les types de variables
 type: text/vnd.tiddlywiki
@@ -31,6 +31,8 @@ decimal taille = 1.75m;
 
 
 * ''string'': désigne une variable de type chaîne de caractères (ex.: "Bonjour", "Mon n° de téléphone est le: 123 456-7890", "Quel est votre nom?")
+
+* ''bool'': désigne une variable booléenne, c.-à-d. une variable qui est soit vraie (''true''), soit fausse (''false'').
 
 <p class="boite">
 

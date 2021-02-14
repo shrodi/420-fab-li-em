@@ -1,0 +1,25 @@
+created: 20210213203111823
+modified: 20210214151617647
+tags: [[04 Boucles]]
+title: 4.05 do ... while
+type: text/vnd.tiddlywiki
+
+Une boucle ''do ... while'' fonctionne comme une boucle ''while'' à la différence qu'on a l'assurance qu'elle s'exécutera au moins une fois, car la condition de continuité est évaluée après plutôt qu'avant chaque itération:
+
+```cs
+do {
+    // instructions à exécuter au moins une fois; se répéteront tant que la condition sera vraie
+} while (condition);
+```
+
+!! Exemple
+
+```cs
+string reponse;
+
+// Boucle qui s'exécutera au moins une fois, peu importe la valeur initiale de reponse, et s'arrêtera seulement si on entre autre chose que « o »
+do {
+    Console.Write("Voulez-vous continuer (o/n) ? ");
+    reponse = Console.ReadLine();
+} while (reponse == "o");
+```

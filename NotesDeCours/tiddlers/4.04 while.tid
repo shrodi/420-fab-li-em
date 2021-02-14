@@ -1,0 +1,30 @@
+created: 20210213203058197
+modified: 20210214145725673
+tags: [[04 Boucles]]
+title: 4.04 while
+type: text/vnd.tiddlywiki
+
+Une boucle ''while'' s'exécutera tant que la condition de contunuité sera remplie:
+
+```cs
+while (condition)
+{
+    // instructions à répéter tant que la condition est vraie
+}
+```
+
+!! Exemple
+
+```cs
+int i = 0;
+
+// Tant que i vaut moins que 3...
+while (i < 3)
+{
+    // ...affiche et incrémente la valeur de i (soit de 0 à 2)
+    Console.WriteLine($"i = {i++}");
+}
+
+// Affiche la valeur de i à la sortie de la boucle (soit 3)
+Console.WriteLine($"i = {i}");
+```

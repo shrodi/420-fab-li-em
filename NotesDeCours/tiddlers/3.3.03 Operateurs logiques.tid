@@ -1,0 +1,39 @@
+created: 20210213192520286
+modified: 20210213200153640
+tags: [[3.03 if]]
+title: 3.3.03 Opérateurs logiques
+type: text/vnd.tiddlywiki
+
+Afin de créer des conditions plus complexes, on peut utiliser des opérateurs logiques:
+
+* `&&` «et»
+* `||` «ou»
+* `!` «non» (négation)
+
+```cs
+const int ageDor = 50;
+bool usagerEstVieux;
+bool usagerVeutSavoir;
+
+Console.Write("Entrez votre âge: ");
+usagerEstVieux = Convert.ToInt32(Console.ReadLine()) >= ageDor;
+
+Console.Write("Désirez-vous savoir si vous faites partie de l'âge d'or (o/n) ? ");
+usagerVeutSavoir = Console.ReadLine() == "o";
+
+if (usagerEstVieux && usagerVeutSavoir)
+{
+       // Affiche un message si l'usager est vieux et qu'il veut savoir
+       Console.WriteLine("Vous faites partie de l'âge d'or!");
+}
+else if (!usagerVeutSavoir)
+{
+   // L'usager ne veut pas savoir
+   Console.WriteLine("Je garderai le secret!");
+}
+else
+{
+   // L'usager est jeune et veut savoir
+    Console.WriteLine("Il vous reste encore du temps avant l'âge d'or!");
+}
+```

@@ -1,0 +1,82 @@
+created: 20210213203041547
+modified: 20210214145313478
+tags: [[04 Boucles]]
+title: 4.03 for
+type: text/vnd.tiddlywiki
+
+Une boucle ''for'' est une boucle générique très polyvalente qui prend la forme suivante:
+
+```
+for ([instructions d'initialisation]; [conditions d'itération]; [instructions d'après itération])
+{
+    // instructions à exécuter en boucle
+}
+```
+
+* On appelle ''itération'' chaque exécution d'une boucle (un cycle). Dix itérations voudra dire qu'on a exécuté le bloc de boucle dix fois.
+
+* les ''instructions d'initialisation'', si fournies, seront des instructions à exécuter une seule fois, ''avant la première itération'', typiquement des initialisations de variables qui varieront d'une itération à l'autre;
+
+* les ''conditions d'itération'', si founies, donnent les conditions à respecter pour effectuer la prochaine itération; si ces conditions ne sont pas respectées, le programme sortira de la boucle; souvent, ces conditions se rapporteront aux variables initialisées dans le premier segment;
+
+* les ''instructions d'après itération'', si fournies, donnent des instructions à exécuter après chaque itération complétée; typiquement, c'est dans ce segment qu'on fera varier les variables initialisées dans le premier segment.
+
+!! Exemple
+
+```cs
+// Boucle qui s'exécutera trois fois
+for (int i = 0; i < 3; i++)
+{
+    // Affiche la valeur de i (0 à 2)
+    Console.WriteLine($"i = {i}");
+}
+```
+
+Dans cet exemple, les itérations se dérouleront de la façon suivante:
+
+<<<
+!!! Initialisation
+* int i = 0
+
+!!! Condition
+* i < 3? &rarr; oui &rArr; on continue
+
+!!! Itération 1
+* affiche "i = 0"
+* i++ &rArr; i == 1
+
+!!! Condition
+* i < 3? &rarr; oui &rArr; on continue
+
+!!! Itération 2
+* affiche "i = 1"
+* i++ &rArr; i == 2
+
+!!! Condition
+* i < 3? &rarr; oui &rArr; on continue
+
+!!! Itération 3
+* affiche "i = 2"
+* i++ &rArr; i == 3
+
+!!! Condition
+* i < 3? &rarr; non &rArr; on arrête! &rArr; la 4e itération de la boucle n'aura pas lieu (donc trois itérations au total)
+<<<
+
+* Dans l'exemple ci-dessus, ''i'' est appelé un ''itérateur'' (ou aussi compteur), car il est incrémenté après chaque itération et contrôle la condition d'exécution de la prochaine itération
+** À noter que ''i'', étant déclarée à l'intérieur du segment d'initialisation, n'existera qu'à l'intérieur de la boucle: dès que le programme sortira de la boucle, il «oubliera» complètement cette variable
+** On peut utiliser des variables déclarées à l'extérieur de la boucle comme itérateurs si le contexte s'y prête, mais c'est rarement le cas.
+** Par contre, il est courant d'utiliser des variables extérieures à la boucle dans les conditions d'itération:<div>
+
+```cs
+Console.Write("Nombre d'itérations souhaitées: ");
+int nbIterations = Convert.ToInt32(Console.ReadLine());
+
+// Exécutera la boucle nbIterations fois
+for (int i = 1; i <= nbIterations; i++)
+{
+    // Affiche le n° d'itération
+    Console.Write($"Itération n° {i}");
+}
+```
+</div>

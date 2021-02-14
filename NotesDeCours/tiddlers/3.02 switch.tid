@@ -1,0 +1,29 @@
+created: 20210213140210205
+list: 
+modified: 20210213144518659
+tags: [[03 Instructions conditionnelles]]
+title: 3.02 switch
+type: text/vnd.tiddlywiki
+
+Tel que déjà vu dans des [[exemples précédents|2.2.Solution]], on peut définir des conditions d'exécution à l'aide d'un bloc ''switch''.
+
+Un bloc ''switch'' sera approprié dans les cas où on veut créer une condition basée sur la valeur d'une expression (une expression peut être une variable ou encore une instruction retournant une valeur).
+
+```cs
+switch (expression)
+{
+   case valeur1:
+      // instructions à exécuter si expression == valeur1
+      break;
+   case valeur2:
+      // instructions à exécuter si expression == valeur2
+      break;
+
+   // [... autant de «case» que désiré ...]
+
+   [default:
+      // instructions à exécuter si aucune valeur présentée dans les case n'est égale à l'expression de comparaison
+      break;]
+}
+```
+> À noter que du code entre crochets (« [ ] »), comme le ''default'' ci-dessus, indique du code facultatif; donc, dans l'exemple ci-dessus, on comprend que la portion ''default'' d'un bloc ''switch'' est facultative, bien que souvent recommandée.

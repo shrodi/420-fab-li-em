@@ -1,5 +1,5 @@
 created: 20210202192929068
-modified: 20210205133817131
+modified: 20210213204725657
 tags: [[1.02 Concepts de base]]
 title: 1.2.03 Algorithme
 type: text/vnd.tiddlywiki
@@ -38,19 +38,19 @@ Afficher plus_grand_n;
 !!! Exemple d'implémentation de l'algorithme ci-dessus en C#:
 
 ```cs
-int[] liste = {10, 55, 33, 30, 47, 21};
+int[] liste = { 10, 55, 33, 30, 47, 21 };
 
-int plus_grand_n = liste[0];
+int plusGrandN = liste[0];
 
-foreach (n in liste)
+foreach (int n in liste)
 {
-   if (n > plus_grand_n)
-   {
-      plus_grand_n = n;
-   }
+    if (n > plusGrandN)
+    {
+        plusGrandN = n;
+    }
 }
 
-Console.WriteLine(plus_grand_n);
+Console.WriteLine(plusGrandN);
 ```
 
 <p class="boite">

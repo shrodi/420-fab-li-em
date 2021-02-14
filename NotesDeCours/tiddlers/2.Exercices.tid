@@ -1,5 +1,5 @@
 created: 20210208161536234
-modified: 20210210183116796
+modified: 20210213135439565
 tags: [[02 Variables]]
 title: 2.Exercices
 type: text/vnd.tiddlywiki
@@ -8,6 +8,7 @@ type: text/vnd.tiddlywiki
 #> Vous aurez sans doute besoin de la méthode `Convert.ToDecimal()` et de faire du «type casting».
 
 # Ajoutez à votre code une variable à laquelle vous affecterez votre nom complet, et faites en sorte que le programme affiche « Programme écrit par [votre nom] » au début de son exécution, où vous remplacerez [votre nom] par le contenu de la variable créée.
+#> [[Exemple de solution|2.2.Solution]]
 
 # Corrigez le code suivant sans toucher aux types de variable déjà en place:<div>
 
@@ -19,10 +20,11 @@ double masse = poids / lbsParKg;
 
 Console.WriteLine("Un poids de {poids} lbs correpond à une masse de {masse} kg.");
 ```
-
 </div>
+#> [[Solution|2.3.Solution]]
 
-# Pourquoi utiliser des ''decimal'' au lieu de ''double''? Écrivez un programme qui calcule et affiche la différence entre 1.18 et 0.08 (donc 1.18-0.08), d'abord en utilisant seulement le type ''double'', ensuite seulement le type ''decimal'': que remarquez-vous...? 
+# Pourquoi utiliser des ''decimal'' au lieu de ''double''? Écrivez un programme qui calcule et affiche la différence entre 1.18 et 0.08 (donc 1.18-0.08), d'abord en utilisant seulement le type ''double'', ensuite seulement le type ''decimal'': que remarquez-vous...?
+#> [[Exemple de solution|2.4.Solution]]
 
 # Démarrez un nouveau projet dans Visual Studio appelé «~ConvertisseurTemperature». En vous inspirant du code déjà vu de la calculatrice et d'autres exemples des notes de cours, et sachant que:<div>
 
@@ -33,3 +35,4 @@ Console.WriteLine("Un poids de {poids} lbs correpond à une masse de {masse} kg.
 #* Affichez toutes les températures avec une seule décimale
 #* N'oubliez pas de mettre des commentaires pertinents
 #* Aux fins de tests: 0°C = 32°F, -40°C = -40°F, 37°C = 98,6°F, 100°C = 212°F
+#> [[Exemple de solution|2.5.Solution]]

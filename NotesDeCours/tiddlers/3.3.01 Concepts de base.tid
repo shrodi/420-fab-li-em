@@ -1,0 +1,39 @@
+created: 20210213192402989
+modified: 20210213200255624
+tags: [[3.03 if]]
+title: 3.3.01 Concepts de base
+type: text/vnd.tiddlywiki
+
+Il arrive souvent que l'on veuille exécuter des instructions selon des conditions complexes ou arbitraires qui ne consistent pas en la comparaison d'égalité à une expression unique; dans ce cas, un bloc ''switch'' ne pourra pas fonctionner. On utilisera plutôt alors un bloc ''if'':
+
+```cs
+if (condition)
+{
+   // instructions à exécuter si condition est vraie
+}
+```
+
+La condition peut être toute expression qui retourne une valeur booléenne (c.-à-d. vrai (''true'') ou faux (''false'')).
+
+Par exemple, tous les [[opérateurs de comparaison|https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/operators/comparison-operators]] retournent un booléen:
+
+* `==` «égal à»
+* `!=` «différent de»
+* `>` «plus grand que»
+* `<` «plus petit que»
+* `>=` «plus grand ou égal à»
+* `<=` «plus petit ou égal à»
+
+!!! Exemple:
+```cs
+const int ageDor = 50;
+
+Console.Write("Entrez votre âge: ");
+int ageUsager = Convert.ToInt32(Console.ReadLine());
+
+if (ageUsager >= ageDor)
+{
+   // Affiche un message si l'âge entré est plus grand ou égal à 50
+   Console.WriteLine("Vous faites partie de l'âge d'or!");
+}
+```
