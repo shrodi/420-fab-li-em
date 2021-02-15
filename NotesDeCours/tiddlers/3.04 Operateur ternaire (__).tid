@@ -1,5 +1,5 @@
 created: 20210213142018261
-modified: 20210213202647315
+modified: 20210215161338701
 tags: [[03 Instructions conditionnelles]]
 title: 3.04 Opérateur ternaire (?:)
 type: text/vnd.tiddlywiki
@@ -24,5 +24,9 @@ decimal temperatureConvertie = uniteEntree == "c" ? (temperatureEntree * 9m / 5m
 
 // Affiche la température initiale et sa conversion, avec les unités appropriées
 // Les parenthèses entourant l'opérateur ternaire sont nécessaires ici aux fins d'interpolation de chaîne dans l'affichage
-Console.Write($"{temperatureEntree}{(uniteEntree == "c" ? "°C" : "°F")} = {temperatureConvertie}{(uniteEntree == "c" ? "°F" : "°C")}");
+Console.WriteLine($"{temperatureEntree}{(uniteEntree == "c" ? "°C" : "°F")} = {temperatureConvertie}{(uniteEntree == "c" ? "°F" : "°C")}");
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/bce77a42-8119-4991-a193-c9428d4f9870?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

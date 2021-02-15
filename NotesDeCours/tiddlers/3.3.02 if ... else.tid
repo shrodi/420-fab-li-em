@@ -1,10 +1,30 @@
 created: 20210213192452089
-modified: 20210213203218610
+modified: 20210215161222062
 tags: [[3.03 if]]
 title: 3.3.02 if ... else
 type: text/vnd.tiddlywiki
 
 S'il y a plusieurs possibilités (un peu comme avec un ''switch''), on enchaînera les conditions avec des ''else''; un ''else'' seul, à la fin d'un bloc ''if'', aura le même effet qu'un ''default'' avec ''switch'':
+
+```cs
+if (condition1)
+{
+    // instructions si condition1 est vraie
+}
+[else if (condition2)
+{
+    // instructions si condition2 est vraie
+}
+// autant de else if que désiré
+]
+[else
+{
+    // instructions si aucune des conditions n'est vraie
+}]
+```
+
+
+!! Exemple
 
 ```cs
 const int ageDor = 50;
@@ -63,3 +83,7 @@ else
     Console.WriteLine("Vous êtes encore jeune!");
 }
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/65a33343-1678-4946-a2b4-501019b0c432?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

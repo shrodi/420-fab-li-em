@@ -1,5 +1,5 @@
 created: 20210213192402989
-modified: 20210213200255624
+modified: 20210215161142349
 tags: [[3.03 if]]
 title: 3.3.01 Concepts de base
 type: text/vnd.tiddlywiki
@@ -37,3 +37,7 @@ if (ageUsager >= ageDor)
    Console.WriteLine("Vous faites partie de l'âge d'or!");
 }
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/1e9bb977-2abc-4727-9d9d-1e820ed2517e?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

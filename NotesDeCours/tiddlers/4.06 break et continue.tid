@@ -1,5 +1,5 @@
 created: 20210214135121045
-modified: 20210214155543709
+modified: 20210215161513659
 tags: [[04 Boucles]]
 title: 4.06 break et continue
 type: text/vnd.tiddlywiki
@@ -58,3 +58,7 @@ do {
 
 L'instruction ''goto'' permet aussi de sortir d'une boucle, mais est de manière générale considérée comme une très mauvaise pratique, car elle brise radicalement le cours logique d'un programme, puisqu'elle permet de sauter n'importe où dans un programme, pas seulement au début ou à la fin d'une boucle comme ''break'' et ''continue''; elle peut donc rendre très difficile le suivi et la maintenance d'un programme. Peu importe le langage, sauf en de très rares exceptions, c'est donc une instruction à éviter, et c'est pourquoi aucun exemple de son utilisation ne sera présenté ici.
 </p>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3b8dc385-61f5-47de-b36b-28204cff2fb0?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

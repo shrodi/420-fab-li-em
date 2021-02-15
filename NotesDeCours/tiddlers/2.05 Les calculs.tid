@@ -1,6 +1,6 @@
 created: 20210209150217790
 list: 
-modified: 20210213180836084
+modified: 20210215152701978
 tags: [[02 Variables]]
 title: 2.05 Les calculs
 type: text/vnd.tiddlywiki
@@ -99,8 +99,8 @@ Comme ces opérations sont très courantes, des raccourcis ont été créés:
 int entier = 0;
 entier++; // entier vaudra 1
 ++entier; // entier vaudra 2
-WriteLine($"{entier++}"); // Affichera 2, et ensuite augmentera entier à 3
-WriteLine($"{++entier}"); // Augmentera entier à 4, et ensuite affichera 4
+Console.WriteLine($"{entier++}"); // Affichera 2, et ensuite augmentera entier à 3
+Console.WriteLine($"{++entier}"); // Augmentera entier à 4, et ensuite affichera 4
 ```
 </div>
 

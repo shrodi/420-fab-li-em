@@ -1,6 +1,6 @@
 created: 20210213140210205
 list: 
-modified: 20210213144518659
+modified: 20210215161025711
 tags: [[03 Instructions conditionnelles]]
 title: 3.02 switch
 type: text/vnd.tiddlywiki
@@ -15,11 +15,12 @@ switch (expression)
    case valeur1:
       // instructions à exécuter si expression == valeur1
       break;
-   case valeur2:
+   [case valeur2:
       // instructions à exécuter si expression == valeur2
       break;
 
-   // [... autant de «case» que désiré ...]
+   // ... autant de «case» que désiré ...
+   ]
 
    [default:
       // instructions à exécuter si aucune valeur présentée dans les case n'est égale à l'expression de comparaison
@@ -27,3 +28,7 @@ switch (expression)
 }
 ```
 > À noter que du code entre crochets (« [ ] »), comme le ''default'' ci-dessus, indique du code facultatif; donc, dans l'exemple ci-dessus, on comprend que la portion ''default'' d'un bloc ''switch'' est facultative, bien que souvent recommandée.
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/6969c383-7500-45e0-a928-5e32c3dfa517?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

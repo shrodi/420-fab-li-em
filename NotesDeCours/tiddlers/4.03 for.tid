@@ -1,5 +1,5 @@
 created: 20210213203041547
-modified: 20210214145313478
+modified: 20210215161417386
 tags: [[04 Boucles]]
 title: 4.03 for
 type: text/vnd.tiddlywiki
@@ -76,7 +76,11 @@ int nbIterations = Convert.ToInt32(Console.ReadLine());
 for (int i = 1; i <= nbIterations; i++)
 {
     // Affiche le n° d'itération
-    Console.Write($"Itération n° {i}");
+    Console.WriteLine($"Itération n° {i}");
 }
 ```
 </div>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e99eb9c4-1753-43f9-88c6-924df41776fe?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

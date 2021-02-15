@@ -1,5 +1,5 @@
 created: 20210213203111823
-modified: 20210214151617647
+modified: 20210215161450720
 tags: [[04 Boucles]]
 title: 4.05 do ... while
 type: text/vnd.tiddlywiki
@@ -23,3 +23,7 @@ do {
     reponse = Console.ReadLine();
 } while (reponse == "o");
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4fc1079d-141e-49b5-a51e-7fe752f2c03b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
