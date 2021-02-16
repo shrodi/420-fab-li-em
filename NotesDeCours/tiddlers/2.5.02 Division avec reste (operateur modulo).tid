@@ -1,0 +1,65 @@
+created: 20210216123828961
+modified: 20210216132600669
+tags: [[2.05 Les calculs]]
+title: 2.5.02 Division avec reste (opérateur modulo)
+type: text/vnd.tiddlywiki
+
+Il est possible d'obtenir le reste d'une division entière avec l'''opérateur modulo'', représenté par un signe de pourcent (''%'').
+
+!! Exemple
+
+```cs
+int numerateur = 19;
+int denominateur = 7;
+
+int quotient = numerateur / denominateur;  // donne 2
+int reste = numerateur % denominateur; // donne 5
+
+// Affichera «19 / 7 = 2 reste 5»
+Console.WriteLine($"{numerateur} / {denominateur} = {quotient} reste {reste}");
+```
+
+L'opérateur modulo est particulièrement pratique pour savoir si un nombre est multiple d'un autre nombre, car alors le modulo donne zéro.
+
+!! Exemple
+
+```cs
+// Demande un 1er nombre entier
+Console.Write("Entrer un 1er nombre entier: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+// Demande un second nombre entier
+Console.Write("Entrer un second nombre entier: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+// Affiche si num1 est multiple de num2
+switch (num1 % num2)
+{
+    case 0:
+        Console.WriteLine($"{num1} est un multiple de {num2}");
+        break;
+    default:
+        Console.WriteLine($"{num1} n'est pas un multiple de {num2}");
+        break;
+}
+```
+
+<p class="boite">
+
+! Rappel
+
+On peut effectuer une division avec reste même si le numérateur est plus petit que le dénominateur; dans ce cas, le quotient est zéro et le reste est égal au numérateur (puisque numérateur = dénominateur*quotient + reste).
+
+!! Exemple
+
+```cs
+int numerateur = 7;
+int denominateur = 19;
+
+int quotient = numerateur / denominateur;  // donne 0
+int reste = numerateur % denominateur; // donne 7
+
+// Affichera «7 / 19 = 0 reste 7»
+Console.WriteLine($"{numerateur} / {denominateur} = {quotient} reste {reste}");
+```
+</p>

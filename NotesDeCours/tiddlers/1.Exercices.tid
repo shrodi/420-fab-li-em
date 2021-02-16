@@ -1,10 +1,10 @@
 created: 20210202221714830
-modified: 20210213135252710
+modified: 20210215174015100
 tags: [[01 Introduction]]
 title: 1.Exercices
 type: text/vnd.tiddlywiki
 
-# Récupérer MS Visual Studio depuis votre [[portail Azure|https://portal.azure.com/#blade/Microsoft_Azure_Education/EducationMenuBlade/overview]] du cégep et l'installer (connectez-vous avec la même identification que pour Teams).
+# Récupérer MS Visual Studio Enterprise depuis votre [[portail Azure|https://portal.azure.com/#blade/Microsoft_Azure_Education/EducationMenuBlade/overview]] du cégep et l'installer (connectez-vous avec la même identification que pour Teams).
 #> Voyez [[ces captures d'écran|1.Étapes d'installation Visual Studio]] pour vous aider dans le téléchargement et l'installation
 
 # Après installation, suivez les étapes 1 à 4 de la section [[Création d'un projet|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#create-a-project]] du site Web de Microsoft, puis les étapes 1 à 5 de la section suivante [[Explorer les mathématiques avec des entiers|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2019#explore-integer-math]].<div>
