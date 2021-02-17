@@ -1,0 +1,17 @@
+created: 20210217183305147
+modified: 20210217183312533
+title: 4.3.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+// Définit un tableau (liste) des jours de la semaine
+string[] joursSemaine = { "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" };
+
+Console.WriteLine("Les jours de la semaine sont:");
+
+// Pour chaque élément du tableau...
+foreach (string jour in joursSemaine)
+{
+    Console.WriteLine($"\t{jour}");
+}
+```

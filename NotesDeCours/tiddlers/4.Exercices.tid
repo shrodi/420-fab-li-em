@@ -1,14 +1,19 @@
 created: 20210214155654128
-modified: 20210214160428689
+modified: 20210217183326662
 tags: [[04 Boucles]]
 title: 4.Exercices
 type: text/vnd.tiddlywiki
 
 # On peut souvent réécrire une boucle sous une forme ou une autre: reprenez l'exemple ''foreach'' de la [[section 4.02|4.02 foreach]] et réécrivez le code en remplaçant la boucle ''foreach'' par:
 ## une boucle ''for''
+##> [[Exemple de solution|4.1.1.Solution]]
 ## une boucle ''while''
+##> [[Exemple de solution|4.1.2.Solution]]
 ## une boucle ''do...while''
+##> [[Exemple de solution|4.1.3.Solution]]
 
 # Réécrivez le second exemple (celui de la NOTE) de la[[ section 4.06|4.06 break et continue]] afin d'utiliser un ''while'' plutôt qu'un ''do...while''
+#> [[Exemple de solution|4.2.Solution]]
 
 # En vous inspirant de l'exemple ''foreach'' de la [[section 4.02|4.02 foreach]] pour créer une liste des jours de la semaine, écrivez un programme qui affiche les sept jours de la semaine.
+#> [[Exemple de solution|4.3.Solution]]

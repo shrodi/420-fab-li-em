@@ -1,6 +1,6 @@
-created: 20210213135101672
-modified: 20210217175851882
-title: 2.2.Solution
+created: 20210217181131581
+modified: 20210217181216794
+title: 3.1.Solution
 type: text/vnd.tiddlywiki
 
 ```cs
@@ -38,28 +38,34 @@ Console.WriteLine("\td - Division");
 Console.WriteLine("\tp - Puissance");
 Console.Write("Votre choix? ");
 
+string option = Console.ReadLine();
+
 // Effectue l'opération demandée 
-switch (Console.ReadLine())
+if (option == "a")
 {
-    case "a":
-        Console.WriteLine($"Résultat: {num1} + {num2} + {num3} = {num1 + num2 + num3}");
-        break;
-    case "s":
-        Console.WriteLine($"Résultat: {num1} - {num2} - {num3} = {num1 - num2 - num3}");
-        break;
-    case "m":
-        Console.WriteLine($"Résultat: {num1} * {num2} * {num3} = {num1 * num2 * num3}");
-        break;
-    case "d":
-        Console.WriteLine($"Résultat: {num1} / {num2} / {num3} = {num1 / num2 / num3}");
-        break;
-    case "p":
-        Console.WriteLine($"Résultat: ({num1} + {num2}) ^ {num3} = {Math.Pow((double)(num1 + num2), (double)num3)}");
-        break;
-    default:
-        Console.WriteLine("Option invalide");
-        break;
+    Console.WriteLine($"Résultat: {num1} + {num2} + {num3} = {num1 + num2 + num3}");
 }
+else if (option == "s")
+{
+    Console.WriteLine($"Résultat: {num1} - {num2} - {num3} = {num1 - num2 - num3}");
+}
+else if (option == "m")
+{
+    Console.WriteLine($"Résultat: {num1} * {num2} * {num3} = {num1 * num2 * num3}");
+}
+else if (option == "d")
+{
+    Console.WriteLine($"Résultat: {num1} / {num2} / {num3} = {num1 / num2 / num3}");
+}
+else if (option == "p")
+{
+    Console.WriteLine($"Résultat: ({num1} + {num2}) ^ {num3} = {Math.Pow((double)(num1 + num2), (double)num3)}");
+}
+else
+{
+    Console.WriteLine("Option invalide");
+}
+
 // Attend que l'utilisateur appuie sur une touche pour continuer
 Console.Write("Appuyer sur une touche pour quitter...");
 Console.ReadKey();

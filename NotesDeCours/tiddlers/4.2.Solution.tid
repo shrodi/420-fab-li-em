@@ -1,0 +1,19 @@
+created: 20210217182431830
+modified: 20210217182442653
+title: 4.2.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+string reponse = "";
+
+while (reponse != "n")
+{
+    Console.Write("Voulez-vous continuer (o/n) ? ");
+    reponse = Console.ReadLine();
+    if (reponse != "o" && reponse != "n")
+    {
+        // Affiche un message d'erreur si on n'a pas entré « o » ni « n »
+        Console.WriteLine("Réponse invalide; veuillez réessayer\n");
+    }
+};
+```
