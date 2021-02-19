@@ -1,9 +1,9 @@
 created: 20210213202731552
-modified: 20210213203025220
+modified: 20210219185550656
 tags: [[04 Boucles]]
 title: 4.01 Introduction
 type: text/vnd.tiddlywiki
 
 Les boucles sont des structures permettant de répéter les mêmes instructions à de multiples reprises sur différentes valeurs.
 
-Par exemple, dans la [[section sur les algortihmes|1.2.03 Algorithme]], on a utilisé une boucle ''foreach'' pour évaluer chacun des éléments d'une liste afin de trouver le plus élevé.
+Par exemple, dans la [[section sur les algorithmes|1.2.03 Algorithme]], on a utilisé une boucle ''foreach'' pour évaluer chacun des éléments d'une liste afin de trouver le plus élevé.
