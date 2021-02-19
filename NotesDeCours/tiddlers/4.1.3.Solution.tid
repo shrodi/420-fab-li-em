@@ -1,5 +1,5 @@
 created: 20210217182100558
-modified: 20210217182120873
+modified: 20210219151903288
 title: 4.1.3.Solution
 type: text/vnd.tiddlywiki
 
@@ -21,7 +21,7 @@ do
         plusGrandN = liste[i];
     }
 
-} while (++i < 6);
+} while (++i < liste.Length);
 
 // Affiche le plus grand nombre du tableau
 Console.WriteLine(plusGrandN);

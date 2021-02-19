@@ -1,5 +1,5 @@
 created: 20210217181514573
-modified: 20210217181538443
+modified: 20210219151654501
 title: 4.1.1.Solution
 type: text/vnd.tiddlywiki
 
@@ -11,7 +11,7 @@ int[] liste = { 10, 55, 33, 30, 47, 21 };
 int plusGrandN = liste[0];
 
 // Pour chaque nombre du tableau...
-for (int i = 1; i < 6; i++)
+for (int i = 1; i < liste.Length; i++)
 {
     // Si le nombre courant du tableau est plus grand que le plus grand nombre enregistré...
     if (liste[i] > plusGrandN)

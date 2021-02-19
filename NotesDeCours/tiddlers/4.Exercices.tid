@@ -1,10 +1,19 @@
 created: 20210214155654128
-modified: 20210217183326662
+modified: 20210219151921367
 tags: [[04 Boucles]]
 title: 4.Exercices
 type: text/vnd.tiddlywiki
 
-# On peut souvent réécrire une boucle sous une forme ou une autre: reprenez l'exemple ''foreach'' de la [[section 4.02|4.02 foreach]] et réécrivez le code en remplaçant la boucle ''foreach'' par:
+# On peut souvent réécrire une boucle sous une forme ou une autre; sachant que l'on peut obtenir la taille d'un tableau de la façon suivante:<div>
+
+```cs
+// Définit un tableau contenant 6 entiers
+int[] entiers = {23, 56, 32, 98, 456, 73};
+
+// Stockera 6 dans tailleEntiers
+int tailleEntiers = entiers.Length;
+```
+</div> reprenez l'exemple ''foreach'' de la [[section 4.02|4.02 foreach]] et réécrivez le code en remplaçant la boucle ''foreach'' par:
 ## une boucle ''for''
 ##> [[Exemple de solution|4.1.1.Solution]]
 ## une boucle ''while''
