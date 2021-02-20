@@ -1,5 +1,5 @@
 created: 20210213203041547
-modified: 20210215161417386
+modified: 20210220131653274
 tags: [[04 Boucles]]
 title: 4.03 for
 type: text/vnd.tiddlywiki
@@ -17,7 +17,7 @@ for ([instructions d'initialisation]; [conditions d'itération]; [instructions d
 
 * les ''instructions d'initialisation'', si fournies, seront des instructions à exécuter une seule fois, ''avant la première itération'', typiquement des initialisations de variables qui varieront d'une itération à l'autre;
 
-* les ''conditions d'itération'', si founies, donnent les conditions à respecter pour effectuer la prochaine itération; si ces conditions ne sont pas respectées, le programme sortira de la boucle; souvent, ces conditions se rapporteront aux variables initialisées dans le premier segment;
+* les ''conditions d'itération'', si fournies, donnent les conditions à respecter pour effectuer la prochaine itération; si ces conditions ne sont pas respectées, le programme sortira de la boucle; souvent, ces conditions se rapporteront aux variables initialisées dans le premier segment;
 
 * les ''instructions d'après itération'', si fournies, donnent des instructions à exécuter après chaque itération complétée; typiquement, c'est dans ce segment qu'on fera varier les variables initialisées dans le premier segment.
 
