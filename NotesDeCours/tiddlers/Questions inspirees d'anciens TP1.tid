@@ -1,0 +1,69 @@
+created: 20210222130506523
+modified: 20210222140826656
+tags: [[Exercices supplémentaires]]
+title: Questions inspirées d'anciens TP1
+type: text/vnd.tiddlywiki
+
+# En utilisant les fonctions de la [[classe Math de C#|https://docs.microsoft.com/fr-fr/dotnet/api/system.math?view=net-5.0]], écrivez un programme qui donne les valeurs suivantes:
+## Valeur absolue de -5
+## Valeur absolue de -5.5
+## Max entre 2 et 4
+## Min entre 2.2 et 4.6
+## 2 puissance 10 (ou 2 à la 10)
+## Racine carrée de 25
+## Sinus de 30 degrés arrondi à cinq décimales
+## Cosinus de 150 degrés arrondi à cinq décimales
+
+# En utilisant la constante PI de la classe Math, écrivez un programme qui calcule l’aire (en cm^^2^^) et le périmètre (en cm) d’un disque dont le rayon en mm est demandé à l’exécution du programme. Choisissez des arrondis cohérents, et soignez la qualité de l’affichage.
+
+# Écrivez un programme qui demande à l’utilisateur d’entrer un nombre de secondes et qui le convertit en années, jours, heures, minutes et secondes. 
+#> ''Remarque:'' Pour simplifier le problème, ne tenez pas compte des années bissextiles, mais par contre votre programme doit fonctionner avec 10^^14^^  secondes
+
+# Écrivez un programme qui génère une facture pour un produit. Il doit demander à l’utilisateur le nom et prénom du client, le nombre d’unités du produit et le prix par unités du produit, alors que le montant de la TPS (en %) et de la TVQ (en %) à ajouter au produit doivent être demandés à l’exécution du programme. Le programme doit ensuite afficher une facture soignée à la console ou figurent toutes les informations pertinentes, dont [[la date du jour|https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.now?view=net-5.0]].
+
+# Écrivez un programme qui génère aléatoirement le tirage d’une seule carte dans un jeu de cartes.<div>
+
+Un jeu de carte est composé de 52 cartes dont:
+
+* les couleurs sont : Cœur, Carreau, Pique et Trèfle et 
+* les valeurs sont (As, 2 à 10, Valet, Dame et Roi).
+
+Imprimez ensuite le résultat sous la forme :
+
+`La carte tirée est l’AS de Pique`
+
+ou 
+
+`La carte tirée est le 8 de Cœur`
+
+ou encore
+
+`La carte tirée est la Dame de Carreau`
+</div>
+
+# Écrire un programme C# qui calcule la date de Pâques à partir d'une année tapée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16ième siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
+
+Dans ce qui suit, appelons « A » l'année pour laquelle on désire connaître la date de Pâques (rappelons que Pâques est défini comme le premier dimanche qui suit la pleine lune arrivant après le 20 mars).  L'algorithme en pseudo-code (langage informel) est le suivant :
+
+|Étapes |Commentaires |h
+|''1.'' Lire ''A'' ||
+|''2.'' O &larr; A ''mod'' 19 + 1 |Nombre d'or du cycle métonique (basée sur 19 ans)|
+|''3.'' S &larr; &lfloor; A / 100 &rfloor; + 1 |Calcul du siècle|
+|''4.'' B &larr; &lfloor; 3S / 4 &rfloor; - 12 |Nombre d'années bissextiles perdues |
+|''5.'' C &larr; &lfloor; (8S+5) / 25 &rfloor; - 5 |Correction spéciale pour synchroniser Pâques avec l'orbite de la lune|
+|''6.'' D &larr; &lfloor; 5A / 4 &rfloor; - B - 10 |Pour trouver le dimanche approprié |
+|''7.'' P &larr; (11O + 20 + C - B) ''mod'' 30<br>si P < 0, alors P &larr; P + 30<br>si (P = 25 &and; O > 11)  &or;  P = 24, alors P &larr; P + 1 |Calcul de la pleine lune |
+|''8.'' J &larr; 44 - P<br>si J < 21, alors J &larr; J + 30||
+|''9.'' J &larr; J + 7 - ((D+J) ''mod'' 7) |Trouver le dimanche|
+|''10.'' si J > 31, alors (J-31) avril est la date recherchée, sinon J mars est la date recherchée |Trouver le bon mois|
+
+''Remarques:''
+
+<<<
+* Le symbole &larr; représente une affectation
+* L’opération ''mod'' est le modulo
+* Les symboles &lfloor; &rfloor; indiquent la partie entière d’une valeur réelle, donc, p.ex., &lfloor; A / 100 &rfloor;  est simplement la division entière (sans reste) de A par 100
+* le symbole &and; représente le «ET » logique
+* le symbole &or; représente le «OU» logique. 
+<<<
+</div>
