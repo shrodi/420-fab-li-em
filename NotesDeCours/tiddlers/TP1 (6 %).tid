@@ -1,6 +1,6 @@
 created: 20210216232655482
 list: 
-modified: 20210222141702890
+modified: 20210222174423341
 tags: [[99 Travaux pratiques et examens]]
 title: TP1 (6 %)
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 |!À remettre: |<ul><li>Le ''dossier complet archivé (.zip)'' de la solution Visual Studio créée</li><li>Un document (MS-Word, ~LibreOffice, PDF...) contenant des captures d'écran de tests complets de fonctionnement du programme</li><li>Remise individuelle par Teams, par l'onglet des devoirs</li><li>Une démonstration par Teams suivant la remise devra être effectuée (voir la ligne «Évaluation» ci-dessous)</li></ul>|
 |!Date limite de remise: |<ul><li>Mardi 2 mars, 23h59</li></ul>|
 |!Évaluation: |<ul><li>Ce travail vaut pour 6 % de la session</li><li>-10 % par jour de retard</li><li>Note de 0 si travail remis après retour à l'ensemble du groupe ou si le travail a été plagié en tout ou en partie</li><li>50% de la note sera attribuée en fonction du niveau de maîtrise du travail effectué par l'élève, lequel niveau sera établi par une entrevue individuelle verbale (démonstration de la solution)</li></ul>|
-|!Temps&nbsp;de&nbsp;réalisation&nbsp;estimé si la matière a été<br>préalablement étudiée, pratiquée et comprise:&nbsp;&nbsp; |<ul><li>3h</li></ul>|
+|!@@display:block;width:15em;Temps de réalisation estimé si la matière a été préalablement étudiée, pratiquée et comprise:@@ |<ul><li>3h</li></ul>|
 
 ! Énoncé
 
