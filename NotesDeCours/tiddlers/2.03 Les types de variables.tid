@@ -1,5 +1,5 @@
 created: 20210208131812543
-modified: 20210222182739099
+modified: 20210222183519946
 tags: [[02 Variables]]
 title: 2.03 Les types de variables
 type: text/vnd.tiddlywiki
@@ -27,7 +27,7 @@ double masse = 70.51;
 float poids = 155.12f;
 decimal taille = 1.75m;
 ```
-Fait également important à noter, le type ''double'' supporte naturellement la notation exponentielle (p.ex., ''4.7e18'' pour écrire «4.7&times;10^^18^^», ce qui n'est pas le cas des autres types, qui demandent un peu plus d'acrobaties en ce sens.
+Fait également important à noter, le type ''double'' supporte naturellement la notation exponentielle (p.ex., ''4.7e18'' pour écrire «4.7&times;10^^18^^») lorsqu'un nombre est converti depuis un type ''string'', ce qui n'est pas le cas des autres types, qui demandent un peu plus d'acrobaties en ce sens.
 </div>
 
 
