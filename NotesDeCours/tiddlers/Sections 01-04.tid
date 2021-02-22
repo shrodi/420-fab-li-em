@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210222155650173
+modified: 20210222161650642
 tags: [[98 Exercices supplémentaires]]
 title: Sections 01-04
 type: text/vnd.tiddlywiki
@@ -41,7 +41,7 @@ ou encore
 `La carte tirée est la Dame de Carreau`
 </div>
 
-# Écrire un programme C# qui calcule la date de Pâques à partir d'une année tapée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16^^e^^ siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
+# Écrire un programme C# qui calcule la date de Pâques à partir d'une année entrée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16^^e^^ siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
 
 Dans ce qui suit, appelons « A » l'année pour laquelle on désire connaître la date de Pâques (rappelons que Pâques est défini comme le premier dimanche qui suit la pleine lune arrivant après le 20 mars).  L'algorithme en pseudo-code (langage informel) est le suivant :
 
