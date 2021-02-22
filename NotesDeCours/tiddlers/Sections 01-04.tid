@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210222161827260
+modified: 20210222162326127
 tags: [[98 Exercices supplémentaires]]
 title: Sections 01-04
 type: text/vnd.tiddlywiki
@@ -43,19 +43,19 @@ ou encore
 
 # Écrire un programme C# qui calcule la date de Pâques à partir d'une année entrée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16^^e^^ siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
 
-Dans ce qui suit, appelons « A » l'année pour laquelle on désire connaître la date de Pâques (rappelons que Pâques est défini comme le premier dimanche qui suit la pleine lune arrivant après le 20 mars).  L'algorithme en pseudo-code (langage informel) est le suivant :
+Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaître la date de Pâques (rappelons que Pâques est défini comme le premier dimanche qui suit la pleine lune arrivant après le 20 mars).  L'algorithme en pseudo-code (langage informel) est le suivant :
 
 |Étapes |Commentaires |h
-|''1.'' Lire ''A'' |L'année pour laquelle on veut la date de Pâques|
-|''2.'' O &larr; A ''mod'' 19 + 1 |Nombre d'or du cycle métonique (basée sur 19 ans)|
-|''3.'' S &larr; &lfloor; A / 100 &rfloor; + 1 |Calcul du siècle|
-|''4.'' B &larr; &lfloor; 3S / 4 &rfloor; - 12 |Nombre d'années bissextiles perdues |
-|''5.'' C &larr; &lfloor; (8S+5) / 25 &rfloor; - 5 |Correction spéciale pour synchroniser Pâques avec l'orbite de la lune|
-|''6.'' D &larr; &lfloor; 5A / 4 &rfloor; - B - 10 |Pour trouver le dimanche approprié |
-|''7.'' P &larr; (11O + 20 + C - B) ''mod'' 30<br>si P < 0, alors P &larr; P + 30<br>si (P = 25 &and; O > 11)  &or;  P = 24, alors P &larr; P + 1 |Calcul de la pleine lune |
-|''8.'' J &larr; 44 - P<br>si J < 21, alors J &larr; J + 30||
-|''9.'' J &larr; J + 7 - ((D+J) ''mod'' 7) |Trouver le dimanche|
-|''10.'' si J > 31, alors (J-31) avril est la date recherchée, sinon J mars est la date recherchée |Trouver le bon mois|
+|''1.'' Lire //A// |L'année pour laquelle on veut la date de Pâques|
+|''2.'' //O// &larr; A ''mod'' 19 + 1 |Nombre d'or du cycle métonique (basée sur 19 ans)|
+|''3.'' //S// &larr; &lfloor; //A// / 100 &rfloor; + 1 |Calcul du siècle|
+|''4.'' //B// &larr; &lfloor; 3//S// / 4 &rfloor; - 12 |Nombre d'années bissextiles perdues |
+|''5.'' //C// &larr; &lfloor; (8//S//+5) / 25 &rfloor; - 5 |Correction spéciale pour synchroniser Pâques avec l'orbite de la lune|
+|''6.'' //D// &larr; &lfloor; 5//A// / 4 &rfloor; - //B// - 10 |Pour trouver le dimanche approprié |
+|''7.'' //P// &larr; (11//O// + 20 + //C// - //B//) ''mod'' 30<br>si //P// < 0, alors //P// &larr; //P// + 30<br>si (//P// = 25 &and; //O// > 11)  &or;  //P// = 24, alors //P// &larr; //P// + 1 |Calcul de la pleine lune |
+|''8.'' //J// &larr; 44 - //P//<br>si //J// < 21, alors //J// &larr; //J// + 30||
+|''9.'' //J// &larr; //J// + 7 - ((//D//+//J//) ''mod'' 7) |Trouver le dimanche|
+|''10.'' si //J// > 31, alors (//J//-31) avril est la date recherchée, sinon //J// mars est la date recherchée |Trouver le bon mois|
 
 ''Remarques:''
 
