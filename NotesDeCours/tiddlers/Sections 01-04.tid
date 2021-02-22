@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210222161650642
+modified: 20210222161827260
 tags: [[98 Exercices supplémentaires]]
 title: Sections 01-04
 type: text/vnd.tiddlywiki
@@ -25,8 +25,8 @@ type: text/vnd.tiddlywiki
 
 Un jeu de carte est composé de 52 cartes dont:
 
-* les couleurs sont : Cœur, Carreau, Pique et Trèfle et 
-* les valeurs sont (As, 2 à 10, Valet, Dame et Roi).
+* les couleurs sont : Cœur, Carreau, Pique et Trèfle
+* les valeurs sont As, 2 à 10, Valet, Dame et Roi.
 
 Imprimez ensuite le résultat sous la forme :
 
