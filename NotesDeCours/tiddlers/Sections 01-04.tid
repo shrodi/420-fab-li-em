@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210222141610100
+modified: 20210222155650173
 tags: [[98 Exercices supplémentaires]]
 title: Sections 01-04
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 ## Valeur absolue de -5.5
 ## Max entre 2 et 4
 ## Min entre 2.2 et 4.6
-## 2 puissance 10 (ou 2 à la 10)
+## 2 puissance 10 (2^^10^^)
 ## Racine carrée de 25
 ## Sinus de 30 degrés arrondi à cinq décimales
 ## Cosinus de 150 degrés arrondi à cinq décimales
@@ -41,12 +41,12 @@ ou encore
 `La carte tirée est la Dame de Carreau`
 </div>
 
-# Écrire un programme C# qui calcule la date de Pâques à partir d'une année tapée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16ième siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
+# Écrire un programme C# qui calcule la date de Pâques à partir d'une année tapée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16^^e^^ siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
 
 Dans ce qui suit, appelons « A » l'année pour laquelle on désire connaître la date de Pâques (rappelons que Pâques est défini comme le premier dimanche qui suit la pleine lune arrivant après le 20 mars).  L'algorithme en pseudo-code (langage informel) est le suivant :
 
 |Étapes |Commentaires |h
-|''1.'' Lire ''A'' ||
+|''1.'' Lire ''A'' |L'année pour laquelle on veut la date de Pâques|
 |''2.'' O &larr; A ''mod'' 19 + 1 |Nombre d'or du cycle métonique (basée sur 19 ans)|
 |''3.'' S &larr; &lfloor; A / 100 &rfloor; + 1 |Calcul du siècle|
 |''4.'' B &larr; &lfloor; 3S / 4 &rfloor; - 12 |Nombre d'années bissextiles perdues |
@@ -63,7 +63,8 @@ Dans ce qui suit, appelons « A » l'année pour laquelle on désire connaître 
 * Le symbole &larr; représente une affectation
 * L’opération ''mod'' est le modulo
 * Les symboles &lfloor; &rfloor; indiquent la partie entière d’une valeur réelle, donc, p.ex., &lfloor; A / 100 &rfloor;  est simplement la division entière (sans reste) de A par 100
-* le symbole &and; représente le «ET » logique
-* le symbole &or; représente le «OU» logique. 
+* le symbole &and; représente le «ET» logique
+* le symbole &or; représente le «OU» logique
+* vous pouvez valider votre programme avec [[cette page Web|http://www.zpag.net/Calendrier/paques.htm]]
 <<<
 </div>
