@@ -1,0 +1,92 @@
+created: 20210224135017173
+modified: 20210224142215067
+tags: [[05 Arguments de programme]]
+title: 5.02 Traitement des arguments
+type: text/vnd.tiddlywiki
+
+Pour tenir compte des arguments, le programme doit explorer le contenu du tableau ''args'' et agir en fonction des valeurs rencontrées. Il y a différents paradigmes de passage d'arguments à un programme:
+
+# on peut exiger des valeurs passées dans un ordre précis; p.ex., si on a un exécutable ''convertirTemperature.exe'' qui a besoin d'une température à convertir en °C ou °F et des unités de départ, on pourrait exiger que l'utilisateur passe d'abord la valeur de température, et ensuite un «c» ou un «f» pour dire si la valeur entrée est en °C ou en °F:<div>
+
+```cs
+// Programme de conversion de température qui prend une température à convertir comme 1er argument et les unités de cette température comme second argument
+static void Main(string[] args)
+{
+    // Le 1er argument est la température à convertir
+    decimal temperature = Convert.ToDecimal(args[0]);
+
+    // Le second argument est l'unité de température (c ou f)
+    string uniteEntree = args[1];
+
+    // Affiche la conversion en fonction des unités de la temperature d'entrée
+    switch (uniteEntree)
+    {
+        case "f":
+            Console.WriteLine($"{temperature}°F = {(temperature - 32) * 5m / 9m}°C");
+            break;
+        case "c":
+            Console.WriteLine($"{temperature}°C = {(temperature * 9m / 5m) + 32m}°F");
+            break;
+        default:
+            Console.WriteLine($"Mauvaise unité entrée.");
+            break;
+    }
+}
+```
+</div>
+
+# Une meilleure stratégie consiste à plutôt nommer les arguments, souvent préfixés d'un tiret pour les arguments nommés par une seule lettre ou de deux tirets pour les arguments avec des noms plus complets (voir [[cette section|5.03 Passage des arguments]] pour savoir comment passer des arguments à un programme); p.ex.:<div>
+
+```
+# Exemple avec des arguments à une lettre
+ConvertisseurTemperature.exe -t 100 -u c
+
+# Exemple avec des arguments à plusieurs lettres
+ConvertisseurTemperature.exe --unite c --temp 100
+```
+</div>dans ce cas, on ne peut présumer de la position des arguments dans le tableau, et on doit plutôt tester chaque argument possible:<div>
+
+```cs
+/* Programme de conversion de température qui prend les arguments suivants:
+ *    --temp TEMPERATURE
+ *    --unite { c | f }
+ *    
+ * où TEMPERATURE est la température à convertir, et UNITE est l'unité de TEMPERATURE (c=°C, f=°F)
+ */
+static void Main(string[] args)
+{
+    decimal temperature = 0;    // Température à convertir
+    string uniteEntree = "";     // Unités de la température à convertir
+
+    // Pour i variant de 0 à args.Length-1...
+    for (int i=0; i<args.Length; i++)
+    {
+        // Affecte les valeurs en fonction des noms d'arguments rencontrés, peu importe leur ordre
+        switch (args[i])
+        {
+            case "--temp":
+                temperature = Convert.ToDecimal(args[++i]);
+                break;
+
+            case "--unite":
+                uniteEntree = args[++i];
+                break;
+        }
+    }
+
+    // Affiche la conversion en fonction des unités de la temperature d'entrée
+    switch (uniteEntree)
+    {
+        case "f":
+            Console.WriteLine($"\n{temperature}°F = {(temperature - 32) * 5m / 9m}°C");
+            break;
+        case "c":
+            Console.WriteLine($"\n{temperature}°C = {(temperature * 9m / 5m) + 32m}°F");
+            break;
+        default:
+            Console.WriteLine($"\nMauvaise unité entrée.");
+            break;
+    }
+}
+```
+</div>

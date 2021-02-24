@@ -1,0 +1,14 @@
+created: 20210224135027801
+modified: 20210224142501548
+tags: [[05 Arguments de programme]]
+title: 5.03 Passage des arguments
+type: text/vnd.tiddlywiki
+
+Les arguments passés à un exécutable doivent être séparés par une ou des espaces.
+
+* Dans Visual Studio, on peut définir les arguments avec //Clic droit sur le nom du projet > Propriétés > Déboguer > Arguments d'application// (p.ex., ci-dessous on passe les valeurs «100» et «c» comme arguments):
+*> [img[https://i.imgur.com/lwOKRE7.png]]
+*> [img[https://i.imgur.com/ZWQFbPd.png]]
+
+* Si on exécute plutôt le programme compilé à partir de la ligne de commande, on passe les arguments à la suite du nom de programme:
+*> [img[https://i.imgur.com/2wDuMlJ.png]]

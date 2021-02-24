@@ -1,6 +1,6 @@
 created: 20210213140210205
 list: 
-modified: 20210215161025711
+modified: 20210224143820496
 tags: [[03 Instructions conditionnelles]]
 title: 3.02 switch
 type: text/vnd.tiddlywiki
@@ -28,6 +28,27 @@ switch (expression)
 }
 ```
 > À noter que du code entre crochets (« [ ] »), comme le ''default'' ci-dessus, indique du code facultatif; donc, dans l'exemple ci-dessus, on comprend que la portion ''default'' d'un bloc ''switch'' est facultative, bien que souvent recommandée.
+
+Si on désire qu'un même bloc d'instructions soit exécuté pour plus d'un ''case'', il suffit de les «empiler»:
+
+```cs
+switch (expression)
+{
+   case valeur1:
+   case valeur2:
+   case valeur3:
+      // instructions à exécuter si expression == valeur2 || expression == valeur2 || expression == valeur3
+      break;
+
+   [
+       // ... autant d'autres «case» que désiré ...
+   ]
+
+   [default:
+      // instructions à exécuter si aucune valeur présentée dans les case n'est égale à l'expression de comparaison
+      break;]
+}
+```
 
 ---
 
