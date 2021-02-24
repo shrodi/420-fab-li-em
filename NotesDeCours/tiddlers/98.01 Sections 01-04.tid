@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210224150023366
+modified: 20210224150944093
 tags: [[98 Exercices supplémentaires]]
 title: 98.01 Sections 01-04
 type: text/vnd.tiddlywiki
@@ -19,7 +19,7 @@ type: text/vnd.tiddlywiki
 # Écrivez un programme qui demande à l’utilisateur d’entrer un nombre de secondes et qui le convertit en années, jours, heures, minutes et secondes. 
 #> ''Remarque:'' Pour simplifier le problème, ne tenez pas compte des années bissextiles, mais par contre votre programme doit fonctionner avec un nombre entré en notation exponentielle, p.ex., 1e14  secondes.
 
-# Écrivez un programme qui génère une facture pour un produit. Il doit demander à l’utilisateur le nom et prénom du client, le nombre d’unités du produit et le prix par unités du produit, alors que le montant de la TPS (en %) et de la TVQ (en %) à ajouter au produit doivent être demandés à l’exécution du programme. Le programme doit ensuite afficher une facture soignée à la console ou figurent toutes les informations pertinentes, dont [[la date du jour|https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.now?view=net-5.0]].
+# Écrivez un programme qui génère une facture pour un produit. Il doit demander à l’utilisateur le nom et prénom du client, le nombre d’unités du produit et le prix par unités du produit, alors que le montant de la TPS (en %) et de la TVQ (en %) à ajouter au produit doivent être demandés à l’exécution du programme. Le programme doit ensuite afficher une facture soignée à la console où figurent toutes les informations pertinentes, dont [[la date du jour|https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.now?view=net-5.0]].
 
 # Écrivez un programme qui génère aléatoirement le tirage d’une seule carte dans un jeu de cartes.<div>
 
