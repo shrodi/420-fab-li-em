@@ -1,5 +1,5 @@
 created: 20210226163516809
-modified: 20210226172933791
+modified: 20210226174651276
 tags: [[04 Boucles]]
 title: 4.07 Quand utiliser quelle boucle?
 type: text/vnd.tiddlywiki
@@ -25,4 +25,4 @@ Comme chaque type de boucle peut généralement être converti en un autre type 
 
 * une boucle ''do ... while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on veut faire au moins une itération;
 
-* une boucle ''while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on n'a pas besoin d'au moins une itération.
+* une boucle ''while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on n'a pas besoin de faire au moins une itération.
