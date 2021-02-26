@@ -1,12 +1,12 @@
 created: 20210226163516809
-modified: 20210226174651276
+modified: 20210226175026355
 tags: [[04 Boucles]]
 title: 4.07 Quand utiliser quelle boucle?
 type: text/vnd.tiddlywiki
 
 ! Quand utiliser une boucle?
 
-On utilisera généralement une boucle chaque fois qu'on sent le besoin de répéter du code ou des opérations un nombre de fois déterminé ou déterminable, ou encore tant qu'une condition est vraie.
+On utilisera généralement une boucle chaque fois qu'on sent le besoin de ''répéter du code'' ou des opérations ''un nombre de fois déterminé ou déterminable'', ou encore ''tant qu'une condition est vraie''.
 
 Quelques mots clefs (p.ex., dans un énoncé de travail) qui suggèrent une boucle:
 
