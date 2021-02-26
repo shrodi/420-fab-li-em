@@ -1,0 +1,28 @@
+created: 20210226163516809
+modified: 20210226172933791
+tags: [[04 Boucles]]
+title: 4.07 Quand utiliser quelle boucle?
+type: text/vnd.tiddlywiki
+
+! Quand utiliser une boucle?
+
+On utilisera généralement une boucle chaque fois qu'on sent le besoin de répéter du code ou des opérations un nombre de fois déterminé ou déterminable, ou encore tant qu'une condition est vraie.
+
+Quelques mots clefs (p.ex., dans un énoncé de travail) qui suggèrent une boucle:
+
+* « pour chaque »
+* « répéter »
+
+! Quelle boucle utiliser?
+
+Comme chaque type de boucle peut généralement être converti en un autre type de boucle, il n'y a pas de règle absolue dictant le choix d'une boucle plutôt qu'une autre, mais, de manière générale, on utilisera:
+
+* une boucle ''foreach'' lorsqu'on désire traiter les éléments d'une liste dont la position dans la liste n'est pas importante pour le traitement;
+
+* une boucle ''for'':
+** pour traiter les éléments d'une liste dont la position nous intéresse (car alors l'itérateur peut indiquer la position de chaque élément dans la liste);
+** pour boucler un nombre déterminé ou déterminable de fois (car alors on peut construire une condition d'itération en fonction de la valeur de l'itérateur);
+
+* une boucle ''do ... while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on veut faire au moins une itération;
+
+* une boucle ''while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on n'a pas besoin d'au moins une itération.

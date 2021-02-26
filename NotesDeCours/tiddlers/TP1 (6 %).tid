@@ -1,6 +1,6 @@
 created: 20210216232655482
 list: 
-modified: 20210222174423341
+modified: 20210226173055105
 tags: [[99 Travaux pratiques et examens]]
 title: TP1 (6 %)
 type: text/vnd.tiddlywiki
@@ -18,7 +18,7 @@ type: text/vnd.tiddlywiki
 * On peut créer et utiliser un générateur de nombres aléatoires de la façon suivante:<div>
 
 ```cs
-// Initialise le générateur, ici appelé « rnd »
+// Initialise le générateur (une seule fois, idéalement au tout début du programme), ici appelé « rnd »
 Random rnd = new Random();
 
 // Génère et stocke un nombre aléatoire situé entre 0 et 9 (inclusivement)
@@ -55,9 +55,9 @@ int tailleEntiers = entiers.Length;  // Stockera 15 dans tailleEntiers
 
 # le programme doit afficher les règles du jeu, à savoir que de 2 à 5 joueurs s'affrontent en lançant chacun deux dés de 6 faces (avec des valeurs de 1 à 6), et que le ou les joueurs qui obtiennent le plus haut score gagnent la partie (il peut donc y avoir plusieurs gagnants);
 
-# pour chaque partie, le programme doit:
+# ''pour chaque partie'', le programme doit:
 ## demander combien il y a de joueurs (de 2 à 5);
-## pour chaque joueur:
+## ''pour chaque joueur'':
 ### demander au joueur, interpelé par son numéro, d'appuyer sur une touche pour lancer ses dés;
 ### sur l'appui d'une touche, lancer deux dés pour le joueur en question (c.-à-d., obtenir deux nombres aléatoires entre 1 et 6, inclusivement);
 ### afficher le résultat des lancers pour ce joueur, à savoir les valeurs individuelles des dés ainsi que le total obtenu;
@@ -66,7 +66,7 @@ int tailleEntiers = entiers.Length;  // Stockera 15 dans tailleEntiers
 
 # pour chaque entrée demandée par le programme:
 ## on peut supposer que l'usager entrera le bon type de donnée (p.ex., qu'il entrera un entier si on lui demande un entier);
-## on doit cependant valider que chaque réponse entrée est à l'intérieur des réponses possibles, sinon le programme doit répéter la question jusqu'à ce qu'une réponse valide soit obtenue.
+## on doit cependant valider que chaque réponse entrée est à l'intérieur des réponses possibles, sinon le programme doit ''répéter la question'' jusqu'à ce qu'une réponse valide soit obtenue.
 
 !! De plus:
 
