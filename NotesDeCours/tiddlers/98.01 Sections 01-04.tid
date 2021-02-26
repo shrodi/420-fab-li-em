@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210224150944093
+modified: 20210226145951012
 tags: [[98 Exercices supplémentaires]]
 title: 98.01 Sections 01-04
 type: text/vnd.tiddlywiki
@@ -69,10 +69,10 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 <<<
 </div>
 
-# Sachant que le 1er mars 2021 est un lundi et à l'aide de boucles ''for'' et de l'opérateur ''modulo'', écrire un programme qui affiche le calendrier du mois de mars 2021 du lundi au vendredi, avec les jours de la semaine en en-tête, comme ceci:
+# Sachant que le 1er mars 2021 est un lundi et à l'aide de boucles ''for'' et de l'opérateur ''modulo'', écrire un programme qui affiche le calendrier du mois de mars 2021 du lundi au dimanche, avec les jours de la semaine en en-tête, comme ceci:
 #> [img[https://i.imgur.com/MG3BFL5.png]]
 
-# Sachant que le 1er avril 2021 est un jeudi et à l'aide de boucles ''for'', de l'opérateur ''modulo'' et de l'''opérateur ternaire'', écrire un programme qui affiche le calendrier du mois d'avril 2021 du lundi au vendredi, avec les jours de la semaine en en-tête, comme ceci:
+# Sachant que le 1er avril 2021 est un jeudi et à l'aide de boucles ''for'', de l'opérateur ''modulo'' et de l'''opérateur ternaire'', écrire un programme qui affiche le calendrier du mois d'avril 2021 du lundi au dimanche, avec les jours de la semaine en en-tête, comme ceci:
 #> [img[https://i.imgur.com/hkmEM2o.png]]
 
 # Écrire un programme qui calcule et affiche la racine carrée de tous les nombres entiers par saut de 5 compris entre deux nombres eniers entrés au clavier (p.ex., si les deux nombres entrés au clavier sont 23 et 47, le programme calculera la racine carrée de 23, 28, 33, 38 et 43).
