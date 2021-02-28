@@ -1,0 +1,31 @@
+created: 20210228180137089
+modified: 20210228185224909
+tags: [[07 Tableaux unidimensionnels (vecteurs)]]
+title: 7.01 Introduction
+type: text/vnd.tiddlywiki
+
+Comme on a déjà pu le voir et le pratiquer dans les sections précédentes, il est possible de regrouper plusieurs valeurs d'un même type dans une variable de type ''tableau'', ce qui évite d'avoir à créer une variable pour chaque élément. Les tableaux sont particulièrement utiles pour enregistrer plusieurs valeurs en mémoire qui pourront être réutilisées plus tard dans le programme.
+
+```cs
+// Un tableau prédéfini; chaque élément du tableau est de type «typeElement»
+typeElement[] nomTableau = {element1, element2, element3, ...};
+
+// Un tableau vide de taille prédéfinie; chaque élément du tableau sera de type «typeElement»
+typeElement[] nomTableau = new typeElement[tailleTableau];
+```
+
+!! Exemples de déclarations
+
+```cs
+// Un tableau appelé «poids»; chaque élément est de type «decimal»
+decimal[] poids = {12.678m, 13m, 75.9m};
+
+// Un tableau appelé «noms»; chaque élément est de type «string»
+string[] noms = {"Jean", "Mireille", "Suzie", "Georges"};
+
+// Un tableau vide appelé «age» qui pourra contenir jusqu'à 27 entiers
+int[] ages = new int[27];
+
+// Un tableau vide appelé «adresses» qui pourra contenir jusqu'à 27 chaînes de caractères
+string[] adresses = new string[27];
+```
