@@ -1,5 +1,5 @@
 created: 20210216123629017
-modified: 20210216131817225
+modified: 20210228143440161
 tags: [[2.05 Les calculs]]
 title: 2.5.01 Opérations de base
 type: text/vnd.tiddlywiki
@@ -22,6 +22,9 @@ num3 = num1 * num2;
 
 // Division
 num3 = num1 / num2;
+
+// Modulo (reste d'une division entière)
+num3 = num1 % num2;
 
 // On peut utiliser les parenthèses pour regrouper des opérations
 num3 = (num1 - num2) / (num1 + num2);
@@ -51,3 +54,27 @@ float quotient3 = 1f / 3f;
 decimal quotient4 = 1m / 3m;
 ```
 </p>
+
+! Opérateurs raccourcis
+
+Lorsqu'une opération mathématique est faite sur une variable et le résultat stocké dans cette même variable, comme dans les cas ci-dessous:
+
+```cs
+num1 = num1 + num2;
+num1 = num1 - num2;
+num1 = num1 * num2;
+num1 = num1 / num2;
+num1 = num1 % num2;
+```
+
+C# offre des raccourcis évitant d'écrire deux fois le même nom de variable, de sorte que les lignes ci-dessus peuvent être réécrites de la façon suivante:
+
+```cs
+num1 += num2;
+num1 -= num2;
+num1 *= num2;
+num1 /= num2;
+num1 %= num2;
+```
+
+De plus, dans le cas spécifique où on veut ajouter ou retirer «1» à une variable, C# offre les opérateurs `++` et `--` (voir [[section 2.5.04|2.5.04 Incrémentation et décrémentation]] à ce sujet).

@@ -1,0 +1,19 @@
+created: 20210228134327889
+modified: 20210228140237720
+title: 98.1.1.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+Console.WriteLine($"Valeur absolue de -5 = {Math.Abs(-5)}");
+Console.WriteLine($"Valeur absolue de -5.5 = {Math.Abs(-5.5)}");
+Console.WriteLine($"Max(2,4) = {Math.Max(2,4)}");
+Console.WriteLine($"Min(2.2,4.6) = {Math.Min(2.4,4.6)}");
+Console.WriteLine($"2^10 = {Math.Pow(2.0,10.0)}");
+Console.WriteLine($"25^(1/2) = {Math.Sqrt(25.0)}");
+
+/* Puisque Math.Sin() et Math.Cos() prennent un angle en radians en argument,
+ * on doit convertir les angles de degrés à radians*/
+const double radiansParDegre = Math.PI / 180.0;
+Console.WriteLine($"Sin(30°) à 5 décimales = {Math.Round(Math.Sin(30.0 * radiansParDegre), 5)}");
+Console.WriteLine($"Cos(150°) à 5 décimales = {Math.Round(Math.Cos(150.0 * radiansParDegre), 5)}");
+```

@@ -1,0 +1,63 @@
+created: 20210228161008366
+modified: 20210228161019717
+title: 98.1.6.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+int date;
+string mois;
+
+// Étape 1
+Console.Write("Année pour laquelle calculer la date de Pâques: ");
+int A = Convert.ToInt32(Console.ReadLine());
+
+// Étape 2
+int O = (A % 19) + 1;
+
+// Étape 3
+int S = A / 100 + 1;
+
+// Étape 4
+int B = 3 * S / 4 - 12;
+
+// Étape 5
+int C = (8 * S + 5) / 25 - 5;
+
+// Étape 6
+int D = 5 * A / 4 - B - 10;
+
+// Étape 7
+int P = (11 * O + 20 + C - B) % 30;
+if (P < 0)
+{
+    P += 30;
+}
+if ((P == 25 && O > 11) || P == 24)
+{
+    P++;
+}
+
+// Étape 8
+int J = 44 - P;
+if (J < 21)
+{
+    J += 30;
+}
+
+// Étape 9
+J += 7 - ((D + J) % 7);
+
+// Étape 10
+if (J > 31)
+{
+    date = J - 31;
+    mois = "avril";
+}
+else
+{
+    date = J;
+    mois = "mars";
+}
+
+Console.WriteLine($"La date de Pâques pour l'année {A} est le {date} {mois}.");
+```

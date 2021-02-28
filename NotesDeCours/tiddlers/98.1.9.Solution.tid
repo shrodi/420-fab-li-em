@@ -1,0 +1,17 @@
+created: 20210228162615303
+modified: 20210228162639549
+title: 98.1.9.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+Console.Write("Entrer un 1er nombre entier: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Entrer un 2e nombre entier, plus grand que le 1er: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+for (int i = num1; i <= num2; i += 5)
+{
+    Console.WriteLine($"La racine carrée de {i} est {Math.Sqrt(i)}");
+}
+```

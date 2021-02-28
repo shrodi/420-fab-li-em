@@ -1,5 +1,5 @@
 created: 20210224142441747
-modified: 20210224144824984
+modified: 20210228163417877
 tags: [[05 Arguments de programme]]
 title: 5.Exercices
 type: text/vnd.tiddlywiki
@@ -10,3 +10,5 @@ type: text/vnd.tiddlywiki
 ## l'usager puisse entrer `--help` comme argument pour recevoir les instructions d'utilisation du programme;
 ## l'usager puisse entrer indifféremment `--temp` ou `-t` pour passer la température à convertir, et indifféremment `--unite` ou `-u` pour passer l'unité de température à convertir, et ce sans modifier le nombre d'affectations;
 ## le programme demande la température à convertir si elle n'a pas été donnée en argument, et de même avec l'unité de température à convertir.
+
+# Modifier les exercices 2, 3, 4, 6 et 9 de la [[section 98.01|98.01 Sections 01-04]] de manière à ce que les paramètres d'entrée puissent être donnés en argument plutôt qu'à l'invite du programme.

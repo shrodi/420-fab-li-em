@@ -1,5 +1,5 @@
 created: 20210222130506523
-modified: 20210226145951012
+modified: 20210228162946663
 tags: [[98 Exercices supplémentaires]]
 title: 98.01 Sections 01-04
 type: text/vnd.tiddlywiki
@@ -13,13 +13,22 @@ type: text/vnd.tiddlywiki
 ## Racine carrée de 25
 ## Sinus de 30 degrés arrondi à cinq décimales
 ## Cosinus de 150 degrés arrondi à cinq décimales
+#> [[Exemple de solution|98.1.1.Solution]]
 
 # En utilisant la constante PI de la classe Math, écrivez un programme qui calcule l’aire (en cm^^2^^) et le périmètre (en cm) d’un disque dont le rayon en mm est demandé à l’exécution du programme. Choisissez des arrondis cohérents, et soignez la qualité de l’affichage.
+#> [[Exemple de solution|98.1.2.Solution]]
 
-# Écrivez un programme qui demande à l’utilisateur d’entrer un nombre de secondes et qui le convertit en années, jours, heures, minutes et secondes. 
-#> ''Remarque:'' Pour simplifier le problème, ne tenez pas compte des années bissextiles, mais par contre votre programme doit fonctionner avec un nombre entré en notation exponentielle, p.ex., 1e14  secondes.
+# Écrivez un programme qui demande à l’utilisateur d’entrer un nombre de secondes et qui le convertit en années, jours, heures, minutes et secondes.<div>
 
-# Écrivez un programme qui génère une facture pour un produit. Il doit demander à l’utilisateur le nom et prénom du client, le nombre d’unités du produit et le prix par unités du produit, alors que le montant de la TPS (en %) et de la TVQ (en %) à ajouter au produit doivent être demandés à l’exécution du programme. Le programme doit ensuite afficher une facture soignée à la console où figurent toutes les informations pertinentes, dont [[la date du jour|https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.now?view=net-5.0]].
+<<<
+
+''Remarque:'' Pour simplifier le problème, ne tenez pas compte des années bissextiles, mais par contre votre programme doit fonctionner avec un nombre entré en notation exponentielle, p.ex., 1e14  secondes.
+<<<
+> [[Exemple de solution|98.1.3.Solution]]
+</div>
+
+# Écrivez un programme qui génère une facture pour un produit. Il doit demander à l’utilisateur le nom et prénom du client, le nombre d’unités du produit et le prix par unités du produit; le montant de la TPS (en %) et de la TVQ (en %) à ajouter au produit doivent également être demandés à l’exécution du programme. Le programme doit ensuite afficher une facture soignée à la console où figurent toutes les informations pertinentes, dont [[la date du jour|https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime.now?view=net-5.0]].
+#> [[Exemple de solution|98.1.4.Solution]]
 
 # Écrivez un programme qui génère aléatoirement le tirage d’une seule carte dans un jeu de cartes.<div>
 
@@ -40,6 +49,7 @@ ou encore
 
 `La carte tirée est la Dame de Carreau`
 </div>
+#> [[Exemple de solution|98.1.5.Solution]]
 
 # Écrire un programme C# qui calcule la date de Pâques à partir d'une année entrée au clavier.  Évidemment, pour réussir ce calcul, il faut un algorithme approprié.  En voici un, trouvé à la fin du 16^^e^^ siècle par l'astronome napolitain Aloysius Lilius et le mathématicien allemand Christopher Clavius.<div>
 
@@ -68,11 +78,15 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 * vous pouvez valider votre programme avec [[cette page Web|http://www.zpag.net/Calendrier/paques.htm]]
 <<<
 </div>
+#> [[Exemple de solution|98.1.6.Solution]]
 
 # Sachant que le 1er mars 2021 est un lundi et à l'aide de boucles ''for'' et de l'opérateur ''modulo'', écrire un programme qui affiche le calendrier du mois de mars 2021 du lundi au dimanche, avec les jours de la semaine en en-tête, comme ceci:
 #> [img[https://i.imgur.com/MG3BFL5.png]]
+#> [[Exemple de solution|98.1.7.Solution]]
 
 # Sachant que le 1er avril 2021 est un jeudi et à l'aide de boucles ''for'', de l'opérateur ''modulo'' et de l'''opérateur ternaire'', écrire un programme qui affiche le calendrier du mois d'avril 2021 du lundi au dimanche, avec les jours de la semaine en en-tête, comme ceci:
 #> [img[https://i.imgur.com/hkmEM2o.png]]
+#> [[Exemple de solution|98.1.8.Solution]]
 
 # Écrire un programme qui calcule et affiche la racine carrée de tous les nombres entiers par saut de 5 compris entre deux nombres eniers entrés au clavier (p.ex., si les deux nombres entrés au clavier sont 23 et 47, le programme calculera la racine carrée de 23, 28, 33, 38 et 43).
+#> [[Exemple de solution|98.1.9.Solution]]

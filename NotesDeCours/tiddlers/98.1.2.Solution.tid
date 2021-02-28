@@ -1,0 +1,18 @@
+created: 20210228140253169
+modified: 20210228140304845
+title: 98.1.2.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+// Reçoit le rayon en mm et le stocke en cm
+Console.Write($"Entrer le rayon du cercle en mm: ");
+double rayonCm = Convert.ToDouble(Console.ReadLine()) / 10.0;
+
+// Calcule l'aire et le périmètre
+double aireCm2 = Math.PI * Math.Pow(rayonCm, 2.0);
+double perimetreCm = 2.0 * Math.PI * rayonCm;
+
+// Affiche les valeurs à deux décimales près
+Console.WriteLine($"Aire du cercle = {aireCm2:f2} cm^2");
+Console.WriteLine($"Périmètre du cercle = {perimetreCm:f2} cm");
+```

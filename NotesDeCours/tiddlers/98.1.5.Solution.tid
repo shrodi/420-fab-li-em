@@ -1,0 +1,30 @@
+created: 20210228160549190
+modified: 20210228160812689
+title: 98.1.5.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+Random rnd = new Random();
+
+string[] couleurs = { "Coeur", "Carreau", "Pique", "Trèfle" };
+string[] valeurs = { "As", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Valet", "Dame", "Roi" };
+
+string couleur = couleurs[rnd.Next(couleurs.Length)];
+string valeur = valeurs[rnd.Next(valeurs.Length)];
+
+string article;
+if (valeur == "As")
+{
+    article = "l'";
+}
+else if (valeur == "Dame")
+{
+    article = "la ";
+}
+else
+{
+    article = "le ";
+}
+
+Console.WriteLine($"La carte tirée est {article}{valeur} de {couleur}");
+```
