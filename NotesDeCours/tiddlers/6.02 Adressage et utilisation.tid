@@ -1,13 +1,13 @@
 created: 20210228180229626
 list: 
-modified: 20210301161708424
+modified: 20210301184908693
 tags: [[06 Tableaux unidimensionnels (vecteurs)]]
 title: 6.02 Adressage et utilisation
 type: text/vnd.tiddlywiki
 
 Une fois un tableau défini, on accède aux valeurs qu'il contient par un ''index'', qui correspond à la position de l'élément du tableau, moins un (donc, le 1er élément est à l'index 0, le second élément à l'index 1, etc.); on indique un index avec le nom du tableau, suivi de l'index entre crochets. On peut récupérer une valeur du tableau ou encore la modifier.
 
-!! Exemple 7.2a
+!! Exemple 6.2a
 
 ```cs
 string[] noms = {"Julie", "Marc", "Rachelle", "Jean"};
@@ -21,7 +21,7 @@ noms[1] = "Mathieu";
 
 Les boucles ''for'' et ''foreach'' sont très utiles pour traiter les éléments d'un tableau; tel que déjà dit à la [[section 4.07|4.07 Quand utiliser quelle boucle?]], on utilisera une boucle ''foreach'' si la position (l'index) des éléments ne nous importe pas, et une boucle ''for'' dans le cas contraire.
 
-!! Exemple 7.2b
+!! Exemple 6.2b
 
 ```cs
 /* Deux tableaux contenant respectivement les noms de personnes
@@ -44,7 +44,7 @@ for (int i = 0; i < noms.Length; i++)
 
 Comme dit en introduction, il est notamment utile de créer des tableaux pour stocker des valeurs à réutiliser plus tard.
 
-!! Exemple 7.2c
+!! Exemple 6.2c
 
 ```cs
 /** Programme qui trace un graphique pour une fonction **/

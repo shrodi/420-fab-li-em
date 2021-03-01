@@ -1,5 +1,5 @@
 created: 20210228161951815
-modified: 20210228162019101
+modified: 20210301184006253
 title: 98.1.7.Solution
 type: text/vnd.tiddlywiki
 
@@ -24,7 +24,7 @@ for (int date=1; date <= nbJoursMois; date++)
     Console.Write($"{date,2} ");
 
     // Change de ligne après chaque dimanche
-    if (date > 0 && date % 7 == 0)
+    if (date % 7 == 0)
     {
         Console.Write("\n\t");
     }
