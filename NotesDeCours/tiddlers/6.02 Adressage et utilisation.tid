@@ -1,7 +1,8 @@
 created: 20210228180229626
-modified: 20210228220658562
-tags: [[07 Tableaux unidimensionnels (vecteurs)]]
-title: 7.02 Adressage et utilisation
+list: 
+modified: 20210301161708424
+tags: [[06 Tableaux unidimensionnels (vecteurs)]]
+title: 6.02 Adressage et utilisation
 type: text/vnd.tiddlywiki
 
 Une fois un tableau défini, on accède aux valeurs qu'il contient par un ''index'', qui correspond à la position de l'élément du tableau, moins un (donc, le 1er élément est à l'index 0, le second élément à l'index 1, etc.); on indique un index avec le nom du tableau, suivi de l'index entre crochets. On peut récupérer une valeur du tableau ou encore la modifier.
@@ -11,7 +12,7 @@ Une fois un tableau défini, on accède aux valeurs qu'il contient par un ''inde
 ```cs
 string[] noms = {"Julie", "Marc", "Rachelle", "Jean"};
 
-// Stocke le premier élément du tableau dans la variable «nom1»
+// Stocke le premier élément du tableau dans la variable «nom1» (donc ici «Julie»)
 string nom1 = noms[0];
 
 // Stocke «Mathieu» comme 2e élément du tableau (remplacera «Marc»)
@@ -100,3 +101,7 @@ for (int col = tailleMarge; col < tailleMarge+nbColonnes; col += intervalleX)
 
 Console.WriteLine();
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/daae1251-b51f-4e91-abe4-e27b2d1572b5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

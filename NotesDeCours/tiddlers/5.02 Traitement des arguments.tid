@@ -1,5 +1,5 @@
 created: 20210224135017173
-modified: 20210224142215067
+modified: 20210301160413833
 tags: [[05 Arguments de programme]]
 title: 5.02 Traitement des arguments
 type: text/vnd.tiddlywiki
@@ -90,3 +90,7 @@ static void Main(string[] args)
 }
 ```
 </div>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/88472299-a634-4b06-af04-4f8c33e64004?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

@@ -1,7 +1,8 @@
 created: 20210228180137089
-modified: 20210228185224909
-tags: [[07 Tableaux unidimensionnels (vecteurs)]]
-title: 7.01 Introduction
+list: 
+modified: 20210301161655440
+tags: [[06 Tableaux unidimensionnels (vecteurs)]]
+title: 6.01 Introduction
 type: text/vnd.tiddlywiki
 
 Comme on a déjà pu le voir et le pratiquer dans les sections précédentes, il est possible de regrouper plusieurs valeurs d'un même type dans une variable de type ''tableau'', ce qui évite d'avoir à créer une variable pour chaque élément. Les tableaux sont particulièrement utiles pour enregistrer plusieurs valeurs en mémoire qui pourront être réutilisées plus tard dans le programme.

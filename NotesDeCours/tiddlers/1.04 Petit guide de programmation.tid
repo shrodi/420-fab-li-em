@@ -1,0 +1,59 @@
+created: 20210301125750640
+modified: 20210301142328081
+tags: [[01 Introduction]]
+title: 1.04 Petit guide de programmation
+type: text/vnd.tiddlywiki
+
+La présente section a pour but de donner des pistes de réflexion dans l'écriture d'un programme.
+
+! Besoin
+
+L'écriture d'un programme part généralement d'un besoin; l'identification et la compréhension du besoin est la première étape vers l'écriture d'un programme.
+
+! Intrants et extrants
+
+Une fois le besoin exprimé, une façon très courante et pratique de conceptualiser les programmes est sous la forme d'intrants (//input//) et de sortants (//outpout//):
+
+[img width="900" [https://i.imgur.com/hmAlTdJ.png]]
+
+Avant de commencer à écrire un programme, la première étape devrait donc toujours être de se demander:
+
+# ''Quels sont les intrants?''
+## Que va-t-on devoir fournir au programme comme données? Quels types (des nombres, du texte)?
+## Comment va-t-on passer les données au programme? Entrée clavier à l'invite du programme? Arguments? Par un fichier?
+
+# ''Quels sont les extrants?''
+## Au final, que veut-on obtenir? Qu'est-ce qu'on veut?
+## Comment récupérer les extrants? Affichage à l'écran? Enregistrement dans un fichier? Transmission par réseau?
+
+! Les traitements
+
+Entre les intrants et les extrants, il y a le programme et ses traitements. Savoir d'où on part (les intrants) et où on s'en va (les extrants) aide à concevoir ce qui devra être fait pour passer de l'un à l'autre, mais il n'y a pas de «recette magique» universelle, puisqu'il y a une infinité de combinaison de besoins, d'intrants et de sortants possibles.
+
+Dans certains cas, il y a des algorithmes connus; par exemple, une formule mathématique pour convertir des °C en °F et vice-versa. Dans la vaste majorité des cas, cependant, il revient à la programmeuse ou au programmeur de penser et de créer une solution unique en utilisant les outils offerts par le langage de programmation utilisé.
+
+Je rappellerai cependant ce qui a déjà été exprimé à la section 1.2.03, à savoir que la programmation d'un algorithme commence souvent par la décomposition des étapes mentales que l'on apliquerait si on avait juste du papier et un crayon.
+
+<p class="boite">
+
+!! Exemple
+
+''Besoin:'' On désire convertir une température entrée au clavier de °C à °F , et vice versa.
+
+# De quoi a-t-on besoin au départ?
+#* la valeur de la température à convertir (un nombre), entrée au clavier à l'invite du programme
+#* l'unité (°C ou °F) de la température à convertir (du texte), entrée au clavier à l'invite du programme
+
+# Que veut-on à la fin?
+#* On désire que le programme affiche à la console la valeur convertie et ses unités
+
+# Quels traitements effectuer?
+## On doit demander et stocker les intrants
+##* Valeur température: type ''double'' ou ''decimal'', Console.Write() pour invite, Console.~ReadLine() + classe Convert pour lecture de l'entrée clavier
+##* Unité de température: type ''string'', Console.Write() pour invite, Console.~ReadLine() pour lecture de l'entrée clavier
+## On doit effectuer la conversion
+##* Ici, on dispose d'une formule déjà connue, soit que °F = °C &times; 9/5 + 32 &rArr; °C = (°F - 32) &times; 5/9
+##* On doit choisir la bonne formule selon les unités entrées (instruction conditionnelle)
+## On affiche le résultat
+##* Console.~WriteLine() pour afficher le résultat de la conversion
+</p>
