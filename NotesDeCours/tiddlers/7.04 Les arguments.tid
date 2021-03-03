@@ -1,0 +1,47 @@
+created: 20210303151112307
+modified: 20210303161052726
+tags: [[07 Routines]]
+title: 7.04 Les arguments
+type: text/vnd.tiddlywiki
+
+On a déjà vu comment [[passer des arguments au programme|05 Arguments de programme]] et comment ces arguments sont en fait stockés dans un tableau de chaînes passé à la fonction Main().
+
+Comme Main() est une fonction, on comprend facilement que l'on peut certainement en fait passer des arguments à toutes les fonctions; qui plus est, alors qu'on se contentera de toujours passer un tableau de chaînes au Main(), on peut en fait passer n'importe quelle quantité et n'importe quel type d'arguments aux fonctions que l'on crée; on place les arguments entre parenthèses, et il revient à la déclaration de fonction de définir le nombre et le type d'arguments à recevoir.
+
+Les arguments reçus par une fonction sont des variables au même titre que les autres variables de la fonction, et ne sont pas visibles de l'extérieur de la fonction.
+
+Ainsi, par exemple, le dernier exemple de la section 7.03 aurait avant à être réécrit en utilisant des arguments:
+
+```cs
+static void Main()
+{
+    // Calcule des racines de nbMin à nbMax et les retourne dans un tableau
+    static double[] CalculerDesRacines(int nbMin, int nbMax)
+    {
+        // Le tableau qui contiendra les racines
+        double[] racines = new double[nbMax - nbMin + 1];
+
+        // Calcule les racines de nbMin à nbMax
+        for (int nb = nbMin; nb <= nbMax; nb++)
+        {
+            racines[nb - nbMin] = Math.Sqrt(nb);
+        }
+
+        return racines;
+    }
+
+    int limiteInferieure = 10;
+    int limiteSuperieure = 20;
+
+    // Reçoit les racines
+    double[] racines = CalculerDesRacines(limiteInferieure, limiteSuperieure);
+
+    // Affiche les racines
+    foreach (double racine in racines)
+    {
+        Console.WriteLine(racine);
+    }
+}
+
+```
+

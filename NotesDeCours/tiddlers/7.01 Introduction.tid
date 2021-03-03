@@ -1,0 +1,121 @@
+created: 20210303140729352
+modified: 20210303145515207
+tags: [[07 Routines]]
+title: 7.01 Introduction
+type: text/vnd.tiddlywiki
+
+[[Les boucles|04 Boucles]] nous permettent déjà de répéter un même bloc de code plusieurs fois sans avoir à le recopier.
+
+Par exemple, si je veux afficher les nombres de 1 à 5, au lieu de faire:
+
+```cs
+// Affiche les nombres de 1 à 5
+Console.WriteLine(1);
+Console.WriteLine(2);
+Console.WriteLine(3);
+Console.WriteLine(4);
+Console.WriteLine(5);
+```
+
+Ce qui me force à répéter cinq fois presque la même ligne, je peux plutôt faire:
+
+```cs
+// Affiche les nombres de 1 à 5
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+```
+
+Ce qui fait sauver beaucoup de temps d'écriture, surtout si on avait, p.ex., 1000 nombres à afficher!
+
+Mais que se passe-t-il si, pour une raison X, j'ai besoin d'afficher les nombres de 1 à 5 une première fois, et ensuite une seconde fois, ou une troisième fois, etc.? Si cela doit se faire une fois après l'autre, on pourrait faire deux boucles imbriquées:
+
+```cs
+// Affiche trois fois de suite les nombres de 1 à 5
+for (int i = 1; i <= 3; i++)
+{
+    for (int j = 1; j <= 5; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+```
+
+Mais que faire, par contre, si ces affichages ne sont pas consécutifs? Il faudra alors recopier le code; p.ex.:
+
+```cs
+// Code quelconque avant la 1re boucle...
+
+// Affiche les nombres de 1 à 5
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// Code intermédiaire...
+
+// Affiche les nombres de 1 à 5
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// Autre code intermédiaire...
+
+// Affiche les nombres de 1 à 5
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// etc.
+```
+
+Dans ce cas, on se retrouve a répéter souvent le même code; sûrement qu'il y a une meilleure façon de faire!
+
+Oui: les ''routines''!
+
+Une ''routine'' est un bloc de code appelable, c.-à-d. un bloc de code que l'on peut exécuter à volonté dans un programme.
+
+Par exemple, le code ci-dessus pourrait être transformé de la façon suivante:
+
+```cs
+static void AfficherLignes()
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+AfficherLignes();
+
+// Code intermédiaire...
+
+AfficherLignes();
+
+// Autre code intermédiaire...
+
+AfficherLignes();
+
+// etc.
+```
+
+Donc, on a inséré la boucle d'affichage des lignes à l'intérieur d'un bloc (une routine) que l'on a appelé `AfficherLignes()`, et qu'il suffit d'appeler à chaque fois qu'on en a besoin, au lieu de répéter à chaque fois toutes les lignes du bloc. C'est une grande économie d'écriture!
+
+Les puristes du langage distinguent deux grands types de routines:
+
+* les ''procédures'': des routines qui ne retournent pas de valeur (p.ex., une routine d'affichage à l'écran)
+* les ''fonctions'': des routines qui retournent une valeur.
+
+En pratique, cependant, on confond souvent les deux. 
+
+D'ailleurs, alors que certains langages les distinguent clairement l'une de l'autre, en C# une procédure n'est qu'un type particulier de fonction (une fonction qui retoune ''void'', comme ci-dessus). Et lorsqu'une routine est placée à l'intérieur d'une classe (que l'on verra plus tard), on l'appelle plus particulièrement une ''méthode''.
+
+<p class="boite">
+
+! La fonction Main()
+
+On peut voir dans le dernier exemple que la déclaration de `AfficherLignes()` ressemble beaucoup à celle du Main(); effectivement, cela nous permet de conclure que le Main() est en fait une routine, simplement est le point d'entrée du programme.
+</p>

@@ -1,0 +1,88 @@
+created: 20210303142616320
+modified: 20210303152619010
+tags: [[07 Routines]]
+title: 7.02 Les fonctions locales
+type: text/vnd.tiddlywiki
+
+Pour commencer, on continuera d'écrire notre code à l'intérieur du Main(), comme on le fait depuis le début.
+
+ Lorsqu'on crée des fonctions directement dans le Main(), on les appelle ''fonctions locales'', comme `AfficherLignes()` ci-dessous:
+
+```cs
+static void Main()
+{
+    // Affiche nombres de 1 à 5
+    static void AfficherLignes()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+
+    AfficherLignes();
+}
+```
+
+On peut créer autant de fonctions que désirées; on les place par convention au début du programme, avant les variables du programme.
+
+Les variables déclarées dans une fonction n'appartiennent qu'à la fonction et seront inconnues du programme, et vice-versa.
+
+!! Exemples
+
+Les deux exemples ci-dessous montrent des choses à ne pas faire:
+
+```cs
+static void Main()
+{
+    // Demande un nombre
+    static void DemanderNombre()
+    {
+        Console.Write("Entrer un nombre réel: ");
+        double nombre = Convert.ToDouble(Console.ReadLine());
+    }
+
+    DemanderNombre();
+
+    // Donnera une erreur, car «nombre» est inconnu du programme
+    Console.WriteLine($"Le nombre entré est: {nombre}");    
+}
+```
+
+```cs
+static void Main()
+{
+    double nombre = 0;
+
+    // Demande un nombre
+    static void DemanderNombre()
+    {
+        Console.Write("Entrer un nombre réel: ");
+
+        // Générera une erreur, car «nombre» est inconnu de la fonction DemanderNombre()
+        nombre = Convert.ToDouble(Console.ReadLine());
+    }
+
+    DemanderNombre();
+
+    // Afficherait toujours 0
+    Console.WriteLine($"Le nombre entré est: {nombre}");    
+}
+```
+
+Sans changer la déclaration de la fonction, il faudrait plutôt déplacer le ~WriteLine() dans la fonction pour obtenir quelque-chose de fonctionnel:
+
+```cs
+static void Main()
+{
+    // Demande un nombre
+    static void DemanderNombre()
+    {
+        Console.Write("Entrer un nombre réel: ");
+        double nombre = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Le nombre entré est: {nombre}");
+    }
+
+    DemanderNombre();        
+}
+```
