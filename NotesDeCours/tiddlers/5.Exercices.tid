@@ -1,5 +1,5 @@
 created: 20210224142441747
-modified: 20210303174320789
+modified: 20210303174903372
 tags: [[05 Arguments de programme]]
 title: 5.Exercices
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 # Concernant le second exemple de la [[section 5.02|5.02 Traitement des arguments]], quels sont le rôle et la pertinence des ``++i`` dans la boucle ''for'' par rapport au `i++` d'après itération?
 
 # Modifier le second exemple de la [[section 5.02|5.02 Traitement des arguments]] de manière à ce que:
-## l'usager puisse entrer `--help` comme argument pour recevoir les instructions d'utilisation du programme; dans ce cas, le programme doit se terminer après l'affichage des instructions;
+## l'usager puisse entrer `--help` comme seul argument pour recevoir les instructions d'utilisation du programme; dans ce cas, le programme doit se terminer après l'affichage des instructions;
 ## l'usager puisse entrer indifféremment `--temp` ou `-t` pour passer la température à convertir, et indifféremment `--unite` ou `-u` pour passer l'unité de température à convertir, et ce sans modifier le nombre d'affectations;
 ## le programme demande la température à convertir si elle n'a pas été donnée en argument, et de même avec l'unité de température à convertir.
 
