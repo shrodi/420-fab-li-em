@@ -1,10 +1,10 @@
 created: 20210303161059945
-modified: 20210303161548518
+modified: 20210303162309873
 tags: [[07 Routines]]
 title: 7.Exercices
 type: text/vnd.tiddlywiki
 
 # Réécrire la [[solution de l'exercice 2.5|2.5.Solution]] de manière à ce que:
-## la température et l'unité soient chacune demandée par une fonction locale (donc deux fonctions) qui retourne la valeur entrée et convertie au besoin;
+## la température et l'unité soient chacune demandée par une fonction locale qui retourne la valeur entrée au clavier (et convertie au besoin) (donc deux fonctions);
 ## le calcul du résultat soit réalisé par une 3e fonction locale qui prend la température et l'unité en argument et retourne la valeur convertie;
 ## l'affichage du résultat soit réalisé par une 4e fonction locale qui reçoit en argument les informations à afficher.
