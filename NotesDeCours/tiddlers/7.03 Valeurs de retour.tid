@@ -1,5 +1,5 @@
 created: 20210303151521469
-modified: 20210305124905855
+modified: 20210305131808118
 tags: [[07 Routines]]
 title: 7.03 Valeurs de retour
 type: text/vnd.tiddlywiki
@@ -85,3 +85,7 @@ static string Traduire(string motAnglais)
 }
 ```
 </p>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b8b4f868-0a3b-4338-bae2-07b70d986509?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

@@ -1,5 +1,5 @@
 created: 20210303140729352
-modified: 20210303145515207
+modified: 20210305131708819
 tags: [[07 Routines]]
 title: 7.01 Introduction
 type: text/vnd.tiddlywiki
@@ -119,3 +119,7 @@ D'ailleurs, alors que certains langages les distinguent clairement l'une de l'au
 
 On peut voir dans le dernier exemple que la déclaration de `AfficherLignes()` ressemble beaucoup à celle du Main(); effectivement, cela nous permet de conclure que le Main() est en fait une routine, simplement est le point d'entrée du programme.
 </p>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/ac5fbb65-7b1f-4b71-8b71-ac173e061ed1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
