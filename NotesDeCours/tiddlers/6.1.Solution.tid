@@ -1,0 +1,70 @@
+created: 20210305112223235
+modified: 20210305112301505
+title: 6.1.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+/** Programme qui trace un graphique pour une fonction **/
+
+int nbMin = 1;              // Nombre minimal pour lequel on désire le calcul
+int nbMax = 10;             // Nombre maximal pour lequel on désire le calcul
+const int intervalleX = 8;  // Intervalle de présentation des valeurs d'abscisse
+const int nbLignes = 50;  // Nombre de colonnes d'affichage du graphique
+const int nbColonnes = 80;  // Nombre de colonnes d'affichage du graphique
+const int tailleMarge = 4;  // Taille de la marge gauche du graphique
+
+// Un tableau qui contiendra tous les resultats de calcul
+double[] resultats = new double[nbMax - nbMin + 1];
+
+// On calcule et enregistre les résultats nbMin à nbMax, inclusivement 
+for (int n = nbMin; n <= nbMax; n++)
+{
+    /* L'index de l'élément ayant la valeur n sera n-nbMin
+      (donc, on aura resultats[0] = calcul(nbMin), resultats[1] = calcul(nbMin+1), etc.) */
+    // NOTE: on peut changer le calcul ci-dessus pour n'importe quelle fonction croissant avec n
+    resultats[n - nbMin] = Math.Pow(n, 2);
+}
+
+// On trace un graphique de n en fonction de calcul(n) sur nbLignes colonnes
+Console.WriteLine($"{"Graphique de calcul(n) en fonction de n",nbLignes - ((nbLignes - 40) / 2)}");
+Console.WriteLine();
+for (int i = nbMax - nbMin, ligne = nbLignes; i >= 0; i--)
+{
+    // Ramène le résultat sur une échelle de nbLignes
+    int ligneY = (int)Math.Round(nbLignes * (resultats[i] - resultats[0]) / (resultats[nbMax - nbMin] - resultats[0]));
+
+    // Ramène n sur une échelle de nbColonnes
+    int colonneX = (int)Math.Round(1.0 * nbColonnes * i / (nbMax - nbMin));
+
+    // On se rend à ligneY pour placer la valeur
+    while (ligne-- != ligneY)
+    {
+        Console.WriteLine();
+    }   
+
+    // On affiche la valeur de y (l'échelle des ordonnées)
+    Console.Write($"{resultats[i], -tailleMarge}");
+
+    // On met des blancs avant de mettre le point
+    for (int j = 0; j < colonneX - 1; j++)
+    {
+        Console.Write(" ");
+    }
+
+    // On met le point
+    Console.WriteLine("*");
+}
+
+// On affiche l'échelle des abscisses par intervalles
+Console.Write($"{" ", -tailleMarge}");
+for (int col = 1; col <= nbColonnes; col += intervalleX)
+{
+    // Calcule le n correspondant à la colonne
+    double n = ((double)col * ((double)nbMax - (double)nbMin) / (double)nbColonnes) + (double)nbMin;
+
+    // Affiche la valeur
+    Console.Write($"{n, -intervalleX:f1}");
+}
+
+Console.WriteLine();
+```
