@@ -1,5 +1,5 @@
 created: 20210305112223235
-modified: 20210305112301505
+modified: 20210305141600493
 title: 6.1.Solution
 type: text/vnd.tiddlywiki
 
@@ -21,12 +21,12 @@ for (int n = nbMin; n <= nbMax; n++)
 {
     /* L'index de l'élément ayant la valeur n sera n-nbMin
       (donc, on aura resultats[0] = calcul(nbMin), resultats[1] = calcul(nbMin+1), etc.) */
-    // NOTE: on peut changer le calcul ci-dessus pour n'importe quelle fonction croissant avec n
+    // NOTE: on peut changer le calcul ci-dessous pour n'importe quelle fonction croissant avec n
     resultats[n - nbMin] = Math.Pow(n, 2);
 }
 
 // On trace un graphique de n en fonction de calcul(n) sur nbLignes colonnes
-Console.WriteLine($"{"Graphique de calcul(n) en fonction de n",nbLignes - ((nbLignes - 40) / 2)}");
+Console.WriteLine($"{"Graphique de calcul(n) en fonction de n", nbColonnes - ((nbColonnes - 40) / 2)}");
 Console.WriteLine();
 for (int i = nbMax - nbMin, ligne = nbLignes; i >= 0; i--)
 {

@@ -1,5 +1,5 @@
 created: 20210303151112307
-modified: 20210305131832606
+modified: 20210306131801727
 tags: [[07 Routines]]
 title: 7.04 Les arguments
 type: text/vnd.tiddlywiki
@@ -60,7 +60,7 @@ static void AfficherEntier(int entierFonction)
 }
 
 int entierProgramme = 22;
-Afficher(entierProgramme );
+AfficherEntier(entierProgramme );
 
 // Affichera 22, car entierFonction est une copie de entierProgramme
 Console.WriteLine($"Entier programme = {entierProgramme }");
