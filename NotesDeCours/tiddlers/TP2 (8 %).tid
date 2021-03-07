@@ -1,5 +1,5 @@
 created: 20210304215949777
-modified: 20210307151119644
+modified: 20210307155601683
 tags: [[99 Travaux pratiques et examens]]
 title: TP2 (8 %)
 type: text/vnd.tiddlywiki
@@ -25,13 +25,27 @@ bool conversionReussie = int.TryParse(chaineNumerique, out entier);
 ```
 </div>
 
-# On peut sortir d'un programme console à n'importe quel moment de la façon suivante:<div>
+# ''[Pas essentiel pour le travail]'' On peut sortir d'un programme console à n'importe quel moment de la façon suivante:<div>
 
 ```cs
 Environment.Exit(codeSortie);
 ```
 
 où `codeSortie` est de type ''int'' et est typiquement soit ''0'' (sortie intentionnelle normale, sans erreur), soit ''1'' (sortie en raison d'une erreur).
+</div>
+
+# ''[Pas essentiel pour le travail]'' On peut réinitialiser un tableau déjà déclaré de la façon suivante:<div>
+
+```cs
+// On déclare et définit le tableau «chaines»
+string[] chaines = { "maison", "cheval", "voiture" };
+
+// code intermédiaire...
+
+// On redéfinit (écrase) le tableau chaines avec de nouvelles valeurs
+chaines = new string[] { "banane", "pomme", "cerise" }; 
+
+```
 </div>
 
 # Le 1er janvier 2021 était un vendredi.
