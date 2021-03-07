@@ -1,5 +1,5 @@
 created: 20210304215949777
-modified: 20210307131317568
+modified: 20210307151119644
 tags: [[99 Travaux pratiques et examens]]
 title: TP2 (8 %)
 type: text/vnd.tiddlywiki
@@ -38,7 +38,7 @@ où `codeSortie` est de type ''int'' et est typiquement soit ''0'' (sortie inten
 
 !! Programmer un logiciel affichant n'importe quel mois de 2021 selon les spécifications suivantes:
 
-# le programme doit pouvoir récupérer indifféremment le nom (en français, en minuscules) ou le numéro (1 à 12) du mois que l'on désire afficher, lequel mois peut être passé soit en argument (avec les options `--mois` ou `-m`, indifféremment (les deux options doivent être possibles)), ou sinon demandé à l'invite du programme;
+# le programme doit pouvoir récupérer indifféremment le nom (en français, selon le format que vous préférez) ou le numéro (1 à 12) du mois que l'on désire afficher, lequel mois peut être passé soit en argument (avec les options `--mois` ou `-m`, indifféremment (les deux options doivent être possibles)), ou sinon demandé à l'invite du programme;
 
 # le programme doit également pouvoir accepter un seul argument `--help` provoquant l'affichage des instructions d'utilisation du programme suivi de la fermeture du programme;
 
