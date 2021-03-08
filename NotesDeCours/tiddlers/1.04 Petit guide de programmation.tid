@@ -1,5 +1,5 @@
 created: 20210301125750640
-modified: 20210301142328081
+modified: 20210308154143667
 tags: [[01 Introduction]]
 title: 1.04 Petit guide de programmation
 type: text/vnd.tiddlywiki
@@ -57,3 +57,30 @@ Je rappellerai cependant ce qui a déjà été exprimé à la section 1.2.03, à
 ## On affiche le résultat
 ##* Console.~WriteLine() pour afficher le résultat de la conversion
 </p>
+
+! La méthode de développement
+
+Il existe diverses stratégies de planification de développement; celle que je préfère et préconise est appelée la [[méthode en spirale|https://fr.ryte.com/wiki/Mod%C3%A8le_en_spirale#Avantages.2Finconv.C3.A9nients]].
+
+En résumé, cette méthode consiste à développer de manière itérative, c'est-à-dire à commencer avec un tout petit noyau qui compile et fonctionne, puis à ajouter des éléments et des fonctionnalités au fur et à mesure (préférentiellement en commençant le plus possible par les fonctionnalités les plus importantes), mais en s'assurant que le tout fonctionne après chaque itération, au lieu d'essayer de tout programmer d'un coup ou par paliers (p.ex., [[méthode en cascade|https://fr.ryte.com/wiki/Waterfall_model]]) et de se retrouver à la fin avec un gros programme à déboguer.
+
+Bien que possiblement plus lente, avec la méthode spirale, on est assuré de pouvoir remettre à temps quelque-chose qui fonctionne au moins en partie, alors que c'est beaucoup moins sûr avec une méthode comme celle en cascade.
+
+La méthode en spirale est particulièrement bien adaptée aux gros projets et s'insère notamment très bien dans un contexte [[agile|http://agilemanifesto.org/principles.html]], bien que, malheureusement, pour toutes sortes de raisons, la méthode en cascade soit encore très utilisée, notamment dans l'administration publique.
+
+<<<
+
+!! Exemple
+
+Pour continuer dans l'exemple du convertisseur de température, on pourrait avoir les itérations suivantes:
+
+# écrire un programme qui convertit une température codée dur de °C vers °F et affiche le résultat;
+
+# modifier le programme afin d'ajouter la conversion d'une température codée dur de °F vers °C (en plus de la précédente) et affiche le résultat;
+
+# modifier le programme afin qu'il demande les intrants, mais qu'il se contente de les afficher, sans les incorporer aux calculs;
+
+# modifier le programme afin qu'il utilise les intrants pour effectuer seulement le calcul attendu.
+
+Donc, à chaque itération on a un programme fonctionnel, bien qu'incomplet; le temps «perdu» est le temps de parfois devoir défaire du code écrit à une itération précédente pour attacher la nouvelle itération; p.ex., à la dernière itrération, il faudra enlever l'affichage systématique de deux calculs codés dur pour le remplacer par un affichage conditionnel, et possiblement enlever aussi ou déplacer l'affichage systématique des intrants.
+<<<

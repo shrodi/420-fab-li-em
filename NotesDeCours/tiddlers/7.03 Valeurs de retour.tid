@@ -1,5 +1,5 @@
 created: 20210303151521469
-modified: 20210305131808118
+modified: 20210308160852885
 tags: [[07 Routines]]
 title: 7.03 Valeurs de retour
 type: text/vnd.tiddlywiki
@@ -56,6 +56,28 @@ static void Main()
     }
 }
 ```
+
+
+! Retourner un ''null''
+
+Tout comme une variable [[peut contenir un null|2.09 Variables nullables]] en apposant un point d'interrogation à son type déclaré, une fonction peut retourner un ''null'' en faisant de même avec son type déclaré:
+
+```cs
+// Convertit une chaîne en entier et retourne la valeur obtenu, ou sinon (si échec de conversion) retourne null
+static int? ConvertirEntier(string chaineEntier)
+{
+    if (int.TryParse(chaineEntier, out int entier))
+    {
+        return entier;
+    }
+    else
+    {
+        return null;
+    }
+}
+```
+
+---
 
 <p class="boite">
 

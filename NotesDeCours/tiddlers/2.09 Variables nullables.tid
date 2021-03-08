@@ -1,0 +1,27 @@
+created: 20210308144112846
+modified: 20210308160247333
+tags: [[02 Variables]]
+title: 2.09 Variables nullables
+type: text/vnd.tiddlywiki
+
+Par défaut, lorsque définie, une variable doit nécessairement contenir une valeur de son type.
+
+Il est cependant possible de permettre à une variable ''de type non référencé'' (essentiellement, les types de base sauf ''string'') de contenir une «absence de valeur», appelée ''null''.
+
+Pour ce faire, on doit suffixer le type de la variable d'un point d'interrogation (''?''), comme ceci:
+
+```cs
+// La variable «entier» pourra contenir un nombre entier ou la valeur null
+int? entier;
+
+// Déclaration d'un tableau pouvant contenir 10 nombres réels de type double, ou encore des null
+double?[] reels = new double?[10];
+```
+
+Ceci est parfois pratique pour marquer l'indétermination d'une valeur.
+
+<<<
+!! Note:
+
+Depuis C# 8.0, il est possible de rendre nullables des variables référencées en donnant un paramètre au projet, soit dans un fichier de configuration, soit en mettant `#nullable enable` dans le fichier .cs.
+<<<
