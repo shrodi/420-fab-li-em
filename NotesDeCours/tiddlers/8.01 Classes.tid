@@ -1,0 +1,109 @@
+created: 20210314170222309
+list: 
+modified: 20210314194336441
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.01 Classes
+type: text/vnd.tiddlywiki
+
+Nous avons vu que les boucles, puis les routines, sont des structures permettant de regrouper du code:
+
+* les boucles permettent de répéter successivement plusieurs fois un même bloc de code ;
+* les routines permettent d'isoler un bloc de code de manière à l'appeler aussi souvent que nécessaire à partir de de n'importe où dans un programme.
+
+Une autre structure enveloppante a par la suite été développée: la ''classe''. Une classe permet de regrouper des variables et des routines apparentées dans un seul bloc; les variables d'une classe sont plus spécifiquement appelées ''attributs'' (ou ''propriétés''), alors que les routines d'une classe sont appelées ''méthode''; les attributs et méthodes, dans leur ensemble, sont appelés les ''membres'' d'une classe.
+
+Un principe par ailleurs sous-jacent aux classes est celui d'''encapsulation de données'': cela signifie qu'on désire que les attributs d'une classe n'appartiennent qu'à elle et ne soient visibles et contrôlés que par elle.
+
+Une classe donne naissance à un ''type''; en effet, les [[instances d'une classe|8.02 Instances de classes (objets)]] seront des objets du type défini par la classe. À ce titre, il est à noter que tous les types C#, incluant les types de base comme ''int'', ''double'', etc., sont des classes.
+
+À noter également que, par convention, à l'exception des types de base internes à C#, les noms de classe commencent toujours par une majuscule.
+
+<p class="boite">
+
+Depuis le début du cours, nous avons travaillé avec une fonction ''Main()'' se trouvant à l'intérieur d'une classe appelée ''Program'' par défaut; nous avons ensuite créé des variables et des fonctions locales dans cette fonction.
+
+! Dès à présent, nous allons:
+
+# enlever les arguments de Main() si non utilisés;
+# éviter de créer des fonctions locales (i.e. dans une autre fonction);
+# toujours regrouper les fonctions apparentées (travaillant de concert ou associées à un même concept) dans une ou plusieurs classes «soeurs» de la classe ''Program'' (donc à l'extérieur de la classe ''Program'', mais à l'intérieur du même ''namespace''), aux noms appropriés;
+# éviter le plus possible de déclarer et utiliser des variables dans le Main();
+# limiter au minimum le code contenu dans le Main().
+
+</p>
+
+!! Exemple
+
+Le 1er exemple de la section 7.04 pourrait être récrit de la façon suivante, en regroupant tout ce qui touche le traitement des racines  (en ajoutant en plus la saisie des limites à l'invite du programme) dans une classe, ce qui réduit considérablement le code du Main() et le rend plus lisible et compréhensible comme un résumé général de ce qui se passe:
+
+```cs
+using System;
+
+namespace Demo
+{
+    // Classe servant à gérer les opérations autour du calcul de racines
+    class Racines
+    {
+        // Limites par défaut si on n'en demande pas
+        private int limiteInferieure = 10;
+        private int limiteSuperieure = 20;
+
+        // Contiendra les racines calculées
+        private double[] racines;
+
+        // Calcule des racines de nbMin à nbMax et les retourne dans un tableau
+        public void Calculer()
+        {
+            // Le tableau qui contiendra les racines
+            racines = new double[limiteSuperieure - limiteInferieure + 1];
+
+            // Calcule les racines de nbMin à nbMax
+            for (int nb = limiteInferieure; nb <= limiteSuperieure; nb++)
+            {
+                racines[nb - limiteInferieure] = Math.Sqrt(nb);
+            }
+        }
+
+        // Demande les limites 
+        public void DemanderLimites()
+        {
+            do {
+                Console.Write("Entrer une limite de calcul inférieure: ");
+                int.TryParse(Console.ReadLine(), out limiteInferieure);
+
+                Console.Write("Entrer une limite de calcul supérieure: ");
+                int.TryParse(Console.ReadLine(), out limiteSuperieure);
+            } while (limiteInferieure >= limiteSuperieure || limiteSuperieure < 1 || limiteSuperieure < 1);
+        }
+
+        // Afficher les racines calculées
+        public void Afficher()
+        {
+            // Affiche les racines
+            foreach (double racine in racines)
+            {
+                Console.WriteLine(racine);
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            // Instantiation de la classe Racines dans la variable (objet) «racines»
+            Racines racines = new Racines();
+
+            // On effectue les opérations sur l'objet «racines»
+            racines.DemanderLimites();
+            racines.Calculer();
+            racines.Afficher();
+        }
+    }
+}
+
+```
+
+Commenté:
+
+[img[https://i.imgur.com/Xdpt4n8.png]]

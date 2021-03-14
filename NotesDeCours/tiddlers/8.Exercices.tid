@@ -1,0 +1,11 @@
+created: 20210314202052547
+modified: 20210314202611407
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.Exercices
+type: text/vnd.tiddlywiki
+
+Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs ayant le même nom que la classe créée.
+
+# Reprendre tous les [[exercices de la section 7|7.Exercices]], mais cette fois en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//.
+
+# Reprendre le TP1 de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//.

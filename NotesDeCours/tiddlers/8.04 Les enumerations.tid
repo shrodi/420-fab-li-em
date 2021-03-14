@@ -1,0 +1,37 @@
+created: 20210314191702509
+modified: 20210314200459983
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.04 Les énumérations
+type: text/vnd.tiddlywiki
+
+Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
+
+Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
+
+La grosse différence avec un tableau régulier est donc qu'on accède en quelque sorte à un index par une chaîne, plutôt que le contraire.
+
+Les énumérations peuvent être placées directement dans l'espace de noms si susceptibles d'être utilisées par plusieurs classes, ou à l'intérieur d'une classe si utiles pour une classe seulement.
+
+!! Exemples
+```cs
+class Program
+{
+    // Chaque nom de mois reçoit une valeur de 0 à 11
+    enum NoMois { janvier, fevrier, mars, avril, mai, juin, juillet, aout, septembre, octobre, novembre, decembre }
+
+    // Chaque nom de jour reçoit une valeur de 1 à 7
+    enum NoJour { dimanche = 1, lundi, mardi, mercredi, jeudi, vendredi, samedi }
+
+    static void Main()
+    {
+        // noJanvier recevra la valeur 0
+        NoMois noJanvier = NoMois.janvier;
+
+        // noLundi recevra la valeur 2
+        NoJour noLundi = NoJour.lundi;
+
+        // Affichera «no janvier = 0, no lundi = 2»
+        Console.WriteLine($"no janvier = {(int)noJanvier}, no lundi = {(int)noLundi}");
+    }
+}
+```

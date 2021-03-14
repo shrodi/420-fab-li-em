@@ -1,0 +1,11 @@
+created: 20210314163736088
+modified: 20210314164834002
+tags: [[97 Petit guide de programmation]]
+title: 97.01 Identification des besoins
+type: text/vnd.tiddlywiki
+
+L'écriture d'un programme part généralement d'un besoin; l'identification et la compréhension du besoin est la première étape vers l'écriture d'un programme.
+
+Avant toute chose, il est primordial de bien identifier les besoins //réels// du client. En effet, il n'est pas rare de voir des clients s'exprimer en termes de besoins //perçus// et de solution désirée: un client peut penser qu'il désire une certaine solution technologique, alors que, lorsqu'on creuse, on réalise que ses besoins réels seraient mieux comblés à l'aide d'une autre solution.
+
+Une fois les besoins réels définis, on peut établir des ''spécifications'' qui viendront encadrer les caractéristiques que le programme devra avoir; notamment, il faudra définir [[les intrants et le extrants|97.02 Intrants et extrants]].

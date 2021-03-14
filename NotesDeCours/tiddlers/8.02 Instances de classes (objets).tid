@@ -1,0 +1,49 @@
+created: 20210314183204151
+modified: 20210314185157256
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.02 Instances de classes (objets)
+type: text/vnd.tiddlywiki
+
+Le mot «objet» dans //Programmation orientée objet// vient du nom donné à une instance de classe, qu'on appelle justement un objet.
+
+P.ex., ci-dessous, la variable mesRacines contiendra un objet de type «Racines».
+
+```cs
+// Affectation à la variable mesRacines d'une instance de la classe «Racines», qu'on peut aussi appeler un objet de type «Racines»
+Racines mesRacines = new Racines();
+```
+
+<<<
+!! Confusions courantes
+
+Le mot «objet» en POO porte souvent à confusion, car:
+
+# certaines personnent confondent ou utilisent indifféremment les termes //classe// et //objet//;
+# certaines personnes auront tendance à associer le mot //objet// à des objets de la vie réelle, ce qui n'a rien à voir avec la POO en tant que tel.
+<<<
+
+Il est important de comprendre que l'on peut créer plusieurs instances de classes dans un même programme, et que chaque instance aura (par défaut) ses propres valeurs et sera complètement indépendante des autres; p.ex., avec la classe //Racines// définie en 8.01:
+
+```cs
+class Program
+{
+    static void Main()
+    {
+        // Création de deux objets de type Racines
+        Racines racines1 = new Racines();
+        Racines racines2 = new Racines();
+
+        // Chaque objet demande ses propres limites
+        racines1.DemanderLimites();
+        racines2.DemanderLimites();
+
+        // Chaque objet fait ses propres calculs
+        racines1.Calculer();
+        racines2.Calculer();
+
+        // Chaque objet affiche ses propres résultats
+        racines1.Afficher();
+        racines2.Afficher();            
+    }
+}
+```

@@ -1,0 +1,9 @@
+created: 20210314164841756
+modified: 20210314165354023
+tags: [[97 Petit guide de programmation]]
+title: 97.06 Les tests
+type: text/vnd.tiddlywiki
+
+Il est important de tester le plus souvent possible ce qui est développé afin de s'assurer de son bon fonctionnement. Plus on teste tôt et souvent, plus on se sauve du temps de débogage à la fin.
+
+On parle souvent de ''tests unitaires'', donc des tests «d'unités»; ces unités peuvent se trouver à plusieurs échelles: une unité peut être une ligne de code, une bloc de code, une routine, une classe, ou même le programme au complet.

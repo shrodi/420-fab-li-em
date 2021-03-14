@@ -1,0 +1,11 @@
+created: 20210314191606949
+modified: 20210314202645046
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.05 Création de classes dans VisualStudio
+type: text/vnd.tiddlywiki
+
+Bien que l'on puisse procéder comme montré dans les exemples de classes des sous-sections précédentes et ajouter des classes dans le même fichier .cs que la classe //Program//, cela risque de rapidement surcharger le fichier et le rendre difficile à lire: on préférera donc créer un fichier .cs par classe (le fichier portant le même nom que la classe), mais toujours dans le même espace de noms, comme montré dans les captures d'écran ci-dessous:
+
+[img width=800 [https://i.imgur.com/pRzt9ty.png]]
+
+[img width=800 [https://i.imgur.com/NjW1CkA.png]]

@@ -1,0 +1,36 @@
+created: 20210314185302524
+modified: 20210314191555098
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.03 Visibilité des membres d'une classe
+type: text/vnd.tiddlywiki
+
+* Tous les membres d'une classe (attributs et méthodes) peuvent être déclarés soit ''public'', soit ''private'':
+** ''public'' signifie que le membre sera accessible de l'extérieur de la classe (donc depuis le programme appelant);
+** ''private'' signifie que le membre ne sera visible que depuis l'intérieur de la classe à laquelle il appartient.
+
+* Règle générale, ''tous les attributs'' devraient être déclarés ''private''; les méthodes seront quant à elles déclarées ''public'' ou ''private'' selon qu'elles ont raison d'être appelées de l'extérieur ou non.
+
+> En C#, il y a un autre modificateur de visibilité appelé ''internal'', qui est une sorte de «public» restreint au programme, mais pour simplifier (et afin de se rapprocher des autres langages POO) nous nous contenterons d'utiliser seulement ''public'' et ''private''.
+
+! Visibilité entre classes
+
+Toutes les classes d'un même espace de nom (//namespace//) pourront se voir entre elles et donc s'instancier les unes les autres.
+
+!! Exemple
+
+```cs
+namespace Demo
+{
+    class Classe1
+    {
+        // On instantie Classe2 depuis Classe1
+        Classe2 objetClasse = new Classe2();
+    }
+
+    class Classe2
+    {
+        // On instantie Classe1 depuis Classe2
+        Classe1 objetClasse = new Classe1();
+    }
+}
+```

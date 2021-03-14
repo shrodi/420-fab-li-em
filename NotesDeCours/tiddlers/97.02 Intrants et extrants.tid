@@ -1,0 +1,19 @@
+created: 20210314163901231
+modified: 20210314164040348
+tags: [[97 Petit guide de programmation]]
+title: 97.02 Intrants et extrants
+type: text/vnd.tiddlywiki
+
+Une fois le besoin exprimé, une façon très courante et pratique de conceptualiser les programmes est sous la forme d'intrants (//input//) et de sortants (//outpout//):
+
+[img width="900" [https://i.imgur.com/hmAlTdJ.png]]
+
+Avant de commencer à écrire un programme, la première étape devrait donc toujours être de se demander:
+
+# ''Quels sont les intrants?''
+## Que va-t-on devoir fournir au programme comme données? Quels types (des nombres, du texte)?
+## Comment va-t-on passer les données au programme? Entrée clavier à l'invite du programme? Arguments? Par un fichier?
+
+# ''Quels sont les extrants?''
+## Au final, que veut-on obtenir? Qu'est-ce qu'on veut?
+## Comment récupérer les extrants? Affichage à l'écran? Enregistrement dans un fichier? Transmission par réseau?
