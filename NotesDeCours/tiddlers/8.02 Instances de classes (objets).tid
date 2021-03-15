@@ -1,8 +1,10 @@
 created: 20210314183204151
-modified: 20210314185157256
+modified: 20210315120331486
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.02 Instances de classes (objets)
 type: text/vnd.tiddlywiki
+
+On crée une instance (on instantie) une classe avec l'instruction ''new''.
 
 Le mot «objet» dans //Programmation orientée objet// vient du nom donné à une instance de classe, qu'on appelle justement un objet.
 

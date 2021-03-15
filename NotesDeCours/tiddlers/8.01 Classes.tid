@@ -1,6 +1,6 @@
 created: 20210314170222309
 list: 
-modified: 20210314194336441
+modified: 20210315105025031
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.01 Classes
 type: text/vnd.tiddlywiki
@@ -106,4 +106,4 @@ namespace Demo
 
 Commenté:
 
-[img[https://i.imgur.com/Xdpt4n8.png]]
+[img width=800 [https://i.imgur.com/Xdpt4n8.png]]

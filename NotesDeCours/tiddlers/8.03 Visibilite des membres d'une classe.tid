@@ -1,5 +1,5 @@
 created: 20210314185302524
-modified: 20210314191555098
+modified: 20210315115920966
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.03 Visibilité des membres d'une classe
 type: text/vnd.tiddlywiki
@@ -11,6 +11,95 @@ type: text/vnd.tiddlywiki
 * Règle générale, ''tous les attributs'' devraient être déclarés ''private''; les méthodes seront quant à elles déclarées ''public'' ou ''private'' selon qu'elles ont raison d'être appelées de l'extérieur ou non.
 
 > En C#, il y a un autre modificateur de visibilité appelé ''internal'', qui est une sorte de «public» restreint au programme, mais pour simplifier (et afin de se rapprocher des autres langages POO) nous nous contenterons d'utiliser seulement ''public'' et ''private''.
+
+!! Exemple
+
+Dans l'exemple de la [[section 8.01|8.01 Classes]], on avait déclaré toutes les méthodes comme étant ''public'', et le //Main()// les appelait une à une; et si on simplifiait encore davantage le //Main()// en reléguant tout le contrôle du processus à la classe? On pourrait alors avoir quelque-chose comme ceci, où toutes les méthodes sont ''private'' sauf une qui exécute les étapes désirées dans l'ordre (dans ce cas, les limites par défaut deviennent inutiles puisque la seule méthode publique forcera la saisie de limites):
+
+```cs
+using System;
+
+namespace Demo
+{
+    // Classe servant à gérer les opérations autour du calcul de racines
+    class Racines
+    {
+        // Limites qui seront demandées
+        private int limiteInferieure;
+        private int limiteSuperieure;
+
+        // Contiendra les racines calculées
+        private double[] racines;
+
+        // Calcule des racines de nbMin à nbMax et les retourne dans un tableau
+        private void Calculer()
+        {
+            // Le tableau qui contiendra les racines
+            racines = new double[limiteSuperieure - limiteInferieure + 1];
+
+            // Calcule les racines de nbMin à nbMax
+            for (int nb = limiteInferieure; nb <= limiteSuperieure; nb++)
+            {
+                racines[nb - limiteInferieure] = Math.Sqrt(nb);
+            }
+        }
+
+        // Demande les limites 
+        private void DemanderLimites()
+        {
+            do
+            {
+                Console.Write("Entrer une limite de calcul inférieure: ");
+                int.TryParse(Console.ReadLine(), out limiteInferieure);
+
+                Console.Write("Entrer une limite de calcul supérieure: ");
+                int.TryParse(Console.ReadLine(), out limiteSuperieure);
+            } while (limiteInferieure >= limiteSuperieure || limiteSuperieure < 1 || limiteSuperieure < 1);
+        }
+
+        // Afficher les racines calculées
+        private void Afficher()
+        {
+            // Affiche les racines
+            foreach (double racine in racines)
+            {
+                Console.WriteLine(racine);
+            }
+        }
+
+        // Exécute toutes les étapes dans l'ordre
+        public void Executer()
+        {
+            DemanderLimites();
+            Calculer();
+            Afficher();
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            // Instantiation de la classe Racines dans la variable (objet) «racines»
+            Racines racines = new Racines();
+
+            // On effectue les opérations sur l'objet «racines»
+            racines.Executer();
+        }
+    }
+}
+```
+
+<p class="boite">
+
+! Méthode privée ou publique?
+
+Comment décider si un méthode devrait être privée ou publique?
+
+On devrait toujours partir du principe que toutes les méthodes devraient être ''private'', sauf celles pour lesquelles on envisage une raison de les rendre accessibles de l'extérieur, selon les besoins et le contexte.
+
+Ainsi, le dernier exemple ci-dessus n'est pas nécessairement la meilleure chose à faire; peut-être, par exemple, qu'on aimerait avoir la liberté de demander ou non la saisie de limites, ou d'afficher les résultats à un autre moment dans le programme: tout est une question de contexte et de besoin.
+</p>
 
 ! Visibilité entre classes
 
