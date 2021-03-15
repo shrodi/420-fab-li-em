@@ -1,9 +1,10 @@
 created: 20210314185302524
-modified: 20210315115920966
+modified: 20210315125132741
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.03 Visibilité des membres d'une classe
 type: text/vnd.tiddlywiki
 
+* Tous les membres d'une classe peuvent être vus et accédés à l'intérieur de la classe (donc, une méthode peut modifier un attribut ou appeler une autre méthode).
 * Tous les membres d'une classe (attributs et méthodes) peuvent être déclarés soit ''public'', soit ''private'':
 ** ''public'' signifie que le membre sera accessible de l'extérieur de la classe (donc depuis le programme appelant);
 ** ''private'' signifie que le membre ne sera visible que depuis l'intérieur de la classe à laquelle il appartient.
