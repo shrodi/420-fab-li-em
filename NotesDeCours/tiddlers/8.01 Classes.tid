@@ -1,6 +1,6 @@
 created: 20210314170222309
 list: 
-modified: 20210315105025031
+modified: 20210315124736047
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.01 Classes
 type: text/vnd.tiddlywiki
@@ -29,6 +29,8 @@ Depuis le début du cours, nous avons travaillé avec une fonction ''Main()'' se
 # toujours regrouper les fonctions apparentées (travaillant de concert ou associées à un même concept) dans une ou plusieurs classes «soeurs» de la classe ''Program'' (donc à l'extérieur de la classe ''Program'', mais à l'intérieur du même ''namespace''), aux noms appropriés;
 # éviter le plus possible de déclarer et utiliser des variables dans le Main();
 # limiter au minimum le code contenu dans le Main().
+
+> __À noter que, à partir de maintenant et pour le moment, nous allons réserver l'utilisation du modificateur ''static'' à la fonction //Main()//__.
 
 </p>
 
