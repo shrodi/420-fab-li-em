@@ -1,11 +1,15 @@
 created: 20210314202052547
-modified: 20210314202611407
+modified: 20210315133828828
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.Exercices
 type: text/vnd.tiddlywiki
 
 Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs ayant le même nom que la classe créée.
 
-# Reprendre tous les [[exercices de la section 7|7.Exercices]], mais cette fois en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//.
+* Gardez en tête qu'il sera sans doute nécessaire ou souhaitable de changer la définition des fonctions lorsque converties en méthodes; notamment, l'utilisation d'arguments ne sera pas nécessaire si une méthode ne traite que des attributs.
+* Gardez en tête que certaines variables n'auront peut-être pas besoin d'être converties en attributs.
+* Changez les //Convert// pour des //~TryParse// et tenez compte si elle retourne vrai ou faux.
 
-# Reprendre le TP1 de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//.
+# Reprendre l'[[exercice de la section 7|7.Exercices]], mais cette fois en plaçant les fonctions et les variables appropriées dans une classe //~ConvertisseurTemperature// et en réduisant au minimum le code de la fonction //Main()//.
+
+# Reprendre le TP1 de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//. Vous devrez avoir au minimum une classe //De// représentant un dé à jouer, ainsi qu'une classe //Partie// représentant une partie de dés.
