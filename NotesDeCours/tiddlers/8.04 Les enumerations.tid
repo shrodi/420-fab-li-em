@@ -1,5 +1,5 @@
 created: 20210314191702509
-modified: 20210314200459983
+modified: 20210315152715269
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.04 Les énumérations
 type: text/vnd.tiddlywiki
@@ -35,3 +35,7 @@ class Program
     }
 }
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/a2dbb5e9-78b3-4e86-9d13-79e98a1e7f6e?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

@@ -1,5 +1,5 @@
 created: 20210314183204151
-modified: 20210315120331486
+modified: 20210315152622153
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.02 Instances de classes (objets)
 type: text/vnd.tiddlywiki
@@ -49,3 +49,7 @@ class Program
     }
 }
 ```
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/072bf3df-d9f7-4f77-815e-f505ab748b3b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

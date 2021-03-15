@@ -1,6 +1,6 @@
 created: 20210314170222309
 list: 
-modified: 20210315124736047
+modified: 20210315152551760
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.01 Classes
 type: text/vnd.tiddlywiki
@@ -36,7 +36,7 @@ Depuis le début du cours, nous avons travaillé avec une fonction ''Main()'' se
 
 !! Exemple
 
-Le 1er exemple de la section 7.04 pourrait être récrit de la façon suivante, en regroupant tout ce qui touche le traitement des racines  (en ajoutant en plus la saisie des limites à l'invite du programme) dans une classe, ce qui réduit considérablement le code du Main() et le rend plus lisible et compréhensible comme un résumé général de ce qui se passe:
+Le 1er exemple de la [[section 7.04|7.04 Les arguments]] pourrait être récrit de la façon suivante, en regroupant tout ce qui touche le traitement des racines  (en ajoutant en plus la saisie des limites à l'invite du programme) dans une classe, ce qui réduit considérablement le code du Main() et le rend plus lisible et compréhensible comme un résumé général de ce qui se passe:
 
 ```cs
 using System;
@@ -109,3 +109,7 @@ namespace Demo
 Commenté:
 
 [img width=800 [https://i.imgur.com/Xdpt4n8.png]]
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/1fcfc54d-a5b2-4e9f-b10a-fb6622d84e60?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
