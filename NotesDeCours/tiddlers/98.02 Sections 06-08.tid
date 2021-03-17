@@ -1,0 +1,42 @@
+created: 20210317130415822
+modified: 20210317133844248
+tags: [[98 Exercices supplémentaires]]
+title: 98.02 Sections 06-08
+type: text/vnd.tiddlywiki
+
+# Dans une classe //Aleatoire//, écrire une méthode //Reel// utilisant la méthode [[Random.NextDouble()|https://docs.microsoft.com/en-us/dotnet/api/system.random.nextdouble?view=net-5.0]] pour retourner un nombre pseudo-aléatoire de type ''double'' compris entre 0 et un nombre passé en argument, inclusivement (de sorte que, p.ex., `Reel(200);` retournera un nombre réel compris entre 0 et 200, inclusivement); faites attention où vous placerez l'initialisation du générateur aléatoire.
+
+# Programmer un jeu de Nim (ou jeu des allumettes) contre l’ordinateur.<div>
+
+Les règles du jeu sont les suivantes :
+
+* le joueur dispose sur une table un nombre d’allumettes supérieur ou égal à 4 
+* le joueur retire 1, 2 ou 3 allumettes
+* l’ordinateur retire 1, 2, ou 3 allumettes
+* le joueur retire 1, 2 ou 3 allumettes
+* l’ordinateur retire 1, 2, ou 3 allumettes, etc...
+
+Le gagnant est celui qui prend les dernières allumettes.
+
+Spécifications:
+
+* L’utilisateur sera systématiquement le premier à jouer. 
+
+* L’utilisateur choisira le nombre initial d’allumettes. 
+
+* Le programme devra vérifier que les règles sont respectées par l’utilisateur (nombre initial supérieur ou égal à 4, nombre d’allumettes retirées entre 1 et 3, etc.).
+
+* Le programme tracera sur l’écran le déroulement du jeu, selon un affichage du type de celui-ci (donné a titre indicatif uniquement): [img[https://i.imgur.com/ING7IPe.png]]
+
+* L’ordinateur doit offrir trois niveaux de difficulté :
+** Débutant : tous les coups au hasard sauf le dernier coup (prend toutes les allumettes s’il en reste 3 ou moins)
+** Moyen : s’il y a moyen de gagner à l’avant dernier coup, il le fait (il faut pour cela laisser 4 allumettes au joueur opposé...) 
+** Infaillible : gagne chaque fois qu’il y a une opportunité!
+
+* Le programme doit permettre de rejouer une partie si désiré; il doit tenir le décompte des scores (nombre de parties gagnées) de chaque joueur et l'afficher à la fin de chaque partie;
+
+* Le programme doit contenir au minimum les classes suivantes:
+** une classe //~JeuDeNim//, représentant le jeu de Nim;
+** une classe //Partie//, représentant une partie;
+** une classe //Joueur//, représentant un joueur (qui contiendra minimalement le score de chaque joueur).
+</div>
