@@ -1,5 +1,5 @@
 created: 20210303151112307
-modified: 20210306131801727
+modified: 20210317165937028
 tags: [[07 Routines]]
 title: 7.04 Les arguments
 type: text/vnd.tiddlywiki
@@ -113,6 +113,26 @@ Donc, ci-dessus, le contenu de mot2 et mot3 a été modifié par la fonction en 
 <p class="boite">
 D'un point de vue strictement technique, le type ''string'' est toujours passé par adresse, mais comme C# en fait automatiquement une copie pour la fonction, il se comporte au final comme les autres types de base. Vous n'avez pas à vous préoccuper de ce point: je ne le mentionne qu'à des fins de précision.
 </p>
+
+! Les valeurs par défaut
+
+On peut donner une valeur par défaut à des arguments s'ils sont placés en dernier dans la déclaration de la fonction; les arguments ayant une valeur par défaut deviennent alors facultatifs.
+
+!! Exemple
+
+```cs
+// Affichera 11 par défaut
+static void AfficherEntier(int entierFonction = 11)
+{
+    Console.WriteLine($"Entier fonction = {entierFonction}");
+}
+
+// Affichera 22
+AfficherEntier(22);
+
+// Affichera 11
+AfficherEntier();
+```
 
 ---
 
