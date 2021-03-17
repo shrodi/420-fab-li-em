@@ -1,6 +1,6 @@
 created: 20210314170222309
 list: 
-modified: 20210315152551760
+modified: 20210317163720409
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.01 Classes
 type: text/vnd.tiddlywiki
@@ -75,7 +75,7 @@ namespace Demo
 
                 Console.Write("Entrer une limite de calcul supérieure: ");
                 int.TryParse(Console.ReadLine(), out limiteSuperieure);
-            } while (limiteInferieure >= limiteSuperieure || limiteSuperieure < 1 || limiteSuperieure < 1);
+            } while (limiteInferieure >= limiteSuperieure || limiteInferieure < 1 || limiteSuperieure < 1);
         }
 
         // Afficher les racines calculées
