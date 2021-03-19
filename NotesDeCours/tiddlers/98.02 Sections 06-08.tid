@@ -1,5 +1,5 @@
 created: 20210317130415822
-modified: 20210317133844248
+modified: 20210319200024881
 tags: [[98 Exercices supplémentaires]]
 title: 98.02 Sections 06-08
 type: text/vnd.tiddlywiki
@@ -39,4 +39,57 @@ Spécifications:
 ** une classe //~JeuDeNim//, représentant le jeu de Nim;
 ** une classe //Partie//, représentant une partie;
 ** une classe //Joueur//, représentant un joueur (qui contiendra minimalement le score de chaque joueur).
+</div>
+
+# Sachant que:<div>
+
+* On peut convertir une chaîne en tableau de caractères de la façon suivante:<div>
+
+```cs
+string chaine = "Une chaîne";
+char[] caracteres = chaine.ToCharArray();
+```
+</div>
+* On peut convertir une chaîne ou un entier en élément d'une énumération (clef ou valeur) de la façon suivante (la casse est importante pour «enum» et «Enum»):<div>
+
+```cs
+class MaClasse
+{
+    enum MonType { clef1 = 10, clef2 = 20, clef3 = 30 }
+
+    public void MaMethode()
+    {
+        MonType element;
+        string clef = "clef2";
+        int val = 20;
+
+        // Si réussit, stocke le 2e élément de l'énumération «MonType» dans la variable «element»
+        Enum.TryParse(clef, out element);
+
+        // Si réussit, stocke aussi le 2e élément de l'énumération «MonType» dans la variable «element»
+        Enum.TryParse(val.ToString(), out element);
+    }
+}
+```
+</div>
+
+Écrire une classe appelée //Romain// contenant une méthode publique appelée //~VersArabe// permettant de convertir un nombre romain reçu en argument (<&nbsp;4000) en nombre entier arabe. Cette méthode devra utiliser une énumération pour arriver à ses fins. Cette méthode retourne l'entier arabe obtenu si la conversion réussit, sinon elle retourne 0.
+
+<<<
+''Rappel''
+
+Dans un nombre romain, les lettres ont les valeurs suivantes:
+
+* I = 1
+* V = 5
+* X = 10
+* L = 50
+* C = 100
+* D = 500
+* M = 1000
+
+De plus, une lettre suivie d'une valeur plus grande doit être soustraite plutôt qu'ajoutée.
+
+P. ex.: MCXLIV = 1000 + 100 - 10 + 50 - 1 + 5 = 1144
+<<<
 </div>
