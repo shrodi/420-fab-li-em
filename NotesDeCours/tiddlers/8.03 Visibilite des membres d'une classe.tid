@@ -1,5 +1,5 @@
 created: 20210314185302524
-modified: 20210315152653948
+modified: 20210319145429043
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.03 Visibilité des membres d'une classe
 type: text/vnd.tiddlywiki
@@ -113,8 +113,7 @@ namespace Demo
 {
     class Classe1
     {
-        // On instantie Classe2 depuis Classe1
-        Classe2 objetClasse = new Classe2();
+        // Code la classe 1
     }
 
     class Classe2
