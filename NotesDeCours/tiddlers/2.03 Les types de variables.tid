@@ -1,5 +1,5 @@
 created: 20210208131812543
-modified: 20210222185015200
+modified: 20210319192513564
 tags: [[02 Variables]]
 title: 2.03 Les types de variables
 type: text/vnd.tiddlywiki
@@ -32,6 +32,10 @@ Fait également important à noter, le type ''double'' supporte naturellement la
 
 
 * ''string'': désigne une variable de type chaîne de caractères (ex.: "Bonjour", "Mon n° de téléphone est le: 123 456-7890", "Quel est votre nom?")
+** les chaînes de caractères sont déimitées par des guillemets (`" "`)
+
+* ''char'': désigne un seul caractère (ex.: 'a', 'B', '$', '%', etc.)
+** les caractères sont délimités par des apostrophes (`' '`)
 
 * ''bool'': désigne une variable booléenne, c.-à-d. une variable qui est soit vraie (''true''), soit fausse (''false'').
 
