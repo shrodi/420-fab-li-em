@@ -1,5 +1,5 @@
 created: 20210317130415822
-modified: 20210322132123220
+modified: 20210322214623676
 tags: [[98 Exercices supplémentaires]]
 title: 98.02 Sections 06-08
 type: text/vnd.tiddlywiki
@@ -101,3 +101,4 @@ P. ex.: MCXLIV = 1000 + 100 - 10 + 50 - 1 + 5 = 1144
 # Écrire une classe appelée //Calcul// comprenant une méthode appelée //Moyenne// qui calcule et retourne la moyenne de nombres réels reçus dans un tableau passé en argument. Écrire ensuite un programme qui demande à l’utilisateur d’entrer //n// valeurs comprises entre un minimum et un maximum et qui passe ces valeurs à la méthode //Moyenne// pour ensuite afficher la moyenne retournée. Le programme affiche un message d’erreur à l’utilisateur si une valeur saisie n’est pas dans l’intervalle [min, max] et demande à l’utilisateur de saisir de nouveau une valeur valide.
 
 # Ajoutez à la classe //Calcul// ci-dessus une méthode appelée //Armstrong// retournant dans un tableau tous les nombres d'Armstrong compris entre 100 et 999, inclusivement. Un nombre d'Armstrong est un nombre qui est égal à la somme des cubes des chiffres qui le composent (p.ex., 153 = 1^^3^^ + 5^^3^^ + 3^^3^^).
+#> [[Exemple de solution 4 et 5|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%2098.2.4-5.zip]]
