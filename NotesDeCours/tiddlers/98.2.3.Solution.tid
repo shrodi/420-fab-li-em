@@ -1,0 +1,49 @@
+created: 20210322125945733
+modified: 20210322125952731
+title: 98.2.3.Solution
+type: text/vnd.tiddlywiki
+
+```cs
+class Romain
+{
+    // Nombres romains de base
+    enum NbRomain {I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000}
+
+    // Convertit un nombre romain en nombre arabe
+    static public int VersArabe(string romainEntree)
+    {
+        int arabeSortie = 0;
+
+        // Convertit le nombre romain entré en tableau de caractères
+        char[] lettres = romainEntree.ToCharArray();
+
+        // Un tableau qui contiendra les nombres romains de base correspondant à chaque lettre du nombre romain à convertir
+        NbRomain[] romains = new NbRomain[lettres.Length];
+
+        /* Remplit le tableau «romains» avec les valeurs d'énumération correspondant aux lettres
+         * du nombre romain à convertir, ou retourne 0 si ce n'est pas possible */
+        for (int i = 0; i < lettres.Length; i++)
+        {
+            if (!Enum.TryParse(lettres[i].ToString(), out romains[i]))
+            {
+                return 0;
+            }
+        }
+
+        /* Calcule et retourne la valeur du nombre romain dans «arabeSortie» */
+        for (int i=0; i < romains.Length; i++)
+        {
+            if (i < romains.Length - 1 && romains[i+1] > romains[i])
+            {
+                arabeSortie -= (int)romains[i];
+            }
+            else
+            {
+                arabeSortie += (int)romains[i];
+            }
+        }
+
+        return arabeSortie;
+    }
+}
+```
