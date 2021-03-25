@@ -1,5 +1,5 @@
 created: 20210314185302524
-modified: 20210319145429043
+modified: 20210325232653513
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.03 Visibilité des membres d'une classe
 type: text/vnd.tiddlywiki
@@ -81,7 +81,7 @@ namespace Demo
     {
         static void Main()
         {
-            // Instantiation de la classe Racines dans la variable (objet) «racines»
+            // Instanciation de la classe Racines dans la variable (objet) «racines»
             Racines racines = new Racines();
 
             // On effectue les opérations sur l'objet «racines»
@@ -118,7 +118,7 @@ namespace Demo
 
     class Classe2
     {
-        // On instantie Classe1 depuis Classe2
+        // On instancie Classe1 depuis Classe2
         Classe1 objetClasse = new Classe1();
     }
 }

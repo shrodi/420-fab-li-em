@@ -1,5 +1,5 @@
 created: 20210314202052547
-modified: 20210319121506194
+modified: 20210325233657155
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.Exercices
 type: text/vnd.tiddlywiki
@@ -13,5 +13,15 @@ Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs aya
 # Reprendre l'[[exercice de la section 7|7.Exercices]], mais cette fois en plaçant les fonctions et les variables appropriées dans une classe //~ConvertisseurTemperature// et en réduisant au minimum le code de la fonction //Main()//.
 #> [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.1.zip]]
 
-# Reprendre le TP1 de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//. Vous devrez avoir au minimum une classe //De// représentant un dé à jouer, une classe //Joueur// représentant un joueur, ainsi qu'une classe //Partie// représentant une partie de dés.
+# Reprendre le [[TP1|TP1.Solution]] de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans des classes et en réduisant au minimum le code de la fonction //Main()//. Vous devrez avoir au minimum une classe //De// représentant un dé à jouer, une classe //Joueur// représentant un joueur, ainsi qu'une classe //Partie// représentant une partie de dés.
 #> [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.2.zip]]
+
+# Reprendre le [[TP2|TP2.Solution]] de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans au moins une classe et en réduisant au minimum le code de la fonction //Main()//.
+
+# Écrivez une classe //Temperature// contenant une seule méthode statique appelée //Convertir// retournant la valeur de température convertie en °C ou en °F selon les arguments qui lui sont passés, puis écrivez un programme exploitant cette classe sans l'instancier.
+
+# Remodelez la solution de l'exercice 8.2 ci-dessus de manière à ce que:
+#* la classe //De// comporte un constructeur prenant le nombre de faces à donner au dé;
+#* le jeu demande le nombre de faces à donner au dé pour chaque nouvelle partie.
+
+# Remodelez un exemple de solution à l'[[examen 1|99.03 Examen 1]] de manière à ce qu'aucune classe ne soit instanciée.

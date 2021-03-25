@@ -1,6 +1,6 @@
 created: 20210314170222309
 list: 
-modified: 20210317163720409
+modified: 20210325232616017
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.01 Classes
 type: text/vnd.tiddlywiki
@@ -93,7 +93,7 @@ namespace Demo
     {
         static void Main()
         {
-            // Instantiation de la classe Racines dans la variable (objet) «racines»
+            // Instanciation de la classe Racines dans la variable (objet) «racines»
             Racines racines = new Racines();
 
             // On effectue les opérations sur l'objet «racines»

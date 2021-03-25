@@ -1,0 +1,15 @@
+created: 20210325204309616
+modified: 20210325230224741
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.07 Membres statiques
+type: text/vnd.tiddlywiki
+
+Depuis le début du cours que nous voyons passer le terme ''static'' sans l'avoir encore expliqué: eh bien, c'est le moment!
+
+Le modificateur ''static'' a un effet différent selon qu'il s'applique à une méthode ou à un attribut.
+
+<div class="tc-table-of-contents">
+
+<$macrocall $name="toc-selective-expandable" tag=<<currentTiddler>>/>
+
+</div>

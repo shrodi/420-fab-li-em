@@ -1,0 +1,67 @@
+created: 20210325202149709
+modified: 20210325232721831
+tags: [[08 Programmation orientée objet (POO)]]
+title: 8.06 Constructeur
+type: text/vnd.tiddlywiki
+
+Un ''constructeur'' est une méthode particulière qui porte le même nom que la classe où elles se trouve; un constructeur permet à une classe d'initialiser des membres ou encore de recevoir des arguments lors de son instanciation.
+
+Par exemple, dans l'exemple solution à l'[[exercice 8.2|8.Exercices]], nous avions la classe //De// suivante représentant un dé à jouer:
+
+```cs
+// Classe représentant un dé à nbFaces faces
+class De
+{
+    static private readonly Random rnd = new Random();
+
+    private readonly int nbFaces = 6;
+
+    // Lancer le dé
+    public int Lancer()
+    {
+        return rnd.Next(nbFaces) + 1;
+    }
+}
+```
+
+Ici, le nombre de faces est codé dur... On pourrait bien se faire une méthode permettant de changer le nombre de faces (p.ex., //~ChangerNbFaces(int n)//), mais est-ce que ce ne serait pas mieux de pouvoir définir le nombre de faces au moment de l'instanciation de la classe? C'est notamment ce que permet un constructeur!
+
+```cs
+// Un dé à jouer
+class De
+{
+    static private readonly Random rnd = new Random();
+
+    // Nombre de faces du dé
+    private readonly int nbFaces;
+
+    // Constructeur (le dé aura 6 faces par défaut)
+    public De(int n = 6)
+    {
+        // Fixe le nombre de faces du dé à jouer à l'instanciation
+        nbFaces = n;
+    }
+
+    // Lancer le dé
+    public int Lancer()
+    {
+        return rnd.Next(nbFaces) + 1;
+    }
+}
+```
+
+Ce qui permet d'instancier le dé avec le nombre de faces désirés:
+
+```cs
+// Instancie un dé à 6 faces (défaut)
+De de6 = new De();
+
+// Instancie un dé à 20 faces
+De de20 = new De(20);
+```
+
+Notez que le constructeur:
+
+# porte le même nom que la classe;
+# est toujours ''public'';
+# n'a pas de type de retour.
