@@ -1,5 +1,5 @@
 created: 20210325230226637
-modified: 20210325232804014
+modified: 20210326123718020
 tags: [[8.07 Membres statiques]]
 title: 8.7.02 Les attributs statiques
 type: text/vnd.tiddlywiki
@@ -89,13 +89,13 @@ class Aleatoire
     static private Random rndStatic = new Random(1);
     private Random rndNonStatic = new Random(1);
 
-    /* Retourne un entier de 1 à 99 avec le générateur statique */
+    /* Retourne un entier de 0 à 99 avec le générateur statique */
     public int GenererStatic()
     {
         return rndStatic.Next(100);
     }
 
-    /* Retourne un entier de 1 à 99 avec le générateur non statique */
+    /* Retourne un entier de 0 à 99 avec le générateur non statique */
     public int GenererNonStatic()
     {
         return rndNonStatic.Next(100);
