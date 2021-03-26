@@ -1,5 +1,5 @@
 created: 20210317130415822
-modified: 20210322214623676
+modified: 20210326122209517
 tags: [[98 Exercices supplémentaires]]
 title: 98.02 Sections 06-08
 type: text/vnd.tiddlywiki
@@ -102,3 +102,7 @@ P. ex.: MCXLIV = 1000 + 100 - 10 + 50 - 1 + 5 = 1144
 
 # Ajoutez à la classe //Calcul// ci-dessus une méthode appelée //Armstrong// retournant dans un tableau tous les nombres d'Armstrong compris entre 100 et 999, inclusivement. Un nombre d'Armstrong est un nombre qui est égal à la somme des cubes des chiffres qui le composent (p.ex., 153 = 1^^3^^ + 5^^3^^ + 3^^3^^).
 #> [[Exemple de solution 4 et 5|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%2098.2.4-5.zip]]
+
+# Modifier l'exercice 2 ci-dessus de manière à ce que les paramètres d'une partie soient plutôt demandés par la classe //~JeuDeNim// et passés à un constructeur de la classe //Partie//.
+
+# Reprendre les exercices 1, 3 , 4 et 5 ci-dessus en rendant statiques toutes les méthodes demandées et en modifiant les programmes correspondants en conséquence.

@@ -1,5 +1,5 @@
 created: 20210325204309616
-modified: 20210325230224741
+modified: 20210326121438904
 tags: [[08 Programmation orientée objet (POO)]]
 title: 8.07 Membres statiques
 type: text/vnd.tiddlywiki
@@ -13,3 +13,7 @@ Le modificateur ''static'' a un effet différent selon qu'il s'applique à une m
 <$macrocall $name="toc-selective-expandable" tag=<<currentTiddler>>/>
 
 </div>
+
+---
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/19d6b1f1-3214-4ed8-a75d-ff163b433ea1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
