@@ -1,8 +1,0 @@
-created: 20210213203748288
-modified: 20210217181128296
-tags: [[03 Instructions conditionnelles]]
-title: 3.Exercices
-type: text/vnd.tiddlywiki
-
-# Convertir l'[[exemple de solution à l'exercice 2.2|2.2.Solution]] de manière à remplacer le bloc ''switch'' par des ''if ... else''.
-#> [[Exemple de solution|3.1.Solution]]
