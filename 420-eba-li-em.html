@@ -9040,19 +9040,19 @@ Error message and password prompt
 <div created="20210408172059010" modified="20210408172059010" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210408191614015" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20210408172100210" modified="20210409120438514" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
-<div created="20210408171656033" modified="20210408191635413" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
-<pre>close</pre>
+<div created="20210408171656033" modified="20210408191818267" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<pre>open</pre>
 </div>
-<div created="20210408180556742" modified="20210408191622401" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
-<pre>close</pre>
+<div created="20210408180556742" modified="20210409104109346" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<pre>open</pre>
 </div>
-<div created="20210408173626162" modified="20210408191623796" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
-<pre>close</pre>
+<div created="20210408173626162" modified="20210408193230863" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
+<pre>open</pre>
 </div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="[[98.02 Sections 06-08]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9109,7 +9109,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20210408191616465" title="$:/temp/search">
+<div created="20210408172006571" modified="20210409105344248" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -12471,7 +12471,7 @@ namespace Demo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" modified="20210315152715269" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" modified="20210409121035061" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
@@ -12500,6 +12500,41 @@ class Program
 
         // Affichera «no janvier = 0, no lundi = 2»
         Console.WriteLine($&quot;no janvier = {(int)noJanvier}, no lundi = {(int)noLundi}&quot;);
+    }
+}
+```
+
+Comme une énumération est un type, on pourrait vouloir l'utiliser dans plusieurs classes; dans ce cas, au lieu de la déclarer dans chaque classe où on en a besoin, on la déclarera plutôt dans le //namespace//, idéalement soit dans le fichier contenant la classe //Program//, soit dans un fichier à part:
+
+```cs
+namespace Demo
+{
+    // Chaque nom de mois reçoit une valeur de 0 à 11
+    enum NoMois { janvier, fevrier, mars, avril, mai, juin, juillet, aout, septembre, octobre, novembre, decembre }
+
+    // Chaque nom de jour reçoit une valeur de 1 à 7
+    enum NoJour { dimanche = 1, lundi, mardi, mercredi, jeudi, vendredi, samedi }
+
+    class Program
+    {
+        static void Main()
+        {
+            // noJanvier recevra la valeur 0
+            NoMois noJanvier = NoMois.janvier;
+
+            // noLundi recevra la valeur 2
+            NoJour noLundi = NoJour.lundi;
+
+            // Affichera «no janvier = 0, no lundi = 2»
+            Console.WriteLine($&quot;no janvier = {(int)noJanvier}, no lundi = {(int)noLundi}&quot;);
+        }
+    }
+
+    // Une autre classe qui utilise les mêmes énumérations
+    class Calendrier
+    {
+        private NoMois noMars = NoMois.mars;
+        private NoJour noJeudi = NoJour.jeudi;
     }
 }
 ```
@@ -12603,7 +12638,7 @@ Le modificateur ''static'' a un effet différent selon qu'il s'applique à une m
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/19d6b1f1-3214-4ed8-a75d-ff163b433ea1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210408171702497" modified="20210408190703363" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
+<div created="20210408171702497" modified="20210409110952046" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
 <pre>Jusqu'à présent, afin de respecter le principe d'[[encapsulation de données|8.01 Classes]], on déclarait toujours les attributs comme étant privés. Dans un pareil scénario, on doit donc nécessairement toujours passer par des méthodes publiques si on désire connaître ou modifier la valeur de ces attributs; ces méthodes sont alors respectivement appelées ''accesseurs'' et ''mutateurs'':
 
 ```cs
@@ -12745,7 +12780,11 @@ class Cercle
 }
 ```
 
-Le but d'une propriété explicite étant d'avoir au moins une forme d'accès extérieur, dès lors qu'un attribut ne doit ni être accédé ni modifié de l'extérieur, il devra simplement rester un attribut privé.</pre>
+Le but d'une propriété explicite étant d'avoir au moins une forme d'accès extérieur, dès lors qu'un attribut ne doit ni être accédé ni modifié de l'extérieur, il devra simplement rester un attribut privé.
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div bag="default" created="20210325230132209" modified="20210325232735507" revision="0" tags="[[8.07 Membres statiques]]" title="8.7.01 Les méthodes statiques" type="text/vnd.tiddlywiki">
 <pre>Une méthode statique est une méthode qui peut être appelée directement dans une classe non instanciée.
@@ -12937,7 +12976,7 @@ class Program
 ```
 &lt;/p&gt;</pre>
 </div>
-<div bag="default" created="20210314202052547" modified="20210408191511823" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314202052547" modified="20210409114600701" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
 <pre>Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs ayant le même nom que la classe créée.
 
 * Gardez en tête qu'il sera sans doute nécessaire ou souhaitable de changer la définition des fonctions lorsque converties en méthodes; notamment, l'utilisation d'arguments ne sera pas nécessaire si une méthode ne traite que des attributs.
@@ -12951,14 +12990,22 @@ class Program
 #&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.2.zip]]
 
 # Reprendre le [[TP2|TP2.Solution]] de la même façon, c.-à-d. en plaçant les fonctions et les variables appropriées dans au moins une classe et en réduisant au minimum le code de la fonction //Main()//.
+#&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.3.zip]]
 
 # Écrivez une classe //Temperature// contenant une seule méthode statique appelée //Convertir// retournant la valeur de température convertie en °C ou en °F selon les arguments qui lui sont passés, puis écrivez un programme exploitant cette classe sans l'instancier.
+#&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.4.zip]]
 
-# Remodelez la solution de l'exercice 8.2 ci-dessus de manière à ce que:
+# Remodeler la solution de l'exercice 8.2 ci-dessus de manière à ce que:
 #* la classe //De// comporte un constructeur prenant le nombre de faces à donner au dé;
 #* le jeu demande le nombre de faces à donner au dé pour chaque nouvelle partie.
+#&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.5.zip]]
 
-# Remodelez un exemple de solution à l'[[examen 1|99.03 Examen 1]] de manière à ce qu'aucune classe ne soit instanciée.
+# Remodeler un exemple de solution à l'[[examen 1|99.03 Examen 1]] de manière à ce qu'aucune classe ne soit instanciée.
+#&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.6.zip]]
+
+# Modifier l'exercice 8.5 ci-dessus de manière à ce que:
+#* le score d'un joueur soit une propriété explicite pouvant être modifiée tant de l'intérieur que de l'extérieur (la méthode //~AugmenterScore// peut demeurer);
+#* le nombre de faces d'un dé soit une propriété explicite ne pouvant être modifiée qu'au moment de l'instanciation de la classe.
 
 # Créer une classe //Personne// ayant les propriétés explicites suivantes:
 #* un nom et un prénom, tous deux passés en argument lors de l'instantiation, accessibles de l'extérieur et qui ne peuvent jamais être changés par la suite ni de l'intérieur ni de l'extérieur;
@@ -13185,7 +13232,7 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 # Écrire un programme qui calcule et affiche la racine carrée de tous les nombres entiers par saut de 5 compris entre deux nombres eniers entrés au clavier (p.ex., si les deux nombres entrés au clavier sont 23 et 47, le programme calculera la racine carrée de 23, 28, 33, 38 et 43).
 #&gt; [[Exemple de solution|98.1.9.Solution]]</pre>
 </div>
-<div bag="default" created="20210317130415822" modified="20210326122209517" revision="0" tags="[[98 Exercices supplémentaires]]" title="98.02 Sections 06-08" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210317130415822" modified="20210409121259396" revision="0" tags="[[98 Exercices supplémentaires]]" title="98.02 Sections 06-08" type="text/vnd.tiddlywiki">
 <pre># Dans une classe //Aleatoire//, écrire une méthode //Reel// utilisant la méthode [[Random.NextDouble()|https://docs.microsoft.com/en-us/dotnet/api/system.random.nextdouble?view=net-5.0]] pour retourner un nombre pseudo-aléatoire de type ''double'' compris entre 0 et un nombre passé en argument, inclusivement (de sorte que, p.ex., `Reel(200);` retournera un nombre réel compris entre 0 et 200, inclusivement); faites attention où vous placerez l'initialisation du générateur aléatoire.
 #&gt; [[Exemple de solution|98.2.1.Solution]]
 
@@ -13286,6 +13333,7 @@ P. ex.: MCXLIV = 1000 + 100 - 10 + 50 - 1 + 5 = 1144
 #&gt; [[Exemple de solution 4 et 5|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%2098.2.4-5.zip]]
 
 # Modifier l'exercice 2 ci-dessus de manière à ce que les paramètres d'une partie soient plutôt demandés par la classe //~JeuDeNim// et passés à un constructeur de la classe //Partie//.
+#&gt; [[Exemple de slution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%2098.2.6.zip]]
 
 # Reprendre les exercices 1, 3 , 4 et 5 ci-dessus en rendant statiques toutes les méthodes demandées et en modifiant les programmes correspondants en conséquence.</pre>
 </div>
