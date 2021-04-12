@@ -9192,8 +9192,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408171656033" modified="20210412144731256" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20210412171610867" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
-<pre>close</pre>
+<div created="20210408180556742" modified="20210412173127112" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210409121931567" modified="20210409123431491" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
@@ -9201,13 +9201,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408173626162" modified="20210412171615505" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210412094527418" modified="20210412145258583" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
-<pre>close</pre>
+<div created="20210412094527418" modified="20210412171651599" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
+<pre>open</pre>
 </div>
 <div created="20210409124017410" modified="20210412171612342" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
 </div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="[[8.09 Identificateur «this»]] [[Table des matières]] [[99.04 TP3 (11 %)]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12944,7 +12944,7 @@ Le but d'une propriété explicite étant d'avoir au moins une forme d'accès ex
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210412103228870" modified="20210412130445159" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
+<div created="20210412103228870" modified="20210412173414385" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
 <pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est surtout utile pour passer une instance de classe en argument.
 
 !! Exemple
@@ -12954,12 +12954,12 @@ Le but d'une propriété explicite étant d'avoir au moins une forme d'accès ex
 class Personne
 {
     // Le chien de la personne
-    private Chien chien;
+    public Chien Compagnon { get; }
 
     public Personne()
     {
         // Crée un nouveau chien ayant pour maître l'instance de Personne actuelle
-        chien = new Chien(this);
+        Compagnon = new Chien(this);
     }
 }
 
