@@ -165,6 +165,8 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/Table des matières-07 Routines-1329480811</li>
+
 <li>$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019</li>
 
 <li>$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811</li>
@@ -364,6 +366,8 @@ Error message and password prompt
 <li>8.7.01 Les méthodes statiques</li>
 
 <li>8.7.02 Les attributs statiques</li>
+
+<li>8.8.Solution</li>
 
 <li>8.Exercices</li>
 
@@ -9170,7 +9174,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210412130335014" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20210412165553248" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
@@ -9182,25 +9186,28 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140203400" modified="20210409141133226" title="$:/state/tab/sidebar--1835078512">
 <pre>Table des matières</pre>
 </div>
-<div created="20210408171656033" modified="20210412144612979" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<div created="20210412165600146" modified="20210412165600146" title="$:/state/toc/Table des matières-07 Routines-1329480811">
+<pre>open</pre>
+</div>
+<div created="20210408171656033" modified="20210412144731256" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20210409140433079" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
-<pre>close</pre>
+<div created="20210408180556742" modified="20210412155610166" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210409121931567" modified="20210409123431491" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408173626162" modified="20210409140443428" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
+<div created="20210408173626162" modified="20210412162807398" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
+<pre>open</pre>
+</div>
+<div created="20210412094527418" modified="20210412145258583" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
 <pre>close</pre>
 </div>
-<div created="20210412094527418" modified="20210412144614118" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
-<pre>close</pre>
+<div created="20210409124017410" modified="20210412154043107" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
+<pre>open</pre>
 </div>
-<div created="20210409124017410" modified="20210409134700208" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
-<pre>close</pre>
-</div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="8.Exercices 8.8.Solution" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13161,7 +13168,33 @@ class Program
 ```
 &lt;/p&gt;</pre>
 </div>
-<div bag="default" created="20210314202052547" modified="20210409114600701" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
+<div created="20210412164554415" modified="20210412170348611" title="8.8.Solution">
+<pre>```cs
+class Personne
+{
+    public string Nom { get; }
+
+    public string Prenom { get; }
+
+    public string Courriel { get; set; }
+
+    public int NAS { get; private set; }
+
+    public Personne(string nom, string prenom, int nas)
+    {
+        Nom = nom;
+        Prenom = prenom;
+        NAS = nas;
+    }
+
+    public void ChangerNAS(int nas)
+    {
+        NAS = nas;
+    }
+}
+```</pre>
+</div>
+<div bag="default" created="20210314202052547" modified="20210412164542545" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
 <pre>Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs ayant le même nom que la classe créée.
 
 * Gardez en tête qu'il sera sans doute nécessaire ou souhaitable de changer la définition des fonctions lorsque converties en méthodes; notamment, l'utilisation d'arguments ne sera pas nécessaire si une méthode ne traite que des attributs.
@@ -13191,11 +13224,13 @@ class Program
 # Modifier l'exercice 8.5 ci-dessus de manière à ce que:
 #* le score d'un joueur soit une propriété explicite pouvant être modifiée tant de l'intérieur que de l'extérieur (la méthode //~AugmenterScore// peut demeurer);
 #* le nombre de faces d'un dé soit une propriété explicite ne pouvant être modifiée qu'au moment de l'instanciation de la classe.
+#&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%208.7.zip]]
 
 # Créer une classe //Personne// ayant les propriétés explicites suivantes:
 #* un nom et un prénom, tous deux passés en argument lors de l'instantiation, accessibles de l'extérieur et qui ne peuvent jamais être changés par la suite ni de l'intérieur ni de l'extérieur;
 #* un courriel, qui peut être changé de l'extérieur;
-#* un NAS, passé en argument lors de l'instanciation, qui ne peut être modifié qu'en passant par la méthode //~ChangerNAS//, que vous devez aussi créer.</pre>
+#* un NAS, passé en argument lors de l'instanciation, qui ne peut être modifié qu'en passant par la méthode //~ChangerNAS//, que vous devez aussi créer.
+#&gt; [[Exemple de solution|8.8.Solution]]</pre>
 </div>
 <div bag="default" created="20210301125750640" modified="20210314164329265" revision="0" tags="[[Table des matières]]" title="97 Petit guide de programmation" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
