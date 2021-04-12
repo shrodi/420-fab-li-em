@@ -143,6 +143,10 @@ Error message and password prompt
 
 <li>$:/isEncrypted</li>
 
+<li>$:/palette</li>
+
+<li>$:/palettes/Dracula</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
 
 <li>$:/SiteSubtitle</li>
@@ -151,11 +155,15 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/ShowPaletteEditor</li>
+
 <li>$:/state/sidebar</li>
 
 <li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019</li>
 
@@ -164,6 +172,8 @@ Error message and password prompt
 <li>$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019</li>
 
 <li>$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811</li>
+
+<li>$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019</li>
 
 <li>$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811</li>
 
@@ -349,6 +359,8 @@ Error message and password prompt
 
 <li>8.08 Accesseurs et mutateurs</li>
 
+<li>8.09 Identificateur «this»</li>
+
 <li>8.7.01 Les méthodes statiques</li>
 
 <li>8.7.02 Les attributs statiques</li>
@@ -410,6 +422,8 @@ Error message and password prompt
 <li>99.02 TP2 (8 %)</li>
 
 <li>99.03 Examen 1</li>
+
+<li>99.04 TP3 (11 %)</li>
 
 <li>css</li>
 
@@ -8979,6 +8993,105 @@ Error message and password prompt
 <div bag="default" revision="0" title="$:/isEncrypted">
 <pre>no</pre>
 </div>
+<div created="20210409140225958" modified="20210409141130174" title="$:/palette">
+<pre>$:/palettes/Vanilla</pre>
+</div>
+<div created="20210409140730608" description="Dark theme" modified="20210409140847059" name="Dracula" tags="$:/tags/Palette" title="$:/palettes/Dracula" type="application/x-tiddler-dictionary">
+<pre>background: #282a36
+untagged-background: #6272a4
+foreground: #f8f8f2
+tiddler-border: #44475a
+page-background: #282a36
+primary: #8be9fd
+tag-background: #bd93f9
+muted-foreground: rgba(255,255,255,0.5)
+alert-background: &lt;&lt;colour tag-background&gt;&gt;
+alert-border: &lt;&lt;colour tag-background&gt;&gt;
+alert-highlight: &lt;&lt;colour primary&gt;&gt;
+alert-muted-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-background: &lt;&lt;colour tag-background&gt;&gt;
+button-foreground: &lt;&lt;colour foreground&gt;&gt;
+button-border: &lt;&lt;colour tag-background&gt;&gt;
+code-background: &lt;&lt;colour page-background&gt;&gt;
+code-border: &lt;&lt;colour page-background&gt;&gt;
+code-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: &lt;&lt;colour primary&gt;&gt;
+download-background: &lt;&lt;colour tag-background&gt;&gt;
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: &lt;&lt;colour background&gt;&gt;
+dropdown-border: &lt;&lt;colour background&gt;&gt;
+dropdown-tab-background-selected: &lt;&lt;colour background&gt;&gt;
+dropdown-tab-background: &lt;&lt;colour background&gt;&gt;
+dropzone-background: &lt;&lt;colour primary&gt;&gt;
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: &lt;&lt;colour tag-background&gt;&gt;
+external-link-foreground: &lt;&lt;color primary&gt;&gt;
+message-background: &lt;&lt;colour tag-background&gt;&gt;
+message-border: &lt;&lt;colour tag-background&gt;&gt;
+message-foreground: &lt;&lt;colour foreground&gt;&gt;
+modal-backdrop: &lt;&lt;colour page-background&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: &lt;&lt;colour background&gt;&gt;
+modal-footer-background: &lt;&lt;colour background&gt;&gt;
+modal-footer-border: &lt;&lt;colour background&gt;&gt;
+modal-header-border: &lt;&lt;colour muted-foreground&gt;&gt;
+notification-background: &lt;&lt;colour tag-background&gt;&gt;
+notification-border: &lt;&lt;colour tag-background&gt;&gt;
+pre-background: &lt;&lt;colour page-background&gt;&gt;
+pre-border: &lt;&lt;colour page-background&gt;&gt;
+sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-controls-foreground-hover: &lt;&lt;colour primary&gt;&gt;
+sidebar-controls-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+sidebar-foreground-shadow: transparent
+sidebar-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-muted-foreground-hover: &lt;&lt;colour primary&gt;&gt;
+sidebar-muted-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+sidebar-tab-background-selected: &lt;&lt;colour page-background&gt;&gt;
+sidebar-tab-background: transparent
+sidebar-tab-border-selected: &lt;&lt;colour tiddler-border&gt;&gt;
+sidebar-tab-border: &lt;&lt;colour tiddler-border&gt;&gt;
+sidebar-tab-divider: &lt;&lt;colour tiddler-border&gt;&gt;
+sidebar-tab-foreground-selected: &lt;&lt;colour primary&gt;&gt;
+sidebar-tab-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: &lt;&lt;colour primary&gt;&gt;
+sidebar-tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+site-title-foreground: &lt;&lt;colour foreground&gt;&gt;
+static-alert-foreground: &lt;&lt;colour foreground&gt;&gt;
+tab-background-selected: &lt;&lt;colour background&gt;&gt;
+tab-background: transparent
+tab-border-selected: &lt;&lt;colour tiddler-border&gt;&gt;
+tab-border: &lt;&lt;colour tiddler-border&gt;&gt;
+tab-divider: &lt;&lt;colour tiddler-border&gt;&gt;
+tab-foreground-selected: &lt;&lt;colour primary&gt;&gt;
+tab-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+table-border: &lt;&lt;colour page-background&gt;&gt;
+table-footer-background: rgba(0, 0, 0, 0.1)
+table-header-background: rgba(0, 0, 0, 0.2)
+tag-foreground: &lt;&lt;colour foreground&gt;&gt;
+tiddler-background: &lt;&lt;colour background&gt;&gt;
+tiddler-controls-foreground-hover: inherit
+tiddler-controls-foreground-selected: &lt;&lt;colour foreground&gt;&gt;
+tiddler-controls-foreground: &lt;&lt;colour forground&gt;&gt;
+tiddler-editor-background: &lt;&lt;colour background&gt;&gt;
+tiddler-editor-border-image: &lt;&lt;colour background&gt;&gt;
+tiddler-editor-border: rgba(255,255,255,0.1)
+tiddler-editor-fields-even: &lt;&lt;colour tiddler-border&gt;&gt;
+tiddler-editor-fields-odd: &lt;&lt;colour page-background&gt;&gt;
+tiddler-info-background: &lt;&lt;colour background&gt;&gt;
+tiddler-info-border: &lt;&lt;colour page-background&gt;&gt;
+tiddler-info-tab-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+tiddler-title-foreground: &lt;&lt;colour primary&gt;&gt;
+very-muted-foreground: rgba(255,255,255,0.2)</pre>
+</div>
 <div author="JoaoBolila" bag="default" core-version="&gt;=5.0.0" dependents="" description="Highlight.js: syntax highlighting" list="readme usage license" plugin-type="plugin" revision="0" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.17">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -9051,34 +9164,43 @@ Error message and password prompt
 <div bag="default" created="20181113130525973" modified="20210202183945997" revision="0" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
 <pre>420-EBA-LI POO I</pre>
 </div>
-<div created="20210408172059010" modified="20210408172059010" title="$:/state/showeditpreview">
+<div created="20210408172059010" modified="20210412094648024" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210409135541002" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
+<pre>yes</pre>
 </div>
-<div created="20210409133650613" modified="20210409133707795" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Theme</pre>
+<div created="20210408172100210" modified="20210412130335014" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
-<div created="20210409133417531" modified="20210409133417531" title="$:/state/tab-1749438307">
+<div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
+</div>
+<div created="20210409133417531" modified="20210409140200253" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20210408171656033" modified="20210409121903172" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<div created="20210409140203400" modified="20210409141133226" title="$:/state/tab/sidebar--1835078512">
+<pre>Table des matières</pre>
+</div>
+<div created="20210408171656033" modified="20210412144612979" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20210409134731082" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
-<pre>open</pre>
+<div created="20210408180556742" modified="20210409140433079" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<pre>close</pre>
 </div>
 <div created="20210409121931567" modified="20210409123431491" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408173626162" modified="20210409134906990" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
-<pre>open</pre>
+<div created="20210408173626162" modified="20210409140443428" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
+<pre>close</pre>
+</div>
+<div created="20210412094527418" modified="20210412144614118" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
+<pre>close</pre>
 </div>
 <div created="20210409124017410" modified="20210409134700208" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
 </div>
-<div list="[[98.02 Sections 06-08]] 8.Exercices [[8.04 Les énumérations]] [[Table des matières]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9135,7 +9257,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20210409105344248" title="$:/temp/search">
+<div created="20210408172006571" modified="20210409140542596" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -12667,7 +12789,7 @@ Le modificateur ''static'' a un effet différent selon qu'il s'applique à une m
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/19d6b1f1-3214-4ed8-a75d-ff163b433ea1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210408171702497" modified="20210409110952046" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
+<div created="20210408171702497" modified="20210412125623564" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
 <pre>Jusqu'à présent, afin de respecter le principe d'[[encapsulation de données|8.01 Classes]], on déclarait toujours les attributs comme étant privés. Dans un pareil scénario, on doit donc nécessairement toujours passer par des méthodes publiques si on désire connaître ou modifier la valeur de ces attributs; ces méthodes sont alors respectivement appelées ''accesseurs'' et ''mutateurs'':
 
 ```cs
@@ -12715,7 +12837,7 @@ class Program
 
 Par convention, les accesseurs sont préférentiellement toujours nommés «Get»+«Attribut» (p.ex., ''~GetRayon'' ci-dessus) et les mutateurs toujours nommés «Set»+«Attribut» (p.ex., ''~SetRayon'' ci-dessus).
 
-Un attribut qui possède un accesseur ou un mutateur est plus spécifiquement appelé ''une propriété''; ainsi, p.ex., l'attribut //rayon// de la classe //Cercle// ci-dessus est aussi une propriété.
+Un attribut qui possède un accesseur ou un mutateur est plus spécifiquement appelé ''une propriété'', sinon il sera plus spécifiquement appelé ''un champ''; ainsi, p.ex., l'attribut //rayon// de la classe //Cercle// ci-dessus est une propriété.
 
 C# offre cependant une façon beaucoup plus simple et plus élégante de définir des propriétés avec accesseurs ou mutateurs automatiques:
 
@@ -12814,6 +12936,40 @@ Le but d'une propriété explicite étant d'avoir au moins une forme d'accès ex
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</div>
+<div created="20210412103228870" modified="20210412130445159" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
+<pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est surtout utile pour passer une instance de classe en argument.
+
+!! Exemple
+
+```cs
+// Une personne
+class Personne
+{
+    // Le chien de la personne
+    private Chien chien;
+
+    public Personne()
+    {
+        // Crée un nouveau chien ayant pour maître l'instance de Personne actuelle
+        chien = new Chien(this);
+    }
+}
+
+// Un chien
+class Chien
+{
+    // Le maître du chien
+    public Personne Maitre { get; set; }
+
+    // Le chien n'a pas de maître par défaut
+    public Chien(Personne maitre = null)
+    {
+        // Affecte un maître au chien
+        Maitre = maitre;
+    }
+}
+```</pre>
 </div>
 <div bag="default" created="20210325230132209" modified="20210325232735507" revision="0" tags="[[8.07 Membres statiques]]" title="8.7.01 Les méthodes statiques" type="text/vnd.tiddlywiki">
 <pre>Une méthode statique est une méthode qui peut être appelée directement dans une classe non instanciée.
@@ -13956,6 +14112,89 @@ chaines = new string[] { &quot;banane&quot;, &quot;pomme&quot;, &quot;cerise&quo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/f5ca6557-d543-4ec7-bf22-92f9f5e6e73e?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20210412094532963" modified="20210412143812898" tags="[[99 Travaux pratiques et examens]]" title="99.04 TP3 (11 %)">
+<pre>|!Capacités évaluées: |&lt;ul&gt;&lt;li&gt;Capacité 1: Résoudre des problèmes en utilisant les structures algorithmiques&lt;/li&gt;&lt;li&gt;Capacité 2: Appliquer les principes de programmation orientée objet&lt;/li&gt;&lt;li&gt;Capacité 3: Utiliser un environnement de développement intégré (IDE) pour développer des programmes&lt;/li&gt;&lt;/ul&gt;|
+|!À remettre: |&lt;ul&gt;&lt;li&gt;Le ''dossier complet archivé (.zip)'' de la solution Visual Studio créée&lt;/li&gt;&lt;li&gt;Remise individuelle par Teams, par l'onglet des devoirs&lt;/li&gt;&lt;li&gt;Une démonstration par Teams suivant la remise devra être effectuée (voir la ligne «Évaluation» ci-dessous)&lt;/li&gt;&lt;/ul&gt;|
+|!Date limite de remise: |&lt;ul&gt;&lt;li&gt;Dimanche 25 avril, 23h59&lt;/li&gt;&lt;/ul&gt;|
+|!Évaluation: |&lt;ul&gt;&lt;li&gt;Ce travail vaut pour 11 % de la session&lt;/li&gt;&lt;li&gt;-10 % par jour de retard&lt;/li&gt;&lt;li&gt;Note de 0 si travail remis après retour à l'ensemble du groupe ou si le travail a été plagié en tout ou en partie&lt;/li&gt;&lt;li&gt;40% de la note sera attribuée en fonction du niveau de maîtrise du travail effectué par l'élève, lequel niveau sera établi par une entrevue individuelle verbale (démonstration de la solution)&lt;/li&gt;&lt;/ul&gt;|
+|!@@display:block;width:15em;Temps de réalisation estimé si la matière a été préalablement étudiée, pratiquée et comprise:@@ |&lt;ul&gt;&lt;li&gt;Moins de 10h&lt;/li&gt;&lt;/ul&gt;|
+
+! Énoncé
+
+!! Sachant que:
+
+Le jeu de [[bataille navale|https://fr.wikipedia.org/wiki/Bataille_navale_(jeu)#/media/Fichier:Battleships_Paper_Game.svg]] est un jeu où des joueurs disposent chacun des navires longilignes sur une grille où les lignes sont étiquetées avec des lettres et les colonnes avec des nombres.
+
+Chaque navire occupe un certain nombre de cases de la grille. Chaque joueur tente par la suite, à l'aveugle, de «couler» chacun des navires de l'adversaire en «attaquant» des coordonnées de la grille d'un joueur adverse. P.ex., si un joueur lance «C8» et que son adversaire possède un navire occupant cette position (ligne C, colonne 8), ce navire est touché; si toutes les cases occupées par un navire sont touchées, le navire est alors coulé.
+
+!! Programmer les bases d'un jeu de bataille navale (//Battleship//) respectant les spécifications suivantes:
+
+# Vous n'avez pas à programmer un jeu complet: seulement la structure demandée ci-dessous.
+
+# La solution Visual Studio doit minimalement comporter les classes suivantes, ''ayant chacune un constructeur approprié'':
+
+#* //Grille//: une grille de jeu de bataille navale; par défaut, doit être de dimensions 10 lignes par 10 colonnes, mais le constructeur doit permettre de créer une grille pouvant aller jusqu'à 26 lignes et 100 colonnes (si des dimensions invalides sont passées à la création de la grille, les dimensions par défaut sont alors utilisées).
+
+#* //Navire//: un navire que l'on peut placer sur une grille de jeu; chaque navire prend un des cinq types de navires représentés par l'énumération suivante (que vous devez utiliser telle quelle dans votre solution, en la déclarant dans un fichier .cs à part):&lt;div&gt;
+
+```cs
+enum TypeNavire { SousMarin = 1, Destroyer, Patrouilleur, Cuirasse, PorteAvions }
+```
+
+La valeur attribuée à un type de navire dans l'énumération correspond au nombre de cases qu'il occupe dans la grille. Un navire peut être coulé ou non. Un navire doit «savoir» quelles cases il occupe.
+&lt;/div&gt;
+
+#* //Case//: une case de la grille. Une case possède une position, et peut être occupée ou non par un navire (dans ce cas elle sait lequel; une case ne peut évidemment être occupée par plus d'un navire) et peut être «touchée» ou non.
+
+#* //Position//: une position (coordonnée) dans la grille (ligne et colonne).
+
+# La solution Visual Studio (VS) doit comporter la classe //Program// suivante, sans aucune modification ni ajout d'aucune sorte:&lt;div&gt;
+
+```cs
+class Program
+{
+    static void Main()
+    {
+        // Affiche une grille de bataille navale générée au hasard
+        new Grille().Afficher();
+    }
+}
+```
+
+Et qui affiche à la console une grille de la forme suivante avec les cinq types de navires positionnés au hasard (l'orientation horizontale ou verticale d'un navire doit également être déterminée au hasard):
+
+[img[https://i.imgur.com/qvata0d.png]]
+
+Où, à l'intérieur de la grille (les «x» donnant le nombre de fois que chaque type de navire doit apparaître dans la grille):
+
+* ''A'' représente un porte-avions (x1);
+* ''C'' représente un cuirassé (x1);
+* ''D'' représente un destroyer (x2);
+* ''P'' représente un patrouilleur (x1);
+* ''S'' représente un sous-marin (x2).
+&lt;/div&gt;
+
+!! De plus:
+
+* vous devez choisir des types de variables, des stuctures conditionnelles et des structures de boucles appropriées;
+
+* vous devez réduire au minimum les valeurs codées dur;
+
+* aucun avertissement ni aucune erreur ne doivent être signalés par Visual Studio;
+
+* votre code doit être raisonnablement commenté;
+
+* assurez-vous que votre code soit adéquatement indenté et aéré;
+
+* n'oubliez pas de respecter les conventions de nomenclature établies.
+
+&lt;p class=&quot;boite&quot;&gt;
+
+! Toutes les informations contenues dans les sections 1 à 8 ainsi que le présent énoncé sont suffisantes pour réaliser le présent travail; notamment, prenez note que les tableaux multidimensionnels n'ayant pas été vus, ils ne sont pas nécessaires pour réaliser le présent travail.
+
+! Même s'il est incomplet, remettez un travail qui ''compile''.
+&lt;/p&gt;</pre>
 </div>
 <div bag="default" created="20181113131237544" modified="20181113131325982" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
