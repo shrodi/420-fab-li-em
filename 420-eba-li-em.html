@@ -9174,8 +9174,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210412175120916" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20210408172100210" modified="20210416115334770" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -9186,14 +9186,14 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140203400" modified="20210409141133226" title="$:/state/tab/sidebar--1835078512">
 <pre>Table des matières</pre>
 </div>
-<div created="20210412165600146" modified="20210412174106896" title="$:/state/toc/Table des matières-07 Routines-1329480811">
-<pre>open</pre>
-</div>
-<div created="20210408171656033" modified="20210412144731256" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<div created="20210412165600146" modified="20210416115337942" title="$:/state/toc/Table des matières-07 Routines-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20210412173127112" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
-<pre>open</pre>
+<div created="20210408171656033" modified="20210416115336452" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<pre>close</pre>
+</div>
+<div created="20210408180556742" modified="20210416115338696" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<pre>close</pre>
 </div>
 <div created="20210409121931567" modified="20210409123431491" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
@@ -9201,13 +9201,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408173626162" modified="20210412171615505" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210412094527418" modified="20210412171651599" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
-<pre>open</pre>
+<div created="20210412094527418" modified="20210416112539123" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
+<pre>close</pre>
 </div>
-<div created="20210409124017410" modified="20210412174423364" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
-<pre>open</pre>
+<div created="20210409124017410" modified="20210416115340106" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
+<pre>close</pre>
 </div>
-<div list="[[7.04 Les arguments]] [[8.09 Identificateur «this»]] [[Table des matières]] [[99.04 TP3 (11 %)]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12453,7 +12453,7 @@ Commenté:
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/1fcfc54d-a5b2-4e9f-b10a-fb6622d84e60?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314183204151" modified="20210325232633072" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.02 Instances de classes (objets)" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314183204151" modified="20210416114304967" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.02 Instances de classes (objets)" type="text/vnd.tiddlywiki">
 <pre>On crée une instance (on instancie) une classe avec l'instruction ''new''.
 
 Le mot «objet» dans //Programmation orientée objet// vient du nom donné à une instance de classe, qu'on appelle justement un objet.
@@ -12474,14 +12474,16 @@ Le mot «objet» en POO porte souvent à confusion, car:
 # certaines personnes auront tendance à associer le mot //objet// à des objets de la vie réelle, ce qui n'a rien à voir avec la POO en tant que tel.
 &lt;&lt;&lt;
 
-Il est important de comprendre que l'on peut créer plusieurs instances de classes dans un même programme, et que chaque instance aura (par défaut) ses propres valeurs et sera complètement indépendante des autres; p.ex., avec la classe //Racines// définie en 8.01:
+Il est important de comprendre que l'on peut créer plusieurs instances de classes dans un même programme, et que chaque instance aura (par défaut) ses propres valeurs et sera complètement indépendante des autres.
+
+!! Exemples
 
 ```cs
 class Program
 {
     static void Main()
     {
-        // Création de deux objets de type Racines
+        // Création de deux objets de type Racines (voir section 8.01)
         Racines racines1 = new Racines();
         Racines racines2 = new Racines();
 
@@ -12496,6 +12498,47 @@ class Program
         // Chaque objet affiche ses propres résultats
         racines1.Afficher();
         racines2.Afficher();            
+    }
+}
+```
+
+```cs
+// Un chien
+class Chien
+{
+    // Le nom du chien
+    private string nom;
+
+    public void Baptiser(string nomChien)
+    {
+        nom = nomChien;
+    }
+
+    public string Nom()
+    {
+        return nom;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Chien fido = new Chien();
+        Chien rex = new Chien();
+        Chien oreo = new Chien();
+        Chien boule = new Chien();
+
+        fido.Baptiser(&quot;Fido&quot;);
+        rex.Baptiser(&quot;Rex&quot;);
+        oreo.Baptiser(&quot;Oreo&quot;);
+        boule.Baptiser(&quot;Boule&quot;);
+
+        // Affiche le nom de chaque chien
+        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom()}»&quot;);
     }
 }
 ```
@@ -12714,7 +12757,7 @@ namespace Demo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/1716d002-d471-4f3a-9ba7-e84c016cbe4d?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210325202149709" modified="20210326121408621" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.06 Constructeur" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210325202149709" modified="20210416115101779" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.06 Constructeur" type="text/vnd.tiddlywiki">
 <pre>Un ''constructeur'' est une méthode particulière qui porte le même nom que la classe où elles se trouve; un constructeur permet à une classe d'initialiser des membres ou encore de recevoir des arguments lors de son instanciation.
 
 Par exemple, dans l'exemple solution à l'[[exercice 8.2|8.Exercices]], nous avions la classe //De// suivante représentant un dé à jouer:
@@ -12777,6 +12820,44 @@ Notez que le constructeur:
 # est toujours ''public'';
 # n'a pas de type de retour.
 
+!! Rreprise de l'exemple de la classe Chien de la section 8.02 avec constructeur
+
+```cs
+// Un chien
+class Chien
+{
+    // Le nom du chien
+    private string nom;
+
+    // Constructeur
+    public Chien(string nomChien)
+    {
+        nom = nomChien;
+    }
+
+    public string Nom()
+    {
+        return nom;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Chien fido = new Chien(&quot;Fido&quot;);
+        Chien rex = new Chien(&quot;Rex&quot;);
+        Chien oreo = new Chien(&quot;Oreo&quot;);
+        Chien boule = new Chien(&quot;Boule&quot;);
+
+        // Affiche le nom de chaque chien
+        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom()}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom()}»&quot;);
+    }
+}
+```
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/586df41b-ceb7-495d-8606-4f200d890d18?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
@@ -12796,7 +12877,7 @@ Le modificateur ''static'' a un effet différent selon qu'il s'applique à une m
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/19d6b1f1-3214-4ed8-a75d-ff163b433ea1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210408171702497" modified="20210412125623564" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
+<div created="20210408171702497" modified="20210416114824943" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
 <pre>Jusqu'à présent, afin de respecter le principe d'[[encapsulation de données|8.01 Classes]], on déclarait toujours les attributs comme étant privés. Dans un pareil scénario, on doit donc nécessairement toujours passer par des méthodes publiques si on désire connaître ou modifier la valeur de ces attributs; ces méthodes sont alors respectivement appelées ''accesseurs'' et ''mutateurs'':
 
 ```cs
@@ -12940,12 +13021,46 @@ class Cercle
 
 Le but d'une propriété explicite étant d'avoir au moins une forme d'accès extérieur, dès lors qu'un attribut ne doit ni être accédé ni modifié de l'extérieur, il devra simplement rester un attribut privé.
 
+!! Rreprise de l'exemple de la classe Chien de la section 8.02 avec constructeur et propriété explicite
+
+```cs
+// Un chien
+class Chien
+{
+    // Le nom du chien
+    public string Nom { get; }
+
+    // Constructeur
+    public Chien(string nomChien)
+    {
+        Nom = nomChien;
+    }        
+}
+
+class Program
+{
+    static void Main()
+    {
+        Chien fido = new Chien(&quot;Fido&quot;);
+        Chien rex = new Chien(&quot;Rex&quot;);
+        Chien oreo = new Chien(&quot;Oreo&quot;);
+        Chien boule = new Chien(&quot;Boule&quot;);
+
+        // Affiche le nom de chaque chien
+        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom}»&quot;);
+    }
+}
+```
+
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210412103228870" modified="20210412173902098" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
-<pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est notamment utile pour passer une instance de classe en argument.
+<div created="20210412103228870" modified="20210416115327225" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
+<pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est notamment utile pour passer l'instance propre d'une classe en argument.
 
 !! Exemple
 
