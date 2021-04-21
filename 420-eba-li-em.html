@@ -9182,7 +9182,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210421112343114" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20210421160958122" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
@@ -9197,23 +9197,23 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210421154945242" modified="20210421154945708" title="$:/state/toc/Table des matières-05 Arguments de programme-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210412165600146" modified="20210421154946660" title="$:/state/toc/Table des matières-07 Routines-1329480811">
-<pre>open</pre>
+<div created="20210412165600146" modified="20210421161001214" title="$:/state/toc/Table des matières-07 Routines-1329480811">
+<pre>close</pre>
 </div>
-<div created="20210408171656033" modified="20210416123614178" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
-<pre>open</pre>
+<div created="20210408171656033" modified="20210421160954468" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<pre>close</pre>
 </div>
 <div created="20210408180556742" modified="20210416115338696" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210409121931567" modified="20210421104325632" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
-<pre>open</pre>
+<div created="20210409121931567" modified="20210421160959436" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
+<pre>close</pre>
 </div>
 <div created="20210408173626162" modified="20210412171615505" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210412094527418" modified="20210416124233969" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
-<pre>open</pre>
+<div created="20210412094527418" modified="20210421160956022" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
+<pre>close</pre>
 </div>
 <div created="20210409124017410" modified="20210416115340106" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
@@ -9221,7 +9221,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210416122540090" modified="20210416122540090" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.02 TP2 (8 %)--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[8.09 Identificateur «this»]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13087,7 +13087,7 @@ class Program
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210412103228870" modified="20210421160249603" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
+<div created="20210412103228870" modified="20210421160949870" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
 <pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est notamment utile pour passer l'instance propre d'une classe en argument.
 
 !! Exemple
@@ -13167,9 +13167,13 @@ class Program
     static void Main()
     {
         Personne moi = new Personne(&quot;Eric&quot;, &quot;Fido&quot;);
+        Chien monChien = moi.Compagnon;
 
         // Affiche «Mon nom est Eric et mon chien s'appelle Fido»
         Console.WriteLine($&quot;Mon nom est {moi.Nom} et mon chien s'appelle {moi.Compagnon.Nom}&quot;);
+
+        // Affiche «Mon nom est Eric et mon chien s'appelle Fido»
+        Console.WriteLine($&quot;Mon nom est {monChien.Maitre.Nom} et mon chien s'appelle {monChien.Nom}&quot;);
     }
 }
 ```</pre>
