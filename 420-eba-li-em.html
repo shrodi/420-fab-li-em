@@ -411,9 +411,13 @@ Error message and password prompt
 
 <li>8.7.02 Les attributs statiques</li>
 
-<li>8.8.01 Propriétés non automatiques</li>
+<li>8.8.01 Introduction</li>
 
-<li>8.8.02 Champs et propriétés associées</li>
+<li>8.8.02 Propriétés automatiques</li>
+
+<li>8.8.03 Propriétés non automatiques</li>
+
+<li>8.8.04 Champs et propriétés associées</li>
 
 <li>8.8.Solution</li>
 
@@ -9275,10 +9279,10 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210412165600146" modified="20210507123055997" title="$:/state/toc/Table des matières-07 Routines-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210408171656033" modified="20210507135232351" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
+<div created="20210408171656033" modified="20210507183648288" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20210507144506401" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<div created="20210408180556742" modified="20210507183618663" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425173004627" modified="20210426102043036" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
@@ -9308,14 +9312,14 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210412094527418" modified="20210507124224380" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
 <pre>close</pre>
 </div>
-<div created="20210409124017410" modified="20210507144507521" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
+<div created="20210409124017410" modified="20210507183619768" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210507131128082" modified="20210507131128082" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-8.07 Membres statiques-1329480811">
 <pre>open</pre>
 </div>
-<div created="20210426103809363" modified="20210507133146164" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-8.08 Accesseurs et mutateurs--249536019">
-<pre>open</pre>
+<div created="20210426103809363" modified="20210507183646511" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-8.08 Accesseurs et mutateurs--249536019">
+<pre>close</pre>
 </div>
 <div created="20210426122924183" modified="20210426161700165" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-8.08 Accesseurs et mutateurs-1329480811">
 <pre>open</pre>
@@ -9386,7 +9390,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20210505153522927" title="$:/temp/search">
+<div created="20210408172006571" modified="20210507183550978" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -9931,13 +9935,13 @@ unEntier = 876;
 ```
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20210208132837986" modified="20210424143057723" revision="0" tags="[[02 Variables]]" title="2.02 La nomenclature" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210208132837986" modified="20210507183445703" revision="0" tags="[[02 Variables]]" title="2.02 La nomenclature" type="text/vnd.tiddlywiki">
 <pre>Il existe différentes philosophies de nomenclature des variables et autres éléments en informatique et d'un langage à l'autre, mais pour le C# on vous demande de respecter principalement les [[conventions établies par Microsoft|https://docs.microsoft.com/fr-fr/dotnet/standard/design-guidelines/naming-guidelines]], dont voici les principales lignes directrices:
 
 * Choisissez des noms ''significatifs'', qui permettent de facilement comprendre à quoi sert l'élément nommé;
 *&gt; p.ex., ''largeur'' et ''hauteur'' seront mieux que ''a'' et ''b'', qui ne veulent rien dire
 
-* Utilisez le «~CamelCase» pour nommer les variables et objets; les noms de variables simples commencent souvent (mais pas obligatoirement) avec une minuscule, alors que les autres éléments (propriétés, classes, méthodes...) commencent avec une majuscule. N’utilisez pas de traits de soulignement (« _ »), de traits d’union (« - ») ou tout autre caractère non alphanumérique (une exception courante étant par contre d'utiliser le trait souligné pour [[préfixer des noms de champs|8.8.02 Champs et propriétés associées]]);
+* Utilisez le «~CamelCase» pour nommer les variables et objets; les noms de variables simples commencent souvent (mais pas obligatoirement) avec une minuscule, alors que les autres éléments (propriétés, classes, méthodes...) commencent avec une majuscule. N’utilisez pas de traits de soulignement (« _ »), de traits d’union (« - ») ou tout autre caractère non alphanumérique (une exception courante étant par contre d'utiliser le trait souligné pour [[préfixer des noms de champs|8.8.04 Champs et propriétés associées]]);
 *&gt; p.ex., ''largeurRectangle'' plutôt que ''largeur_rectangle''.
 
 * Choisissez des noms d’identificateur facilement lisibles.
@@ -13058,191 +13062,12 @@ Le modificateur ''static'' a un effet différent selon qu'il s'applique à une m
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/19d6b1f1-3214-4ed8-a75d-ff163b433ea1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210408171702497" modified="20210426105019438" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
-<pre>&lt;&lt;enfants&gt;&gt;
+<div created="20210408171702497" modified="20210507183202213" tags="[[08 Programmation orientée objet (POO)]]" title="8.08 Accesseurs et mutateurs">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
-Jusqu'à présent, afin de respecter le principe d'[[encapsulation de données|8.01 Classes]], on déclarait toujours les attributs comme étant privés. Dans un pareil scénario, on doit donc nécessairement toujours passer par des méthodes publiques si on désire connaître ou modifier la valeur de ces attributs; ces méthodes sont alors respectivement appelées ''accesseurs'' et ''mutateurs'':
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
 
-```cs
-// Un cercle
-class Cercle
-{
-    // Le rayon du cercle
-    private decimal rayon;
-
-    // Constructeur, qui peut recevoir un rayon en argument
-    public Cercle (decimal r = 1)
-    {
-        rayon = r;
-    }
-
-    // Obtenir le rayon du cercle (accesseur)
-    public decimal GetRayon()
-    {
-        return rayon;
-    }
-
-    // Modifier le rayon du cercle (mutateur)
-    public void SetRayon(decimal r)
-    {
-        rayon = r;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Cercle cercle = new Cercle();
-
-        // Le rayon est de 1
-        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.GetRayon()}&quot;);
-
-        cercle.SetRayon(10);
-
-        // Le rayon est de 10
-        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.GetRayon()}&quot;);
-    }
-}
-```
-
-Par convention, les accesseurs sont préférentiellement toujours nommés «Get»+«Attribut» (p.ex., ''~GetRayon'' ci-dessus) et les mutateurs toujours nommés «Set»+«Attribut» (p.ex., ''~SetRayon'' ci-dessus).
-
-Un attribut qui possède un accesseur ou un mutateur est plus spécifiquement appelé ''une propriété'', sinon il sera plus spécifiquement appelé ''un champ''; ainsi, p.ex., l'attribut //rayon// de la classe //Cercle// ci-dessus est une propriété.
-
-C# offre cependant une façon beaucoup plus simple et plus élégante de définir des propriétés avec accesseurs ou mutateurs automatiques:
-
-```cs
-// Un cercle
-class Cercle
-{
-    /* Le rayon du cercle:
-         - valeur accessible de l'extérieur et de l'intérieur
-         - valeur modifiable de l'extérieur et de l'intérieur  */
-    public decimal Rayon { get; set; }
-
-    // Constructeur, qui peut recevoir un rayon en argument
-    public Cercle (decimal r = 1)
-    {
-        Rayon = r;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Cercle cercle = new Cercle();
-
-        // Le rayon est de 1
-        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.Rayon}&quot;);
-
-        cercle.Rayon = 10;
-
-        // Le rayon est de 10
-        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.Rayon}&quot;);
-    }
-}
-```
-
-Comme on peut le voir ci-dessus, l'attribut //rayon// est devenu la propriété explicite //Rayon// (on met une majuscule par convention pour les propriétés explicites). Les propriétés explicites sont nécessairement publiques, et il suffit de leur mettre un bloc `{ get; set; }` pour automatiquement permettre de les accéder ou modifier directement, comme exemplifié dans le //Main()// ci-dessus.
-
-À supposer que l'on veuille permettre de connaître la valeur d'une propriété, mais pas de la modifier de l'extérieur (ou vice-versa), alors on peut mettre ''private'' devant ''get'' ou ''set'', selon le cas:
-
-```cs
-// Un cercle
-class Cercle
-{
-    /* Le rayon du cercle:
-         - valeur accessible de l'extérieur et de l'intérieur
-         - valeur modifiable de l'intérieur seulement  */
-    public decimal Rayon { get; private set; }
-
-    // Constructeur, qui peut recevoir un rayon en argument
-    public Cercle (decimal r = 1)
-    {
-        Rayon = r;
-    }
-}
-```
-
-```cs
-// Un cercle
-class Cercle
-{
-    /* Le rayon du cercle:
-         - valeur accessible de l'intérieur seulement
-         - valeur modifiable de l'extérieur et de l'intérieur  */
-    public decimal Rayon { private get; set; }
-
-    // Constructeur, qui peut recevoir un rayon en argument
-    public Cercle (decimal r = 1)
-    {
-        Rayon = r;
-    }
-}
-```
-
-Finalement, on peut enlever complètement le ''set'' si on désire qu'une propriété ne puisse être modifiée ni de l'intérieur, ni de l'extérieur, //sauf// par le constructeur:
-
-```cs
-// Un cercle
-class Cercle
-{
-    /* Le rayon du cercle:
-         - valeur accessible de l'intérieur et de l'extérieur
-         - valeur modifiable seulement par le constructeur  */
-    public decimal Rayon { get; }
-
-    // Constructeur, qui peut recevoir un rayon en argument
-    public Cercle (decimal r = 1)
-    {
-        Rayon = r;
-    }
-}
-```
-
-Le but d'une propriété explicite étant d'avoir au moins une forme d'accès extérieur, dès lors qu'un attribut ne doit ni être accédé ni modifié de l'extérieur, il devra simplement rester un attribut privé.
-
-!! Rreprise de l'exemple de la classe Chien de la section 8.06 avec propriété explicite
-
-```cs
-// Un chien
-class Chien
-{
-    // Le nom du chien
-    public string Nom { get; }
-
-    // Constructeur
-    public Chien(string nomChien)
-    {
-        Nom = nomChien;
-    }        
-}
-
-class Program
-{
-    static void Main()
-    {
-        Chien fido = new Chien(&quot;Fido&quot;);
-        Chien rex = new Chien(&quot;Rex&quot;);
-        Chien oreo = new Chien(&quot;Oreo&quot;);
-        Chien boule = new Chien(&quot;Boule&quot;);
-
-        // Affiche le nom de chaque chien
-        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom}»&quot;);
-    }
-}
-```
-
-&lt;&lt;enfants&gt;&gt;
-
----
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+&lt;/div&gt;</pre>
 </div>
 <div created="20210412103228870" modified="20210507142134743" tags="[[08 Programmation orientée objet (POO)]]" title="8.09 Identificateur «this»">
 <pre>L'identificateur ''this'' permet de représenter une instance de classe à l'intérieur de la classe elle-même. Il est notamment utile pour passer l'instance propre d'une classe en argument.
@@ -13546,7 +13371,190 @@ class Program
 ```
 &lt;/p&gt;</pre>
 </div>
-<div created="20210424120736910" modified="20210426103753325" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.01 Propriétés non automatiques">
+<div created="20210507181749948" modified="20210507183120816" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.01 Introduction">
+<pre>Jusqu'à présent, afin de respecter le principe d'[[encapsulation de données|8.01 Classes]], on déclarait toujours les attributs comme étant privés. Dans un pareil scénario, on doit donc nécessairement toujours passer par des méthodes publiques si on désire connaître ou modifier la valeur de ces attributs; ces méthodes sont alors respectivement appelées ''accesseurs'' et ''mutateurs'':
+
+```cs
+// Un cercle
+class Cercle
+{
+    // Le rayon du cercle
+    private decimal rayon;
+
+    // Constructeur, qui peut recevoir un rayon en argument
+    public Cercle (decimal r = 1)
+    {
+        rayon = r;
+    }
+
+    // Obtenir le rayon du cercle (accesseur)
+    public decimal GetRayon()
+    {
+        return rayon;
+    }
+
+    // Modifier le rayon du cercle (mutateur)
+    public void SetRayon(decimal r)
+    {
+        rayon = r;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Cercle cercle = new Cercle();
+
+        // Le rayon est de 1
+        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.GetRayon()}&quot;);
+
+        cercle.SetRayon(10);
+
+        // Le rayon est de 10
+        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.GetRayon()}&quot;);
+    }
+}
+```
+
+Par convention, les accesseurs sont préférentiellement toujours nommés «Get»+«Attribut» (p.ex., ''~GetRayon'' ci-dessus) et les mutateurs toujours nommés «Set»+«Attribut» (p.ex., ''~SetRayon'' ci-dessus).
+
+Un attribut qui possède un accesseur ou un mutateur est plus spécifiquement appelé ''une propriété'', sinon il sera plus spécifiquement appelé ''un champ''; ainsi, p.ex., l'attribut //rayon// de la classe //Cercle// ci-dessus est une propriété.</pre>
+</div>
+<div created="20210507183019881" modified="20210507183133923" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.02 Propriétés automatiques">
+<pre>C# offre une façon simple et élégante de définir des propriétés avec accesseurs ou mutateurs automatiques:
+
+```cs
+// Un cercle
+class Cercle
+{
+    /* Le rayon du cercle:
+         - valeur accessible de l'extérieur et de l'intérieur
+         - valeur modifiable de l'extérieur et de l'intérieur  */
+    public decimal Rayon { get; set; }
+
+    // Constructeur, qui peut recevoir un rayon en argument
+    public Cercle (decimal r = 1)
+    {
+        Rayon = r;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Cercle cercle = new Cercle();
+
+        // Le rayon est de 1
+        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.Rayon}&quot;);
+
+        cercle.Rayon = 10;
+
+        // Le rayon est de 10
+        Console.WriteLine($&quot;Le rayon du cercle est de {cercle.Rayon}&quot;);
+    }
+}
+```
+
+Comme on peut le voir ci-dessus, l'attribut //rayon// est devenu la propriété explicite //Rayon// (on met une majuscule par convention pour les propriétés explicites). Les propriétés explicites sont nécessairement publiques, et il suffit de leur mettre un bloc `{ get; set; }` pour automatiquement permettre de les accéder ou modifier directement, comme exemplifié dans le //Main()// ci-dessus.
+
+À supposer que l'on veuille permettre de connaître la valeur d'une propriété, mais pas de la modifier de l'extérieur (ou vice-versa), alors on peut mettre ''private'' devant ''get'' ou ''set'', selon le cas:
+
+```cs
+// Un cercle
+class Cercle
+{
+    /* Le rayon du cercle:
+         - valeur accessible de l'extérieur et de l'intérieur
+         - valeur modifiable de l'intérieur seulement  */
+    public decimal Rayon { get; private set; }
+
+    // Constructeur, qui peut recevoir un rayon en argument
+    public Cercle (decimal r = 1)
+    {
+        Rayon = r;
+    }
+}
+```
+
+```cs
+// Un cercle
+class Cercle
+{
+    /* Le rayon du cercle:
+         - valeur accessible de l'intérieur seulement
+         - valeur modifiable de l'extérieur et de l'intérieur  */
+    public decimal Rayon { private get; set; }
+
+    // Constructeur, qui peut recevoir un rayon en argument
+    public Cercle (decimal r = 1)
+    {
+        Rayon = r;
+    }
+}
+```
+
+Finalement, on peut enlever complètement le ''set'' si on désire qu'une propriété ne puisse être modifiée ni de l'intérieur, ni de l'extérieur, //sauf// par le constructeur:
+
+```cs
+// Un cercle
+class Cercle
+{
+    /* Le rayon du cercle:
+         - valeur accessible de l'intérieur et de l'extérieur
+         - valeur modifiable seulement par le constructeur  */
+    public decimal Rayon { get; }
+
+    // Constructeur, qui peut recevoir un rayon en argument
+    public Cercle (decimal r = 1)
+    {
+        Rayon = r;
+    }
+}
+```
+
+Le but d'une propriété explicite étant d'avoir au moins une forme d'accès extérieur, dès lors qu'un attribut ne doit ni être accédé ni modifié de l'extérieur, il devra simplement rester un attribut privé.
+
+!! Rreprise de l'exemple de la classe Chien de la section 8.06 avec propriété explicite
+
+```cs
+// Un chien
+class Chien
+{
+    // Le nom du chien
+    public string Nom { get; }
+
+    // Constructeur
+    public Chien(string nomChien)
+    {
+        Nom = nomChien;
+    }        
+}
+
+class Program
+{
+    static void Main()
+    {
+        Chien fido = new Chien(&quot;Fido&quot;);
+        Chien rex = new Chien(&quot;Rex&quot;);
+        Chien oreo = new Chien(&quot;Oreo&quot;);
+        Chien boule = new Chien(&quot;Boule&quot;);
+
+        // Affiche le nom de chaque chien
+        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom}»&quot;);
+        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom}»&quot;);
+    }
+}
+```
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59370e95-9b37-4ee3-80bf-6601dda669b4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</div>
+<div created="20210424120736910" modified="20210507183213239" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.03 Propriétés non automatiques">
 <pre>À la [[section 8.08|8.08 Accesseurs et mutateurs]], nous avons vu ce qu'on appelle les //propriétés automatiques// avec ''get'' et ''set'', qui gèrent automatiquement l'accès et la modification à la propriété.
 
 Mais il peut être intéressant de donner à une classe une propriété qui n'est pas expressément représentative d'une valeur stockée.
@@ -13725,8 +13733,8 @@ class Program
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/6c064fb6-f943-48a0-9ce2-a938009734f5?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
 </pre>
 </div>
-<div created="20210424140456073" modified="20210505134213128" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.02 Champs et propriétés associées">
-<pre>Dans les exemples de la [[section 8.8.01|8.8.01 Propriétés non automatiques]], on a fait le choix d'enregistrer seulement le Rayon et de calculer l'Aire (ou le Rayon) au besoin.
+<div created="20210424140456073" modified="20210507183421447" tags="[[8.08 Accesseurs et mutateurs]]" title="8.8.04 Champs et propriétés associées">
+<pre>Dans les exemples de la section [[8.8.03|8.8.03 Propriétés non automatiques]], on a fait le choix d'enregistrer seulement le Rayon et de calculer l'Aire (ou le Rayon) au besoin.
 
 Ce choix est élégant et propre, mais cela force un calcul à chaque fois que l'on désire connaître l'Aire; si on avait besoin d'accéder des millions de fois à l'Aire d'un même cercle, cela pourrait se faire sentir en terme de temps CPU.
 
@@ -13734,7 +13742,7 @@ Ce choix est élégant et propre, mais cela force un calcul à chaque fois que l
 
 Comme le nom idéal //aire// pour ce champ est très proche de la propriété //Aire// et qu'une erreur de frappe sur la majuscule/minuscule serait vite arrivée, une pratique courante est de préfixer les champs avec des traits soulignés (`_`).
 
-Si on reprend le dernier exemple de la section 8.8.01, cela pourrait donner ceci (en modifiant également le mutateur de Rayon pour que l'aire soit calculée et stockées automatiquement à la modification du rayon):
+Si on reprend le dernier exemple de la section 8.8.03, cela pourrait donner ceci (en modifiant également le mutateur de Rayon pour que l'aire soit calculée et stockées automatiquement à la modification du rayon):
 
 ```cs
 class Cercle
@@ -13953,7 +13961,7 @@ public class Cercle
 }
 ```</pre>
 </div>
-<div bag="default" created="20210314202052547" modified="20210505134459849" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314202052547" modified="20210507183506976" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="8.Exercices" type="text/vnd.tiddlywiki">
 <pre>Pour tous les exercices ci-dessous, créez chaque classe dans un fichier .cs ayant le même nom que la classe créée.
 
 * Gardez en tête qu'il sera sans doute nécessaire ou souhaitable de changer la définition des fonctions lorsque converties en méthodes; notamment, l'utilisation d'arguments ne sera pas nécessaire si une méthode ne traite que des attributs.
@@ -13991,7 +13999,7 @@ public class Cercle
 #* un NAS, passé en argument lors de l'instanciation, qui ne peut être modifié qu'en passant par la méthode //~ChangerNAS//, que vous devez aussi créer.
 #&gt; [[Exemple de solution|8.8.Solution]]
 
-# ''[Propriétés non auto]'' Ajoutez la circonférence comme propriété à la classe Cercle de la [[section 8.8.02|8.8.02 Champs et propriétés associées]].
+# ''[Propriétés non auto]'' Ajoutez la circonférence comme propriété à la classe Cercle de la [[section 8.8.04|8.8.04 Champs et propriétés associées]].
 #&gt; [[Exemple de solution|8.9.Solution]]</pre>
 </div>
 <div created="20210424115440823" list="" modified="20210426111116679" tags="[[09 Exceptions]]" title="9.01 Introduction">
