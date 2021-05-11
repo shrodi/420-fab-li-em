@@ -463,6 +463,8 @@ Error message and password prompt
 
 <li>98.03 Préparation examen 2</li>
 
+<li>98.03.4.2.Solution</li>
+
 <li>98.1.1.Solution</li>
 
 <li>98.1.2.Solution</li>
@@ -9314,7 +9316,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510153553336" modified="20210510153553928" title="$:/state/toc/Table des matières-97 Petit guide de programmation--249536019">
 <pre>close</pre>
 </div>
-<div created="20210409121931567" modified="20210511120700198" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
+<div created="20210409121931567" modified="20210511151613060" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
 </div>
 <div created="20210408173626162" modified="20210510152557061" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
@@ -14582,7 +14584,7 @@ P. ex.: MCXLIV = 1000 + 100 - 10 + 50 - 1 + 5 = 1144
 #&gt; [[Exemple solution 3|98.2.7.3.Solution]]
 #&gt; [[Exemple solution 4-5|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Exercice%2098.2.7.4-5.zip]]</pre>
 </div>
-<div created="20210507093506171" modified="20210511120655720" tags="[[98 Exercices supplémentaires]]" title="98.03 Préparation examen 2">
+<div created="20210507093506171" modified="20210511151606788" tags="[[98 Exercices supplémentaires]]" title="98.03 Préparation examen 2">
 <pre># ''[Capacité 2]'' Créer des classes avec des propriétés et des méthodes publiques (signatures seulement) pour représenter l'ensemble d'une voiture. P. ex., vous devriez au moins avoir une classe Voiture, une classe Volant, etc., et ensuite imaginez les propriétés et actions que chaque objet peut faire (les actions seront les méthodes), comme démarrer, tourner, etc. Vous n'avez pas besoin de classe Program, puisque le but n'est pas de faire un programme ici, mais seulement d'avoir une structure qui pourrait être utilisée par un programme ultérieurement.&lt;div&gt;
 
 &gt; Vous n'avez pas à écrire de code pour les méthodes, mais prévoyez des mutateurs et accesseurs au besoin pour les propriétés.
@@ -14636,6 +14638,7 @@ On se demande ici si, afin d’augmenter ses chances de remporter le prix :
 #* une méthode publique //~VersGregorien// prenant en argument une date hégirienne &gt;= 1420-09-25 (chaîne de format &quot;AAAA-MM-JJ&quot;) et retournant la date grégorienne correspondante (également format &quot;AAAA-MM-JJ&quot;).
 
 # Selon vous, les méthodes ci-dessus devraient-elles être statiques ou non? Pourquoi?
+#&gt; [[Réponse|98.03.4.2.Solution]]
 
 # Gérer les exceptions.
 
@@ -14645,6 +14648,9 @@ On se demande ici si, afin d’augmenter ses chances de remporter le prix :
 
 #&gt; [[Exemple de solution|https://lecegeplimoilou.sharepoint.com/sites/Section_90756/Supports%20de%20cours/Exemples%20de%20solution/Kuwaiti_98.03.4.zip]]
 </pre>
+</div>
+<div created="20210511151418394" modified="20210511151601846" title="98.03.4.2.Solution">
+<pre>Toute la classe devrait être statique, puisqu'il n'y a pas lieu d'avoir différentes instances de la classe (différents objets) avec chacune des valeurs différentes d'attributs, étant donné que son seul but est d'effectuer des conversions de dates (classe utilitaire, comme la classe C# //Math//).</pre>
 </div>
 <div bag="default" created="20210228134327889" modified="20210228140237720" revision="0" title="98.1.1.Solution" type="text/vnd.tiddlywiki">
 <pre>```cs
