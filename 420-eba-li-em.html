@@ -277,6 +277,8 @@ Error message and password prompt
 
 <li>10.02 Avec VisualStudio</li>
 
+<li>10.03 Capture de sortie console</li>
+
 <li>10.Exercices</li>
 
 <li>2.01 Introduction</li>
@@ -502,6 +504,8 @@ Error message and password prompt
 <li>99.04 TP3 (11 %)</li>
 
 <li>99.05 TP4 (15 %)</li>
+
+<li>99.06 Examen 2</li>
 
 <li>css</li>
 
@@ -9310,7 +9314,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210430115648658" modified="20210430121527587" title="$:/state/toc/Table des matières-10 Tests unitaires--249536019">
 <pre>close</pre>
 </div>
-<div created="20210426114108190" modified="20210510153822622" title="$:/state/toc/Table des matières-10 Tests unitaires-1329480811">
+<div created="20210426114108190" modified="20210517121425110" title="$:/state/toc/Table des matières-10 Tests unitaires-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210510153553336" modified="20210510153553928" title="$:/state/toc/Table des matières-97 Petit guide de programmation--249536019">
@@ -9319,13 +9323,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409121931567" modified="20210511151613060" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408173626162" modified="20210510152557061" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
+<div created="20210408173626162" modified="20210517121426232" title="$:/state/toc/Table des matières-98 Exercices supplémentaires-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210412094527418" modified="20210510174232401" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens--249536019">
 <pre>close</pre>
 </div>
-<div created="20210409124017410" modified="20210510152556035" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
+<div created="20210409124017410" modified="20210517121426880" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210510173950547" modified="20210511120703131" title="$:/state/toc/Table des matières/02 Variables-2.05 Les calculs-1329480811">
@@ -9400,16 +9404,16 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;2560&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;2560&quot;
+            &quot;text&quot;: &quot;1440&quot;
         }
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20210510152600313" title="$:/temp/search">
+<div created="20210408172006571" modified="20210517110055798" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -9914,6 +9918,47 @@ Quand on demandait des captures d'écran, l'unité testée était le programme a
 
 !! Partie 2
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/77614916-e8ed-4dea-9d6d-22aa16deb504?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</div>
+<div created="20210517110106025" modified="20210517121411741" tags="[[10 Tests unitaires]]" title="10.03 Capture de sortie console">
+<pre>Pour pouvoir tester la sortie d'une écriture console, il faut:
+
+# créer un objet de type //~StringWriter// (classe de l'espace de nom //System.IO//);
+# rediriger la sortie console vers cet objet;
+# appeler la méthode à tester contenant une sortie console;
+# comparer ce qui est attendu avec le ~ToString() de l'objet.
+
+!! Exemple
+
+```cs
+using System.IO;
+
+namespace TestPendu
+{
+    [TestClass]
+    public class TestSortie
+    {
+        [TestMethod]
+        public void TestLettrePresente()
+        {
+            // 1. Création d'un objet StringWriter
+            StringWriter sortie = new StringWriter();
+
+            // 2. Redirection de la sortie console vers l'objet créé
+            Console.SetOut(sortie);
+
+            // 3. On appelle la méthode à tester qui écrit à la console
+            Sortie.LettrePresente(&quot;l&quot;);
+
+            // 4. On compare le ToString() de l'objet avec ce qui est attendu
+            Assert.AreEqual(&quot;\n*** La lettre l est présente! ***\r\n&quot;, sortie.ToString());
+        }
+    }
+}
+```
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/d42fd737-300f-4bdc-9d5d-cdc85d812dc3?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div created="20210426123518178" modified="20210507135224741" tags="[[10 Tests unitaires]]" title="10.Exercices">
 <pre># Modifiez l'exercice 9.1 de manière à subdiviser la méthode Partie.Demarrer() en plusieurs unités logiques (méthodes) testables. (P.ex., mettre le bloc commenté «Demande et obtient le nombre de joueurs» en méthode testable, etc.).
@@ -15484,6 +15529,11 @@ foreach (Fleur fleur in (Fleur[])Enum.GetValues(typeof(Fleur)))
 * [img[https://i.imgur.com/MHuLiPO.png]]: méthode publique
 * [img[https://i.imgur.com/yGESI9W.png]]: constante privée
 * [img[https://i.imgur.com/YAOgD2q.png]]: propriété (à noter que les propriétés sont toujours affichées comme si elles étaient automatiques, même si ce n'est pas le cas)</pre>
+</div>
+<div created="20210517110207519" modified="20210517113150613" tags="[[99 Travaux pratiques et examens]]" title="99.06 Examen 2">
+<pre>&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/797e335f-4570-4eb3-a35a-07c43925e35c?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/55e1a58f-2cd3-4a55-8a37-9d3bf1880fc5?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div bag="default" created="20181113131237544" modified="20181113131325982" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
