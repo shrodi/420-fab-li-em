@@ -9266,7 +9266,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20210509095759872" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20210614141100488" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
@@ -9299,10 +9299,10 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408180556742" modified="20210507184044938" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
-<div created="20210425173004627" modified="20210426102043036" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
+<div created="20210425173004627" modified="20210614141058998" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
 <pre>close</pre>
 </div>
-<div created="20210426122942976" modified="20210510153822075" title="$:/state/toc/Table des matières-09 Exceptions-1329480811">
+<div created="20210426122942976" modified="20210614141102186" title="$:/state/toc/Table des matières-09 Exceptions-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425111845107" modified="20210425111845107" title="$:/state/toc/Table des matières-09 Gestion des exceptions--249536019">
@@ -9314,7 +9314,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210430115648658" modified="20210517122320737" title="$:/state/toc/Table des matières-10 Tests unitaires--249536019">
 <pre>close</pre>
 </div>
-<div created="20210426114108190" modified="20210517122609235" title="$:/state/toc/Table des matières-10 Tests unitaires-1329480811">
+<div created="20210426114108190" modified="20210614133955113" title="$:/state/toc/Table des matières-10 Tests unitaires-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210510153553336" modified="20210510153553928" title="$:/state/toc/Table des matières-97 Petit guide de programmation--249536019">
@@ -9404,11 +9404,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;2560&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;2560&quot;
         }
     }
 }</pre>
@@ -14081,7 +14081,7 @@ Vous remarquerez que le titre de la fenêtre affichée est //Exception non gér�
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/c13a486c-f4ad-4aed-82d6-fdae884eadf1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210425135252632" modified="20210503161623583" tags="[[09 Exceptions]]" title="9.02 Gérer les exceptions">
+<div created="20210425135252632" modified="20210614141046567" tags="[[09 Exceptions]]" title="9.02 Gérer les exceptions">
 <pre>Si on ne veut pas qu'on programme « plante » (s'arrête soudainement) en cours d'exécution, il faut gérer les exceptions, c'est-à-dire essayer de prévoir quand une exception pourrait survenir et dire au programme quoi faire si cela survient.
 
 Pour cela, on utilise des blocs ''try/catch'', comme ceci par exemple:
@@ -14117,7 +14117,7 @@ Dans ce cas, le programme ne s'arrêtera pas: ici, on lui dit d'afficher un mess
 Les ''try/catch'' peuvent être mis n'importe où dans le code, mais plus spécifiquement:
 
 * Quand on appelle au moins une méthode qui peut lever une exception
-* Quand il y a des calculs contenant au moins une division (risque de division par zéro)
+* Quand il y a des calculs contenant un risque de division par zéro (dénominateur contient une ou plusieurs variables)
 * Quand on utilise des tableaux ou des listes (surtout avec des index)
 * Pour encadrer un bloc d'instructions à risque formant un tout logique
 
