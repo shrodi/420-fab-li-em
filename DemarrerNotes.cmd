@@ -8,9 +8,13 @@
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "" /min "%~dpnx0" %* && exit
 
 :: Met à jour le dépôt Git (nécessite que «Git for Windows» soit installé: https://gitforwindows.org/)
+echo git checkout .
 git checkout .
+
+echo git pull
 git pull
 
+echo Ouvre notes
 :: Démarre les notes de cours avec le fureteur par défaut
 for %%I in (*.html) do start %%~nxI
 
