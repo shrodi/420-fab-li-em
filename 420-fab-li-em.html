@@ -9207,7 +9207,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409133417531" modified="20220228131032254" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20210409140203400" modified="20210409141133226" title="$:/state/tab/sidebar--1835078512">
+<div created="20210409140203400" modified="20231004144458935" title="$:/state/tab/sidebar--1835078512">
 <pre>Table des matières</pre>
 </div>
 <div created="20220228132339688" modified="20220228132339688" title="$:/state/toc/01 Introduction-1.02 Concepts de base-1521420305">
@@ -9291,8 +9291,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510153553336" modified="20231001130438734" title="$:/state/toc/Table des matières-97 Petit guide de programmation--249536019">
 <pre>close</pre>
 </div>
-<div created="20220404114304308" modified="20220411125458612" title="$:/state/toc/Table des matières-97 Petit guide de programmation-1329480811">
-<pre>close</pre>
+<div created="20220404114304308" modified="20231004152535102" title="$:/state/toc/Table des matières-97 Petit guide de programmation-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210409121931567" modified="20220228140719264" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
 <pre>open</pre>
@@ -9339,7 +9339,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[1.2.01 La programmation]] Semainier [[Table des matières]] [[1.2.03 Algorithme]]" title="$:/StoryList">
+<div list="[[97.03 Les traitements]] [[97.01 Identification des besoins]] [[97.05 Règles générales]] Semainier [[Table des matières]] [[1.2.03 Algorithme]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9721,7 +9721,7 @@ On dit souvent des langages de programmation qu'ils sont de ''haut ou de bas niv
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/2cfadafb-a163-472b-b801-6297fb2881d6?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210202192929068" modified="20231002151003489" revision="0" tags="[[1.02 Concepts de base]]" title="1.2.03 Algorithme" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202192929068" modified="20231004171822417" revision="0" tags="[[1.02 Concepts de base]]" title="1.2.03 Algorithme" type="text/vnd.tiddlywiki">
 <pre>Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Algorithme]] (au 2 février 2021):
 
 &lt;&lt;&lt;
@@ -9771,11 +9771,13 @@ foreach (int n in liste)
 Console.WriteLine(plusGrandN);
 ```
 
-&lt;p class=&quot;boite&quot;&gt;
-Les algorithmes suivent souvent un processus mental naturel; la difficulté est parfois de décortiquer la pensée afin de bien isoler chaque étape suivie dans un raisonnement.
-&lt;br&gt;&lt;br&gt;
-La difficulté d'implémentation dans un langage dépend quant à elle généralement du niveau de maîtrise du langage par la personne qui programme afin de traduire ces étapes avec la bonne syntaxe.
-&lt;/p&gt;
+&lt;div class=&quot;boite&quot;&gt;
+&lt;p&gt;Les algorithmes suivent souvent un processus mental naturel; la difficulté est parfois de décortiquer la pensée afin de bien isoler chaque étape suivie dans un raisonnement.&lt;/p&gt;
+
+&lt;p&gt;La difficulté d'implémentation dans un langage dépend quant à elle généralement du niveau de maîtrise du langage par la personne qui programme afin de traduire ces étapes avec la bonne syntaxe.&lt;/p&gt;
+
+//''&amp;rarr; Voir le [[Petit guide de programmation|97 Petit guide de programmation]] et plus précisément [[Les traitements|97.03 Les traitements]] pour voir des trucs en méthode de développement''//
+&lt;/div&gt;
 
 [img width=1024 [https://m1.quebecormedia.com/emp/emp/MREG_2021_02_03_019ad3b8f4a-5dc0-44dc-8a6a-4144f880d312_ORIGINAL.jpg?impolicy=crop-resize&amp;x=0&amp;y=0&amp;w=0&amp;h=0&amp;width=3200]]
 
@@ -13438,12 +13440,24 @@ Avant de commencer à écrire un programme, la première étape devrait donc tou
 ## Au final, que veut-on obtenir? Qu'est-ce qu'on veut?
 ## Comment récupérer les extrants? Affichage à l'écran? Enregistrement dans un fichier? Transmission par réseau?</pre>
 </div>
-<div bag="default" created="20210314163949008" list="" modified="20220228140803062" revision="0" tags="[[97 Petit guide de programmation]]" title="97.03 Les traitements" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314163949008" list="" modified="20231004154317695" revision="0" tags="[[97 Petit guide de programmation]]" title="97.03 Les traitements" type="text/vnd.tiddlywiki">
 <pre>Entre les intrants et les extrants, il y a le programme et ses traitements. Savoir d'où on part (les intrants) et où on s'en va (les extrants) aide à concevoir ce qui devra être fait pour passer de l'un à l'autre, mais il n'y a pas de «recette magique» universelle, puisqu'il y a une infinité de combinaison de besoins, d'intrants et de sortants possibles.
 
 Dans certains cas, il y a des algorithmes connus; par exemple, une formule mathématique pour convertir des °C en °F et vice-versa. Dans la vaste majorité des cas, cependant, il revient à la programmeuse ou au programmeur de penser et de créer une solution unique en utilisant les outils offerts par le langage de programmation utilisé.
 
 Je rappellerai cependant ce qui a déjà été exprimé à la section 1.2.03, à savoir que la programmation d'un algorithme commence souvent par la décomposition des étapes mentales que l'on apliquerait si on avait juste du papier et un crayon.
+
+!! Étapes générales
+
+Généralement, on pourra décortiquer des traitements simples en quatre grandes étapes:
+
+# Établir les informations pertinentes connues que l'on peut précharger dans le programme (s'il y a lieu).
+
+# Établir les valeurs pertinentes inconnues que l'on devra obtenir lors de l'exécution du programme (s'il y a lieu).
+
+# Établir les valeurs que l'on devra calculer ou transformer, ainsi que les calculs et transformations à effectuer en conséquence (s'il y a lieu).
+
+# Établir les informations que l'on devra afficher en cours d'exécution ou à la fin de l'exécution du programme.
 
 &lt;p class=&quot;boite&quot;&gt;
 
@@ -13451,22 +13465,21 @@ Je rappellerai cependant ce qui a déjà été exprimé à la section 1.2.03, à
 
 ''Besoin:'' On désire convertir une température entrée au clavier de °C à °F , et vice versa.
 
-# De quoi a-t-on besoin au départ?
+# Que sait-on déjà au départ?
+#* On sait que °F = °C &amp;times; 9/5 + 32 et que °C = (°F - 32) &amp;times; 5/9
+#*&gt; //On peut stocker ces deux relations dès le départ dans le programme sous forme de routine.//
+
+# De quoi a-t-on besoin qu'on ne connaît pas au départ?
 #* la valeur de la température à convertir (un nombre), entrée au clavier à l'invite du programme
 #* l'unité (°C ou °F) de la température à convertir (du texte), entrée au clavier à l'invite du programme
 
-# Que veut-on à la fin?
+# Quelles valeurs doivent être calculées?
+#* On doit effectuer la conversion de °C vers °F ou vice-versa selon une des deux formules connues
+#* On doit choisir la bonne formule selon les unités entrées (instruction conditionnelle)
+
+# Que veut-on afficher?
 #* On désire que le programme affiche à la console la valeur convertie et ses unités
 
-# Quels traitements effectuer?
-## On doit demander et stocker les intrants
-##* Valeur température: type ''double'' ou ''decimal'', Console.Write() pour invite, Console.~ReadLine() + classe Convert pour lecture de l'entrée clavier
-##* Unité de température: type ''string'', Console.Write() pour invite, Console.~ReadLine() pour lecture de l'entrée clavier
-## On doit effectuer la conversion
-##* Ici, on dispose d'une formule déjà connue, soit que °F = °C &amp;times; 9/5 + 32 &amp;rArr; °C = (°F - 32) &amp;times; 5/9
-##* On doit choisir la bonne formule selon les unités entrées (instruction conditionnelle)
-## On affiche le résultat
-##* Console.~WriteLine() pour afficher le résultat de la conversion
 &lt;/p&gt;</pre>
 </div>
 <div bag="default" created="20210314164124849" list="" modified="20220228140803062" revision="0" tags="[[97 Petit guide de programmation]]" title="97.04 La méthode de développement" type="text/vnd.tiddlywiki">
