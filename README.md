@@ -1,3 +1,6 @@
-# 420-EBA-LI-EM
+# 420-FAB-LI-EM
 
-Notes du cours 420-EBA-LI -- Programmation objet I
+Notes du cours 420-FAB-LI -- Programmation objet I
+
+Anciens codes de cours:
+* 420-EAB-LI
