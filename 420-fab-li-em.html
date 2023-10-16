@@ -9275,13 +9275,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220307213615041" modified="20231006150255791" title="$:/state/toc/Table des matières-02 Variables--249536019">
 <pre>close</pre>
 </div>
-<div created="20210424142806685" modified="20231012183115839" title="$:/state/toc/Table des matières-02 Variables-1329480811">
+<div created="20210424142806685" modified="20231015215620454" title="$:/state/toc/Table des matières-02 Variables-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140549786" modified="20220228152323976" title="$:/state/toc/Table des matières-03 Instructions conditionnelles--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122659982" modified="20231006122759176" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
+<div created="20231006122659982" modified="20231015215617284" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
@@ -9368,7 +9368,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20231006125830256" modified="20231006134928551" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122545451" modified="20231012173351303" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs-1329480811">
+<div created="20231006122545451" modified="20231013150453084" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs-1329480811">
 <pre>close</pre>
 </div>
 <div created="20231005172055758" modified="20231006115212694" title="$:/state/toc/Table des matières/02 Variables-2.05 Les calculs--249536019">
@@ -9377,8 +9377,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510173950547" modified="20231005174828492" title="$:/state/toc/Table des matières/02 Variables-2.05 Les calculs-1329480811">
 <pre>open</pre>
 </div>
-<div created="20231006122731355" modified="20231006122731355" title="$:/state/toc/Table des matières/03 Instructions conditionnelles-03.03 if-1329480811">
-<pre>open</pre>
+<div created="20231006122731355" modified="20231015215613822" title="$:/state/toc/Table des matières/03 Instructions conditionnelles-03.03 if-1329480811">
+<pre>close</pre>
 </div>
 <div created="20231006122715372" modified="20231006122715372" title="$:/state/toc/Table des matières/03 Instructions conditionnelles-3.03 if-1329480811">
 <pre>open</pre>
@@ -9410,7 +9410,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier [[Table des matières]]" title="$:/StoryList">
+<div list="[[03.04 Opérateur ternaire (?:)]] [[03.03.01 Concepts de base]] [[03.03.02 if ... else]] Semainier [[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9467,7 +9467,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20231012183112680" title="$:/temp/search">
+<div created="20210408172006571" modified="20231013150711641" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -10302,15 +10302,15 @@ Console.WriteLine($&quot;{Math.Pow(17.0, 1.0/3.0)}&quot;);
 ```
 &lt;/p&gt;</pre>
 </div>
-<div bag="default" created="20210216131855169" list="" modified="20231012170155778" revision="0" tags="[[02.05 Les calculs]]" title="02.05.04 Incrémentation et décrémentation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210216131855169" list="" modified="20231013124756094" revision="0" tags="[[02.05 Les calculs]]" title="02.05.04 Incrémentation et décrémentation" type="text/vnd.tiddlywiki">
 <pre>Deux opérations mathématiques très utilisées en programmation sont l'''incrémentation'' (augmenter une valeur entière) et la ''décrémentation'' (diminuer une valeur entière).
 
 Comme ces opérations sont très courantes, des raccourcis ont été créés:
 
 * Pour incrémenter de 1 une variable, plutôt que de faire `variable = variable + 1` ou même `variable += 1`, il suffit de faire `variable++` ou `++variable`
-** la position du `++`  a une incidence sur l'ordre d'évaluation de la variable; si le `++` est placé avant la variable, alors l'incrémentation est faite avant l'évaluation de la variable, alors que s'il est placé après, alors l'incrémentation est faite après l'évaluation:&lt;div&gt;
+** la position du `++`  a une incidence sur l'ordre d'évaluation de la variable; si le `++` est placé avant la variable (préincrément), alors l'incrémentation est faite avant l'évaluation de la variable, alors que s'il est placé après (postincrément), alors l'incrémentation est faite après l'évaluation.&lt;div&gt;
 
-&lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/BcabXS&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/BcabXS&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 * Pour décrémenter de 1, on a l'opérateur `--`, qui se comporte comme `++`, mais à la négative
@@ -10433,8 +10433,10 @@ Bien qu'il puisse être tentant à l'occasion de permettre à une variable d'êt
 Ce n'est pas pour rien que les variables ne sont pas nullables par défaut!
 &lt;/p&gt;</pre>
 </div>
-<div created="20231011131716746" modified="20231011132325446" tags="[[02 Variables]]" title="02.Exercices">
-<pre># Continuez [[01.Exercices]] en suivant les directives pour [[déboguer l'application|https://learn.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#debug-the-app]] (avec les adaptations nécessaires). ''Ne faites pas les sections suivantes.''</pre>
+<div created="20231011131716746" modified="20231013150656634" tags="[[02 Variables]]" title="02.Exercices">
+<pre># Continuez [[01.Exercices]] en suivant les directives pour [[déboguer l'application|https://learn.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#debug-the-app]] (avec les adaptations nécessaires). ''Ne faites pas les sections suivantes.''
+
+</pre>
 </div>
 <div bag="default" created="20210213140140279" modified="20210213141116195" revision="0" tags="[[Table des matières]]" title="03 Instructions conditionnelles" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -10450,7 +10452,7 @@ P.ex., dans l'exemple de la calculatrice des exercices de la section 1, chaque c
 
 En C#, il y a trois manières principales d'exprimer des conditions: les blocs ''switch'' et ''if-else'', et l'opérateur ternaire ''?:''</pre>
 </div>
-<div bag="default" created="20210213140210205" list="" modified="20231006122711945" revision="0" tags="[[03 Instructions conditionnelles]]" title="03.02 switch" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210213140210205" list="" modified="20231015213418596" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.02 switch" type="text/vnd.tiddlywiki">
 <pre>On peut définir des conditions d'exécution à l'aide d'un bloc ''switch''.
 
 Un bloc ''switch'' sera approprié dans les cas où on veut créer une condition basée sur la valeur d'une expression (une expression peut être une variable ou encore une instruction retournant une valeur).
@@ -10507,7 +10509,7 @@ switch (expression)
 
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20210213192402989" list="" modified="20231006122737090" revision="0" tags="[[03.03 if]]" title="03.03.01 Concepts de base" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210213192402989" list="" modified="20231015213909607" revision="0" tags="video [[03.03 if]]" title="03.03.01 Concepts de base" type="text/vnd.tiddlywiki">
 <pre>Il arrive souvent que l'on veuille exécuter des instructions selon des conditions complexes ou arbitraires qui ne consistent pas en la comparaison d'égalité à une expression unique; dans ce cas, un bloc ''switch'' ne pourra pas fonctionner. On utilisera plutôt alors un bloc ''if'':
 
 ```cs
@@ -10529,24 +10531,13 @@ Par exemple, tous les [[opérateurs de comparaison|https://docs.microsoft.com/fr
 * `&lt;=` «plus petit ou égal à»
 
 !!! Exemple:
-```cs
-const int ageDor = 50;
-
-Console.Write(&quot;Entrez votre âge: &quot;);
-int ageUsager = Convert.ToInt32(Console.ReadLine());
-
-if (ageUsager &gt;= ageDor)
-{
-   // Affiche un message si l'âge entré est plus grand ou égal à 50
-   Console.WriteLine(&quot;Vous faites partie de l'âge d'or!&quot;);
-}
-```
+&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/KfReWa&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/1e9bb977-2abc-4727-9d9d-1e820ed2517e?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210213192452089" list="" modified="20231006122745261" revision="0" tags="[[03.03 if]]" title="03.03.02 if ... else" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210213192452089" list="" modified="20231015214420336" revision="0" tags="video [[03.03 if]]" title="03.03.02 if ... else" type="text/vnd.tiddlywiki">
 <pre>S'il y a plusieurs possibilités (un peu comme avec un ''switch''), on enchaînera les conditions avec des ''else''; un ''else'' seul, à la fin d'un bloc ''if'', aura le même effet qu'un ''default'' avec ''switch'':
 
 ```cs
@@ -10569,108 +10560,30 @@ if (condition1)
 
 !! Exemple
 
-```cs
-const int ageDor = 50;
-
-Console.Write(&quot;Entrez votre âge: &quot;);
-int ageUsager = Convert.ToInt32(Console.ReadLine());
-
-if (ageUsager &gt;= ageDor)
-{
-   // Affiche un message si l'âge entré est plus grand ou égal à l'âge d'or
-   Console.WriteLine(&quot;Vous faites partie de l'âge d'or!&quot;);
-}
-else if (ageUsager == ageDor-1)
-{
-   // Affiche un message si l'âge entré est égal à un an de moins que l'âge d'or
-   Console.WriteLine(&quot;Il vous reste moins d'un an avant d'atteindre l'âge d'or!&quot;);
-}
-else
-{
-   // Ce message s'affichera si aucune des conditions précédentes n'est vraie
-   Console.WriteLine(&quot;Vous êtes encore jeune!&quot;);
-}
-```
+&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/L02NEr&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 Il est également permis d'imbriquer des blocs if-else:
 
-```cs
-const int ageDor = 50;
-
-Console.Write(&quot;Entrez votre âge: &quot;);
-int ageUsager = Convert.ToInt32(Console.ReadLine());
-
-if (ageUsager &gt;= ageDor / 2)
-{
-    // Si l'âge entré est plus grand ou égal à la moitié de l'âge d'or...
-
-    if (ageUsager &gt;= ageDor)
-    {
-       // Affiche un message si l'âge entré est plus grand ou égal à l'âge d'or
-       Console.WriteLine(&quot;Vous faites partie de l'âge d'or!&quot;);
-    }
-    else if (ageUsager == ageDor-1)
-    {
-       // Affiche un message si l'âge entré est égal à un an de moins que l'âge d'or
-       Console.WriteLine(&quot;Il vous reste moins d'un an avant d'atteindre l'âge d'or!&quot;);
-    }
-    else
-    {
-       // Ce message s'affichera si aucune des conditions précédentes n'est vraie
-        Console.WriteLine(&quot;Il vous reste quelques années avant l'âge d'or!&quot;);
-    }
-}
-else
-{
-    // Si l'âge entré est plus petit que la moitié de l'âge d'or...
-    Console.WriteLine(&quot;Vous êtes encore jeune!&quot;);
-}
-```
+&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/ELJ79B&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/65a33343-1678-4946-a2b4-501019b0c432?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210213192520286" list="" modified="20231006122752455" revision="0" tags="[[03.03 if]]" title="03.03.03 Opérateurs logiques" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210213192520286" list="" modified="20231015214611556" revision="0" tags="video [[03.03 if]]" title="03.03.03 Opérateurs logiques" type="text/vnd.tiddlywiki">
 <pre>Afin de créer des conditions plus complexes, on peut utiliser des opérateurs logiques:
 
 * `&amp;&amp;` «et»
 * `||` «ou»
 * `!` «non» (négation)
 
-```cs
-const int ageDor = 50;
-bool usagerEstVieux;
-bool usagerVeutSavoir;
-
-Console.Write(&quot;Entrez votre âge: &quot;);
-usagerEstVieux = Convert.ToInt32(Console.ReadLine()) &gt;= ageDor;
-
-Console.Write(&quot;Désirez-vous savoir si vous faites partie de l'âge d'or (o/n) ? &quot;);
-usagerVeutSavoir = Console.ReadLine() == &quot;o&quot;;
-
-if (usagerEstVieux &amp;&amp; usagerVeutSavoir)
-{
-       // Affiche un message si l'usager est vieux et qu'il veut savoir
-       Console.WriteLine(&quot;Vous faites partie de l'âge d'or!&quot;);
-}
-else if (!usagerVeutSavoir)
-{
-   // L'usager ne veut pas savoir
-   Console.WriteLine(&quot;Je garderai le secret!&quot;);
-}
-else
-{
-   // L'usager est jeune et veut savoir
-    Console.WriteLine(&quot;Il vous reste encore du temps avant l'âge d'or!&quot;);
-}
-```
+&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/ReQ2SG&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/959a6326-b6e8-4a5c-ab80-9b9065ae6865?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210213142018261" modified="20231006122726924" revision="0" tags="[[03 Instructions conditionnelles]]" title="03.04 Opérateur ternaire (?:)" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210213142018261" modified="20231015214901618" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.04 Opérateur ternaire (?:)" type="text/vnd.tiddlywiki">
 <pre>L'''opérateur ternaire'' offre un raccourci pour retourner des valeurs en fonction de conditions simples:
 
 ```cs
@@ -10679,20 +10592,7 @@ valeurRetournee = condition ? valeurSiConditionVraie : valeurSiConditionFausse;
 
 !! Exemple
 
-```cs
-Console.Write(&quot;Entrez une température: &quot;);
-decimal temperatureEntree = Convert.ToDecimal(Console.ReadLine());
-
-Console.Write(&quot;Unités de la tempértature entrée (f/c): &quot;);
-string uniteEntree = Console.ReadLine();
-
-// Stocke la température en °F si température entrée en °C, le contraire sinon
-decimal temperatureConvertie = uniteEntree == &quot;c&quot; ? (temperatureEntree * 9m / 5m) + 32m : (temperatureEntree - 32m) * 5m / 9m;
-
-// Affiche la température initiale et sa conversion, avec les unités appropriées
-// Les parenthèses entourant l'opérateur ternaire sont nécessaires ici aux fins d'interpolation de chaîne dans l'affichage
-Console.WriteLine($&quot;{temperatureEntree}{(uniteEntree == &quot;c&quot; ? &quot;°C&quot; : &quot;°F&quot;)} = {temperatureConvertie}{(uniteEntree == &quot;c&quot; ? &quot;°F&quot; : &quot;°C&quot;)}&quot;);
-```
+&lt;iframe width=&quot;100%&quot; height=&quot;700&quot; src=&quot;https://dotnetfiddle.net/Widget/SAxi7B&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
@@ -13519,7 +13419,7 @@ Dans des environnements de développement plus avancés, comme Visual Studio, on
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59add37c-7615-4c4d-beb0-8537c47a5044?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20181113131237544" modified="20231006134809840" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
+<div bag="default" created="20181113131237544" modified="20231013150546215" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
    background: #dddddd;
    padding: 1em;
@@ -13574,7 +13474,7 @@ li {
   margin-bottom: 0.5em;
 }
 
-img {
+img, iframe {
   vertical-align: top;
 }
 
@@ -13627,10 +13527,11 @@ pre, code {
 &lt;/p&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20231011132413328" tags="" title="Semainier">
+<div created="20220228135020747" modified="20231015211021682" tags="" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
 | 1 (2 oct.) | [[01 Introduction]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
-| 2 (9 oct.) | [[02 Variables]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|</pre>
+| 2 (9 oct.) | [[02 Variables]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
+| 3 (16 oct.) | [[03 Instructions conditionnelles]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|</pre>
 </div>
 <div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20231006123953529" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
