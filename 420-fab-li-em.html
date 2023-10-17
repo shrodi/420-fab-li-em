@@ -473,6 +473,8 @@ Error message and password prompt
 
 <li>97.07 Le débogage</li>
 
+<li>Coffre à outils</li>
+
 <li>css</li>
 
 <li>Étapes d'installation Visual Studio</li>
@@ -9275,13 +9277,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220307213615041" modified="20231006150255791" title="$:/state/toc/Table des matières-02 Variables--249536019">
 <pre>close</pre>
 </div>
-<div created="20210424142806685" modified="20231015215620454" title="$:/state/toc/Table des matières-02 Variables-1329480811">
+<div created="20210424142806685" modified="20231017172858953" title="$:/state/toc/Table des matières-02 Variables-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140549786" modified="20220228152323976" title="$:/state/toc/Table des matières-03 Instructions conditionnelles--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122659982" modified="20231015215617284" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
+<div created="20231006122659982" modified="20231017172900752" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
@@ -9368,7 +9370,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20231006125830256" modified="20231006134928551" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122545451" modified="20231013150453084" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs-1329480811">
+<div created="20231006122545451" modified="20231017172857319" title="$:/state/toc/Table des matières/02 Variables-02.05 Les calculs-1329480811">
 <pre>close</pre>
 </div>
 <div created="20231005172055758" modified="20231006115212694" title="$:/state/toc/Table des matières/02 Variables-2.05 Les calculs--249536019">
@@ -9410,7 +9412,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier 02.Exercices [[Table des matières]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9458,7 +9460,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
@@ -9467,7 +9469,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20231016121633486" title="$:/temp/search">
+<div created="20210408172006571" modified="20231017152255192" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -10403,12 +10405,18 @@ Quelques exemples à essayer (ici j'utilise des valeurs numériques littérales,
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/fd4391ec-7a86-4795-b892-1da0779cc7ba?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210308144112846" modified="20231006150139235" revision="0" tags="[[02 Variables]]" title="02.09 Variables nullables" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210308144112846" modified="20231017152222392" revision="0" tags="[[02 Variables]]" title="02.09 Variables nullables" type="text/vnd.tiddlywiki">
 <pre>Par défaut, lorsque définie, une variable doit nécessairement contenir une valeur de son type.
 
 Il est cependant possible de permettre à une variable ''de type non référencé'' (essentiellement, les types de base sauf ''string'') de contenir une «absence de valeur», appelée ''null''.
 
-Pour ce faire, on doit suffixer le type de la variable d'un point d'interrogation (''?''), comme ceci:
+Pour ce faire, on doit:
+
+# s'assurer d'être dans un [[contexte nullable|https://learn.microsoft.com/fr-ca/dotnet/csharp/language-reference/builtin-types/nullable-reference-types#setting-the-nullable-context]] en donnant un paramètre au projet, soit dans un fichier de configuration, soit en mettant `#nullable enable` dans le fichier .cs;&lt;p class=&quot;boite note&quot;&gt;
+
+Depuis .NET 6, les nouveaux projets C# créés dans ~VisualStudio sont dans un contexte nullable par défaut. On peut désactiver le contexte nullable soit en modifiant les propriétés du projet, soit en insérant `#nullable disable` dans un fichier .cs.&lt;/p&gt;
+
+# suffixer le type de la variable d'un point d'interrogation (''?''), comme ceci:&lt;div&gt;
 
 ```cs
 // La variable «entier» pourra contenir un nombre entier ou la valeur null
@@ -10417,14 +10425,7 @@ int? entier;
 // Déclaration d'un tableau pouvant contenir 10 nombres réels de type double, ou encore des null
 double?[] reels = new double?[10];
 ```
-
-Ceci est parfois pratique pour marquer l'indétermination d'une valeur.
-
-&lt;&lt;&lt;
-!! Note:
-
-Depuis C# 8.0, il est possible de rendre nullables des variables référencées en donnant un paramètre au projet, soit dans un fichier de configuration, soit en mettant `#nullable enable` dans le fichier .cs.
-&lt;&lt;&lt;
+&lt;/div&gt;
 
 &lt;p class=&quot;boite stop&quot;&gt;
 
@@ -13424,7 +13425,56 @@ Dans des environnements de développement plus avancés, comme Visual Studio, on
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/59add37c-7615-4c4d-beb0-8537c47a5044?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20181113131237544" modified="20231013150546215" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
+<div created="20231017152259060" modified="20231017172442237" tags="" title="Coffre à outils">
+<pre>!! ''Outils à connaître et maîtriser''
+//Vous ''devez'' connaître l'existence de chaque outil et savoir quand et comment l'utiliser; il n'est pas très utile d'attaquer un travail ou un exercice sans d'abord maîtriser tout le contenu de son coffre à outils!//
+
+* Variables (réception et stockage de valeurs)
+** de type ''int''
+** de type ''double''
+** de type ''float''
+** de type ''decimal''
+** de type ''string''
+** de type ''char''
+** constantes: ''const''
+** nullables
+
+* Conversion de types
+** conversion implicite
+** transtypage
+** fonctions `Convert.ToXXX()`
+
+* Opérateurs de calcul
+** Opérateurs de base: `+`, `-`, `*`, `/`
+** Modulo (reste d'une division): `%`
+** Assignations composées: `+=`, `-=`, `*=`, `/=`, `%=`
+** Préincrémentation (`++variable`) et postincrémentation (`variable++`)
+** Prédécrémentation (`--variable`) et postdécrémentation (`variable--`)
+
+* Instructions conditionnelles
+** ''switch''
+** ''if .. else''
+** Opérateur ternaire ''? :''
+
+* Comparateurs logiques
+** `==` (égale à)
+** `&gt;` (plus grand que)
+** `&lt;` (plus petite que)
+** `&gt;=` (plus grand ou égal)
+** `&lt;=` (plus petit ou égal)
+** `!=` (différent de)
+
+* Opérateurs logiques
+** `&amp;&amp;` (et)
+** `||` (ou)
+** `!` (non/pas)
+
+* Routines
+** `Console.Write()` et `Console.WriteLine()`, incluant méthodes d'affichage du contenu des variables
+** `Console.ReadKey()` et `Console.ReadLine()`
+** Fonctions mathématiques de `System.Math`</pre>
+</div>
+<div bag="default" created="20181113131237544" modified="20231017152010844" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
    background: #dddddd;
    padding: 1em;
@@ -13462,6 +13512,16 @@ Dans des environnements de développement plus avancés, comme Visual Studio, on
 
 .attention::before {
    background-image: url('https://i.imgur.com/TGHe7KV.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   display: inline-block;
+   width: 200px;
+   height: 100px;
+   content:&quot;&quot;;
+}
+
+.note::before {
+   background-image: url('https://i.imgur.com/GfxBmDf.png');
    background-size: contain;
    background-repeat: no-repeat;
    display: inline-block;
@@ -13532,11 +13592,16 @@ pre, code {
 &lt;/p&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20231015211021682" tags="" title="Semainier">
+<div created="20220228135020747" modified="20231017172750323" tags="" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
 | 1 (2 oct.) | [[01 Introduction]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 2 (9 oct.) | [[02 Variables]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
-| 3 (16 oct.) | [[03 Instructions conditionnelles]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|</pre>
+| 3 (16 oct.) | [[03 Instructions conditionnelles]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
+
+&lt;p class=&quot;boite important&quot;&gt;
+
+!! ''En tout temps, vous devez maîtriser le contenu de votre [[coffre à outils|Coffre à outils]]!!''
+&lt;/p&gt;</pre>
 </div>
 <div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20231006123953529" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
