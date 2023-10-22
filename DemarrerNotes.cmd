@@ -8,6 +8,6 @@
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "" /min "%~dpnx0" %* && exit
 
 :: Script PS principal
-Powershell.exe -executionpolicy bypass -File .\main.ps1
+powershell -executionpolicy bypass -File .\main.ps1
 
 exit
