@@ -15,7 +15,7 @@ set GIT_ABSENT=%1
 if "%GIT_ABSENT%"=="true" echo "Quitte car Git est absent" && exit
 
 :: Affiche un pop-up et quitte si Git est absent
-set commande="if (!(Get-Command git -ErrorAction SilentlyContinue)) {Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('git n''est pas disponible sur ce système.'); .\DemarrerNotes.cmd true;} else {.\DemarrerNotes.cmd false;}"
+set commande="if (!(Get-Command git -ErrorAction SilentlyContinue)) {Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Impossible de mettre les notes à jour car git n''est pas disponible sur ce système.','Erreur',0,16); .\DemarrerNotes.cmd true;} else {.\DemarrerNotes.cmd false;}"
 if "%GIT_ABSENT%"=="" powershell -ExecutionPolicy bypass -Command "& {%commande%}" && exit
 
 :: Met à jour le dépôt Git (nécessite que «Git for Windows» soit installé: https://gitforwindows.org/)
