@@ -9291,7 +9291,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140549786" modified="20220228152323976" title="$:/state/toc/Table des matières-03 Instructions conditionnelles--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122659982" modified="20231017172900752" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
+<div created="20231006122659982" modified="20231023154338948" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
@@ -9436,7 +9436,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/eric.martel/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9456,7 +9456,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/eric.martel/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9468,16 +9468,16 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;2561&quot;
+            &quot;text&quot;: &quot;1080&quot;
         }
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20231022190749206" title="$:/temp/search">
+<div created="20210408172006571" modified="20231023145132865" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -10477,10 +10477,21 @@ P.ex., dans l'exemple de la calculatrice des exercices de la section 1, chaque c
 
 En C#, il y a trois manières principales d'exprimer des conditions: les blocs ''switch'' et ''if-else'', et l'opérateur ternaire ''?:''</pre>
 </div>
-<div bag="default" created="20210213140210205" list="" modified="20231015213418596" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.02 switch" type="text/vnd.tiddlywiki">
-<pre>On peut définir des conditions d'exécution à l'aide d'un bloc ''switch''.
+<div bag="default" created="20210213140210205" list="" modified="20231023153513959" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.02 switch" type="text/vnd.tiddlywiki">
+<pre>On peut définir des conditions d'exécution à l'aide d'une instruction ''switch''.
 
 Un bloc ''switch'' sera approprié dans les cas où on veut créer une condition basée sur la valeur d'une expression (une expression peut être une variable ou encore une instruction retournant une valeur).
+
+&lt;div class=&quot;boite&quot;&gt;Bref, on utilise une instruction ''switch'' lorsqu'on désire exécuter certaines instructions seulement si une expression correspond à une valeur attendue.&lt;/div&gt;
+
+Depuis C# v8, il existe deux syntaxes pour instruction ''switch'':
+
+* la syntaxe classique, qui utilise des ''case'';
+* la nouvelle syntaxe, qui n'utilise pas de ''case''.
+
+! La syntaxe classique
+
+Avec la syntaxe classique, on compare une expression à différentes valeurs introduites par des ''case''; cette syntaxe permet d'exécuter plusieurs instructions pour chaque ''case'' et ne retourne pas de valeur. On doit mettre un ''break'' après chaque ''case'' de valeur différente afin de sortir du ''switch'', et on peut mettre un ''default'' pour les cas non couverts par les différents ''case'':
 
 ```cs
 switch (expression)
@@ -10501,6 +10512,9 @@ switch (expression)
 }
 ```
 &gt; À noter que du code entre crochets (« [ ] »), comme le ''default'' ci-dessus, indique du code facultatif; donc, dans l'exemple ci-dessus, on comprend que la portion ''default'' d'un bloc ''switch'' est facultative, bien que souvent recommandée.
+
+!!! Exemple:
+&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/hrA3Va&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 Si on désire qu'un même bloc d'instructions soit exécuté pour plus d'un ''case'', il suffit de les «empiler»:
 
@@ -10523,7 +10537,40 @@ switch (expression)
 }
 ```
 
+! La nouvelle syntaxe
+
+On utilisera la nouvelle syntaxe si on désire notamment que le ''switch'' retourne une valeur; il n'y a pas de ''case'' et le ''default'' est remplacé par un trait souligné «''_''»:
+
+```cs
+variable = expression switch
+{
+   valeur1 =&gt; valeur_de_retour1,
+   [valeur2 =&gt; valeur_de_retour_2,
+
+   // ... autant de valeurs de retour que désiré
+   ]
+
+   [_ =&gt; valeur_de_retour_par_défaut]
+};
+```
+
+!!! Exemple:
+&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/aF1ika&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+Depuis C# v9, il est possible «d'empiler» les valeurs de cette façon avec la nouvelle syntaxe:
+
+```cs
+variable = expression switch
+{
+   valeur1 or valeur2 or valeur3 =&gt; valeur_de_retour1,
+   valeur4 =&gt; valeur_de_retour2
+   [...]
+};
+```
+
 ---
+
+! Vidéo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/6969c383-7500-45e0-a928-5e32c3dfa517?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
