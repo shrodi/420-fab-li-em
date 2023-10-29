@@ -9297,8 +9297,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
 <pre>close</pre>
 </div>
-<div created="20220504132040684" modified="20231029212845438" title="$:/state/toc/Table des matières-04 Boucles-1329480811">
-<pre>open</pre>
+<div created="20220504132040684" modified="20231029222343805" title="$:/state/toc/Table des matières-04 Boucles-1329480811">
+<pre>close</pre>
 </div>
 <div created="20220228140608876" modified="20220228152325769" title="$:/state/toc/Table des matières-05 Arguments de programme--249536019">
 <pre>close</pre>
@@ -9309,8 +9309,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140617598" modified="20220228152326569" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)--249536019">
 <pre>close</pre>
 </div>
-<div created="20220310211604639" modified="20231029203543678" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
-<pre>open</pre>
+<div created="20220310211604639" modified="20231029222345222" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
+<pre>close</pre>
 </div>
 <div created="20220228140625672" modified="20220502122913413" title="$:/state/toc/Table des matières-07 Routines--249536019">
 <pre>close</pre>
@@ -9420,7 +9420,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier [[Carré de sable]]" title="$:/StoryList">
+<div list="[[06.01 Introduction]] Semainier [[Coffre à outils]] [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10989,7 +10989,7 @@ static void Main(string[] args)
 &lt;/div&gt;
 </pre>
 </div>
-<div bag="default" created="20210228180137089" list="" modified="20231029205237200" revision="0" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.01 Introduction" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210228180137089" list="" modified="20231029222319926" revision="0" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.01 Introduction" type="text/vnd.tiddlywiki">
 <pre>Les [[variables de base|02 Variables]] ne permettent de stocker qu'une seule valeur à la fois:
 
 ```cs
@@ -11009,7 +11009,7 @@ Si on a un grand nombre de valeurs similaires à stocker, il devient vite incomm
 ```
 Imaginez dans l'exemple ci-dessus qu'on ait  des dizaines, des centaines ou même des milliers de personnes... Cela n'aurait aucun sens...!
 
-Heureusement, il est possible de créer des ''tableaux'', qui sont des variables pouvant contenir plusieurs valeurs:
+Heureusement, il est possible de créer des ''tableaux'', qui sont des variables pouvant contenir plusieurs valeurs du même type de base; pour ce faire, il suffit de suffixer des crochets `[]` au type de base de la variable. Tout comme pour une variable de base, on peut ou non définir des valeurs initiales:
 
 ```cs
 // Un tableau prédéfini; chaque élément du tableau est de type «typeElement»
@@ -11022,13 +11022,13 @@ typeElement[] nomTableau = new typeElement[tailleTableau];
 !! Exemples de déclarations
 
 ```cs
-// Un tableau appelé «poids»; chaque élément est de type «decimal»
+// Un tableau prédéfini appelé «poids»; chaque élément est de type «decimal»
 decimal[] poids = {12.678m, 13m, 75.9m};
 
-// Un tableau appelé «noms»; chaque élément est de type «string»
+// Un tableau prédéfini appelé «noms»; chaque élément est de type «string»
 string[] noms = {&quot;Jean&quot;, &quot;Mireille&quot;, &quot;Suzie&quot;, &quot;Georges&quot;};
 
-// Un tableau vide appelé «age» qui pourra contenir jusqu'à 27 entiers
+// Un tableau vide appelé «ages» qui pourra contenir jusqu'à 27 entiers
 int[] ages = new int[27];
 
 // Un tableau vide appelé «adresses» qui pourra contenir jusqu'à 27 chaînes de caractères
@@ -11038,6 +11038,11 @@ string[] adresses = new string[27];
 &lt;div class=&quot;boite note&quot;&gt;
 
 On pourrait créer des tableaux à plusieurs dimensions, mais dans le cadre du présent cours on se limitera aux tableau unidimensionnels (à une dimension), aussi appelés ''vecteurs''.
+&lt;/div&gt;
+
+&lt;div class=&quot;boite stop&quot;&gt;
+
+On évitera de mettre dans un même tableau des valeurs de signification différente, même si elles sont de même type; p.ex., il serait inopportun de créer un tableau générique `double nombres[]` mélangeant des nombres de signification variée, comme des âges, des poids, des distances, etc.
 &lt;/div&gt;</pre>
 </div>
 <div bag="default" created="20210228180229626" list="" modified="20231029221039144" revision="0" tags="video [[06 Tableaux unidimensionnels (vecteurs)]]" title="06.02 Adressage et utilisation" type="text/vnd.tiddlywiki">
