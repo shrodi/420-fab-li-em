@@ -9315,19 +9315,19 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
 <pre>close</pre>
 </div>
-<div created="20220504132040684" modified="20231030132639190" title="$:/state/toc/Table des matières-04 Boucles-1329480811">
+<div created="20220504132040684" modified="20231101171230013" title="$:/state/toc/Table des matières-04 Boucles-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140608876" modified="20220228152325769" title="$:/state/toc/Table des matières-05 Arguments de programme--249536019">
 <pre>close</pre>
 </div>
-<div created="20210421154945242" modified="20231030131317650" title="$:/state/toc/Table des matières-05 Arguments de programme-1329480811">
+<div created="20210421154945242" modified="20231101171233411" title="$:/state/toc/Table des matières-05 Arguments de programme-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140617598" modified="20220228152326569" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)--249536019">
 <pre>close</pre>
 </div>
-<div created="20220310211604639" modified="20231030132640215" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
+<div created="20220310211604639" modified="20231101171232418" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140625672" modified="20220502122913413" title="$:/state/toc/Table des matières-07 Routines--249536019">
@@ -9363,7 +9363,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510153553336" modified="20231001130438734" title="$:/state/toc/Table des matières-97 Petit guide de programmation--249536019">
 <pre>close</pre>
 </div>
-<div created="20220404114304308" modified="20231101141410335" title="$:/state/toc/Table des matières-97 Petit guide de programmation-1329480811">
+<div created="20220404114304308" modified="20231101141439790" title="$:/state/toc/Table des matières-97 Petit guide de programmation-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210409121931567" modified="20220228140719264" title="$:/state/toc/Table des matières-98 Exercices supplémentaires--249536019">
@@ -10854,7 +10854,7 @@ L'instruction ''goto'' permet aussi de sortir d'une boucle, mais est de manière
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/3b8dc385-61f5-47de-b36b-28204cff2fb0?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210226163516809" modified="20231029220640040" revision="0" tags="[[04 Boucles]]" title="04.07 Quand utiliser quelle boucle?" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210226163516809" modified="20231101170840587" revision="0" tags="[[04 Boucles]]" title="04.07 Quand utiliser quelle boucle?" type="text/vnd.tiddlywiki">
 <pre>! Quand utiliser une boucle?
 
 On utilisera généralement une boucle chaque fois qu'on sent le besoin de ''répéter du code'' ou des opérations ''un nombre de fois déterminé ou déterminable'', ou encore ''tant qu'une condition est vraie''.
@@ -10877,10 +10877,26 @@ Comme chaque type de boucle peut souvent être converti en un autre type de bouc
 
 * une boucle ''do ... while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on veut faire au moins une itération;
 
-* une boucle ''while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on n'a pas besoin de faire au moins une itération.</pre>
+* une boucle ''while'' si on désire répéter des opérations « tant que cela est vrai » et qu'on n'a pas besoin de faire au moins une itération.
+
+! Exemples pour afficher les nombres de 1 à 10
+
+&lt;iframe width=&quot;100%&quot; height=&quot;1100&quot; src=&quot;https://dotnetfiddle.net/Widget/j5fLSw&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+Il est important de comprendre que les exemples ci-dessus ne sont pas exhaustifs et qu'il y a souvent plusieurs façons de faire les choses. P.ex., on pourrait réécrire la boucle ''for'' ci-dessus de la façon suivante, avec le même résultat:
+
+```cs
+// Version alternative pour le for
+for (int i = 0; i &lt; 10; i++)
+{
+	Console.Write($&quot;{i+1} &quot;);
+}
+```</pre>
 </div>
-<div created="20231030132508693" modified="20231030132516477" tags="[[04 Boucles]]" title="04.Exercices">
-<pre># Réécrivez l'exemple du bloc «//Attention!//» de la [[section 04.06|04.06 break et continue]] afin d'utiliser un ''while'' plutôt qu'un ''do...while'' tout en utilisant une condition d'itération adéquate plutôt que //true//.</pre>
+<div created="20231030132508693" modified="20231101171221785" tags="[[04 Boucles]]" title="04.Exercices">
+<pre># Réécrivez l'exemple du bloc «//Attention!//» de la [[section 04.06|04.06 break et continue]] afin d'utiliser un ''while'' plutôt qu'un ''do...while'' tout en utilisant une condition d'itération adéquate plutôt que //true//.
+
+# Réécrivez chacun des exemples de boucle de la section 04.07 d'une manière différente, tout en obtenant exactement le même résultat. ''Vous ne pouvez utiliser la version alternative du //for// donnée après les exemples'': vous devez donc trouver une autre façon de réécrire la boucle ''for''.</pre>
 </div>
 <div bag="default" created="20210224130846848" modified="20210224131004035" revision="0" tags="[[Table des matières]]" title="05 Arguments de programme" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
