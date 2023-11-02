@@ -9291,13 +9291,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228131054165" modified="20231006124237111" title="$:/state/toc/Table des matières-01 Introduction--249536019">
 <pre>close</pre>
 </div>
-<div created="20220311191549397" modified="20231102181427166" title="$:/state/toc/Table des matières-01 Introduction-1329480811">
+<div created="20220311191549397" modified="20231102182202490" title="$:/state/toc/Table des matières-01 Introduction-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220307213615041" modified="20231006150255791" title="$:/state/toc/Table des matières-02 Variables--249536019">
 <pre>close</pre>
 </div>
-<div created="20210424142806685" modified="20231031190428925" title="$:/state/toc/Table des matières-02 Variables-1329480811">
+<div created="20210424142806685" modified="20231102184708224" title="$:/state/toc/Table des matières-02 Variables-1329480811">
 <pre>close</pre>
 </div>
 <div created="20231031184806939" modified="20231031190649035" title="$:/state/toc/Table des matières-02.05 Calculs-1329480811">
@@ -10121,7 +10121,7 @@ Depuis la version 3.0 de C#, il existe un type générique appelé ''var''. Une 
 &lt;/p&gt;
 </pre>
 </div>
-<div bag="default" created="20210208150219255" modified="20231012181929541" revision="0" tags="video [[02 Variables]]" title="02.04 Les conversions de types" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210208150219255" modified="20231102184322157" revision="0" tags="video [[02 Variables]]" title="02.04 Les conversions de types" type="text/vnd.tiddlywiki">
 <pre>Si deux variables contiennent une chaîne de caractères rerésentant des nombres (p.ex., &quot;10&quot; et &quot;20&quot;, en représentation ASCII), et que l'on veuille effectuer une opération mathématique entre les deux, cette opération sera impossible si ces chaînes ne sont pas d'abord converties en véritables nombres en mémoire; il y aura nécessité d'effectuer une ''conversion de types''. Le même besoin sera exprimé si on désire plutôt afficher à l'écran des nombres: ils devront d'abord être convertis en chaînes de caractères affichables.
 
 Certains langages sont dits //faiblement typés// et d'autres //fortement typés//.
@@ -10134,11 +10134,9 @@ Certains langages sont dits //faiblement typés// et d'autres //fortement typés
 
 !! Méthodes de conversion
 
-Lorsque l'on doit convertir des types, il y a essentiellement trois façons:
+Lorsque l'on doit convertir des types, il y a essentiellement trois façons de faire; elles sont, par ordre de préférence (selon la disponibilité):
 
-# ''conversion implicite'' (automatique): il arrive que, dans certains contextes, le compilateur C# reconnaisse le type désiré et puisse faire la conversion automatiquement sans intervention du programmeur (p.ex., `System.Console.WriteLine()` convertira automatiquement les nombres à afficher en chaînes de caractères);
-
-# ''[[Sytem.Convert|https://docs.microsoft.com/fr-fr/dotnet/api/system.convert?view=net-5.0]]'': classe qui offre plusieurs méthodes de conversion entre types 
+# ''conversion implicite'' (automatique): il arrive que, dans certains contextes, le compilateur C# reconnaisse le type désiré et puisse faire la conversion automatiquement sans intervention du programmeur:&lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/zXt4MJ&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 # ''conversion par transtypage'' (//type casting//): pour des types «rapprochés» (comme des nombres), on peut souvent forcer la conversion en préfixant le type désiré entre parenthèses
 #&gt; ex.:&lt;div&gt;
@@ -10165,6 +10163,8 @@ On peut faire autant de conversions que nécessaires à l'intérieur d'une même
 &lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/PahdBe&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;/div&gt;
+
+# ''[[Sytem.Convert|https://docs.microsoft.com/fr-fr/dotnet/api/system.convert?view=net-5.0]]'': classe qui offre plusieurs méthodes de conversion entre types 
 
 ---
 
