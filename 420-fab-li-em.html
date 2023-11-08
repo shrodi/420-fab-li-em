@@ -9335,7 +9335,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140617598" modified="20220228152326569" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)--249536019">
 <pre>close</pre>
 </div>
-<div created="20220310211604639" modified="20231107193018881" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
+<div created="20220310211604639" modified="20231108184201799" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140625672" modified="20220502122913413" title="$:/state/toc/Table des matières-07 Routines--249536019">
@@ -9446,7 +9446,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[07 Routines]] [[07.01 Introduction aux routines]] Semainier [[Carré de sable]]" title="$:/StoryList">
+<div list="06.Exercices [[06.01 Introduction]] [[06.02 Adressage et utilisation]] Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11108,37 +11108,31 @@ On pourrait créer des tableaux à plusieurs dimensions, mais dans le cadre du p
 On évitera de mettre dans un même tableau des valeurs de signification différente, même si elles sont de même type; p.ex., il serait inopportun de créer un tableau générique `double nombres[]` mélangeant des nombres de signification variée, comme des âges, des poids, des distances, etc.
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20210228180229626" list="" modified="20231029221039144" revision="0" tags="video [[06 Tableaux unidimensionnels (vecteurs)]]" title="06.02 Adressage et utilisation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210228180229626" list="" modified="20231108184156392" revision="0" tags="video [[06 Tableaux unidimensionnels (vecteurs)]]" title="06.02 Adressage et utilisation" type="text/vnd.tiddlywiki">
 <pre>Une fois un tableau défini, on accède aux valeurs qu'il contient par un ''index'', qui correspond à la position de l'élément du tableau, moins un (donc, le 1er élément est à l'index 0, le second élément à l'index 1, etc.); on indique un index avec le nom du tableau, suivi de l'index entre crochets. On peut récupérer une valeur du tableau ou encore la modifier.
 
-!! Exemple 6.2a
-
-&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/lhaUYy&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+!!! Exemple 6.2a &lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/lhaUYy&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 Les boucles ''for'' et ''foreach'' sont très utiles pour traiter les éléments d'un tableau; tel que traité à la [[section 04.07|04.07 Quand utiliser quelle boucle?]], on utilisera une boucle ''foreach'' si la position (l'index) des éléments ne nous importe pas, et une boucle ''for'' dans le cas contraire.
 
-!! Exemple 6.2b
-
-!! &lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/t6gGuh&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+!!! Exemple 6.2b &lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/t6gGuh&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 Comme dit en introduction, il est notamment utile de créer des tableaux pour stocker des valeurs à réutiliser plus tard.
 
-!! Exemple 6.2c
-
-&lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/79AeS1&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+!!! Exemple 6.2c &lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/79AeS1&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/daae1251-b51f-4e91-abe4-e27b2d1572b5?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20231030124534543" modified="20231030132503132" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.Exercices">
+<div created="20231030124534543" modified="20231108184101329" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.Exercices">
 <pre># On peut souvent réécrire une boucle sous une forme ou une autre; sachant que l'on peut obtenir la taille d'un tableau de la façon suivante:&lt;div&gt;
 
 ```cs
 // Définit un tableau contenant 6 entiers
 int[] entiers = {23, 56, 32, 98, 456, 73};
 
-// Stockera 6 dans tailleEntiers
+// Stockera 6 dans tailleEntiers (soit le nombre d'éléments dans le tableau «entiers»)
 int tailleEntiers = entiers.Length;
 ```
 &lt;/div&gt; reprenez l'exemple ''foreach'' de la [[section 04.02|04.02 foreach]] et réécrivez le code en remplaçant la boucle ''foreach'' par:
