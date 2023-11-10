@@ -9311,7 +9311,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220307213615041" modified="20231006150255791" title="$:/state/toc/Table des matières-02 Variables--249536019">
 <pre>close</pre>
 </div>
-<div created="20210424142806685" modified="20231110005111586" title="$:/state/toc/Table des matières-02 Variables-1329480811">
+<div created="20210424142806685" modified="20231110134625803" title="$:/state/toc/Table des matières-02 Variables-1329480811">
 <pre>close</pre>
 </div>
 <div created="20231031184806939" modified="20231107172231853" title="$:/state/toc/Table des matières-02.05 Calculs-1329480811">
@@ -9347,7 +9347,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140625672" modified="20220502122913413" title="$:/state/toc/Table des matières-07 Routines--249536019">
 <pre>close</pre>
 </div>
-<div created="20210412165600146" modified="20231110004828623" title="$:/state/toc/Table des matières-07 Routines-1329480811">
+<div created="20210412165600146" modified="20231110134822111" title="$:/state/toc/Table des matières-07 Routines-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210408171656033" modified="20220318104714116" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
@@ -11170,7 +11170,7 @@ int tailleEntiers = entiers.Length;
 &lt;/div&gt;
 </pre>
 </div>
-<div bag="default" created="20210303140729352" modified="20231109133237636" revision="0" tags="video [[07 Routines]]" title="07.01 Introduction aux routines" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210303140729352" modified="20231110134816969" revision="0" tags="video [[07 Routines]]" title="07.01 Introduction aux routines" type="text/vnd.tiddlywiki">
 <pre>[[Les boucles|04 Boucles]] nous permettent déjà de répéter un même bloc de code plusieurs fois sans avoir à le recopier.
 
 Mais que se passe-t-il si, pour quelque raison, on a besoin de répéter un certain bloc de code une première fois dans un programme, et ensuite une seconde fois, ou une troisième fois, etc.? Si cela doit se faire une fois après l'autre, on pourrait faire deux boucles imbriquées:
@@ -11262,11 +11262,15 @@ D'ailleurs, alors que certains langages les distinguent clairement l'une de l'au
 On appelle ''signature'' d'une routine le code qui en assure la déclaration, alors qu'on appelle ''corps'' le code qui en assure la définition; p.ex.:
 
 ```cs
-double maFonction(int parametre1, string parametre2) // signature
+double MaFonction(int parametre1, string parametre2) // signature
 {
     // corps
 }
 ```
+
+!! Nomenclature
+
+Tout en respectant les règles générales de la [[section 02.02|02.02 La nomenclature]], on nommera toujours une fonction en ''commençant par une lettre majuscule''.
 
 ! La fonction Main()
 
@@ -11370,7 +11374,7 @@ static string Traduire(string motAnglais)
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b8b4f868-0a3b-4338-bae2-07b70d986509?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210303151112307" modified="20231107181014837" revision="0" tags="[[07 Routines]]" title="07.04 Les arguments" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210303151112307" modified="20231110134515334" revision="0" tags="[[07 Routines]]" title="07.04 Les arguments" type="text/vnd.tiddlywiki">
 <pre>Une fonction peut recevoir des ''arguments''; ce sont les valeurs passées entre parenthèses lors de l'appel de la fonction. Par exemple, comme on le sait, la fonction `Math.Pow()` attend deux arguments, soit la base et l'exposant, tous deux de type ''double'':
 
 ```cs
@@ -11399,7 +11403,10 @@ On distingue notamment trois façons de passer une valeur par référence, selon
 
 # avec le modificateur ''ref'': la variable passée doit être initialisée et peut être modifiée par la fonction;
 # avec le modificateur  ''out'': la variable passée n'a pas à être initialisée, mais ''doit'' être modifiée par la fonction (une sorte de valeur de retour);
-# avec le modificateur  ''in'': la variable passée doit être initialisée et ne pourra être modifiée par la fonction (une sorte de constante pour la fonction).
+# avec le modificateur  ''in'': la variable passée doit être initialisée et ne pourra être modifiée par la fonction (une sorte de constante pour la fonction).&lt;div class=&quot;boite attention&quot;&gt;
+
+!!! Il ne faut pas confondre le «''in''» que l'on utilise dans un ''foreach'' et le «''in''» utilisé avec un paramètre de fonction C#: le premier signifie littéralement «dans» (le tableau), alors que le second signifie plutôt «entrée» (d'argument). Les deux n'ont pas du tout le même rôle syntaxique en C#, et le compilateur fera la distinction selon le contexte.
+&lt;/div&gt;
 
 &lt;/div&gt;Donc, avec ''ref'' et ''out'', toutes les modifications faites à l'argument dans la fonction se réflèteront aussi sur la variable d'origine qui a été passée.&lt;div&gt;
 
@@ -11410,7 +11417,7 @@ Donc, ci-dessus, le contenu de mot2 et mot3 a été modifié par la fonction en 
 
 &lt;div class=&quot;boite note&quot;&gt;
 
-D'un point de vue strictement technique, le type ''string'' est toujours passé par adresse, mais comme C# en fait automatiquement une copie pour la fonction, il se comporte au final comme les autres types de base. Vous n'avez pas à vous préoccuper de ce point: je ne le mentionne qu'à des fins de précision.
+!!! D'un point de vue strictement technique, le type ''string'' est toujours passé par adresse, mais comme C# en fait automatiquement une copie pour la fonction, il se comporte au final comme les autres types de base. Vous n'avez pas à vous préoccuper de ce point: je ne le mentionne qu'à des fins de précision.
 &lt;/div&gt;
 
 ! Les valeurs par défaut
@@ -11423,7 +11430,7 @@ On peut donner une valeur par défaut à des arguments s'ils sont placés en der
 
 ! Paramètres vs. arguments
 
-On entend souvent parler de ''paramètres'' au lieu d'arguments. D'un point de vue strictement technique, les paramètres sont les variables définies dans la signature d'une routine, alors que les arguments sont les valeurs passées à la routine lors de son appel, mais en pratique on confond souvent les deux.
+!!! On entend souvent parler de ''paramètres'' au lieu d'arguments. D'un point de vue strictement technique, les paramètres sont les variables définies dans la signature d'une routine, alors que les arguments sont les valeurs passées à la routine lors de son appel, mais en pratique on confond souvent les deux.
 &lt;/div&gt;
 
 ---
