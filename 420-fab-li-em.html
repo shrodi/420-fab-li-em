@@ -9268,7 +9268,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20231110144900609" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20231120204004649" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
@@ -9337,7 +9337,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140608876" modified="20220228152325769" title="$:/state/toc/Table des matières-05 Arguments de programme--249536019">
 <pre>close</pre>
 </div>
-<div created="20210421154945242" modified="20231120140846413" title="$:/state/toc/Table des matières-05 Arguments de programme-1329480811">
+<div created="20210421154945242" modified="20231120205006543" title="$:/state/toc/Table des matières-05 Arguments de programme-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140617598" modified="20220228152326569" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)--249536019">
@@ -9470,7 +9470,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9490,7 +9490,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-FAB%20Notes%20de%20cours/420-fab-li-em.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9506,7 +9506,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;2561&quot;
+            &quot;text&quot;: &quot;960&quot;
         }
     }
 }</pre>
@@ -10955,7 +10955,7 @@ Les arguments possibles peuvent être énumérés dans une documentation à part
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/a53c2c29-437d-4930-8987-5f389bef3dbc?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210224135017173" modified="20231116130218064" revision="0" tags="video [[05 Arguments de programme]]" title="05.02 Traitement des arguments" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210224135017173" modified="20231120204129899" revision="0" tags="video [[05 Arguments de programme]]" title="05.02 Traitement des arguments" type="text/vnd.tiddlywiki">
 <pre>Pour tenir compte des arguments, le programme doit explorer le contenu du tableau ''args'' et agir en fonction des valeurs rencontrées. Il y a différents paradigmes de passage d'arguments à un programme:
 
 # on peut exiger des valeurs passées dans un ordre précis; p.ex., si on a un exécutable ''convertirTemperature.exe'' qui a besoin d'une température à convertir en °C ou °F et des unités de départ, on pourrait exiger que l'utilisateur passe d'abord la valeur de température, et ensuite un «c» ou un «f» pour dire si la valeur entrée est en °C ou en °F:&lt;div&gt;
@@ -11014,17 +11014,21 @@ ConvertisseurTemperature.exe --unite c --temp 100
  */
 static void Main(string[] args)
 {
-    decimal temperature = 0;    // Température à convertir
+    double temperature = 0;    // Température à convertir
     string uniteEntree = &quot;&quot;;     // Unités de la température à convertir
 
     // Pour i variant de 0 à args.Length-1...
-    for (int i=0; i&lt;args.Length; i++)
+    for (int i = 0; i &lt; args.Length; i++)
     {
         // Affecte les valeurs en fonction des noms d'arguments rencontrés, peu importe leur ordre
         switch (args[i])
         {
             case &quot;--temp&quot;:
-                temperature = Convert.ToDecimal(args[++i]);
+                if (!double.TryParse(args[++i], out temperature))
+                {
+                    // La valeur saisie n'est pas un nombre (NaN === &quot;Not a Number&quot;)
+                    temperature = double.NaN;
+                }
                 break;
 
             case &quot;--unite&quot;:
@@ -11033,18 +11037,27 @@ static void Main(string[] args)
         }
     }
 
-    // Affiche la conversion en fonction des unités de la temperature d'entrée
-    switch (uniteEntree)
+    // Si temperature est un nombre, effectue et affiche la conversion
+    if (!double.IsNaN(temperature))
     {
-        case &quot;f&quot;:
-            Console.WriteLine($&quot;\n{temperature}°F = {(temperature - 32) * 5m / 9m}°C&quot;);
-            break;
-        case &quot;c&quot;:
-            Console.WriteLine($&quot;\n{temperature}°C = {(temperature * 9m / 5m) + 32m}°F&quot;);
-            break;
-        default:
-            Console.WriteLine($&quot;\nMauvaise unité entrée.&quot;);
-            break;
+        // Affiche la conversion en fonction des unités de la temperature d'entrée
+        switch (uniteEntree)
+        {
+            case &quot;f&quot;:
+                Console.WriteLine($&quot;\n{temperature}°F = {(temperature - 32.0) * 5.0 / 9.0}°C&quot;);
+                break;
+            case &quot;c&quot;:
+                Console.WriteLine($&quot;\n{temperature}°C = {(temperature * 9.0 / 5.0) + 32.0}°F&quot;);
+                break;
+            default:
+                Console.WriteLine($&quot;\nMauvaise unité entrée.&quot;);
+                break;
+        }
+    }
+    // Sinon (si temperature n'est pas un nombre), affiche une erreur
+    else
+    {
+        Console.WriteLine(&quot;Erreur: mauvaise valeur de température entrée&quot;);
     }
 }
 ```
@@ -11054,12 +11067,12 @@ static void Main(string[] args)
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/88472299-a634-4b06-af04-4f8c33e64004?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210224135027801" modified="20231110150921344" revision="0" tags="[[05 Arguments de programme]]" title="05.03 Passage des arguments" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210224135027801" modified="20231120204953557" revision="0" tags="[[05 Arguments de programme]]" title="05.03 Passage des arguments" type="text/vnd.tiddlywiki">
 <pre>Les arguments passés à un exécutable doivent être séparés par une ou des espaces.
 
-* Dans Visual Studio, on peut définir les arguments avec //Clic droit sur le nom du projet &gt; Propriétés &gt; Déboguer &gt; Arguments d'application// (p.ex., ci-dessous on passe les valeurs «100» et «c» comme arguments):
-*&gt; [img[https://i.imgur.com/lwOKRE7.png]]
-*&gt; [img[https://i.imgur.com/ZWQFbPd.png]]
+* Dans Visual Studio, on peut définir les arguments avec //Déboguer &gt; Propriétés de débogage...//:
+*&gt; [img width=&quot;600&quot; [https://i.imgur.com/kefEe5a.png]]
+*&gt; [img[https://i.imgur.com/s0uI5Y3.png]]
 
 * Si on exécute plutôt le programme compilé à partir de la ligne de commande, on passe les arguments à la suite du nom de programme:
 *&gt; [img[https://i.imgur.com/2wDuMlJ.png]]</pre>
