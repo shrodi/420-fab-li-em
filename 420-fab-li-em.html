@@ -9286,7 +9286,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20231127122025633" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20231204125615491" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
@@ -9373,7 +9373,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408171656033" modified="20220318104714116" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20231130113235543" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<div created="20210408180556742" modified="20231204133057247" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425173004627" modified="20220228152329550" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
@@ -11574,7 +11574,7 @@ Pour avoir accès directement aux éléments d'un espace de noms, on utilise le 
 
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20210314183204151" modified="20231130111758251" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.02 Instances de classes (objets)" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314183204151" modified="20231204124021367" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.02 Instances de classes (objets)" type="text/vnd.tiddlywiki">
 <pre>On crée une instance (on instancie) une classe avec l'instruction ''new''.
 
 Le mot «objet» dans //Programmation orientée objet// vient du nom donné à une instance de classe, qu'on appelle justement un objet.
@@ -11584,21 +11584,28 @@ P.ex., ci-dessous, la variable mesRacines contiendra un objet de type «Racines�
 ```cs
 // Affectation à la variable mesRacines d'une instance de la classe «Racines», qu'on peut aussi appeler un objet de type «Racines»
 Racines mesRacines = new Racines();
+
+// Depuis C# 9.0, on peut omettre de répéter le type ciblé lorsque celui-ci est connu:
+Racines mesRacines = new();  //--&gt; C# comprend qu'on veut instancier la classe Racines()
+[...]
+mesRacines = new(); //--&gt; Même lors d'une redéfinition, C# connaît le type de mesRacines et donc comprend qu'on veut une nouvelle instance de la classe Racines()
 ```
 
-&lt;&lt;&lt;
+&lt;div class=&quot;boite attention&quot;&gt;
+
 !! Confusions courantes
 
 Le mot «objet» en POO porte souvent à confusion, car:
 
 # certaines personnent confondent ou utilisent indifféremment les termes //classe// et //objet//;
 # certaines personnes auront tendance à associer le mot //objet// à des objets de la vie réelle, ce qui n'a rien à voir avec la POO en tant que tel.
-&lt;&lt;&lt;
+&lt;/div&gt;
 
 Il est important de comprendre que l'on peut créer plusieurs instances de classes dans un même programme, et que chaque instance aura (par défaut) ses propres valeurs et sera complètement indépendante des autres.
 
-!! Exemples
+P.ex., à l'[[exemple 8.1a|08.01 Classes]], chaque nouveau chien est indépendant des autres et reçoit son propre nom, et dans l'exemple 8.2a ci-dessous (qui s'appuie sur la classe //Racines// de l'[[exemple 8.1b|08.01 Classes]]), on crée deux instances de cette classe qui aura chacune ses propres limites.
 
+!!! Exemple 8.2a
 ```cs
 class Program
 {
@@ -11623,138 +11630,25 @@ class Program
 }
 ```
 
-```cs
-// Un chien
-class Chien
-{
-    // Le nom du chien
-    private string nom;
-
-    public void Baptiser(string nomChien)
-    {
-        nom = nomChien;
-    }
-
-    public string Nom()
-    {
-        return nom;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Chien fido = new Chien();
-        Chien rex = new Chien();
-        Chien oreo = new Chien();
-        Chien boule = new Chien();
-
-        fido.Baptiser(&quot;Fido&quot;);
-        rex.Baptiser(&quot;Rex&quot;);
-        oreo.Baptiser(&quot;Oreo&quot;);
-        boule.Baptiser(&quot;Boule&quot;);
-
-        // Affiche le nom de chaque chien
-        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom()}»&quot;);
-    }
-}
-```
-
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/072bf3df-d9f7-4f77-815e-f505ab748b3b?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314185302524" modified="20231006123137700" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="08.03 Visibilité des membres d'une classe" type="text/vnd.tiddlywiki">
-<pre>* Tous les membres d'une classe peuvent être vus et accédés à l'intérieur de la classe (donc, une méthode peut modifier un attribut ou appeler une autre méthode).
+<div bag="default" created="20210314185302524" modified="20231204133042235" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.03 Visibilité des membres d'une classe" type="text/vnd.tiddlywiki">
+<pre>* Tous les membres d'une classe se voient entre eux et peuvent donc être accédés à l'intérieur de la classe elle-même (donc, une méthode peut modifier un attribut ou appeler une autre méthode).
 * Tous les membres d'une classe (attributs et méthodes) peuvent être déclarés soit ''public'', soit ''private'':
-** ''public'' signifie que le membre sera accessible de l'extérieur de la classe (donc depuis le programme appelant);
+** ''public'' signifie que le membre sera accessible de l'extérieur de la classe (donc depuis le code appelant);
 ** ''private'' signifie que le membre ne sera visible que depuis l'intérieur de la classe à laquelle il appartient.
 
 * Règle générale, ''tous les attributs'' devraient être déclarés ''private''; les méthodes seront quant à elles déclarées ''public'' ou ''private'' selon qu'elles ont raison d'être appelées de l'extérieur ou non.
 
-&gt; En C#, il y a un autre modificateur de visibilité appelé ''internal'', qui est une sorte de «public» restreint au programme, mais pour simplifier (et afin de se rapprocher des autres langages POO) nous nous contenterons d'utiliser seulement ''public'' et ''private''.
+&lt;div class=&quot; boite note&quot;&gt;
 
-!! Exemple
+En C#, il y a un autre modificateur de visibilité appelé ''internal'', qui est une sorte de «public» restreint au programme, mais pour simplifier (et afin de se rapprocher des autres langages POO) nous nous contenterons d'utiliser seulement ''public'' et ''private''.&lt;/div&gt;
 
-Dans l'exemple de la [[section 8.01|8.01 Classes]], on avait déclaré toutes les méthodes comme étant ''public'', et le //Main()// les appelait une à une; et si on simplifiait encore davantage le //Main()// en reléguant tout le contrôle du processus à la classe? On pourrait alors avoir quelque-chose comme ceci, où toutes les méthodes sont ''private'' sauf une qui exécute les étapes désirées dans l'ordre (dans ce cas, les limites par défaut deviennent inutiles puisque la seule méthode publique forcera la saisie de limites):
+Dans la classe //Racines// de l'[[exemple 8.1b|08.01 Classes]], on avait déclaré toutes les méthodes comme étant ''public'', et le `Main()` les appelait une à une; et si on simplifiait encore davantage le `Main()` en reléguant tout le contrôle du processus à la classe? On pourrait alors avoir quelque-chose comme l'exemple 8.3a ci-dessous, où toutes les méthodes sont ''private'' sauf une qui exécute les étapes désirées dans l'ordre (dans ce cas, les limites par défaut deviennent inutiles puisque la seule méthode publique forcera la saisie de limites):
 
-```cs
-using System;
-
-namespace Demo
-{
-    // Classe servant à gérer les opérations autour du calcul de racines
-    class Racines
-    {
-        // Limites qui seront demandées
-        private int limiteInferieure;
-        private int limiteSuperieure;
-
-        // Contiendra les racines calculées
-        private double[] racines;
-
-        // Calcule des racines de nbMin à nbMax et les retourne dans un tableau
-        private void Calculer()
-        {
-            // Le tableau qui contiendra les racines
-            racines = new double[limiteSuperieure - limiteInferieure + 1];
-
-            // Calcule les racines de nbMin à nbMax
-            for (int nb = limiteInferieure; nb &lt;= limiteSuperieure; nb++)
-            {
-                racines[nb - limiteInferieure] = Math.Sqrt(nb);
-            }
-        }
-
-        // Demande les limites 
-        private void DemanderLimites()
-        {
-            do
-            {
-                Console.Write(&quot;Entrer une limite de calcul inférieure: &quot;);
-                int.TryParse(Console.ReadLine(), out limiteInferieure);
-
-                Console.Write(&quot;Entrer une limite de calcul supérieure: &quot;);
-                int.TryParse(Console.ReadLine(), out limiteSuperieure);
-            } while (limiteInferieure &gt;= limiteSuperieure || limiteSuperieure &lt; 1 || limiteSuperieure &lt; 1);
-        }
-
-        // Afficher les racines calculées
-        private void Afficher()
-        {
-            // Affiche les racines
-            foreach (double racine in racines)
-            {
-                Console.WriteLine(racine);
-            }
-        }
-
-        // Exécute toutes les étapes dans l'ordre
-        public void Executer()
-        {
-            DemanderLimites();
-            Calculer();
-            Afficher();
-        }
-    }
-
-    class Program
-    {
-        static void Main()
-        {
-            // Instanciation de la classe Racines dans la variable (objet) «racines»
-            Racines racines = new Racines();
-
-            // On effectue les opérations sur l'objet «racines»
-            racines.Executer();
-        }
-    }
-}
-```
+!!! Exemple 8.3a&lt;iframe width=&quot;100%&quot; height=&quot;1500&quot; src=&quot;https://dotnetfiddle.net/Widget/yKbQui&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;p class=&quot;boite&quot;&gt;
 
@@ -11762,17 +11656,16 @@ namespace Demo
 
 Comment décider si un méthode devrait être privée ou publique?
 
-On devrait toujours partir du principe que toutes les méthodes devraient être ''private'', sauf celles pour lesquelles on envisage une raison de les rendre accessibles de l'extérieur, selon les besoins et le contexte.
+On devrait toujours partir du principe de base que toutes les méthodes devraient être ''private'', sauf celles pour lesquelles on envisage une raison de les rendre accessibles de l'extérieur.
 
-Ainsi, le dernier exemple ci-dessus n'est pas nécessairement la meilleure chose à faire; peut-être, par exemple, qu'on aimerait avoir la liberté de demander ou non la saisie de limites, ou d'afficher les résultats à un autre moment dans le programme: tout est une question de contexte et de besoin.
+Au final cependant, tout dépendra du besoin et du contexte. Ainsi, l'exemple 8.3a ci-dessus n'est pas nécessairement la meilleure chose à faire: peut-être, par exemple, qu'on aimerait avoir la liberté de demander ou non la saisie de limites, ou d'afficher les résultats à un autre moment dans le programme, de sorte que la version originale de l'[[exemple 8.1b|08.01 Classes]] serait préférable dans ce cas. Tout est une question de contexte et de besoin.
 &lt;/p&gt;
 
 ! Visibilité entre classes
 
 Toutes les classes d'un même espace de nom (//namespace//) pourront se voir entre elles et donc s'instancier les unes les autres.
 
-!! Exemple
-
+!!! Exemple 8.3b
 ```cs
 namespace Demo
 {
@@ -11783,8 +11676,9 @@ namespace Demo
 
     class Classe2
     {
-        // On instancie Classe1 depuis Classe2
-        Classe1 objetClasse = new Classe1();
+        /* On instancie Classe1 depuis Classe2
+            =&gt; Classe2 peut voir Classe1 car sont dans le même namespace */
+        Classe1 objetClasse1 = new Classe1();
     }
 }
 ```
@@ -13508,7 +13402,7 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 &lt;/p&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20231130122548640" tags="[[Table des matières]]" title="Semainier">
+<div created="20220228135020747" modified="20231204131309307" tags="[[Table des matières]]" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
 | 1 (2 oct.) | [[01 Introduction]] |&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 2 (9 oct.) |&lt;ul&gt;&lt;li&gt;[[02 Variables]]&lt;/li&gt;&lt;li&gt;[[02.05 Calculs]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;[[02.05.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
@@ -13518,7 +13412,8 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 | 6 (6 nov.) |&lt;ul&gt;&lt;li&gt;[[03.05 TryParse()]]&lt;/li&gt;&lt;li&gt;[[07 Routines]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP2&lt;/li&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[07.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | (13 nov.) | //Semaine sans cours// |&lt;ul&gt;&lt;li&gt;TP2&lt;/li&gt;&lt;/ul&gt;|
 | 7 (20 nov.) |&lt;ul&gt;&lt;li&gt;[[05 Arguments de programme]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;/ul&gt;|
-| 8 (27 nov.) |&lt;ul&gt;&lt;li&gt;[[08.01 Classes]]&lt;/li&gt;&lt;li&gt;[[08.01.05 Les espaces de noms]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;li&gt;[[08.Exercices|08.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
+| 8 (27 nov.) |&lt;ul&gt;&lt;li&gt;[[08.01 Classes]]&lt;/li&gt;&lt;li&gt;[[08.01.05 Les espaces de noms]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;li&gt;[[Exercices 8.1 à 8.3|08.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
+| 9 (4 déc.) |&lt;ul&gt;&lt;li&gt;[[08.02 Instances de classes (objets)]]&lt;/li&gt;&lt;li&gt;[[08.03 Visibilité des membres d'une classe]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;//Exercices à venir//&lt;/li&gt;&lt;/ul&gt;|
 
 &lt;p class=&quot;boite important&quot;&gt;
 
