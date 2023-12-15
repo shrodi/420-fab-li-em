@@ -9373,7 +9373,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408171656033" modified="20220318104714116" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20231215131655427" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<div created="20210408180556742" modified="20231215144343997" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425173004627" modified="20220228152329550" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
@@ -9472,7 +9472,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier [[Carré de sable]]" title="$:/StoryList">
+<div list="08.Exercices Semainier [[08.06 Constructeur]] [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11737,55 +11737,63 @@ Il est parfois utile de pouvoir récupérer l'étiquette d'une énumération à 
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/1716d002-d471-4f3a-9ba7-e84c016cbe4d?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210325202149709" modified="20231006123156142" revision="0" tags="[[08 Programmation orientée objet (POO)]]" title="08.06 Constructeur" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210325202149709" modified="20231215140213163" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.06 Constructeur" type="text/vnd.tiddlywiki">
 <pre>Un ''constructeur'' est une méthode particulière qui porte le même nom que la classe où elles se trouve; un constructeur permet à une classe d'initialiser des membres ou encore de recevoir des arguments lors de son instanciation.
+
+&lt;div class=&quot;boite note&quot;&gt;
+
+!! Il n'est pas obligatoire d'ajouter un constructeur à une classe: c'est strictement une question de besoin et de contexte.
+&lt;/div&gt;
 
 Par exemple, soit la classe //De// suivante représentant un dé à jouer:
 
+!!! Exemple 8.4a
 ```cs
-// Classe représentant un dé à nbFaces faces
+// Classe représentant un dé à 6 faces
 class De
 {
     static private readonly Random rnd = new Random();
 
-    private readonly int nbFaces = 6;
+    private readonly int _nbFaces = 6;
 
     // Lancer le dé
     public int Lancer()
     {
-        return rnd.Next(nbFaces) + 1;
+        return rnd.Next(_nbFaces) + 1;
     }
 }
 ```
 
 Ici, le nombre de faces est codé dur... On pourrait bien se faire une méthode permettant de changer le nombre de faces (p.ex., //~ChangerNbFaces(int n)//), mais est-ce que ce ne serait pas mieux de pouvoir définir le nombre de faces au moment de l'instanciation de la classe? C'est notamment ce que permet un constructeur!
 
+!!! Exemple 8.4b
 ```cs
-// Un dé à jouer
+// Un dé à jouer avec _nbFaces faces
 class De
 {
     static private readonly Random rnd = new Random();
 
     // Nombre de faces du dé
-    private readonly int nbFaces;
+    private readonly int _nbFaces;
 
     // Constructeur (le dé aura 6 faces par défaut)
-    public De(int n = 6)
+    public De(int nbFaces = 6)
     {
-        // Fixe le nombre de faces du dé à jouer à l'instanciation
-        nbFaces = n;
+        // Fixe le nombre de faces du dé à jouer au moment de l'instanciation
+        _nbFaces = nbFaces;
     }
 
     // Lancer le dé
     public int Lancer()
     {
-        return rnd.Next(nbFaces) + 1;
+        return rnd.Next(_nbFaces) + 1;
     }
 }
 ```
 
 Ce qui permet d'instancier le dé avec le nombre de faces désirés:
 
+!!! Exemple 8.4c
 ```cs
 // Instancie un dé à 6 faces (défaut)
 De de6 = new De();
@@ -11794,50 +11802,19 @@ De de6 = new De();
 De de20 = new De(20);
 ```
 
-Notez que le constructeur:
+&lt;div class=&quot;boite important&quot;&gt;
+
+!! Notez que le constructeur:
 
 # porte le même nom que la classe;
 # est toujours ''public'';
 # n'a pas de type de retour.
+&lt;/div&gt;
 
-!! Rreprise de l'exemple de la classe Chien de la section 8.02 avec constructeur
+Reprise de l'[[exemple 8.1a|08.01 Classes]] avec constructeur:
 
-```cs
-// Un chien
-class Chien
-{
-    // Le nom du chien
-    private string nom;
-
-    // Constructeur
-    public Chien(string nomChien)
-    {
-        nom = nomChien;
-    }
-
-    public string Nom()
-    {
-        return nom;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Chien fido = new Chien(&quot;Fido&quot;);
-        Chien rex = new Chien(&quot;Rex&quot;);
-        Chien oreo = new Chien(&quot;Oreo&quot;);
-        Chien boule = new Chien(&quot;Boule&quot;);
-
-        // Affiche le nom de chaque chien
-        Console.WriteLine($&quot;Le nom du chien «fido» est «{fido.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «rex» est «{rex.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «oreo» est «{oreo.Nom()}»&quot;);
-        Console.WriteLine($&quot;Le nom du chien «boule» est «{boule.Nom()}»&quot;);
-    }
-}
-```
+!!! Exemple 8.4d
+&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/dLQeii&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 ---
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/586df41b-ceb7-495d-8606-4f200d890d18?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
@@ -12687,7 +12664,7 @@ class MaClasse
 ```
 &lt;/p&gt;</pre>
 </div>
-<div created="20231130112641543" modified="20231206160308910" tags="[[08 Programmation orientée objet (POO)]]" title="08.Exercices">
+<div created="20231130112641543" modified="20231215144309748" tags="[[08 Programmation orientée objet (POO)]]" title="08.Exercices">
 <pre># À la lumière des informations de la [[section 08.01|08.01 Classes]], qu'est-ce que la fonction `Main()` de la classe //Program//?
 
 # Créez une classe //Personne// avec des attributs et des méthodes de votre choix.
@@ -12700,7 +12677,11 @@ class MaClasse
 ## créez une nouvelle méthode `Demarrer()` dans la classe qui se chargera d'appeler les méthodes nécessaires pour demander les informations nécessaires à la conversion, effectuer la conversion et afficher le résultat;
 ## instanciez la classe //~ConvertisseurTemperature// dans le `Main()` et appelez la méthode Demarrer() afin que le programme fonctionne avec le même comportement qu'avant les modifications.
 
-# À partir de votre solution à l'exercice précédent, modifiez votre programme de manière à ce que les unités de température valides soient stockées dans un énumération et utilisées ''uniquement'' à partir de celle-ci (donc, on ne devrait trouver ''aucune'' chaîne littérale `&quot;C&quot;` ou `&quot;F&quot;` dans votre programme).</pre>
+# À partir de votre solution à l'exercice précédent, modifiez votre programme de manière à ce que les unités de température valides soient stockées dans un énumération et utilisées ''uniquement'' à partir de celle-ci (donc, on ne devrait trouver ''aucune'' chaîne littérale `&quot;C&quot;` ou `&quot;F&quot;` dans votre programme).
+
+# À partir de votre solution à l'exercice 4 ci-dessus, ajoutez-y un constructeur qui:
+## remplacera la méthode `Demarrer()`;
+##  recevra __facultativement__ en arguments une température à convertir et son unité (auquel cas, évidemment, il sera inutile de demander ces valeurs à l'usager).</pre>
 </div>
 <div created="20210421104616137" modified="20210425135226677" tags="[[Table des matières]]" title="09 Exceptions">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -13380,7 +13361,7 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 &lt;/p&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20231215131652626" tags="[[Table des matières]]" title="Semainier">
+<div created="20220228135020747" modified="20231215144335348" tags="[[Table des matières]]" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
 | 1 (2 oct.) |&lt;ul&gt;&lt;li&gt;[[01 Introduction]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 2 (9 oct.) |&lt;ul&gt;&lt;li&gt;[[02 Variables]]&lt;/li&gt;&lt;li&gt;[[02.05 Calculs]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;[[02.05.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
@@ -13393,6 +13374,7 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 | 8 (27 nov.) |&lt;ul&gt;&lt;li&gt;[[08.01 Classes]]&lt;/li&gt;&lt;li&gt;[[08.01.05 Les espaces de noms]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;li&gt;[[Exercices 8.1 à 8.3|08.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 9 (4 déc.) |&lt;ul&gt;&lt;li&gt;[[08.02 Instances de classes (objets)]]&lt;/li&gt;&lt;li&gt;[[08.03 Visibilité des membres d'une classe]]&lt;/li&gt;&lt;li&gt;[[08.05 Création de classes dans VisualStudio]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[Exercice 8.4|08.Exercices]]&lt;/li&gt;&lt;li&gt;TP4&lt;/li&gt;&lt;/ul&gt;|
 | 10 (11 déc.) |&lt;ul&gt;&lt;li&gt;//Pas de nouvelle matière//&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP4&lt;/li&gt;&lt;/ul&gt;|
+| 11 (18 déc.) |&lt;ul&gt;&lt;li&gt;[[08.04 Les énumérations]]&lt;/li&gt;&lt;li&gt;[[08.06 Constructeur]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP4&lt;/li&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[Exercices 8.5 et 8.6|08.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 
 &lt;p class=&quot;boite important&quot;&gt;
 
