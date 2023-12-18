@@ -11699,12 +11699,41 @@ namespace Demo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" modified="20231218192752327" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" modified="20231218194842376" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
 
 La grosse différence avec un tableau régulier est donc qu'on accède en quelque sorte à un index par une étiquette, plutôt que le contraire.
+
+&lt;div class=&quot;boite note&quot;&gt;
+
+Les énumérations ont comme principal intérêt d'offrir la possibilité d'écrire des valeurs littérales de manière textuelle (un peu comme des constantes), et donc de faciliter la lecture du code.
+
+P.ex., pour une liste de couleurs:
+&lt;div&gt;
+
+```cs
+// Cas #1: avec un tableau de string
+string[] couleurs = {&quot;bleu&quot;, &quot;rouge&quot;, &quot;jaune&quot;};
+
+// Définir la couleur d'un jouet rouge
+string couleurJouet = couleurs[1];
+```
+&lt;/div&gt;
+&lt;div&gt;
+
+```cs
+// Cas #2: avec une énumération
+enum Couleur = {bleu, rouge, jaune};
+
+// Définir la couleur d'un jouet rouge
+Couleur couleurJouet = Couleur.rouge;
+```
+&lt;/div&gt;
+
+On voit que le code du cas #2 est beaucoup plus clair et parlant que le code du cas #1.
+&lt;/div&gt;
 
 Les énumérations peuvent être placées directement dans l'espace de noms si susceptibles d'être utilisées par plusieurs classes, ou à l'intérieur d'une classe si utiles pour une classe seulement.
 
