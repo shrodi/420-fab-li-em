@@ -9472,7 +9472,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="08.Exercices Semainier [[08.06 Constructeur]] [[Carré de sable]]" title="$:/StoryList">
+<div list="Semainier [[08.04 Les énumérations]] [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9520,11 +9520,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1200&quot;
+            &quot;text&quot;: &quot;960&quot;
         }
     }
 }</pre>
@@ -11699,7 +11699,7 @@ namespace Demo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" modified="20231206155830402" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" modified="20231218192752327" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
@@ -11716,9 +11716,13 @@ Comme une énumération est un type, on pourrait vouloir l'utiliser dans plusieu
 
 !! Récupérer une étiquette
 
-Il est parfois utile de pouvoir récupérer l'étiquette d'une énumération à partir de son index; ceci peut se faire avec `Enum.GetName(typeof(nomEnumération)), index)`:
+Il est parfois utile de pouvoir récupérer l'étiquette d'une énumération à partir de son index; ceci peut se faire avec `Enum.GetName(typeof(nomEnumération), index)`:
 
 !!! Exemple 8.4c &lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/yGoZ8z&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+Notez qu'il est également possible de convertir une étiquette en ''string'' avec `ToString()`:
+
+!!! Exemple 8.4d&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/6OkxJl&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
