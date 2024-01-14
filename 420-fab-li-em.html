@@ -9472,7 +9472,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[08.08 Accesseurs et mutateurs]] [[08.08.04 Champs et propriétés associées]]" title="$:/StoryList">
+<div list="Semainier [[Coffre à outils]] [[09 Exceptions]] [[09.02 Gérer les exceptions]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9520,11 +9520,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;960&quot;
+            &quot;text&quot;: &quot;1200&quot;
         }
     }
 }</pre>
@@ -12222,7 +12222,7 @@ class MaClasse
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20210424115440823" list="" modified="20231006123348375" tags="[[09 Exceptions]]" title="09.01 Introduction">
+<div created="20210424115440823" list="" modified="20240114143438433" tags="video [[09 Exceptions]]" title="09.01 Introduction">
 <pre>Une ''exception'' est essentiellement une erreur qui survient au moment de l'exécution du programme. Vous en avez sûrement déjà rencontré plusieurs jusqu'à maintenant au cours de vos développements; par exemple:
 
 [img width=600 [https://i.imgur.com/zbUBgSH.png]]
@@ -12235,34 +12235,12 @@ Vous remarquerez que le titre de la fenêtre affichée est //Exception non gér�
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/c13a486c-f4ad-4aed-82d6-fdae884eadf1?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210425135252632" modified="20231006123356033" tags="[[09 Exceptions]]" title="09.02 Gérer les exceptions">
-<pre>Si on ne veut pas qu'on programme « plante » (s'arrête soudainement) en cours d'exécution, il faut gérer les exceptions, c'est-à-dire essayer de prévoir quand une exception pourrait survenir et dire au programme quoi faire si cela survient.
+<div created="20210425135252632" modified="20240114144602503" tags="video [[09 Exceptions]]" title="09.02 Gérer les exceptions">
+<pre>Si on ne veut pas qu'un programme « plante » (s'arrête soudainement) en cours d'exécution, il faut gérer les exceptions, c'est-à-dire essayer de prévoir quand une exception pourrait survenir et dire au programme quoi faire si cela survient.
 
 Pour cela, on utilise des blocs ''try/catch'', comme ceci par exemple:
 
-```cs
-static void Main()
-{
-    int[] entiers = { 1, 2, 3, 4 };
-
-    try
-    {
-        entiers[4] = 5;
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine($&quot;L'exception suivante est survenue: «{e.Message}»&quot;);
-    }
-
-    Console.WriteLine();
-    Console.WriteLine(&quot;Tableau:&quot;);
-    for (int i=0; i &lt; entiers.Length; i++)
-    {
-        Console.Write($&quot;{entiers[i]} &quot;);
-    }
-    Console.WriteLine();
-}
-```
+!!! Exemple 9.2a &lt;iframe width=&quot;100%&quot; height=&quot;800&quot; src=&quot;https://dotnetfiddle.net/Widget/KjzckF&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 Dans ce cas, le programme ne s'arrêtera pas: ici, on lui dit d'afficher un message d'erreur, et on continue le programme malgré tout (ou on pourrait décider d'arrêter le programme nous-même si on juge l'erreur fatale).
 
@@ -12763,7 +12741,7 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 <div created="20231018023810512" modified="20231018023943748" tags="[[Table des matières]]" title="Carré de sable">
 <pre>&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/Kr8CEz&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20231017152259060" modified="20240108142343552" tags="[[Table des matières]]" title="Coffre à outils">
+<div created="20231017152259060" modified="20240114144832332" tags="[[Table des matières]]" title="Coffre à outils">
 <pre>!! ''Outils à connaître et maîtriser''
 //Vous ''devez'' connaître l'existence de chaque outil et savoir quand et comment l'utiliser; il n'est pas très utile d'attaquer un travail ou un exercice sans d'abord maîtriser tout le contenu de son coffre à outils!//
 
@@ -12834,11 +12812,13 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 ** Méthodes
 ** Nouveau Instanciation (''new'')
 ** Visibilité (''public''/''private'')
-** &lt;span class=&quot;notice&quot;&gt;Nouveau&lt;/span&gt; ''static''
-** &lt;span class=&quot;notice&quot;&gt;Nouveau&lt;/span&gt; Propriétés C# (automatiques ou non)
-** &lt;span class=&quot;notice&quot;&gt;Nouveau&lt;/span&gt; ''this''
+** ''static''
+** Propriétés C# (automatiques ou non)
+**  ''this''
 
-* Énumérations (''enum'')</pre>
+* Énumérations (''enum'')
+
+* &lt;span class=&quot;notice&quot;&gt;Nouveau&lt;/span&gt; Gestion des exceptions (''try'' / ''catch'')</pre>
 </div>
 <div bag="default" created="20181113131237544" modified="20231022185103531" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre></pre>
