@@ -301,6 +301,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
 
+<li>$:/view</li>
+
 <li>00 Documents utiles</li>
 
 <li>01 Introduction</li>
@@ -530,6 +532,8 @@ Error message and password prompt
 <li>Coffre à outils</li>
 
 <li>css</li>
+
+<li>Diapo</li>
 
 <li>DiapoTemplate</li>
 
@@ -9294,19 +9298,19 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408172100210" modified="20240907232625660" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210409133650613" modified="20240907232638047" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20210409133650613" modified="20240908010745461" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
 <div created="20231006122016682" modified="20231006122017684" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20210409133417531" modified="20240908001150830" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210409133417531" modified="20240908010722893" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20231006123553166" modified="20231006123604444" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/Orphans</pre>
+<div created="20231006123553166" modified="20240908003615527" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20210409140203400" modified="20240227185919497" title="$:/state/tab/sidebar--1835078512">
+<div created="20210409140203400" modified="20240908010800945" title="$:/state/tab/sidebar--1835078512">
 <pre>Table des matières</pre>
 </div>
 <div created="20220228132339688" modified="20220228132339688" title="$:/state/toc/01 Introduction-1.02 Concepts de base-1521420305">
@@ -9477,7 +9481,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[01 Introduction]] [[01.02 Concepts de base]] [[01.02.03 Algorithme]]" title="$:/StoryList">
+<div list="[[01 Introduction]] [[01.02 Concepts de base]] [[01.02.04 Les paradigmes de programmation]] [[01.02.03 Algorithme]] [[01.02.01 La programmation]] [[01.01 Accueil]] [[02 Variables]] Diapo [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9534,7 +9538,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20240908001141828" title="$:/temp/search">
+<div created="20210408172006571" modified="20240908010708641" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -9657,6 +9661,9 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 </div>
 <div created="20240907232651193" modified="20240907232651193" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
 <pre>yes</pre>
+</div>
+<div created="20240908010754516" modified="20240908011037374" title="$:/view">
+<pre>classic</pre>
 </div>
 <div created="20220228142508128" modified="20231002143900722" tags="[[Table des matières]]" title="00 Documents utiles">
 <pre></pre>
@@ -9835,7 +9842,7 @@ Vous travaillez pour une chaîne de vente au détail d'appareils audio-vidéo. L
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/27d08780-4f6f-4d88-a918-dc7dbfdc7f53?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210202202037646" list="" modified="20231006122244109" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.04 Les paradigmes de programmation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202202037646" list="" modified="20240908012003944" revision="0" tags="[[01.02 Concepts de base]]" title="01.02.04 Les paradigmes de programmation" type="text/vnd.tiddlywiki">
 <pre>Un paradigme de programmation est une «façon» de programmer, c'est-à-dire une sorte de philosophie ou de manière d'aborder l'implémentation d'algorithmes.
 
 Les principaux paradigmes de programmation, par ordre de complexité, sont:
@@ -9853,16 +9860,13 @@ Les principaux paradigmes de programmation, par ordre de complexité, sont:
 * ''la programmation orienté objet (POO)'': on crée des blocs réunissant à la fois des variables (appelées ''propriétés'') et des procédures/fonctions (appelées ''méthodes'') formant un lien logique entre elles; on appelle ces blocs des ''classes'', qui peuvent être instanciées en ''objets'' lorsqu'utilisées.
 ** p.ex., on pourrait avoir une classe appelée «rectangle» qui contiendrait les variables «largeur» et «longueur» en plus d'une procédure «modifier» qui contiendrait les instructions pour modfier les dimensions du rectangle.
 
-&lt;p class=&quot;boite&quot;&gt;
-&lt;ul class=&quot;boite&quot;&gt;
-&lt;li&gt;Chaque paradigme de programmation avancé inclut nécessairement les paradigmes antérieurs; ainsi, il est impossible de faire de la POO sans aussi faire au moins en partie de la programmation impérative simple ni aucune des autres formes de programmation qui la précèdent.&lt;/li&gt;
-&lt;li&gt;Tous les langages de programmation ne supportent pas tous les paradigmes; ainsi, pour faire de la POO, il faut nécessairement utiliser un langage qui supporte ce paradigme (comme C++, Java, C#, Python, Ruby, etc.).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
+&lt;div class=&quot;boite&quot;&gt;
 
----
+* Chaque paradigme de programmation avancé inclut nécessairement les paradigmes antérieurs; ainsi, il est impossible de faire de la POO sans aussi faire au moins en partie de la programmation impérative simple ni aucune des autres formes de programmation qui la précèdent.
 
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/82ff9837-a24f-4b00-94b6-889446ae5800?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+* Tous les langages de programmation ne supportent pas tous les paradigmes; ainsi, pour faire de la POO, il faut nécessairement utiliser un langage qui supporte ce paradigme (comme C++, Java, C#, Python, Ruby, etc.).
+&lt;/div&gt;
+</pre>
 </div>
 <div bag="default" created="20210202212012990" list="" modified="20231006124044383" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.05 La compilation / l'interprétation" type="text/vnd.tiddlywiki">
 <pre>Donc, ''programmer = écrire du code informatique dans un langage de programmation''.
@@ -12759,8 +12763,17 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 <div bag="default" created="20181113131237544" modified="20231022185103531" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre></pre>
 </div>
-<div created="20240907233032113" modified="20240907235850949" tags="" title="DiapoTemplate">
+<div created="20240908003755992" modified="20240908005605167" tags="" title="Diapo" type="">
 <pre>&lt;div class=&quot;diapo&quot;&gt;
+
+* Point 1
+* Point 2
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20240907233032113" modified="20240908005615935" tags="" title="DiapoTemplate">
+<pre>&lt;div class=&quot;diapo&quot;&gt;
+
 &lt;/div&gt;</pre>
 </div>
 <div created="20231130111002248" draft.of="New Tiddler" draft.title="08.Exercices" modified="20231130111008728" tags="[[08 Programmation orientée objet (POO)]]" title="Draft of 'New Tiddler'">

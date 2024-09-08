@@ -13,7 +13,20 @@
     border-radius: 10px;
     margin: 2em;
  }
- 
+
+ .diapo {
+   background: cyan;
+   padding: 0em 1em 0em 1em;
+   border: 2px solid darkblue;
+   border-radius: 10px;
+   margin: 0;
+   font-size: 2vw;
+}
+
+.diapo li { 
+   margin-bottom: 2vw;
+}
+
  .formule {
     background: #ffffcc;
     padding: 0.5em;
