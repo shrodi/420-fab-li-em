@@ -295,7 +295,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth</li>
+
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
 
 <li>00 Documents utiles</li>
 
@@ -371,7 +375,7 @@ Error message and password prompt
 
 <li>03.03.03 Opérateurs logiques</li>
 
-<li>03.04 Opérateur ternaire (?:)</li>
+<li>03.04 Opérateurs ternaire et de coalescence nulle</li>
 
 <li>03.05 TryParse()</li>
 
@@ -446,6 +450,8 @@ Error message and password prompt
 <li>08.07.01 Les méthodes statiques</li>
 
 <li>08.07.02 Les attributs statiques</li>
+
+<li>08.07.03 Constantes vs attributs «readonly»</li>
 
 <li>08.08 Accesseurs et mutateurs</li>
 
@@ -526,6 +532,8 @@ Error message and password prompt
 <li>css</li>
 
 <li>css codepen</li>
+
+<li>DiapoTemplate</li>
 
 <li>Draft of 'New Tiddler'</li>
 
@@ -9100,8 +9108,7 @@ Error message and password prompt
     &quot;tiddlers&quot;: {
         &quot;Untitled&quot;: {
             &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;https://i.imgur.com/avZmStg.png&quot;,
-            &quot;type&quot;: &quot;text/plain&quot;
+            &quot;text&quot;: &quot;&lt;pre class=\&quot;cs hljs\&quot; style=\&quot;box-sizing: border-box; overflow: auto; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 15px; display: block; margin-top: 1em; margin-bottom: 1em; word-break: normal; overflow-wrap: normal; white-space: pre; background: rgb(248, 248, 248); border: 1px solid rgb(204, 204, 204); padding: 0.5em; border-radius: 3px; text-size-adjust: none; color: rgb(51, 51, 51); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\&quot;&gt;&lt;code style=\&quot;box-sizing: border-box; font-family: SFMono-Regular, Consolas, &amp;quot;Liberation Mono&amp;quot;, Menlo, Courier, monospace; font-size: 1em; color: inherit; background-color: inherit; border: none; white-space: pre; padding: 0px; border-radius: 3px; overflow-wrap: normal;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;class&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;Program&lt;/span&gt;\n{\n    &lt;span class=\&quot;hljs-function\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;static&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;void&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;Main&lt;/span&gt;(&lt;span class=\&quot;hljs-params\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;/span&gt;)\n    &lt;/span&gt;{\n        Jeu monJeu = &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;new&lt;/span&gt; Jeu();\n\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;do&lt;/span&gt;\n        {\n            &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// try -&amp;gt; bloc à risque&lt;/span&gt;\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;try&lt;/span&gt;\n            {\n                monJeu.NouvellePartie();\n            }\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;catch&lt;/span&gt;(Exception e)\n            {\n                Console.WriteLine($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;Oups! Désolé, il y a eu un bogue dans la partie... :(\&quot;&lt;/span&gt;);\n                Console.WriteLine($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;Erreur: «{e.Message}»\&quot;&lt;/span&gt;);\n            }\n            \n        } &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;while&lt;/span&gt; (monJeu.VeutContinuer());\n    }\n}\n\n&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;class&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;Jeu&lt;/span&gt;\n{\n    &lt;span class=\&quot;hljs-function\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;public&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;void&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;NouvellePartie&lt;/span&gt;(&lt;span class=\&quot;hljs-params\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;/span&gt;)\n    &lt;/span&gt;{\n        &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Code de partie...&lt;/span&gt;\n    }\n\n    &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Retourne vrai si le joueur veut continuer&lt;/span&gt;\n    &lt;span class=\&quot;hljs-function\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;public&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;bool&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;VeutContinuer&lt;/span&gt;(&lt;span class=\&quot;hljs-params\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;/span&gt;)\n    &lt;/span&gt;{\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt; choixJoueur;\n\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;do&lt;/span&gt;\n        {\n            &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// try -&amp;gt; la méthode peut lever une exception&lt;/span&gt;\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;try&lt;/span&gt;\n            {\n                choixJoueur = DemanderChaine(&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;Désirez-vous continuer (o/n) ? \&quot;&lt;/span&gt;, &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;new&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt;[] { &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;o\&quot;&lt;/span&gt;, &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;n\&quot;&lt;/span&gt; });\n            }\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;catch&lt;/span&gt; (Exception e)\n            {\n                choixJoueur = &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;\&quot;&lt;/span&gt;;\n                Console.WriteLine($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;{e.Message}; veuillez réessayer\&quot;&lt;/span&gt;);\n            }\n\n        } &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;while&lt;/span&gt; (choixJoueur.ToLower() != &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;o\&quot;&lt;/span&gt; &amp;amp;&amp;amp; choixJoueur.ToLower() != &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;n\&quot;&lt;/span&gt;);\n\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;return&lt;/span&gt; choixJoueur == &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;o\&quot;&lt;/span&gt;;\n    }\n\n    &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Retourne la réponse du joueur à une question&lt;/span&gt;\n    &lt;span class=\&quot;hljs-function\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;private&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;DemanderChaine&lt;/span&gt;(&lt;span class=\&quot;hljs-params\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt; question, &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt;[] choixPossibles = &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;null&lt;/span&gt;&lt;/span&gt;)\n    &lt;/span&gt;{\n        Console.WriteLine();\n        Console.Write(question);\n\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt; reponse = Console.ReadLine();\n\n        &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// On valide la réponse si possible&lt;/span&gt;\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;if&lt;/span&gt; (choixPossibles != &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;null&lt;/span&gt;)\n        {\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;bool&lt;/span&gt; reponseOK = &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;false&lt;/span&gt;;\n\n            &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// try -&amp;gt; on manipule un tableau&lt;/span&gt;\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;try&lt;/span&gt;\n            {\n                &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;foreach&lt;/span&gt; (&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;string&lt;/span&gt; possible &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;in&lt;/span&gt; choixPossibles)\n                {\n                    &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;if&lt;/span&gt; (reponse == possible)\n                    {\n                        reponseOK = &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;true&lt;/span&gt;;\n                        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;break&lt;/span&gt;;\n                    }\n                }\n            }\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;catch&lt;/span&gt; (Exception e)\n            {\n                &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Erreur imprévue; affiche un message informatif à cet effet&lt;/span&gt;\n                Erreur(&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;new&lt;/span&gt; InvalidOperationException($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;[DemanderChaine('{question}', '{choixPossibles}')] \&quot;&lt;/span&gt; + e.Message));\n\n                &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Retourne une chaîne vide&lt;/span&gt;\n                &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;return&lt;/span&gt; &lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;\&quot;&lt;/span&gt;;\n            }\n\n            &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;if&lt;/span&gt; (!reponseOK)\n            {\n                &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// On lance une exception indiquant que la réponse est invalide&lt;/span&gt;\n                &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;throw&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;new&lt;/span&gt; InvalidOperationException($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;Réponse invalide «{reponse}» à la question «{question}»\&quot;&lt;/span&gt;);\n            }\n        }                        \n\n        &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;return&lt;/span&gt; reponse;\n    }\n\n    &lt;span class=\&quot;hljs-comment\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 153, 136); font-style: italic;\&quot;&gt;// Affiche une erreur&lt;/span&gt;\n    &lt;span class=\&quot;hljs-function\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;&lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;private&lt;/span&gt; &lt;span class=\&quot;hljs-keyword\&quot; style=\&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51);\&quot;&gt;void&lt;/span&gt; &lt;span class=\&quot;hljs-title\&quot; style=\&quot;box-sizing: border-box; color: rgb(153, 0, 0); font-weight: bold;\&quot;&gt;Erreur&lt;/span&gt;(&lt;span class=\&quot;hljs-params\&quot; style=\&quot;box-sizing: border-box;\&quot;&gt;Exception e&lt;/span&gt;)\n    &lt;/span&gt;{\n        Console.WriteLine();\n        Console.WriteLine($&lt;span class=\&quot;hljs-string\&quot; style=\&quot;box-sizing: border-box; color: rgb(221, 17, 68);\&quot;&gt;\&quot;*** Erreur imprévue: {e.Message}\&quot;&lt;/span&gt;);\n        Console.WriteLine();\n    }\n}&lt;/code&gt;&lt;/pre&gt;&lt;hr style=\&quot;box-sizing: content-box; height: 0px; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\&quot;&gt;&lt;p style=\&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\&quot;&gt;&lt;iframe width=\&quot;640\&quot; height=\&quot;360\&quot; src=\&quot;https://web.microsoftstream.com/embed/video/2bba610e-fe08-4249-a073-43987a5a227c?autoplay=false&amp;amp;amp;showinfo=true\&quot; allowfullscreen=\&quot;true\&quot; style=\&quot;box-sizing: border-box; vertical-align: top; border: none; border-radius: 10px; margin-top: 1em; margin-bottom: 1em; max-width: 100%;\&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&quot;
         }
     }
 }</pre>
@@ -9286,22 +9293,22 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20231204125615491" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20240907232625660" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210409133650613" modified="20210409140709762" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20210409133650613" modified="20240907232638047" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
 <div created="20231006122016682" modified="20231006122017684" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20210409133417531" modified="20231022182557144" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Settings</pre>
+<div created="20210409133417531" modified="20240907232635926" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20231006123553166" modified="20231006123604444" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20210409140203400" modified="20231022183244103" title="$:/state/tab/sidebar--1835078512">
+<div created="20210409140203400" modified="20240227185919497" title="$:/state/tab/sidebar--1835078512">
 <pre>Table des matières</pre>
 </div>
 <div created="20220228132339688" modified="20220228132339688" title="$:/state/toc/01 Introduction-1.02 Concepts de base-1521420305">
@@ -9322,8 +9329,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210424140447781" modified="20210424140447781" title="$:/state/toc/08 Programmation orientée objet (POO)-8.08 Accesseurs et mutateurs-1166582011">
 <pre>open</pre>
 </div>
-<div created="20220228131054165" modified="20231006124237111" title="$:/state/toc/Table des matières-01 Introduction--249536019">
-<pre>close</pre>
+<div created="20220228131054165" modified="20240227154531574" title="$:/state/toc/Table des matières-01 Introduction--249536019">
+<pre>open</pre>
 </div>
 <div created="20220311191549397" modified="20240108171121093" title="$:/state/toc/Table des matières-01 Introduction-1329480811">
 <pre>close</pre>
@@ -9343,7 +9350,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220228140549786" modified="20220228152323976" title="$:/state/toc/Table des matières-03 Instructions conditionnelles--249536019">
 <pre>close</pre>
 </div>
-<div created="20231006122659982" modified="20231130112528929" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
+<div created="20231006122659982" modified="20240124135053056" title="$:/state/toc/Table des matières-03 Instructions conditionnelles-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140559845" modified="20220228152324712" title="$:/state/toc/Table des matières-04 Boucles--249536019">
@@ -9373,7 +9380,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408171656033" modified="20220318104714116" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)--249536019">
 <pre>close</pre>
 </div>
-<div created="20210408180556742" modified="20240111140316700" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
+<div created="20210408180556742" modified="20240124161026917" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425173004627" modified="20220228152329550" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
@@ -9415,8 +9422,8 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409124017410" modified="20210517122037724" title="$:/state/toc/Table des matières-99 Travaux pratiques et examens-1329480811">
 <pre>close</pre>
 </div>
-<div created="20231006123525268" modified="20231006124121162" title="$:/state/toc/Table des matières/01 Introduction-01.02 Concepts de base--249536019">
-<pre>close</pre>
+<div created="20231006123525268" modified="20240227154544369" title="$:/state/toc/Table des matières/01 Introduction-01.02 Concepts de base--249536019">
+<pre>open</pre>
 </div>
 <div created="20231006122208462" modified="20240108171053503" title="$:/state/toc/Table des matières/01 Introduction-01.02 Concepts de base-1329480811">
 <pre>open</pre>
@@ -9445,11 +9452,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20231006122715372" modified="20231006122715372" title="$:/state/toc/Table des matières/03 Instructions conditionnelles-3.03 if-1329480811">
 <pre>open</pre>
 </div>
-<div created="20231006123236505" modified="20240108142215283" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-08.07 Membres statiques-1329480811">
-<pre>close</pre>
-</div>
-<div created="20231006123323005" modified="20240111131226214" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-08.08 Accesseurs et mutateurs-1329480811">
+<div created="20231006123236505" modified="20240124154648807" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-08.07 Membres statiques-1329480811">
 <pre>open</pre>
+</div>
+<div created="20231006123323005" modified="20240124154404045" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-08.08 Accesseurs et mutateurs-1329480811">
+<pre>close</pre>
 </div>
 <div created="20210507131128082" modified="20231006123158961" title="$:/state/toc/Table des matières/08 Programmation orientée objet (POO)-8.07 Membres statiques-1329480811">
 <pre>open</pre>
@@ -9472,7 +9479,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier [[Coffre à outils]] [[09 Exceptions]] [[09.02 Gérer les exceptions]]" title="$:/StoryList">
+<div list="DiapoTemplate $:/ControlPanel Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9520,17 +9527,17 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1707&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1200&quot;
+            &quot;text&quot;: &quot;1067&quot;
         }
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20231206163108458" title="$:/temp/search">
-<pre></pre>
+<div created="20210408172006571" modified="20240907234831757" title="$:/temp/search">
+<pre>css</pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9644,8 +9651,14 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div bag="default" created="20181113130651975" modified="20181113130653357" revision="0" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki">
+<div created="20240907232813474" modified="20240907232814007" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth">
+<pre>500px</pre>
+</div>
+<div bag="default" created="20181113130651975" modified="20240907232738819" revision="0" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki">
 <pre>fluid-fixed</pre>
+</div>
+<div created="20240907232651193" modified="20240907232651193" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
+<pre>yes</pre>
 </div>
 <div created="20220228142508128" modified="20231002143900722" tags="[[Table des matières]]" title="00 Documents utiles">
 <pre></pre>
@@ -9757,7 +9770,7 @@ On dit souvent des langages de programmation qu'ils sont de ''haut ou de bas niv
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/2cfadafb-a163-472b-b801-6297fb2881d6?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210202192929068" list="" modified="20231006123818208" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.03 Algorithme" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202192929068" list="" modified="20240227160541589" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.03 Algorithme" type="text/vnd.tiddlywiki">
 <pre>Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Algorithme]] (au 6 octobre 2023):
 
 &lt;&lt;&lt;
@@ -10453,7 +10466,7 @@ Quelques exemples à essayer (ici j'utilise des valeurs numériques littérales,
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/fd4391ec-7a86-4795-b892-1da0779cc7ba?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210308144112846" modified="20231017152222392" revision="0" tags="[[02 Variables]]" title="02.09 Variables nullables" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210308144112846" modified="20240124131522269" revision="0" tags="[[02 Variables]]" title="02.09 Variables nullables" type="text/vnd.tiddlywiki">
 <pre>Par défaut, lorsque définie, une variable doit nécessairement contenir une valeur de son type.
 
 Il est cependant possible de permettre à une variable ''de type non référencé'' (essentiellement, les types de base sauf ''string'') de contenir une «absence de valeur», appelée ''null''.
@@ -10689,16 +10702,48 @@ Il est également permis d'imbriquer des blocs if-else:
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/959a6326-b6e8-4a5c-ab80-9b9065ae6865?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210213142018261" modified="20231015214901618" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.04 Opérateur ternaire (?:)" type="text/vnd.tiddlywiki">
-<pre>L'''opérateur ternaire'' offre un raccourci pour retourner des valeurs en fonction de conditions simples:
+<div bag="default" created="20210213142018261" modified="20240124134906273" revision="0" tags="video [[03 Instructions conditionnelles]]" title="03.04 Opérateurs ternaire et de coalescence nulle" type="text/vnd.tiddlywiki">
+<pre>! Opérateur ternaire `?:`
+
+L'''opérateur ternaire'' `?:` offre un raccourci pour retourner des valeurs en fonction de conditions simples:
 
 ```cs
 valeurRetournee = condition ? valeurSiConditionVraie : valeurSiConditionFausse;
 ```
 
-!! Exemple
+!!! Exemple 3.4a &lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/SAxi7B&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
-&lt;iframe width=&quot;100%&quot; height=&quot;700&quot; src=&quot;https://dotnetfiddle.net/Widget/SAxi7B&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+! Opérateurs de coalescence nulle `??` et `??=`
+
+Lorsqu'on manipule des variables nullables, il est fréquent de vouloir tester si une telle variable est, justement, nulle ou non nulle, et prendre action sur le résultat. Évidemment, ceci peut se faire avec les expressions conditionnelles courantes; p.ex.:
+
+!!! Exemple 3.4b &lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/nhb25E&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+C# offre des raccourcis pour les expressions conditionnelles traitant des valeurs nulles, qu'on appelle les ''opérateurs de coalescence nulle''.
+
+!! Opérateur `??`
+
+Cet opérateur retourne l'opérande de droite si l'opérande de gauche est nul. P. ex., l'expression `a ?? b` est parfaitement équivalente à l'expression ternaire suivante:
+
+```cs
+a == null ? a : b
+```
+
+Ainsi, l'exemple 3.4b pourrait être réécri plus simplement de cette façon:
+
+!!! Exemple 3.4c - Opérateur `??` &lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/Gm6l4v&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+!! Opérateur `??=`
+
+Cet opérateur est similaire au précédent, sauf qu'il inclut l'affectation à la variable dont on teste la nullité (il s'agit donc d'une [[assignation composée|02.05.01 Opérations de base]]). P. ex., l'expression `a ??= b` est parfaitement équivalente à l'expression ternaire suivante:
+
+```cs
+a = a == null ? a : b
+```
+
+Ainsi, l'exemple 3.4b pourrait également être réécri de la façon suivante:
+
+!!! Exemple 3.4d - Opérateur `??=` &lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/GeWSDA&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
@@ -11699,7 +11744,7 @@ namespace Demo
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" modified="20231218194842376" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" modified="20240124135213455" revision="0" tags="video [[08 Programmation orientée objet (POO)]]" title="08.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
@@ -11725,7 +11770,7 @@ string couleurJouet = couleurs[1];
 
 ```cs
 // Cas #2: avec une énumération
-enum Couleur = {bleu, rouge, jaune};
+enum Couleur {bleu, rouge, jaune};
 
 // Définir la couleur d'un jouet rouge
 Couleur couleurJouet = Couleur.rouge;
@@ -11934,6 +11979,14 @@ Exécutez le code ci-dessous et voyez vous-même le risque causé par des géné
 
 &lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/6FeNCb&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 &lt;/p&gt;</pre>
+</div>
+<div created="20240124154511639" modified="20240124160904996" tags="[[08 Programmation orientée objet (POO)]]" title="08.07.03 Constantes vs attributs «readonly»">
+<pre>Un attribut déclaré `const` est ''automatiquement statique'' et ne peut donc être un attribut propre à une instance.
+
+Pour avoir un attribut d'instance invariable dans le temps, on utilisera plutôt `readonly`.
+
+!!! Exemple 8.7.3a - const vs readonly
+&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/VTu01B&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div created="20210408171702497" modified="20231006123320153" tags="[[08 Programmation orientée objet (POO)]]" title="08.08 Accesseurs et mutateurs">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -12302,7 +12355,7 @@ finally
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/076df279-9bcf-4d7a-a956-74edbf267f83?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210425175750578" modified="20231006123401738" tags="[[09 Exceptions]]" title="09.03 Lancer des exceptions">
+<div created="20210425175750578" modified="20240115191029240" tags="[[09 Exceptions]]" title="09.03 Lancer des exceptions">
 <pre>Comme on le sait déjà, C# a ses propres exceptions pour les erreurs de base, qu'il va lancer lui-même lorsqu'une erreur technique survient.
 
 Mais on peut nous-même lancer des exceptions au besoin pour manifester un état indésirable du programme, avec l'instruction ''throw'':
@@ -12317,115 +12370,7 @@ Où //~TypeException// est un type d'exception prédéfini. Bien qu'on puisse te
 * ''~ArgumentException'', ''~ArgumentNullException'' et ''~ArgumentOutOfRangeException'', pour les erreurs d'arguments
 * Les types d'exception personnalisés définis dans le programme (à voir en POO 2)
 
-!! Exemple
-
-```cs
-class Program
-{
-    static void Main()
-    {
-        Jeu monJeu = new Jeu();
-
-        do
-        {
-            // try -&gt; bloc à risque
-            try
-            {
-                monJeu.NouvellePartie();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine($&quot;Oups! Désolé, il y a eu un bogue dans la partie... :(&quot;);
-                Console.WriteLine($&quot;Erreur: «{e.Message}»&quot;);
-            }
-            
-        } while (monJeu.VeutContinuer());
-    }
-}
-
-class Jeu
-{
-    public void NouvellePartie()
-    {
-        // Code de partie...
-    }
-
-    // Retourne vrai si le joueur veut continuer
-    public bool VeutContinuer()
-    {
-        string choixJoueur;
-
-        do
-        {
-            // try -&gt; la méthode peut lever une exception
-            try
-            {
-                choixJoueur = DemanderChaine(&quot;Désirez-vous continuer (o/n) ? &quot;, new string[] { &quot;o&quot;, &quot;n&quot; });
-            }
-            catch (Exception e)
-            {
-                choixJoueur = &quot;&quot;;
-                Console.WriteLine($&quot;{e.Message}; veuillez réessayer&quot;);
-            }
-
-        } while (choixJoueur.ToLower() != &quot;o&quot; &amp;&amp; choixJoueur.ToLower() != &quot;n&quot;);
-
-        return choixJoueur == &quot;o&quot;;
-    }
-
-    // Retourne la réponse du joueur à une question
-    private string DemanderChaine(string question, string[] choixPossibles = null)
-    {
-        Console.WriteLine();
-        Console.Write(question);
-
-        string reponse = Console.ReadLine();
-
-        // On valide la réponse si possible
-        if (choixPossibles != null)
-        {
-            bool reponseOK = false;
-
-            // try -&gt; on manipule un tableau
-            try
-            {
-                foreach (string possible in choixPossibles)
-                {
-                    if (reponse == possible)
-                    {
-                        reponseOK = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                // Erreur imprévue; affiche un message informatif à cet effet
-                Erreur(new InvalidOperationException($&quot;[DemanderChaine('{question}', '{choixPossibles}')] &quot; + e.Message));
-
-                // Retourne une chaîne vide
-                return &quot;&quot;;
-            }
-
-            if (!reponseOK)
-            {
-                // On lance une exception indiquant que la réponse est invalide
-                throw new InvalidOperationException($&quot;Réponse invalide «{reponse}» à la question «{question}»&quot;);
-            }
-        }                        
-
-        return reponse;
-    }
-
-    // Affiche une erreur
-    private void Erreur(Exception e)
-    {
-        Console.WriteLine();
-        Console.WriteLine($&quot;*** Erreur imprévue: {e.Message}&quot;);
-        Console.WriteLine();
-    }
-}
-```
+!!! Exemple 9.3.a &lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/eN6kGv&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 ---
 
@@ -12825,6 +12770,10 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 </div>
 <div created="20231022190150620" modified="20231022190226526" tags="" title="css codepen">
 <pre>[[Lien vers CSS sur CodePen|https://codepen.io/shrodi/pen/PoVoaKX]]</pre>
+</div>
+<div created="20240907233032113" modified="20240907235850949" tags="" title="DiapoTemplate">
+<pre>&lt;div class=&quot;diapo&quot;&gt;
+&lt;/div&gt;</pre>
 </div>
 <div created="20231130111002248" draft.of="New Tiddler" draft.title="08.Exercices" modified="20231130111008728" tags="[[08 Programmation orientée objet (POO)]]" title="Draft of 'New Tiddler'">
 <pre># </pre>
