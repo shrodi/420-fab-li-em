@@ -305,27 +305,25 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>00 Accueil</li>
+
 <li>01 Introduction</li>
 
 <li>01 Introduction - Impression</li>
 
-<li>01.01 Accueil</li>
+<li>01.01 La programmation</li>
 
-<li>01.02 Concepts de base</li>
+<li>01.02 Langage de programmation</li>
 
-<li>01.02.01 La programmation</li>
+<li>01.03 Algorithme</li>
 
-<li>01.02.02 Langage de programmation</li>
+<li>01.04 Les paradigmes de programmation</li>
 
-<li>01.02.03 Algorithme</li>
+<li>01.05 La compilation / l'interprétation</li>
 
-<li>01.02.04 Les paradigmes de programmation</li>
+<li>01.06 Les commentaires</li>
 
-<li>01.02.05 La compilation / l'interprétation</li>
-
-<li>01.02.06 Les commentaires</li>
-
-<li>01.03 Environnement de développement</li>
+<li>01.07 Environnement de développement</li>
 
 <li>01.Exercices</li>
 
@@ -9504,7 +9502,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[01.01 Accueil]] Semainier [[Coffre à outils]]" title="$:/StoryList">
+<div list="01.Exercices Semainier" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9561,7 +9559,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20241008123058018" title="$:/temp/search">
+<div created="20210408172006571" modified="20241008162842341" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -9688,13 +9686,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20240908010754516" modified="20240908011037374" title="$:/view">
 <pre>classic</pre>
 </div>
-<div bag="default" created="20210202184010917" modified="20241008122210088" revision="0" tags="[[Table des matières]]" title="01 Introduction" type="text/vnd.tiddlywiki">
-<pre>&lt;&lt;ssections&gt;&gt;</pre>
-</div>
-<div created="20241008122631172" modified="20241008122715515" title="01 Introduction - Impression">
-<pre>&lt;&lt;TouteSection 01&gt;&gt;</pre>
-</div>
-<div bag="default" created="20210202184053634" modified="20241008124652953" revision="0" tags="[[01 Introduction]]" title="01.01 Accueil" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202184053634" modified="20241008140934196" revision="0" tags="[[Table des matières]]" title="00 Accueil" type="text/vnd.tiddlywiki">
 <pre># Mots de bienvenue
 #* Présentation du prof
 #** ''Pour rejoindre le prof:'' https://teams.microsoft.com/v2/
@@ -9725,31 +9717,72 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 #** Web vs bureau vs mobile
 #** Source pour tous les documents du cours
 
-* Notes de cours</pre>
-</div>
-<div bag="default" created="20210202185759040" modified="20231006122118845" revision="0" tags="[[01 Introduction]]" title="01.02 Concepts de base" type="text/vnd.tiddlywiki">
-<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+* Notes de cours
 
-&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
-
-&lt;/div&gt;</pre>
+* Quiz d'introduction</pre>
 </div>
-<div bag="default" created="20210202192706797" list="" modified="20240908001645742" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.01 La programmation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202184010917" modified="20241008122210088" revision="0" tags="[[Table des matières]]" title="01 Introduction" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;ssections&gt;&gt;</pre>
+</div>
+<div created="20241008122631172" modified="20241008122715515" title="01 Introduction - Impression">
+<pre>&lt;&lt;TouteSection 01&gt;&gt;</pre>
+</div>
+<div bag="default" created="20210202192706797" list="" modified="20241008150422432" revision="0" tags="[[01 Introduction]]" title="01.01 La programmation" type="text/vnd.tiddlywiki">
 <pre>Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Programmation_informatique]] (au 2 février 2021):
 
 &lt;&lt;&lt;
 La programmation, appelée aussi codage dans le domaine informatique, est l'ensemble des activités qui permettent l'''écriture des programmes informatiques''. C'est une étape importante du développement de logiciels (voire de matériel).
 
-L'écriture d'un programme se fait dans un ''langage de programmation''. Un logiciel est un ensemble de programmes (qui peuvent être écrits dans des langages de programmation différents) dédié à la réalisation de certaines tâches par un (ou plusieurs) utilisateurs du logiciel.
+L'écriture d'un programme se fait dans un [[langage de programmation|01.02 Langage de programmation]]. Un logiciel est un ensemble de programmes (qui peuvent être écrits dans des langages de programmation différents) dédié à la réalisation de certaines tâches par un (ou plusieurs) utilisateurs du logiciel.
 
 La programmation représente donc ici la ''rédaction du code source d'un logiciel''. On utilise plutôt le terme développement pour dénoter l'ensemble des activités liées à la création d'un logiciel et des programmes qui le composent. Cela inclut la spécification du logiciel, sa conception, puis son implémentation proprement dite au sens de l'écriture des programmes dans un langage de programmation bien défini, ainsi que la vérification de sa correction, etc.
 &lt;&lt;&lt;
 
-&lt;p class=&quot;boite&quot;&gt;
-Donc, programmer, c'est écrire des instructions destinées à un ordinateur afin qu'il réalise les tâches souhaitées.
+&lt;p class=&quot;boite bref&quot;&gt;
+
+!! Programmer, c'est écrire des instructions destinées à un ordinateur afin qu'il réalise les tâches souhaitées.
 &lt;/p&gt;
 
-[img width=600 [img/giph.gif]]
+@@display:block;text-align:center;[img width=&quot;600&quot; [img/giph.gif]]@@
+
+! Les intrants et les extrants
+
+Une façon très courante et pratique de conceptualiser les programmes informatiques est sous la forme d'intrants (//input//) et de sortants (//outpout//):
+
+[img width=&quot;900&quot; [img/intrants_extrants.png]]
+
+Avant de commencer à écrire un programme, la première étape devrait donc toujours être de se demander:
+
+# ''Quels sont les intrants?''
+## Que va-t-on devoir fournir au programme comme données? Quels types (des nombres, du texte)?
+## Comment va-t-on passer les données au programme? Entrée clavier à l'invite du programme? Arguments? Par un fichier? Base de données? Clic ou mouvement de souris?
+
+# ''Quels sont les extrants?''
+## Au final, que veut-on obtenir? Qu'est-ce qu'on veut?
+## Comment récupérer les extrants? Affichage à l'écran? Enregistrement dans un fichier? Transmission par réseau? Enregistrement dans une base de données?
+
+Exemples d'''intrants'':
+
+* des mots-clefs entrés dans Google;
+* du texte saisi dans Word;
+* cliquer sur un bouton avec la souris;
+* saisir un mot de passe.
+
+Exemples d'''extrants'':
+
+* une page Web qui s'affiche;
+* impression d'un document;
+* une notification sur un téléphone;
+* résultat d'un calcul dans la calculatrice de Windows.
+
+&lt;div class=&quot;boite note&quot;&gt;
+
+Les intrants, ce sont des données que le programme ne possède pas au démarrage et qui lui sont fournies par une ou des sources externes; ainsi, les calculs intermédiaires produits par les traitements ne sont pas considérés comme des intrants puisque générés par le programme lui-même durant son exécution.
+
+La question est plus délicate lorsque des données sont obtenues directement du système sur lequel s'exécute le programme; p.ex., si un programme a besoin de la date du jour et, qu'au lieu de la demander à l'utilisateur, il l'obtient du système sur lequel il est en exécution: s'agit-il d'un intrant...? Selon certaines écoles de pensée, puisque la donnée n'est pas produite par le programme lui-même et qu'elle pourrait justement être demandée à l'utilisateur ou obtenue d'une autre source externe (comme un serveur NTP, p.ex.), il s'agit d'un intrant; mais pour d'autres, le système ne constitue pas une source externe et il ne s'agirait donc pas d'un intrant.
+
+!! ''Dans ce cours, aux fins de simplification, dès qu'une donnée nécessaire au fonctionnement d'un programme ne sera pas produite par le programme lui-même durant son exécution, elle sera considérée comme un intrant.''
+&lt;/div&gt;
 
 ! Développement «tous niveaux» (//full stack//)
 
@@ -9762,47 +9795,55 @@ Une fois le problème connu, il faut réaliser les étapes suivantes:
 
 # ''Analyse architecturale'' (//Réflexion//): choisir les technologies sur lesquelles s'appuira le programme final (langage de programmation, système d'exploitation, mode de distribution, etc.).
 
-# ''Analyse fonctionnelle'' (//Réflexion + [[Algorithme|01.02.03 Algorithme]]//): déterminer comment se comportera le programme final d'un point de vue extérieur (intrants, extrants, interfaces...); peut aussi inclure une étape algorithmique si on doit suivre certaines recettes logiques précises.
+# ''Analyse fonctionnelle'' (//Réflexion + [[Algorithme|01.03 Algorithme]]//): déterminer comment se comportera le programme final d'un point de vue extérieur (intrants, extrants, interfaces...); peut aussi inclure une étape algorithmique si on doit suivre certaines recettes logiques précises.
 
-# ''Analyse organique'' (//Réflexion + [[Algorithme|01.02.03 Algorithme]]//): déterminer les opérations logiques et la structure du code qui permettront de répondre aux choix des étapes précédentes.
+# ''Analyse organique'' (//Réflexion + [[Algorithme|01.03 Algorithme]]//): déterminer les opérations logiques et la structure du code qui permettront de répondre aux choix des étapes précédentes.
 
 # ''Codage'' (//Programmation//): on écrit un code répondant aux exigences des étapes précédentes.
 </pre>
 </div>
-<div bag="default" created="20210202192819715" list="" modified="20240908001726754" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.02 Langage de programmation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202192819715" list="" modified="20241008165847703" revision="0" tags="[[01 Introduction]]" title="01.02 Langage de programmation" type="text/vnd.tiddlywiki">
 <pre>Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Langage_de_programmation]] (au 2 février 2021):
 
 &lt;&lt;&lt;
 Un langage de programmation est une notation conventionnelle destinée à ''formuler des algorithmes'' et produire des programmes informatiques qui les appliquent. D'une manière similaire à une langue naturelle, un langage de programmation est composé d'un ''alphabet'', d'un ''vocabulaire'', de ''règles de grammaire'' et de ''significations''.
 &lt;&lt;&lt;
 
+&lt;div class=&quot;boite bref&quot;&gt;
+
+!! Un langage de programmation est un langage permettant de transcrire des algorithmes en programmes informatiques.
+&lt;/div&gt;
+
 ''&amp;rarr; [[Liste de langages|https://en.wikipedia.org/wiki/List_of_programming_languages]]''
 
-&lt;div class=&quot;boite&quot;&gt;
-Étant donné la très grande quantité de langages de programmation, il est impossible de les voir tous dans un programme d'étude en informatique; vous n'en verrez que quelques-uns, et il vous appartiendra, au fil de votre carrière, d'apprendre d'autres langages, par vous-mêmes ou par le biais de diverses formations.
+&lt;div class=&quot;boite note&quot;&gt;
+
+!! Étant donné la très grande quantité de langages de programmation, il est impossible de les voir tous dans un programme d'étude en informatique; vous n'en verrez que ''quelques-uns'', et il vous appartiendra, au fil de votre carrière, d'apprendre d'autres langages, par vous-mêmes ou par le biais de diverses formations.
 &lt;/div&gt;
 
 Dans le présent cours, nous étudierons les bases du [[langage C# de Microsoft|https://docs.microsoft.com/fr-fr/dotnet/csharp/]] (prononcé «c-sharp», à l'anglaise).
 
 !! Les niveaux de langage
 
-On dit souvent des langages de programmation qu'ils sont de ''haut ou de bas niveau''. On réfère ainsi à la «distance» à laquelle le langage se trouve par rapport au langage machine de l'ordinateur. Ainsi, le langage ''assembleur'', constitué de simples mnémoniques du langage machine, est le langage de programmation de plus bas niveau. On retrouve ensuite dans l'ordre, de manière générale, les[[ langages compilés|01.02.05 La compilation / l'interprétation]], puis les [[langages interprétés|01.02.05 La compilation / l'interprétation]]; à l'intérieur de ces deux catégories, les [[langages POO|01.02.04 Les paradigmes de programmation]] sont en principe de plus haut niveau que les langages procéduraux simples.</pre>
+On dit souvent des langages de programmation qu'ils sont de ''haut ou de bas niveau''. On réfère ainsi à la «distance» à laquelle le langage se trouve par rapport au langage machine de l'ordinateur. Ainsi, le langage ''assembleur'', constitué de simples mnémoniques du langage machine, est le langage de programmation de plus bas niveau. On retrouve ensuite dans l'ordre, de manière générale, les[[ langages compilés|01.05 La compilation / l'interprétation]], puis les [[langages interprétés|01.05 La compilation / l'interprétation]]; à l'intérieur de ces deux catégories, les [[langages POO|01.04 Les paradigmes de programmation]] sont en principe de plus haut niveau que les langages procéduraux simples.</pre>
 </div>
-<div bag="default" created="20210202192929068" list="" modified="20240227160541589" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.03 Algorithme" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202192929068" list="" modified="20241008170242486" revision="0" tags="[[01 Introduction]]" title="01.03 Algorithme" type="text/vnd.tiddlywiki">
 <pre>Selon [[Wikipédia|https://fr.wikipedia.org/wiki/Algorithme]] (au 6 octobre 2023):
 
 &lt;&lt;&lt;
 Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre une classe de problèmes.
 &lt;&lt;&lt;
 
-Donc, un algorithme est une sorte de ''recette logique'' pour résoudre un problème.
+&lt;div class=&quot;boite bref&quot;&gt;
+
+!! Donc, un algorithme est une sorte de ''recette logique'' pour résoudre un problème.
+&lt;/div&gt;
 
 Un algortihme peut d'abord être écrit en ''pseudo-code'', qui ne correspond à aucun langage en particulier et qui ne fait que représenter de manière générique les étapes de la recette logique. On peut également représenter les algorithmes sous forme de ''diagramme de flux''.
 
 De la même façon qu'une recette de cuisine peut être traduite dans plusieurs langues, il en va de même pour un algorithme qui peut être traduit (on dit ''implémenté'') dans plusieurs langages informatiques. 
 
-!!! Exemple de pseudo-code pour trouver et afficher le plus grand nombre d'une liste d'entiers positifs:
-
+!!! Exemple 1.3.1 -- Pseudo-code pour trouver et afficher le plus grand nombre d'une liste d'entiers positifs
 ```
 liste := Liste(nombres entiers positifs);
 
@@ -9814,14 +9855,15 @@ Pour chaque nombre n dans liste, faire:
 
 Afficher plus_grand_n;
 ```
+&gt; ''Dans le pseudo-code ci-dessus:''
+&gt;* `Liste()` représente une ''fonction'' qui prend `nombres entiers positifs` en arguments (paramètres) et qui retourne une valeur qui sera stockée dans la variable `liste`
+&gt;* le symbole `:=` représente une ''affectation'': il signifie qu'on affecte (attribue) une valeur à une variable
 
-!!! Le même algorithme, sous forme de diagramme de flux:
-
+!!! Exemple 1.3.2 -- Le même algorithme que ci-dessus, sous forme de diagramme de flux
 [img[https://i.imgur.com/k86fyjK.png]]
 
 
-!!! Exemple d'implémentation de l'algorithme ci-dessus en C#:
-
+!!! Exemple 1.3.3 -- Implémentation de l'algorithme ci-dessus en C#
 &lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/t7am5q&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;div class=&quot;boite&quot;&gt;
@@ -9836,7 +9878,7 @@ Afficher plus_grand_n;
 
 ---
 
-&lt;p class=&quot;boite defi&quot;&gt;
+&lt;div class=&quot;boite defi&quot;&gt;
 
 ! Avant de programmer, il faut réfléchir!
 
@@ -9848,7 +9890,7 @@ Vous travaillez pour une chaîne de vente au détail d'appareils audio-vidéo. L
 
 # Un autre facteur à considérer est la «pixélisation», aussi appelée «l'effet moustiquaire», qui se manifeste quand on distingue les pixels à l'écran, lequel dépend de la taille du téléviseur, mais aussi de sa résolution et de la distance à laquelle on le regarde. En effet, on considère qu'on évitera l'effet moustiquaire en ayant au moins 60 pixels par degré de visionnement horizontal (l'angle de visionnement est l'angle formé entre les deux lignes reliant les extrémités gauche et droite du téléviseur à l'oeil du téléspectateur). Ainsi, votre patron vous demande de déterminer un second algorithme qui, lui, donnera la diagonale maximale de télé que le client pourrait acheter en fonction de la distance de visionnement et de la résolution horizontale de la télé convoitée.
 
-# Créez un troisième algorithme qui intégrera les deux premiers algorithmes afin de déterminer la diagnonale optimale.
+# Créez un troisième algorithme qui intégrera les deux premiers algorithmes afin de déterminer la diagonale optimale.
 
 !! Finalement:
 
@@ -9856,39 +9898,155 @@ Vous travaillez pour une chaîne de vente au détail d'appareils audio-vidéo. L
 
 * Désignez une personne qui présentera les résultats de l'équipe en classe.
 
-&lt;/p&gt;
-
----
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/27d08780-4f6f-4d88-a918-dc7dbfdc7f53?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+&lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20210202202037646" list="" modified="20240908012003944" revision="0" tags="[[01.02 Concepts de base]]" title="01.02.04 Les paradigmes de programmation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202202037646" list="" modified="20241008174750993" revision="0" tags="[[01 Introduction]]" title="01.04 Les paradigmes de programmation" type="text/vnd.tiddlywiki">
 <pre>Un paradigme de programmation est une «façon» de programmer, c'est-à-dire une sorte de philosophie ou de manière d'aborder l'implémentation d'algorithmes.
 
 Les principaux paradigmes de programmation, par ordre de complexité, sont:
 
 * ''la programmation impérative (ou séquentielle) simple'': il s'agit de donner les instructions une à la suite de l'autre, sans effectuer de regroupements ni créer de structures de code particulières;
+*&gt; Exemple en C#:&lt;div&gt;
+
+```cs
+// On affiche les nombres de 1 à 10 de manière séquentielle, deux fois de suite
+Console.WriteLine(1);
+Console.WriteLine(2);
+Console.WriteLine(3);
+Console.WriteLine(4);
+Console.WriteLine(5);
+Console.WriteLine(6);
+Console.WriteLine(7);
+Console.WriteLine(8);
+Console.WriteLine(9);
+Console.WriteLine(10);
+Console.WriteLine(1);
+Console.WriteLine(2);
+Console.WriteLine(3);
+Console.WriteLine(4);
+Console.WriteLine(5);
+Console.WriteLine(6);
+Console.WriteLine(7);
+Console.WriteLine(8);
+Console.WriteLine(9);
+Console.WriteLine(10);
+```
+&lt;/div&gt;
 
 * ''la programmation structurée simple'': on regroupe certaines instructions en blocs logiques sous forme de boucles et d'exécutions conditionnelles;
+*&gt; Exemple en C#:&lt;div&gt;
+
+```cs
+// On affiche les nombres de 1 à 10 à l'aide d'une première boucle
+for (int i = 1; i &lt;= 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+// On affiche les nombres de 1 à 10 à l'aide d'une seconde boucle
+for (int i = 1; i &lt;= 10; i++)
+{
+    Console.WriteLine(i);
+}
+```
+&lt;/div&gt;
 
 * ''la programmation procédurale/fonctionnelle'': on crée des blocs d'instructions isolés (appelés ''procédures'' ou ''fonctions'') que l'on peut appeler à répétition (plutôt que de répéter les mêmes instructions chaque fois qu'on en a besoin, on écrit une seule fois un bloc d'instructions utile et ensuite on appelle ce bloc d'instructions dans le porgramme autant de fois qu'on en a besoin);
-** p.ex., on pourrait avoir un bloc appelé «trouver_plus_grand» qui contiendrait les instructions nécessaires pour trouver le plus grand nombre d'une liste;
+*&gt; Exemple en C#:&lt;div&gt;
+
+```cs
+// Une procédure qui affiche les nombres 1 à 10 seulement lorsqu'elle est appelée
+void Afficher1A10()
+{
+    // On affiche les nombres de 1 à 10 à l'aide d'une boucle
+    for (int i = 1; i &lt;= 10; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+// Appelle la procédure pour afficher les nombres une première fois
+Afficher1A10();
+
+// Appelle la procédure pour afficher les nombres une seconde fois
+Afficher1A10();
+```
+&lt;/div&gt;
 
 * ''la programmation structurée avancée'': on crée des blocs de variables formant un lien logique entre elles;
-** p.ex., on pourrait avoir un bloc appelé «rectangle» qui regrouperait deux variables «largeur» et «longueur»;
+*&gt; Exemple en C#:&lt;div&gt;
+
+```cs
+// Crée une instance de structure de séquence (voir plus bas)
+Sequence seq = new Sequence { Min = 1, Max = 10 };
+
+// Une procédure qui affiche les nombres 1 à 10 seulement lorsqu'elle est appelée
+void Afficher1A10()
+{
+    // On affiche les nombres de 1 à 10 à l'aide d'une boucle
+    for (int i = seq.Min; i &lt;= seq.Max; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+// Premier appel de procédure pour afficher les nombres de 1 à 10
+Afficher1A10();
+
+// Second appel de procédure pour afficher les nombres de 1 à 10
+Afficher1A10();
+
+// On regroupe les valeurs minimales et maximales à afficher dans une structure
+public struct Sequence
+{
+    public int Min { get; set; }  // Une valeur minimale à afficher
+    public int Max { get; set; }  // Une valeur maximale à afficher
+}
+```
+&lt;/div&gt;
 
 * ''la programmation orienté objet (POO)'': on crée des blocs réunissant à la fois des variables (appelées ''propriétés'') et des procédures/fonctions (appelées ''méthodes'') formant un lien logique entre elles; on appelle ces blocs des ''classes'', qui peuvent être instanciées en ''objets'' lorsqu'utilisées.
-** p.ex., on pourrait avoir une classe appelée «rectangle» qui contiendrait les variables «largeur» et «longueur» en plus d'une procédure «modifier» qui contiendrait les instructions pour modfier les dimensions du rectangle.
+*&gt; Exemple en C#:&lt;div&gt;
 
-&lt;div class=&quot;boite&quot;&gt;
+```cs
+// Crée une instance de classe de séquence (voir plus bas)
+Sequence seq = new Sequence { Min = 1, Max = 10 };
+
+// Premier appel de procédure pour afficher les nombres de 1 à 10
+seq.Afficher1A10();
+
+// Second appel de procédure pour afficher les nombres de 1 à 10
+seq.Afficher1A10();
+
+// On regrouper les valeurs minimales et maximales à afficher, plus la méthode pour le faire
+public class Sequence
+{
+    public int Min { get; set; }  // Une valeur minimale à afficher
+    public int Max { get; set; }  // Une valeur maximale à afficher
+
+    // Une procédure (méthode) qui affiche les nombres 1 à 10 seulement lorsqu'elle est appelée
+    public void Afficher1A10()
+    {
+        // On affiche les nombres de 1 à 10 à l'aide d'une boucle
+        for (int i = Min; i &lt;= Max; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+```
+&lt;/div&gt;
+
+&lt;div class=&quot;boite note&quot;&gt;
 
 * Chaque paradigme de programmation avancé inclut nécessairement les paradigmes antérieurs; ainsi, il est impossible de faire de la POO sans aussi faire au moins en partie de la programmation impérative simple ni aucune des autres formes de programmation qui la précèdent.
 
-* Tous les langages de programmation ne supportent pas tous les paradigmes; ainsi, pour faire de la POO, il faut nécessairement utiliser un langage qui supporte ce paradigme (comme C++, Java, C#, Python, Ruby, etc.).
+* Tous les langages de programmation ne supportent pas tous les paradigmes; ainsi, pour faire de la POO, il faut nécessairement utiliser un langage qui supporte ce paradigme (comme C++, Java, C#, Python, Ruby, etc.). Des langages qui ne supportent pas la POO sont, p.ex.: C, Perl, Pascal, Fortran.
 &lt;/div&gt;
 </pre>
 </div>
-<div bag="default" created="20210202212012990" list="" modified="20231006124044383" revision="0" tags="video [[01.02 Concepts de base]]" title="01.02.05 La compilation / l'interprétation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202212012990" list="" modified="20241008174847688" revision="0" tags="[[01 Introduction]]" title="01.05 La compilation / l'interprétation" type="text/vnd.tiddlywiki">
 <pre>Donc, ''programmer = écrire du code informatique dans un langage de programmation''.
 
 Mais un ordinateur ne comprend qu'un seul langage, soit le ''langage machine'', constitué uniquement de 0 et de 1. 
@@ -9912,12 +10070,9 @@ Les langages interprétés quant à eux ont pour avantage de générer des progr
 Par contre, il existe des langages dits ''intermédiaires'' ou ''semi-compilés'' qui ont une étape de «prémâchage» du code (qui réduira et optimisera le code initial) pour un interpréteur; autrement dit, le programmeur écrit dans le langage de programmation, qu'il passe à un «compilateur» mais qui, au lieu de traduire en langage machine, va traduire dans un langage propre à un interpréteur. Donc, un fichier est produit, mais ce fichier, bien qu'illisible pour un humain, n'est pas un exécutable contenant du langage machine, mais plutôt un fichier contenant du langage optimisé pour un interpréteur. On crée ainsi un programme qui s'exécute plus rapidement qu'un programme interprété pur, tout en étant portable. Des exemples de ce type de langage sont le ''Java'' et le ''C#''.
 
 [img width=1024 [https://i.imgur.com/mhz36zP.png]]
-
----
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/60a00cd5-6347-45a8-87cf-86eb1014c590?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</pre>
 </div>
-<div created="20231012173426324" modified="20231012183105634" tags="[[01.02 Concepts de base]]" title="01.02.06 Les commentaires">
+<div created="20231012173426324" modified="20241008140809367" tags="[[01 Introduction]]" title="01.06 Les commentaires">
 <pre>Dans la plupart sinon la totalité des langages de programmation, il est possible (et fortement recommandé, voir section [[97.05 Règles générales]]) d'écrire des commentaires à même le code que l'on écrit.
 
 Il existe plusieurs écoles de pensées quant à la rédaction des commentaires (allant du «une instruction, un commentaire» jusqu'au code autodescriptif sans commentaires), mais règle générale on écrira des commentaires pertinents utiles à la compréhension du code ou en faciliant la lecture; si quelqu'un qui ne connaît pas du tout le langage de programmation utilisé est capable néanmoins de comprendre ce que fait le code, alors c'est mission accomplie!
@@ -9938,19 +10093,19 @@ int entier; // Qui peuvent aussi être utilisés en fin de ligne
 double puissance = Math.Pow(10 /*base*/, 2 /*exposant*/);
 ```</pre>
 </div>
-<div bag="default" created="20210202211339110" modified="20231102180542889" revision="0" tags="video [[01 Introduction]]" title="01.03 Environnement de développement" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210202211339110" modified="20241008175343490" revision="0" tags="[[01 Introduction]]" title="01.07 Environnement de développement" type="text/vnd.tiddlywiki">
 <pre>Donc, ''programmer = écrire du code''.
 
 Mais dans quoi écrire ce code?
 
 # Dans un éditeur de texte simple (p.ex., le bloc-notes de Windows)
-#* dans ce cas, on doit ensuite se charger d'appeler manuellement le compilateur ou l'interpréteur, et en plus on n'a pas de coloration du code en fonction des mots-clefs
+#* Dans ce cas, on doit ensuite se charger d'appeler manuellement le compilateur ou l'interpréteur, et en plus on n'a pas de coloration du code en fonction des mots-clefs.
 
-# Dans un éditeur de texte avancé (p.ex., [[MS VSCode|https://code.visualstudio.com/]], [[Notepad++|https://notepad-plus-plus.org/]], [[Brackets|https://brackets.io/]], [[Sublime Text|https://www.sublimetext.com/]])
-#* ces éditeurs offrent beaucoup de fonctionnalité aidant le développement, comme l'installation de greffons, coloration du code, appel facile de compilateurs/interpréteurs, etc.
+# Dans un éditeur de texte avancé (p.ex., [[MS VSCode|https://code.visualstudio.com/]], [[Notepad++|https://notepad-plus-plus.org/]], [[Sublime Text|https://www.sublimetext.com/]])
+#* Ces éditeurs offrent beaucoup de fonctionnalité aidant le développement, comme l'installation de greffons, coloration du code, appel facile de compilateurs/interpréteurs, etc.
 
 # Dans un environnement de développement intégré (ou ''IDE'', //Integrated Development Environment//) (p.ex., [[Eclipse|https://www.eclipse.org/ide/]], [[MS Visual Studio|https://visualstudio.microsoft.com/fr/]], [[IntelliJ|https://www.jetbrains.com/idea/]], [[Netbeans|https://netbeans.apache.org/]])
-#* ces logiciels poussent encore plus loin les fonctionnalités en offrant notamment des outils de débogage et de test, en plus de permettre l'exécution des programmes écrits du simple clic d'un bouton.
+#* Ces logiciels poussent encore plus loin les fonctionnalités en offrant notamment des outils de débogage et de test, en plus de permettre l'exécution des programmes écrits du simple clic d'un bouton.
 
 Dans ce cours, nous utiliserons l'IDE MS Visual Studio pour écrire nos programmes en C#.
 
@@ -9958,7 +10113,7 @@ Dans ce cours, nous utiliserons l'IDE MS Visual Studio pour écrire nos programm
 
 ! Où est le programme???
 
-Si le langage C# est [[compilé dans un fichier|01.02.05 La compilation / l'interprétation]], où se trouve-t-il quand on exécute un programme à partir de Visual Studio?
+Si le langage C# est [[compilé dans un fichier|01.05 La compilation / l'interprétation]], où se trouve-t-il quand on exécute un programme à partir de Visual Studio?
 
 [img[https://i.imgur.com/CxoTwvN.png]]
 
@@ -9970,39 +10125,46 @@ Si le langage C# est [[compilé dans un fichier|01.02.05 La compilation / l'inte
 
 [img[https://i.imgur.com/wbbKkqV.png]]
 
-&lt;/p&gt;
-
-
----
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/74293dd4-5280-4a32-b59e-12a7bb2a3040?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+&lt;/p&gt;</pre>
 </div>
-<div bag="default" created="20210202221714830" modified="20231011131705090" revision="0" tags="[[01 Introduction]]" title="01.Exercices" type="text/vnd.tiddlywiki">
-<pre># (Si possible / facultatif) Sur votre ordinateur personnel (quand vous pourrez), récupérez MS Visual Studio Enterprise depuis votre [[portail Azure|https://portal.azure.com/#blade/Microsoft_Azure_Education/EducationMenuBlade/overview]] du cégep et installez-le (connectez-vous avec la même identification que pour Teams).
+<div bag="default" created="20210202221714830" modified="20241008194834112" revision="0" tags="[[01 Introduction]]" title="01.Exercices" type="text/vnd.tiddlywiki">
+<pre># Pour chacun des éléments suivants, dites s'il s'agit d'un intrant ou d'un extrant:
+## Un nom entré dans un formulaire Web.
+## Une vidéo affichée dans Youtube.
+## Cliquer sur un film que vous déirez voir sur Netflix.
+## Un film en cours de visionnement sur Netflix.
+## Recevoir une demande d'amitié sur Facebook.
+## Accepter une demande d'amitié sur Facebook.
+
+# Pour chacun des programmes informatiques ci-dessous, déterminez quels devraient être les principaux intrants et extrants:
+## Un programme qui convertit une température en degrés Celsius vers des degrés Fahrenheit.
+## Un jeu vidéo où un joueur déplace un personnage à l'écran.
+## Une application de vote par Internet.
+## Un système d'alarme avec détecteur de mouvement.
+
+# (Si possible / facultatif) Sur votre ordinateur personnel (quand vous pourrez), récupérez MS Visual Studio Enterprise depuis votre [[portail Azure|https://portal.azure.com/#blade/Microsoft_Azure_Education/EducationMenuBlade/overview]] du cégep et installez-le (connectez-vous avec la même identification que pour Teams).
 #&gt; Voyez [[ces captures d'écran|Étapes d'installation Visual Studio]] pour vous aider dans le téléchargement et l'installation
 
 # Dans Visual Studio, suivez les ''étapes 1 à 4'' de la section [[Création d'un projet|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#create-a-project]] du site Web de Microsoft
 
 # Puis les ''étapes 1 à 5'' de la section suivante [[Explorer les mathématiques avec des entiers|https://docs.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#explore-integer-math]].&lt;div&gt;
 
-&gt; ''NOTE:'' en informatique, il est ''très'' important de pouvoir suivre des procédures écrites!
+&lt;div class=&quot;boite attention&quot;&gt;
 
-&lt;!--
+!! ''N'allez pas plus loin que l'étape 5!!!''
+
+ ''NOTE:'' en informatique, il est ''très'' important de pouvoir suivre des procédures écrites!
+&lt;/div&gt;
+
 &lt;p class=&quot;boite&quot;&gt;
 
 Si tout a bien été, vous devriez à la fin vous retrouver dans Visual Studio avec le code suivant:
 
-[img[https://i.imgur.com/uxukV7m.png]]
+[img[img/calculatrice_intro.png]]
 
-Notez de plus:
-
-* Le code est constitué de ''blocs d'instructions'':
-** chaque bloc est délimité par des accolades: `{ }`
-** chaque instruction est terminée par un point-virgule: `;`
+Notez de plusque chaque instruction est terminée par un point-virgule: `;`
 
 &lt;/p&gt;
-
---&gt;
 
 &lt;/div&gt;
 
@@ -10016,12 +10178,22 @@ Notez de plus:
 
 ## Testez l'application jusqu'à ce qu'elle fonctionne.
 
-# Continuez le développement de l'application en suivant les étapes de la section [[Ajouter des fonctionalités décimales|https://learn.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#add-decimal-functionality]] (arrêtez avant la section «Déboguer l'application»).
-#* Testez l'application jusqu'à ce qu'elle fonctionne.
+# Continuez le développement de l'application en suivant les étapes de la section [[Ajouter des fonctionalités décimales|https://learn.microsoft.com/fr-fr/visualstudio/get-started/csharp/tutorial-console?view=vs-2022#add-decimal-functionality]] ''(arrêtez avant la section «Déboguer l'application»)''.
+#* Testez l'application jusqu'à ce qu'elle fonctionne.&lt;div class=&quot;boite stop&quot;&gt;
 
-# En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5,2)`, ce qui donnera 25.
-#* Sachant cela, ajouter au programme l'option «p» qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^)
-#&gt; Le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &amp;equiv; 5^^2^^
+!! ''Ne faites pas la section «Déboguer l'application»!''
+&lt;/div&gt;
+
+# En C#, on peut calculer une puissance avec la fonction `Math.Pow(base, exposant)`; p.ex., pour calculer la puissance de 5 élevé à l'exposant 2 (5^^2^^), on écrira `Math.Pow(5, 2)`, ce qui donnera 25.
+#&gt; Donc, p.ex.:
+#&gt;* 5&lt;sup&gt;2&lt;/sup&gt; &amp;equiv; `Math.Pow(5, 2)` = 25
+#&gt;* 2&lt;sup&gt;5&lt;/sup&gt; &amp;equiv; `Math.Pow(2, 5)` = 32
+#&gt;* 4&lt;sup&gt;4&lt;/sup&gt; &amp;equiv; `Math.Pow(4, 4)` = 256
+
+#* Sachant cela, ajoutez au programme l'option «p» (aux options «a», «s», «m» et «d» déjà présentes) qui calculera la puissance de num1 élevé à l'exposant num2 (num1^^num2^^).&lt;div class=&quot;boite note&quot;&gt;
+
+!! Le symbole généralement utilisé en programmation pour représenter l'opération «exposant» est `^`; p.ex., `5 ^ 2` &amp;equiv; 5^^2^^
+&lt;/div&gt;
 
 # Ajoutez un troisième nombre «num3» de manière à ce que:
 #* Si on choisit «a», alors  calculera num1 + num2 + num3
@@ -12689,12 +12861,12 @@ Dans ce qui suit, appelons « //A// » l'année pour laquelle on désire connaî
 <div created="20231018023810512" modified="20231018023943748" tags="[[Table des matières]]" title="Carré de sable">
 <pre>&lt;iframe width=&quot;100%&quot; height=&quot;1000&quot; src=&quot;https://dotnetfiddle.net/Widget/Kr8CEz&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20231017152259060" modified="20241008124115056" tags="[[Table des matières]]" title="Coffre à outils">
+<div created="20231017152259060" modified="20241008162331872" tags="[[Table des matières]]" title="Coffre à outils">
 <pre>!! ''Outils à connaître et maîtriser''
 
 Des outils de langage apparaîtront ici au fur et à mesure qu'ils seront étudiés.
 
-Vous ''devrez'' connaître l'existence de chacun de ces outils et savoir quand et comment l'utiliser: il n'est pas très utile d'attaquer un travail ou un exercice sans d'abord maîtriser tout le contenu de son coffre à outils!
+Vous ''devrez'' connaître l'existence de chacun de ces outils et savoir quand et comment les utiliser: il n'est pas très utile d'attaquer un travail ou un exercice sans d'abord maîtriser tout le contenu de son coffre à outils!
 
 &lt;!--
 * Variables (réception et stockage de valeurs)
@@ -12774,7 +12946,7 @@ Vous ''devrez'' connaître l'existence de chacun de ces outils et savoir quand e
 
 --&gt;</pre>
 </div>
-<div bag="default" created="20181113131237544" modified="20241008122037854" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
+<div bag="default" created="20181113131237544" modified="20241008144315274" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
     background: #dddddd;
     padding: 1em;
@@ -12813,6 +12985,24 @@ Vous ''devrez'' connaître l'existence de chacun de ces outils et savoir quand e
     content:&quot;&quot;;
  }
  
+ .bref::before {
+    content: &quot;En bref&quot;;
+    font: bold italic 2em cursive;
+    text-decoration: underline;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    left: -20px;
+    top: -20 px;
+    margin-top: -20px;
+    border-radius: 10px;
+    background-color: LightSteelBlue;
+    /*border: 2px solid darkred;*/
+    rotate: -15deg;
+ }
+
  .important::before {
     background-image: url('img/important.png');
     background-size: contain;
@@ -13059,9 +13249,9 @@ img.normal {
 &lt;/div&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20241008124207145" tags="[[Table des matières]]" title="Semainier">
+<div created="20220228135020747" modified="20241008175456002" tags="[[Table des matières]]" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
-| 1 (7 oct.) |&lt;ul&gt;&lt;li&gt;[[01 Introduction]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
+| 1 (7 oct.) |&lt;ul&gt;&lt;li&gt;[[01 Introduction]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 &lt;!--
 | 2 (9 oct.) |&lt;ul&gt;&lt;li&gt;[[02 Variables]]&lt;/li&gt;&lt;li&gt;[[02.05 Calculs]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;[[02.05.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
 | 3 (16 oct.) |&lt;ul&gt;&lt;li&gt;[[03 Instructions conditionnelles]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes et regarder les vidéos (au besoin)&lt;/li&gt;&lt;li&gt;[[03.Exercices|03.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
@@ -13079,21 +13269,23 @@ img.normal {
 | 14 (22 jan.) |&lt;ul&gt;&lt;li&gt;//Pas de nouvelle matière//&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP5&lt;/li&gt;&lt;/ul&gt;|
 --&gt;
 
-&lt;p class=&quot;boite important&quot;&gt;
+&lt;div class=&quot;boite important&quot;&gt;
 
 !! ''En tout temps, vous devez maîtriser le contenu de votre [[coffre à outils|Coffre à outils]]!!''
-&lt;/p&gt;</pre>
+&lt;/div&gt;</pre>
 </div>
-<div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20231021173811986" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
+<div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20241008162736145" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
 <pre>! Sections
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;&lt;toc-selective-expandable 'Table des matières'&gt;&gt;
 
+&lt;!--
 ! Vidéos
 
 &lt;&lt;toc-selective-expandable 'video'&gt;&gt;
+--&gt;
 
 &lt;/div&gt;</pre>
 </div>
