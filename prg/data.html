@@ -9564,7 +9564,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier 08.Exercices" title="$:/StoryList">
+<div list="[[06 Tableaux unidimensionnels (vecteurs)]] [[06.01 Tableaux - Introduction]] [[06.02 Adressage et utilisation]] Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11343,7 +11343,7 @@ for (int i = 0; i &lt; 10; i++)
 <div created="20241030175653923" modified="20241030175702026" title="06 Tableaux unidimensionnels (vecteurs) - Impression">
 <pre>&lt;&lt;TouteSection 06&gt;&gt;</pre>
 </div>
-<div bag="default" created="20210228180137089" list="" modified="20241030180039150" revision="0" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.01 Tableaux - Introduction" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210228180137089" list="" modified="20241111184918396" revision="0" tags="[[06 Tableaux unidimensionnels (vecteurs)]]" title="06.01 Tableaux - Introduction" type="text/vnd.tiddlywiki">
 <pre>Les [[variables de base|02 Variables]] ne permettent de stocker qu'une seule valeur à la fois:
 
 ```cs
@@ -11363,7 +11363,9 @@ Si on a un grand nombre de valeurs similaires à stocker, il devient vite incomm
 ```
 Imaginez dans l'exemple ci-dessus qu'on ait  des dizaines, des centaines ou même des milliers de personnes... Cela n'aurait aucun sens...!
 
-Heureusement, il est possible de créer des ''tableaux'', qui sont des variables pouvant contenir plusieurs valeurs du même type de base; pour ce faire, il suffit de suffixer des crochets `[]` au type de base de la variable. Tout comme pour une variable de base, on peut ou non définir des valeurs initiales:
+Heureusement, il est possible de créer des ''tableaux'', qui sont des variables pouvant contenir plusieurs valeurs du même type de base; pour ce faire, il suffit de suffixer des crochets `[]` au type de base de la variable.
+
+Tout comme pour une variable de base, on peut ou non définir des valeurs initiales, ici en insérant ces valeurs entre accolades `{}`:
 
 ```cs
 // Un tableau prédéfini; chaque élément du tableau est de type «typeElement»
@@ -11372,6 +11374,21 @@ typeElement[] nomTableau = {element1, element2, element3, ...};
 // Un tableau vide de taille prédéfinie; chaque élément du tableau sera de type «typeElement»
 typeElement[] nomTableau = new typeElement[tailleTableau];
 ```
+
+&lt;div class=&quot;boite note&quot;&gt;
+
+!! Depuis C# 12, fourni avec .NET 8, il est possible d'initialiser des tableaux avec des expressions de collection (non vues dans ce cours), qui utilisent des crochets (`[]`) plutôt que des accolades (`{}`):
+
+```cs
+// Expression de collection (possible depuis C# 12):
+int[] tableau1 = [1, 2, 3, 4, 5, 6];
+
+// Syntaxe C# traditionnelle:
+int[] tableau2 = {1, 2, 3, 4, 5, 6};
+```
+
+!! Pour les fins de ce cours, cela ne fera aucune différence, et vous pouvez donc utiliser l'une ou l'autre de ces syntaxes sans problèmes, mais notez que tous les exemples trouvés dans les présentes notes de cours utilisent la syntaxe C# traditionnelle.
+&lt;/div&gt;
 
 !! Exemples de déclarations
 
