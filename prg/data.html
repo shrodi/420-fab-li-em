@@ -12144,7 +12144,7 @@ namespace Demo
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
 --&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" list="" modified="20241129181545960" revision="0" tags="[[09 Programmation orientée objet (POO)]]" title="09.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" list="" modified="20241129182205345" revision="0" tags="[[09 Programmation orientée objet (POO)]]" title="09.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
@@ -12208,7 +12208,7 @@ Notez que, par défaut, c'est l'étiquette qui sera affichée dans une commande 
 On peut regarder si une chaîne est présente en tant qu'étiquette dans une énumération en utilisant `Enum.TryParse()`:
 
 ```cs
-bool RECHERCHE_FRUCTUEUSE = Enum.TryParse(typeof(NOM_ÉNUMÉRATION), string? CHAÎNE, bool IGNORER_CASSE, out object? ETIQUETTE_TROUVÉE)
+bool RECHERCHE_FRUCTUEUSE = Enum.TryParse(typeof(NOM_ÉNUMÉRATION), string? CHAÎNE, bool IGNORER_CASSE, out object? ÉTIQUETTE_TROUVÉE)
 ```
 
 !!! Exemple 9.4e -- Utilisation de `Enum.TryParse()` pour chercher une étiquette à partir d'une chaîne&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/W4eGUQ&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
