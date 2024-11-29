@@ -9352,7 +9352,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210409140712926" modified="20210409140712926" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20210408172100210" modified="20241119224338837" title="$:/state/sidebar">
+<div created="20210408172100210" modified="20241129180945944" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210409133650613" modified="20241010133251810" title="$:/state/tab--1963855381">
@@ -9484,7 +9484,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210425135213079" modified="20210425135213079" title="$:/state/toc/Table des matières-09 Gestion des exceptions-1329480811">
 <pre>open</pre>
 </div>
-<div created="20241119151941752" modified="20241126190415004" title="$:/state/toc/Table des matières-09 Programmation orientée objet (POO)-1329480811">
+<div created="20241119151941752" modified="20241129180948478" title="$:/state/toc/Table des matières-09 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210430115648658" modified="20220524131255513" title="$:/state/toc/Table des matières-10 Tests unitaires--249536019">
@@ -9583,7 +9583,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="Semainier [[Coffre à outils]] [[Carré de sable]]" title="$:/StoryList">
+<div list="[[09.04 Les énumérations]] Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9599,7 +9599,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9619,7 +9619,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9631,11 +9631,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;2560&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;960&quot;
         }
     }
 }</pre>
@@ -12144,7 +12144,7 @@ namespace Demo
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/cf438551-0143-41be-bef9-410bcbc2eeab?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
 --&gt;</pre>
 </div>
-<div bag="default" created="20210314191702509" list="" modified="20241119155019499" revision="0" tags="[[09 Programmation orientée objet (POO)]]" title="09.04 Les énumérations" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210314191702509" list="" modified="20241129180837062" revision="0" tags="[[09 Programmation orientée objet (POO)]]" title="09.04 Les énumérations" type="text/vnd.tiddlywiki">
 <pre>Il existe un type particulier à mi-chemin entre la classe et le tableau appelé ''énumération'', qui définit une liste constante de chaînes littérales (sans guillemets) représentant chacune une valeur entière.
 
 Par défaut, ces valeurs varient comme les index d'un tableau régulier, à partir de 0, mais on peut aussi définir la valeur désirée pour chaque chaîne littérale.
@@ -12192,13 +12192,26 @@ Comme une énumération est un type, on pourrait vouloir l'utiliser dans plusieu
 
 !! Récupérer une étiquette
 
-Il est parfois utile de pouvoir récupérer l'étiquette d'une énumération à partir de son indice; ceci peut se faire avec `Enum.GetName(typeof(nomEnumération), index)`:
+Il est parfois utile de pouvoir récupérer l'étiquette d'une énumération à partir de sa valeur; ceci peut se faire avec `Enum.GetName(typeof(nomEnumération), index)`:
 
-!!! Exemple 9.4c -- Récupérer une étiquette d'énumération à partir de son indice&lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/yGoZ8z&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+!!! Exemple 9.4c -- Récupérer une étiquette d'énumération à partir de sa valeur&lt;iframe width=&quot;100%&quot; height=&quot;475&quot; src=&quot;https://dotnetfiddle.net/Widget/yGoZ8z&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
-Notez que, par défaut, c'est l'étiquette qui sera affichée dans une commande d'affichage:
 
-!!! Exemple 9.4d -- Affichage d'une étiquette&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/6OkxJl&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+!! Convertir une étiquette en chaîne
+
+Notez que, par défaut, c'est l'étiquette qui sera affichée dans une commande d'affichage. Par contre, si on a besoin de convertir cette étiquette en chaîne (p.ex, aux fins de comparaison), on peut facilement le faire avec la méthode `.ToString()`:
+
+!!! Exemple 9.4d -- Utilisation de `.TopString()` sur une étiquette d'énumération&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/6OkxJl&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+!! Vérifier si une chaîne existe en tant qu'étiquette dans une énumération
+
+On peut regarder si une chaîne est présente en tant qu'étiquette dans une énumération en utilisant `Enum.TryParse()`:
+
+```cs
+bool TROUVÉ = Enum.TryParse(typeof(NOM_ÉNUMÉRATION), string? CHAÎNE, bool IGNORER_CASSE, out object? ETIQUETTE_TROUVÉE)
+```
+
+!!! Exemple 9.4e -- Utilisation de `Enum.TryParse()` pour chercher une étiquette à partir d'une chaîne&lt;iframe width=&quot;100%&quot; height=&quot;600&quot; src=&quot;https://dotnetfiddle.net/Widget/W4eGUQ&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;!--
 ---
