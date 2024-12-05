@@ -9475,7 +9475,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210408180556742" modified="20240124161026917" title="$:/state/toc/Table des matières-08 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
-<div created="20241111143212159" modified="20241203201740121" title="$:/state/toc/Table des matières-08 Routines-1329480811">
+<div created="20241111143212159" modified="20241205201143918" title="$:/state/toc/Table des matières-08 Routines-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210425173004627" modified="20220228152329550" title="$:/state/toc/Table des matières-09 Exceptions--249536019">
@@ -9490,7 +9490,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210425135213079" modified="20210425135213079" title="$:/state/toc/Table des matières-09 Gestion des exceptions-1329480811">
 <pre>open</pre>
 </div>
-<div created="20241119151941752" modified="20241205200328232" title="$:/state/toc/Table des matières-09 Programmation orientée objet (POO)-1329480811">
+<div created="20241119151941752" modified="20241205200507583" title="$:/state/toc/Table des matières-09 Programmation orientée objet (POO)-1329480811">
 <pre>close</pre>
 </div>
 <div created="20241203193115474" modified="20241203201742388" title="$:/state/toc/Table des matières-10 Exceptions-1329480811">
@@ -9577,7 +9577,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20241119223103976" modified="20241126181227920" title="$:/state/toc/Table des matières/09 Programmation orientée objet (POO)-09.07 Classes et membres statiques-1329480811">
 <pre>close</pre>
 </div>
-<div created="20241119230436119" modified="20241205200326862" title="$:/state/toc/Table des matières/09 Programmation orientée objet (POO)-09.08 Accesseurs et mutateurs-1329480811">
+<div created="20241119230436119" modified="20241205200438823" title="$:/state/toc/Table des matières/09 Programmation orientée objet (POO)-09.08 Accesseurs et mutateurs-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210426151740553" modified="20210510152555475" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.01 TP1 (6 %)-1329480811">
@@ -9592,7 +9592,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[09.10 Affectation et passage en argument d'objets]] [[09.08.05 Initialisation des propriétés]] [[09.08.03 Propriétés non automatiques]] Semainier [[Carré de sable]]" title="$:/StoryList">
+<div list="[[08.04 Les arguments]] Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9649,7 +9649,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20241203201734906" title="$:/temp/search">
+<div created="20210408172006571" modified="20241205201141131" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -11837,7 +11837,7 @@ static string Traduire(string motAnglais)
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b8b4f868-0a3b-4338-bae2-07b70d986509?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
 --&gt;</pre>
 </div>
-<div bag="default" created="20210303151112307" list="" modified="20241130141300737" revision="0" tags="[[08 Routines]]" title="08.04 Les arguments" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210303151112307" list="" modified="20241205201123244" revision="0" tags="[[08 Routines]]" title="08.04 Les arguments" type="text/vnd.tiddlywiki">
 <pre>Une fonction peut recevoir des ''arguments''; ce sont les valeurs passées entre parenthèses lors de l'appel de la fonction. Par exemple, comme on le sait, la fonction `Math.Pow()` attend deux arguments, soit la base et l'exposant, tous deux de type ''double'':
 
 ```cs
@@ -11869,6 +11869,9 @@ On distingue notamment trois façons de passer une valeur par référence, selon
 # avec le modificateur  ''in'': la variable passée doit être initialisée et ne pourra être modifiée par la fonction (une sorte de constante pour la fonction).&lt;div class=&quot;boite attention&quot;&gt;
 
 !!! Il ne faut pas confondre le «''in''» que l'on utilise dans un ''foreach'' et le «''in''» utilisé avec un paramètre de fonction C#: le premier signifie littéralement «dans» (le tableau), alors que le second signifie plutôt «entrée» (d'argument). Les deux n'ont pas du tout le même rôle syntaxique en C#, et le compilateur fera la distinction selon le contexte.
+&lt;/div&gt;&lt;div class=&quot;boite attention&quot;&gt;
+
+!!! Il faut restreindre le plus possible l'utilisation de ''ref'', car il peut être dangereux de propager une variable par adresse du fait qu'il devient plus difficile d'en contrôler le contenu. P.ex., imaginons tout un arbre d'appels et de sous-appels de fonctions avec une variable passée par référence, chacune avec le pouvoir de changer sa valeur: la résultante ne sera pas tellement différente que d'utiliser une variable globale, ce qui est une très mauvaise pratique...!
 &lt;/div&gt;
 
 &lt;/div&gt;Donc, avec ''ref'' et ''out'', toutes les modifications faites à l'argument dans la fonction se réflèteront aussi sur la variable d'origine qui a été passée.&lt;div&gt;
