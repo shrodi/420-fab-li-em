@@ -461,6 +461,8 @@ Error message and password prompt
 
 <li>07.03 Passage des arguments</li>
 
+<li>07.Exercices</li>
+
 <li>08 Routines</li>
 
 <li>08 Routines - Impression</li>
@@ -566,6 +568,12 @@ Error message and password prompt
 <li>6.4.Solution</li>
 
 <li>6.5.Solution</li>
+
+<li>7.1.Solution</li>
+
+<li>7.2.Solution</li>
+
+<li>7.3.Solution</li>
 
 <li>97 Petit guide de programmation</li>
 
@@ -9458,7 +9466,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20220310211604639" modified="20241203201738839" title="$:/state/toc/Table des matières-06 Tableaux unidimensionnels (vecteurs)-1329480811">
 <pre>close</pre>
 </div>
-<div created="20241030183019627" modified="20241126183849520" title="$:/state/toc/Table des matières-07 Arguments de programme-1329480811">
+<div created="20241030183019627" modified="20241211172004244" title="$:/state/toc/Table des matières-07 Arguments de programme-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220228140625672" modified="20220502122913413" title="$:/state/toc/Table des matières-07 Routines--249536019">
@@ -9590,7 +9598,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20210510160552086" modified="20210510160554898" title="$:/state/toc/Table des matières/99 Travaux pratiques et examens-99.05 TP4 (15 %)--249536019">
 <pre>close</pre>
 </div>
-<div list="[[10.02 Gérer les exceptions]] 04.Exercices Semainier [[10 Exceptions]] [[10.03 Lancer des exceptions]] [[Carré de sable]]" title="$:/StoryList">
+<div list="Semainier [[Carré de sable]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9606,7 +9614,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9626,7 +9634,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-FAB%20POO%201%20(FC)/420-fab-li-em/prg/data.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9638,16 +9646,16 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;2560&quot;
+            &quot;text&quot;: &quot;1707&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1067&quot;
         }
     }
 }</pre>
 </div>
-<div created="20210408172006571" modified="20241211123647531" title="$:/temp/search">
+<div created="20210408172006571" modified="20241211172002376" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20210409133646399" modified="20210409133647089" title="$:/theme">
@@ -11671,6 +11679,18 @@ static void Main(string[] args)
 !! Quand on exécute un programme à partir de Visual Studio, le compilateur génère un exécutable accessible dans un sous-dossier de `bin\debug` de notre dossier de projet de développement.
 &lt;/div&gt;</pre>
 </div>
+<div created="20241211164544199" modified="20241211171954976" tags="[[07 Arguments de programme]]" title="07.Exercices">
+<pre># Écrivez un programme qui affiche simplement (mais clairement) tous les arguments passés à la ligne de commande.
+#&gt; [[Exemple de solution|7.1.Solution]]
+
+# Écrivez un programme qui prend en argument des paires «option valeur» et qui affiche simplement (mais clairement) les options entrées avec leur valeur respective.
+#&gt; [[Exemple de solution|7.2.Solution]]
+
+# Créez un projet à partir de l'exemple [[7.2b|07.02 Traitement des arguments]], puis testez-le avec simplement l'argument suivant: `--temp` (sans entrer de valeur). Vous devriez constater que le programme plante (une exception est soulevée). 
+## Corrigez le programme pour éviter que cette situation ne se produise.
+## Profitez-en pour aussi enlever la répétition des `WriteLine()`: faites en sorte qu'il y ait un seul `WriteLine()` dans le programme.
+#&gt; [[Exemple de solution|7.3.Solution]]</pre>
+</div>
 <div bag="default" created="20210303140507054" modified="20241111143023148" revision="0" tags="[[Table des matières]]" title="08 Routines" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;ssections&gt;&gt;</pre>
 </div>
@@ -13073,6 +13093,66 @@ for (int col = 1; col &lt;= nbColonnes; col += intervalleX)
 Console.WriteLine();
 ```</pre>
 </div>
+<div created="20241211171456870" modified="20241211171535803" title="7.1.Solution">
+<pre>```cs
+foreach (string arg in args)
+{
+    Console.WriteLine(arg);
+}
+```</pre>
+</div>
+<div created="20241211171743610" modified="20241211171906008" title="7.2.Solution">
+<pre>```cs
+for (int i = 0; i &lt; args.Length - 1; i++)
+{
+    Console.WriteLine($&quot;args[i] = args[++i]&quot;);
+}
+```</pre>
+</div>
+<div created="20241211171027913" modified="20241211171718982" title="7.3.Solution">
+<pre>```cs
+ /* Programme de conversion de température qui prend les arguments suivants:
+  *    --temp TEMPERATURE
+  *    --unite { c | f }
+  *    
+  * où TEMPERATURE est la température à convertir, et UNITE est l'unité de TEMPERATURE (c=°C, f=°F)
+  */
+ static void Main(string[] args)
+ {
+     double temperature = double.NaN;    // Température à convertir
+     string uniteEntree = &quot;&quot;;     // Unités de la température à convertir
+
+     // Pour i variant de 0 à args.Length-2 (on s'assure de ne pas sortir du tableau)
+     for (int i = 0; i &lt; args.Length - 1; i++)
+     {
+         // Affecte les valeurs en fonction des noms d'arguments rencontrés, peu importe leur ordre
+         switch (args[i])
+         {
+             case &quot;--temp&quot;:
+                 if (!double.TryParse(args[++i], out temperature))
+                 {
+                     // La valeur saisie n'est pas un nombre (NaN === &quot;Not a Number&quot;)
+                     temperature = double.NaN;
+                 }
+                 break;
+
+             case &quot;--unite&quot;:
+                 uniteEntree = args[++i];
+                 break;
+         }
+     }
+
+     // Si temperature est un nombre, effectue et affiche la conversion
+     Console.WriteLine(double.IsNaN(temperature) ? &quot;Erreur: mauvaise valeur de température entrée&quot; :
+         uniteEntree switch
+         {
+             &quot;f&quot; =&gt; $&quot;\n{temperature}°F = {(temperature - 32.0) * 5.0 / 9.0}°C&quot;,
+             &quot;c&quot; =&gt; $&quot;\n{temperature}°C = {(temperature * 9.0 / 5.0) + 32.0}°F&quot;,
+             _ =&gt; $&quot;\nMauvaise unité entrée.&quot;
+         });
+ }
+```</pre>
+</div>
 <div bag="default" created="20210301125750640" modified="20241008123643991" revision="0" tags="[[Table des matières]]" title="97 Petit guide de programmation" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;ssections&gt;&gt;</pre>
 </div>
@@ -13650,14 +13730,14 @@ img.normal {
 &lt;/div&gt;
 \end</pre>
 </div>
-<div created="20220228135020747" modified="20241211120535487" tags="[[Table des matières]]" title="Semainier">
+<div created="20220228135020747" modified="20241211172113421" tags="[[Table des matières]]" title="Semainier">
 <pre>| Semaine | Sections à l'étude | À faire |h
 | 1 (7 oct.) |&lt;ul&gt;&lt;li&gt;[[01 Introduction]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[01.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 2 (14 oct.) |&lt;ul&gt;&lt;li&gt;[[02 Variables]]&lt;/li&gt;&lt;li&gt;[[03 Calculs]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[02.Exercices]]&lt;/li&gt;&lt;li&gt;[[03.Exercices]]&lt;/li&gt;&lt;/ul&gt;|
 | 3 (21 oct.) |&lt;ul&gt;&lt;li&gt;[[04 Instructions conditionnelles]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[04.Exercices|04.Exercices]]&lt;/li&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;/ul&gt;|
 | 4 (28 oct.) |&lt;ul&gt;&lt;li&gt;//Pas de nouvelle matière//&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP1&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;notice&quot;&gt;Facultatif&lt;/span&gt; [[Exercices 98.1 et 98.2|98 Exercices supplémentaires]]&lt;/li&gt;&lt;/ul&gt;|
 | 5 (4 nov.) |&lt;ul&gt;&lt;li&gt;[[03.05 Nombres pseudo-aléatoires]] (retour)&lt;/li&gt;&lt;li&gt;[[05 Boucles]]&lt;/li&gt;&lt;li&gt;[[06 Tableaux|06 Tableaux unidimensionnels (vecteurs)]]&lt;/li&gt;&lt;li&gt;[[97.07 Le débogage]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[Exercice 3.4|03.Exercices]] (rappel)&lt;/li&gt;&lt;li&gt;[[05.Exercices]]&lt;/li&gt;&lt;li&gt;[[06.Exercices]]&lt;/li&gt;&lt;li&gt;TP2&lt;/li&gt;&lt;/ul&gt;|
-| 6 (11 nov.) |&lt;ul&gt;&lt;li&gt;[[07 Arguments de programme]]&lt;/li&gt;&lt;li&gt;[[08 Routines]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP2&lt;/li&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;/ul&gt;|
+| 6 (11 nov.) |&lt;ul&gt;&lt;li&gt;[[07 Arguments de programme]]&lt;/li&gt;&lt;li&gt;[[08 Routines]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP2&lt;/li&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[07.Exercices]]&lt;/li&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;/ul&gt;|
 | 7 (18 nov.) |&lt;ul&gt;&lt;li&gt;Retour sur exercices&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;TP3&lt;/li&gt;&lt;/ul&gt;|
 | 8 (25 nov.) |&lt;ul&gt;&lt;li&gt;[[09.01 à 09.05|09 Programmation orientée objet (POO)]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[Exercices 9.1 à 9.5|09.Exercices]]&lt;/li&gt;&lt;li&gt;TP4&lt;/li&gt;&lt;/ul&gt;|
 | 9 (2 déc.) |&lt;ul&gt;&lt;li&gt;[[09.06 à 09.10|09 Programmation orientée objet (POO)]]&lt;/li&gt;&lt;/ul&gt;|&lt;ul&gt;&lt;li&gt;Lire les notes de cours&lt;/li&gt;&lt;li&gt;[[Exercice 9.6|09.Exercices]]&lt;/li&gt;&lt;li&gt;TP4&lt;/li&gt;&lt;/ul&gt;|
